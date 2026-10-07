@@ -114,4 +114,4 @@ z390 只有一张 3090，训练和评估同卡会慢 2.6 到 10 倍（10-01 实�
 - 不碰测试集；K4 过线后 TEST 等导演单独授权。
 - z390 上 K1 第 5,000 到 35,000 步的中间存档还在（约 560 MB），D1、D2 要用；按 10-04 的规矩，用完再列进删除清单，由导演批。
 - K2 的最终权重复制了一份到 z390 的 `sirb/diag/k2-from-5090/`（80 MB，两边 sha256 一致），只给诊断用；5090 的 `sirb/diag/checkpoints/` 有 v1、K1 最终和 K1 第 5,000 步的副本，D2 和 T1 用。用完一起列进删除清单。
-- T1 的产出在 5090 `sirb/diag/signthr-K1-1007/`（TRAIN 分数、学到的门槛、五轮 VAL、VAL 汇总），已拷回本机这个文件夹的 `server-diagnostics/rtx5090-signthr-1007/`（12 个文件 sha256 一致），读数 `analysis-scripts/stage2-20261007/t1_out.txt`。
+- T1 的产出在 5090 `sirb/diag/signthr-K1-1007/`（TRAIN 分数、学到的门槛、五轮 VAL、VAL 汇总），已拷回本机第 06 阶段的 `server-diagnostics/rtx5090-signthr-1007/`（12 个文件 sha256 一致），读数 `analysis-scripts/stage2-20261007/t1_out.txt`。
