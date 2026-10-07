@@ -5,10 +5,11 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parent
-K4 = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "server-diagnostics/z390-queue-k4-1007/train-early/metrics.jsonl"
-RUNS = {"v1 flat": ROOT / "data/val-and-train-results/train-sirb-formal-20260930/N1_STATE/metrics.jsonl",
-        "K1": ROOT / "data/val-and-train-results/train-sirb-k-20261006/K1_INTENT_FULL/metrics.jsonl",
+DOCS = HERE.parents[3]
+DATA = DOCS.parent / "petct_textual_intent" / "records" / "development_results_transfer"
+K4 = Path(sys.argv[1]) if len(sys.argv) > 1 else DOCS / "4-route/07-k4-hardneg-remove-only-20261007/server-diagnostics/z390-queue-k4-1007/train-early/metrics.jsonl"
+RUNS = {"v1 flat": DATA / "train-sirb-formal-20260930/N1_STATE/metrics.jsonl",
+        "K1": DATA / "train-sirb-k-20261006/K1_INTENT_FULL/metrics.jsonl",
         "K4": K4}
 
 

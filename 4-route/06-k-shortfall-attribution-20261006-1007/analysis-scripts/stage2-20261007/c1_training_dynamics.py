@@ -1,6 +1,6 @@
 """c1: training dynamics of v1 flat, v1 N3, K1, K2 and K3 (partial) side by side, from the training logs only.
 
-Reads (read-only): data/val-and-train-results/<run>/metrics.jsonl and run_manifest.json, resolved_config.json.
+Reads (read-only): <code tree>/records/development_results_transfer/<run>/metrics.jsonl and run_manifest.json, resolved_config.json.
 Writes: ../figures/train-curves-*.png (150 dpi) and prints every table (saved as c1_out.txt).
 Run from this folder:  D:/Anaconda/python.exe -W ignore c1_training_dynamics.py > c1_out.txt
 
@@ -26,8 +26,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)
-DATA = os.path.join(ROOT, "data", "val-and-train-results")
+ROOT = os.path.dirname(os.path.dirname(HERE))          # the stage folder
+DATA = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(ROOT))), "petct_textual_intent", "records", "development_results_transfer")
 FIG = os.path.join(ROOT, "figures")
 os.makedirs(FIG, exist_ok=True)
 

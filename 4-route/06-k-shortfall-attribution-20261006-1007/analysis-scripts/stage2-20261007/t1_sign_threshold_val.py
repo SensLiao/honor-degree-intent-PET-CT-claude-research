@@ -18,7 +18,7 @@ sys.path.insert(0, str(HERE))
 import b0_paths  # noqa: E402
 from b0_load import KEYS, POS, jl, load, paired_bootstrap, patient_mean  # noqa: E402
 
-T1 = HERE.parent / "server-diagnostics" / "rtx5090-signthr-1007"
+T1 = HERE.parents[1] / "server-diagnostics" / "rtx5090-signthr-1007"
 b0_paths.RUNS["K1signthr"] = T1 / "quickval-signthr"
 names = ["v1flat", "K1", "K1signthr"]
 data = {n: load(n, remote=False) for n in names}

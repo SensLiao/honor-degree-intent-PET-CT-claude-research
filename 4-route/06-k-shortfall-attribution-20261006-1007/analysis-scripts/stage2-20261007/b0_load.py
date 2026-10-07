@@ -1,4 +1,4 @@
-"""Shared loaders for the stage-2 scripts (VAL only; read-only on this folder's data/ copy).
+"""Shared loaders for the stage-2 scripts (VAL only; read-only on the canonical result stores, see b0_paths).
 
 Quick-VAL protocol: each of the 99 VAL scans runs its one frozen drawing style (the style K2's run used); systems that
 ran all three styles (v1 batch-1) are restricted to that style.  Dice: patient mean of scan means over the 85 positive

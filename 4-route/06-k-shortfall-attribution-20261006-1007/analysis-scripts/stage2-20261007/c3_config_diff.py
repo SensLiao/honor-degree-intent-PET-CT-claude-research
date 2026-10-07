@@ -1,7 +1,7 @@
 """c3: configuration and arm-spec differences between v1 flat, K1, K2 and K3 (v1 N3 as an extra column), plus the
 training exposure each run received.
 
-Reads (read-only): resolved_config.json, run_manifest.json and metrics.jsonl of each run under data/val-and-train-results,
+Reads (read-only): resolved_config.json, run_manifest.json and metrics.jsonl of each run under <code tree>/records/development_results_transfer,
 and a few named constants from the code tree source (text only, nothing imported).
 Run from this folder:  D:/Anaconda/python.exe -W ignore c3_config_diff.py > c3_out.txt
 """
@@ -11,9 +11,9 @@ import os
 import re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)
-DATA = os.path.join(ROOT, "data", "val-and-train-results")
-PROJECT = os.path.abspath(os.path.join(ROOT, "..", "..", ".."))
+ROOT = os.path.dirname(os.path.dirname(HERE))          # the stage folder
+PROJECT = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(ROOT))), "petct_textual_intent")
+DATA = os.path.join(PROJECT, "records", "development_results_transfer")
 RUNS = {
     "v1 flat": "train-sirb-formal-20260930/N1_STATE",
     "K1": "train-sirb-k-20261006/K1_INTENT_FULL",

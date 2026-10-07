@@ -16,7 +16,7 @@ sys.path.insert(0, str(HERE))
 from b0_load import KEYS, POS, jl, load, patient_mean, per_patient  # noqa: E402
 from b0_paths import RUNS  # noqa: E402
 
-OUT = HERE.parent / "figures"
+OUT = HERE.parents[1] / "figures"
 COLOR = {"v1flat": "#222222", "K1": "#1f5fbf", "K1flip": "#7fa7e0", "K2": "#e07b00", "K2flip": "#f5b041",
          "oracle": "#7b3fa0"}
 LABEL = {"v1flat": "v1 flat", "K1": "K1", "K1flip": "K1 + flip", "K2": "K2", "K2flip": "K2 + flip",

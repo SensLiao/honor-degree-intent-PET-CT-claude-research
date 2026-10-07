@@ -24,7 +24,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-SOURCE = HERE.parent / "server-diagnostics" / "rtx5090-d2-1007" / "d2-term-gradient-influence-train48.jsonl"
+SOURCE = HERE.parents[1] / "server-diagnostics" / "rtx5090-d2-1007" / "d2-term-gradient-influence-train48.jsonl"
 REGIONS = ("T", "T_near", "T_far", "T_boundary", "T_interior", "P_ring", "O")
 TARGET_DICE = "base_target_dice"
 

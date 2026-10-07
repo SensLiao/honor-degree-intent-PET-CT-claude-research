@@ -1,6 +1,6 @@
 """K3 (INTENT_WIDE, trunk 1.5x) network-alone VAL against v1 flat, K1 and K2: D0..D5, nAUC, paired D5 intervals and the
 five-round gain by stroke sign.  K3's VAL is read from the canonical local copy records/development_results_transfer/
-(collected 10-07 10:31, sha256 checked); the others from this folder's data/ copy.  VAL only."""
+(collected 10-07 10:31, sha256 checked); the others from the canonical stores, see b0_paths.  VAL only."""
 import collections
 import sys
 from pathlib import Path
@@ -10,7 +10,7 @@ sys.path.insert(0, str(HERE))
 import b0_paths  # noqa: E402
 from b0_load import POS, load, paired_bootstrap, patient_mean  # noqa: E402
 
-TRANSFER = HERE.parents[2] / "development_results_transfer"
+TRANSFER = HERE.parents[4] / "petct_textual_intent" / "records" / "development_results_transfer"
 b0_paths.RUNS["K3"] = TRANSFER / "eval-sirb-v3-quickval-INTENT_WIDE-R1-20261006"
 names = ["v1flat", "K1", "K2", "K3"]
 data = {n: load(n, remote=False) for n in names}

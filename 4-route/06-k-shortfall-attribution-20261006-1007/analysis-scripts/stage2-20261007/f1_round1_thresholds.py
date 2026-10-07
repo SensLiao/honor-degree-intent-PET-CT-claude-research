@@ -30,7 +30,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from b0_load import patient_mean  # noqa: E402
 
-SOURCE = Path(sys.argv[1]) if len(sys.argv) > 1 else (HERE.parent / "server-diagnostics" / "z390-queue-diag-1007"
+SOURCE = Path(sys.argv[1]) if len(sys.argv) > 1 else (HERE.parents[1] / "server-diagnostics" / "z390-queue-diag-1007"
                                                      / "round1-score-histograms.jsonl")
 TAUS = [round(0.025 * k, 3) for k in range(1, 40)]
 

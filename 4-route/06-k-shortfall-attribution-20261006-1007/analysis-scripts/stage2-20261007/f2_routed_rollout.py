@@ -16,7 +16,7 @@ sys.path.insert(0, str(HERE))
 import b0_paths  # noqa: E402
 from b0_load import KEYS, POS, jl, load, paired_bootstrap, patient_mean  # noqa: E402
 
-DIAG = HERE.parent / "server-diagnostics" / "z390-queue-diag-1007"
+DIAG = HERE.parents[1] / "server-diagnostics" / "z390-queue-diag-1007"
 routed_dirs = sorted(p for p in DIAG.glob("diag-routed-*") if (p / "six_state.csv").exists())
 for folder in routed_dirs:
     b0_paths.RUNS[folder.name] = folder

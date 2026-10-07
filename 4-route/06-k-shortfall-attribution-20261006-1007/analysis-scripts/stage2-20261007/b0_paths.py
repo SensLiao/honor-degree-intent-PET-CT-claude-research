@@ -1,10 +1,16 @@
-"""Shared paths for the stage-2 scripts: every input is read from this folder's data/ copy."""
+"""Shared paths for the stage-2 scripts: VAL results and training records are read from the code tree's canonical
+stores (records/development_results_transfer, records/eval_results_transfer); server diagnostics from this stage folder."""
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
-ROOT = HERE.parent
-DATA = ROOT / "data" / "val-and-train-results"
-TEST = ROOT / "data" / "test-results"
+HERE = Path(__file__).resolve().parent                 # <stage folder>/analysis-scripts/stage2-20261007
+STAGE = HERE.parents[1]                                # 4-route/06-k-shortfall-attribution-20261006-1007
+DOCS = HERE.parents[3]                                 # projects/petct-sirb-research-docs
+CODE = DOCS.parent / "petct_textual_intent"            # the code tree sits next to the docs folder
+DATA = CODE / "records" / "development_results_transfer"
+TEST = CODE / "records" / "eval_results_transfer"
+DIAG = STAGE / "server-diagnostics"
+FIGURES = STAGE / "figures"
+K4_QUEUE = DOCS / "4-route" / "07-k4-hardneg-remove-only-20261007" / "server-diagnostics" / "z390-queue-k4-1007"
 OUT = HERE
 
 #: VAL rollout folders (99 scans / 57 patients; quick VAL = each scan its one frozen style).

@@ -19,7 +19,7 @@ sys.path.insert(0, str(HERE))
 import b0_paths  # noqa: E402
 from b0_load import POS, PATIENT, load, patient_mean, read_six  # noqa: E402
 
-DIAG = HERE.parent / "server-diagnostics" / "z390-queue-diag-1007" / "diag-routed-v1add-k2remove-val"
+DIAG = HERE.parents[1] / "server-diagnostics" / "z390-queue-diag-1007" / "diag-routed-v1add-k2remove-val"
 b0_paths.RUNS["routed"] = DIAG
 SYSTEMS = ("v1flat", "routed")
 data = {n: load(n, remote=False) for n in SYSTEMS}

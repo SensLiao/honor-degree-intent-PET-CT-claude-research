@@ -75,7 +75,7 @@ K4 的配方；`1-plan/experiment-schedule.md` 第三节里按证据排好的候
 
 - `k-analysis-report-20261007.md`：K 和 v1 差在哪（加删拆开、按距离、按病人、病灶层面、没起作用的笔、按画法、和基线比）、训练过程、三项诊断和 T1 的读数、更正和没核实的地方。
 - `k-runs-and-diagnostics-log.md`：原因摘要和诊断的运行记录（原样搬自 vault T083）。
-- `analysis-scripts/`：第一轮（`stage1-20261006/`）和第二轮（`stage2-20261007/`）的分析脚本，每个脚本旁边是它的输出 `*_out.txt`；各自的 README 说明每个脚本看什么。脚本读的原始结果在代码树 `records/development_results_transfer/`。
+- `analysis-scripts/`：第一轮（`stage1-20261006/`）和第二轮（`stage2-20261007/`）的分析脚本，每个脚本旁边是它的输出 `*_out.txt`；第一轮的 `README-stage1.md` 和第二轮的 `c-training-and-components-summary.md` 说明每个脚本看什么。脚本读的原始结果在代码树 `records/development_results_transfer/`。在脚本所在文件夹里运行，例如 `D:/Anaconda/python.exe -W ignore e1_systems_overview.py`；`c2` 要建网络数参数，用 `D:/Anaconda/envs/petct-sirb310/python.exe`。10-07 整理后在新位置重跑了第二轮全部脚本：数字输出和原来逐字节相同，16 张图也一样；只有 `c2`、`c3` 里核对代码文件的几行变了，因为 10-07 凌晨为 K4 改了 registry、losses、training 三个文件。
 - `figures/`：训练曲线和验证集行为图。
 - `server-diagnostics/`：D1、D2、D3、T1 的排队文件、等待程序和拷回本机的结果（都核过 sha256），以及 z390 新代码目录的部署回执。
 - `discussions/codex-rounds1-3-20261007/`：Codex 三轮的简报和原文。

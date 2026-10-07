@@ -14,9 +14,9 @@ import sys
 from collections import OrderedDict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)
-DATA = os.path.join(ROOT, "data", "val-and-train-results")
-PROJECT = os.path.abspath(os.path.join(ROOT, "..", "..", ".."))           # projects/petct_textual_intent
+ROOT = os.path.dirname(os.path.dirname(HERE))          # the stage folder
+PROJECT = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(ROOT))), "petct_textual_intent")  # projects/petct_textual_intent
+DATA = os.path.join(PROJECT, "records", "development_results_transfer")
 CODE = os.path.join(PROJECT, "scripts")
 sys.path.insert(0, CODE)
 
@@ -137,8 +137,7 @@ for rel in ("scripts/common/petct_sirb_network.py", "scripts/common/petct_sirb_r
           + ("" if local == k1_files.get(rel) else f" (local {local[:12]}, recorded {str(k1_files.get(rel))[:12]})"))
 exp_dir = os.path.join(PROJECT, "configs", "sirb", "experiments")
 for name in sorted(os.listdir(exp_dir)):
-    copy = os.path.join(ROOT, "data", "configs", name)
-    print(f"  experiment file {name:40s} same as the analysis copy: {sha256(os.path.join(exp_dir, name)) == sha256(copy)}")
+    print(f"  experiment file {name:40s} sha256 {sha256(os.path.join(exp_dir, name))[:16]}")
 
 models = {}
 reports = {}
