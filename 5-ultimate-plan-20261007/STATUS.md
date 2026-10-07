@@ -1,8 +1,12 @@
 # STATUS：究极 plan 进度表
 
-最后更新：2026-10-07 06:20 UTC
+最后更新：2026-10-07 06:45 UTC
 
-结论一句话：刚开工，目录建好，正在通读仓库；七个领域的文献核实数都还是 0。
+结论一句话：仓库已通读完；正在并行开 48 个子 agent（6 个做复盘、模块、创新点、已有调研摘要，42 个做七个领域的文献检索）。**文献核实目前被环境的网络策略卡住：本会话的出站代理只放行 github.com，arxiv.org、doi.org、pubmed、elifesciences.org 等全部被挡（已实测）。所以本轮只能用 WebSearch 收集候选并全部标“未核实”，已核实数在网络放开前都是 0。**
+
+## 需要负责人现在做的一件事
+
+把这个云端环境（Default）的 Network access 改成更宽的级别，或在 Allowed domains 里加上 arxiv.org、doi.org、pubmed.ncbi.nlm.nih.gov、pmc.ncbi.nlm.nih.gov、link.springer.com、www.nature.com、elifesciences.org、journals.plos.org、www.frontiersin.org、openreview.net、proceedings.mlr.press、openaccess.thecvf.com、proceedings.neurips.cc、aclanthology.org、ieeexplore.ieee.org、www.sciencedirect.com、onlinelibrary.wiley.com、dl.acm.org、www.semanticscholar.org（保留 Allow package managers）。改法在 https://code.claude.com/docs/en/cloud-environments#network-access 。改好后本会话会自动检测并开始逐篇核实；若本会话已结束，下次运行只需跑核实这一步（候选清单已存在 `04-cross-domain/registers/`）。
 
 ## 现在在做什么
 
