@@ -1,6 +1,6 @@
 # 项目简报（给所有子 agent，先读完再干活）
 
-仓库根目录：`/home/user/honor-degree-intent-PET-CT-claude-research/`。这是一个 PET/CT 交互式病灶分割项目 SIRB-Net 的全部研究文字（无源码）。你的产出写进 `5-ultimate-plan-20261007/` 下指定给你的那一个文件；不要改别的文件，不要运行 git（主 agent 统一提交）。
+仓库根目录：`/home/user/honor-degree-intent-pet-ct-claude-research/`。这是一个 PET/CT 交互式病灶分割项目 SIRB-Net 的全部研究文字（无源码）。你的产出写进 `5-ultimate-plan-20261007/` 下指定给你的那一个文件；不要改别的文件，不要运行 git（主 agent 统一提交）。
 
 ## 一、项目一句话
 

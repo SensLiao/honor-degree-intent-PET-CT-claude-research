@@ -50,3 +50,21 @@
 ## 最后的汇报
 
 完成后在最终回复里给出：已核实篇数、未核实篇数、用过的检索词、哪些方向没找到合适论文、你认为对本项目最有用的 3 篇和理由（一句话一篇）。不要把整份 JSON 贴进回复。
+
+## 本次运行实测的网络情况（2026-10-07 07:00 UTC，curl 经代理）
+
+能打开（HTTP 200）：arxiv.org（abs 和 pdf）、export.arxiv.org API、doi.org（跳转正常）、api.crossref.org、pubmed.ncbi.nlm.nih.gov、pmc.ncbi.nlm.nih.gov、eutils.ncbi.nlm.nih.gov、openreview.net、proceedings.neurips.cc、papers.nips.cc、openaccess.thecvf.com、link.springer.com、www.nature.com、aclanthology.org、journals.plos.org、elifesciences.org、www.frontiersin.org、dblp.org、paperswithcode.com、huggingface.co。
+被拦（403/418/429，别反复试）：scholar.google.com、api.semanticscholar.org（限流）、www.biorxiv.org（限流）、ieeexplore.ieee.org、dl.acm.org、www.sciencedirect.com、onlinelibrary.wiley.com、www.pnas.org、www.science.org、psycnet.apa.org、www.jneurosci.org、journals.aps.org、www.tandfonline.com、www.mdpi.com、researchgate.net。
+
+对策：
+- IEEE、ACM、Elsevier、Wiley 的论文：找 arXiv 版（export.arxiv.org API 按标题搜很稳）、PubMed/PMC 版（心理学、神经科学、医学文献大多有 PubMed 条目，PubMed 摘要页算来源页）、或作者主页 PDF。
+- 心理学、教育学经典期刊（Psychological Review、Cognition、Review of Educational Research 等）走 PubMed 摘要页或 doi.org 跳到 Springer/Nature/PLOS/Frontiers 时能打开；跳到 Wiley/Elsevier/APA 打不开就记 unverified，换一篇能打开的。
+- Crossref API（https://api.crossref.org/works/<doi>）能核标题、作者、年份、期刊；但只有 Crossref 元数据、没有读到摘要或正文的，`verification` 写“只读到检索摘录”并放 unverified。
+- 用 WebFetch 时 prompt 写短，让它返回：标题、作者（前三位）、年份、出处、摘要前三句、以及和你的问题相关的一两个要点。
+- 仓库里已有的两份文献综述（`3-literature/literature-review.md` 的对应领域小节、`3-literature/attribution-methods-and-k-literature-20261007.md`）可以当候选来源，但必须本次重新打开来源页才算已核实。用 Grep 搜你领域的小节标题就行，不要整篇读（235 KB）。
+
+## 存盘和效率
+
+- 文件路径用绝对路径 `/home/user/honor-degree-intent-pet-ct-claude-research/5-ultimate-plan-20261007/04-cross-domain/registers/<domain>/<subtopic>.json`。
+- 每核实 5 篇就用 Write 整体重写一次 JSON（有效的 JSON 数组）。不要运行 git。
+- 一个子主题只写自己的两个文件，别碰别人的。
