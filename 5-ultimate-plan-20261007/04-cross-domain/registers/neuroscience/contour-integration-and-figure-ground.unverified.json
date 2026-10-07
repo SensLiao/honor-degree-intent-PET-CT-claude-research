@@ -1,0 +1,19 @@
+[
+  {
+    "id": "neuroscience-contour-integration-and-figure-ground-U01",
+    "domain": "neuroscience",
+    "subtopic": "contour-integration-and-figure-ground",
+    "title": "Neural dynamics of form perception: boundary completion, illusory figures, and neon color spreading",
+    "authors": "Stephen Grossberg, Ennio Mingolla",
+    "year": 1985,
+    "venue": "Psychological Review",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/3887450/",
+    "doi": "10.1037/0033-295x.92.2.173",
+    "verification": "只读到检索摘录（PubMed eutils 与 Europe PMC 记录只有标题、作者、年份、期刊，无摘要；APA 原页 psycnet 被拦）",
+    "source_page_opened": true,
+    "what_it_says": "按 PubMed 记录只能确认题名、作者与出处；边界系统与特征系统分路、边界压低扩散形成屏障等内容来自仓库文献综述，本次没有在来源页读到。",
+    "target_module": "连通与断桥判断 / 范围传播（边界当屏障的填充）",
+    "use_for_project": "若能核实，可作“边界头与填充头分开、边界作为扩散屏障”的经典出处；目前只能当背景引用，不作证据。",
+    "transfer_risk": "理论模型、系数手设；其预言的“边界有缺口就漏”正是项目里规则取连通块遇到假桥时的失败形式，但本次未读到原文，不能据此写结论。"
+  }
+]

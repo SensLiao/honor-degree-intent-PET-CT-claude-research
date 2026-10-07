@@ -1,0 +1,19 @@
+[
+ {
+  "id": "medical-cv-lead-verified-01",
+  "domain": "medical-cv",
+  "subtopic": "lead-verified",
+  "title": "nnInteractive: Redefining 3D Promptable Segmentation",
+  "authors": "Fabian Isensee, Maximilian Rokuss, Lars Krämer, Stefan Dinkelacker, Ashis Ravindran, Florian Stritzke 等",
+  "year": 2025,
+  "venue": "arXiv 2025",
+  "url": "https://arxiv.org/abs/2503.08373",
+  "doi": "",
+  "verification": "读了摘要",
+  "source_page_opened": true,
+  "what_it_says": "接受点、涂鸦、框和新的套索提示，从二维交互生成完整三维分割；在 120 多个三维数据集（CT、MRI、PET、显微）上训练；集成到 Napari 和 MITK 用于交互精修。",
+  "target_module": "整体结构 / 基线",
+  "use_for_project": "作为开放集三维交互分割的参照系统与潜在对照基线；它整卷重分割的做法和我们“只改所指的块”形成对照，可用于论文的方法定位。",
+  "transfer_risk": "它面向多数据集通用分割而非 PET/CT 残差修正，训练规模和数据远超本项目；能否拿到权重和在本协议下公平评测未核实。"
+ }
+]

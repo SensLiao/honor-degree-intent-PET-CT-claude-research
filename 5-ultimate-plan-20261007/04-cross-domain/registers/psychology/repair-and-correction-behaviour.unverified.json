@@ -1,0 +1,53 @@
+[
+  {
+    "id": "psychology-repair-and-correction-behaviour-u01",
+    "domain": "psychology",
+    "subtopic": "repair-and-correction-behaviour",
+    "title": "Errors and error correction in choice-response tasks",
+    "authors": "Patrick M. A. Rabbitt",
+    "year": 1966,
+    "venue": "Journal of Experimental Psychology 71(2)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/5948188/",
+    "doi": "10.1037/h0022853",
+    "verification": "只读到检索摘录（PubMed eutils 记录只有标题、作者、年份、期刊、DOI，无摘要；APA PsycNet 被拦）",
+    "source_page_opened": false,
+    "what_it_says": "按 PubMed 元数据：1966 年发表于 Journal of Experimental Psychology，题目为选择反应任务中的错误与错误更正。摘要未读到，内容不作陈述。",
+    "target_module": "多轮纠错 / 执行门槛",
+    "use_for_project": "错误监控与快速自我更正的经典起点；若能读到原文，可作“人不需要外部反馈也能察觉并更正错误”的奠基引用，对照本项目模型没有自我更正通道、只能靠用户反向笔。",
+    "transfer_risk": "未读到摘要，不能引用其任何结论；即便读到，按键更正与体素写回的类比也只在“更正紧跟错误之后”这一结构层面。"
+  },
+  {
+    "id": "psychology-repair-and-correction-behaviour-u02",
+    "domain": "psychology",
+    "subtopic": "repair-and-correction-behaviour",
+    "title": "Dwell-and-Spring: Undo for Direct Manipulation",
+    "authors": "Caroline Appert, Olivier Chapuis, Emmanuel Pietriga",
+    "year": 2012,
+    "venue": "CHI 2012",
+    "url": "https://hal.science/hal-00663638",
+    "doi": "",
+    "verification": "只读到检索摘录（HAL 页面返回 Anubis 访问拦截页；ACM 页面被拦）",
+    "source_page_opened": false,
+    "what_it_says": "按检索摘录：提出一种在直接操纵界面里撤销拖拽等增量动作的交互技术，并报告用户能快速采用。页面未打开，内容未核。",
+    "target_module": "撤回候选",
+    "use_for_project": "若核实，可作“撤销应作用于刚完成的那一次增量动作”的 HCI 旁证，对应撤回候选只在上一轮实际改动里反向编辑。",
+    "transfer_risk": "未核实；且直接操纵的撤销针对单个对象的几何变换，分割改动是体素集合，没有一一对应的“对象”。"
+  },
+  {
+    "id": "psychology-repair-and-correction-behaviour-u03",
+    "domain": "psychology",
+    "subtopic": "repair-and-correction-behaviour",
+    "title": "Other-initiated repair across languages: towards a typology of conversational structures",
+    "authors": "Mark Dingemanse, N. J. Enfield",
+    "year": 2015,
+    "venue": "Open Linguistics 1",
+    "url": "https://www.degruyterbrill.com/document/doi/10.2478/opli-2014-0007/html",
+    "doi": "10.2478/opli-2014-0007",
+    "verification": "只读到检索摘录（De Gruyter 页面返回 HTTP 405）",
+    "source_page_opened": false,
+    "what_it_says": "按检索摘录：给出他人发起修补的跨语言类型学框架（开放式与受限式发起格式及其解决方式）。页面未打开，内容未核。",
+    "target_module": "笔的编码 / 多轮纠错",
+    "use_for_project": "与已核实的 Dingemanse 等 2015（PLOS ONE）同一项目，若核实可补充发起格式与解决方式的对应表，作为“笔的类型到撤回/续修/新指”映射的旁证。",
+    "transfer_risk": "未核实；与 PLOS ONE 一文内容重叠，即使核实也不应重复计数。"
+  }
+]
