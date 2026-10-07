@@ -80,3 +80,13 @@
 5. doi.org 经 WebFetch 返回“REDIRECT DETECTED”，把它给出的跳转 URL 再 WebFetch 一次即可（跳到 Nature/Springer 时按第 4 条处理）。
 6. 另外确认能开：proceedings.mlr.press（ICML/AISTATS 等）、ojs.aaai.org、ijcai.org、www.cambridge.org/core（文章页含摘要，不需要登录）、psyarxiv.com 与 osf.io、jmlr.org、hal.science、core.ac.uk、openaccess.thecvf.com、journals.plos.org、elifesciences.org、frontiersin.org 文章页。确认被拦：jneurosci.org（Cloudflare 验证页）、psycnet.apa.org、academic.oup.com、direct.mit.edu、journals.sagepub.com、cell.com、annualreviews.org、royalsocietypublishing.org、sciencedirect.com、ieeexplore、dl.acm.org。
 7. 统计脚本认 `verification` 以“读了摘要”或“读了全文”开头的记录，所以括号里的注释可以保留。
+
+## 补充二（08:20 UTC）：WebSearch 配额可能中途耗尽，找候选的替代通道（都经 WebFetch 可用，返回 XML 或 JSON）
+
+- arXiv API 按题名或关键词搜：`https://export.arxiv.org/api/query?search_query=ti:%22interactive%20segmentation%22+AND+all:scribble&max_results=20&sortBy=relevance`（返回标题、作者、年份、摘要、abs 链接；读到摘要即算核实，url 写 abs 页）。
+- Crossref 按题名搜：`https://api.crossref.org/works?query.title=<题名关键词>&rows=5&select=DOI,title,author,issued,container-title`（只给元数据，用来拿 DOI 和出处，再去 Europe PMC / eutils / arXiv 读摘要）。
+- Europe PMC 按关键词搜：`https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=<关键词>%20AND%20(SRC:MED%20OR%20SRC:PPR)&format=json&resultType=core&pageSize=10`（含摘要，覆盖 PubMed 和部分预印本）。
+- PubMed 按关键词搜：eutils esearch（见补充一）再 efetch。
+- dblp 搜计算机类会议论文：`https://dblp.org/search/publ/api?q=<关键词>&format=json&h=10`（元数据和 DOI/ee 链接，再去 arXiv 或会议页读摘要）。
+- 会议论文集目录页能直接翻：proceedings.mlr.press/v<卷>/、openaccess.thecvf.com/<会议><年>、proceedings.neurips.cc/paper_files/paper/<年>、aclanthology.org/events/。
+- 篇数上限从 32 放宽到 40；但宁缺毋滥，去重后再计数。
