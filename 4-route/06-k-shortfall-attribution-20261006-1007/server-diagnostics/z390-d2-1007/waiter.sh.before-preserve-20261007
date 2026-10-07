@@ -1,0 +1,37 @@
+#!/bin/bash
+# Diagnostic D2 on z390 (Director 2026-10-07, K shortfall analysis; Claude Code): per-term gradient influence on the
+# target logits of v1 flat (scored with the B1 terms), K1 (final and step 5000) and K2, on 48 fixed TRAIN units.
+# Measure only.  It shares the card with the K4 training for about half an hour: it starts once K4 has logged 200
+# steps (the trainer's GPU admission is then passed) and only when the card still has 9000 MiB free.
+set -u
+R=/mnt/HDD4/honor_petct/sirb
+Q=$R/queue-d2-1007
+PY=/mnt/HDD4/honor_petct/runs/new-baselines-20260915-R1/envs/2sicr/bin/python
+K1=$R/runs/PETCT-EDITOR-SIRB-INTENT_FULL-S3407-TRAIN-20261006-R1/checkpoints
+V1=/mnt/HDD4/honor_petct/runs/editor-sirb-mainline-20260920-R1/runs-formal/PETCT-EDITOR-SIRB-N1_STATE-S3407-TRAIN-20260927-R1/checkpoints/final.pt
+K2=$R/diag/k2-from-5090/checkpoints/final.pt
+OUT=$R/diag/d2-term-gradient-influence-train48.jsonl
+echo "$(date -Is) waiting for 200 logged steps of the K4 training" >> "$Q/waiter.state"
+while true; do
+  m=$(ls $R/runs/PETCT-EDITOR-SIRB-INTENT_HARDNEG_REMOVE-S3407-TRAIN-*-R1/metrics.jsonl 2>/dev/null | head -1)
+  if [ -n "$m" ] && [ "$(wc -l < "$m")" -ge 10 ]; then break; fi
+  if [ -e "$R/queue-k4-1007/queue.fail" ]; then echo "$(date -Is) STOP: K4 queue failed; D2 not started" >> "$Q/waiter.state"; exit 1; fi
+  sleep 120
+done
+free=$(nvidia-smi --query-gpu=memory.free --format=csv,noheader,nounits -i 0 | head -1)
+if [ "${free:-0}" -lt 9000 ]; then echo "$(date -Is) STOP: GPU 0 free ${free} MiB < 9000; D2 not started" >> "$Q/waiter.state"; exit 1; fi
+echo "$(date -Is) D2 starts (GPU 0 free ${free} MiB)" >> "$Q/waiter.state"
+cd $R/code-1007/code
+env CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 NUMPY_MADVISE_HUGEPAGE=0 TMPDIR=$R/.tmp \
+  PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
+  $PY -B -u scripts/evaluation/gen_petct_eval_sirb_term_gradient_influence.py \
+  --network=v1c=N1_STATE:3407:$V1:contract \
+  --network=K1=INTENT_FULL:3407:$K1/final.pt:mult=dice_gain=0.46292146252998073 \
+  --network=K1s5k=INTENT_FULL:3407:$K1/step_0005000.pt:mult=dice_gain=0.46292146252998073 \
+  --network=K2=INTENT_REFRESH:3407:$K2:mult=dice_gain=0.5925754145773268 \
+  --pair-manifest=/mnt/HDD4/honor_petct/runs/editor-sirb-mainline-20260920-R1/episodes/pairs.jsonl \
+  --manifest-root=/mnt/HDD4/honor_petct/runs/editor-sirb-mainline-20260920-R1/episodes \
+  --inputs-root=/mnt/HDD4/honor_petct/runs/dataset-sirb-cases-gen-20260919-R2/cache/inputs \
+  --labels-root=/mnt/HDD4/honor_petct/runs/dataset-sirb-cases-gen-20260919-R2/cache/labels \
+  --output=$OUT --units=48 --device=cuda:0 >> "$Q/d2.log" 2>&1
+echo "$(date -Is) D2 exited rc=$?" >> "$Q/waiter.state"

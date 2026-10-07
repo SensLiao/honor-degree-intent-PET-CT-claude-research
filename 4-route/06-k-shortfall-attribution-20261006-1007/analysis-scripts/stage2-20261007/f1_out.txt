@@ -1,0 +1,96 @@
+== 1. Check: patient-mean round-1 Dice at tau 0.5 (positive scans with a stroke)
+  v1flat   scans 85  D1 0.6948  histogram = exact count at 0.5: True
+  K1       scans 85  D1 0.6916  histogram = exact count at 0.5: True
+  K2       scans 85  D1 0.6792  histogram = exact count at 0.5: True
+  K1s10k   scans 85  D1 0.6887  histogram = exact count at 0.5: True
+  K1s20k   scans 85  D1 0.6870  histogram = exact count at 0.5: True
+
+== 2. Patient-mean round-1 Dice when only the ADD threshold (or only the REMOVE threshold) moves
+  v1flat   + 0.10:0.6850 0.20:0.6892 0.30:0.6917 0.40:0.6934 0.50:0.6948 0.60:0.6957 0.70:0.6966 0.80:0.6959 0.90:0.6945  | best on VAL 0.700 -> 0.6966
+  v1flat   - 0.10:0.6902 0.20:0.6928 0.30:0.6939 0.40:0.6949 0.50:0.6948 0.60:0.6963 0.70:0.6959 0.80:0.6959 0.90:0.6973  | best on VAL 0.900 -> 0.6973
+  K1       + 0.10:0.6940 0.20:0.6964 0.30:0.6971 0.40:0.6951 0.50:0.6916 0.60:0.6877 0.70:0.6824 0.80:0.6754 0.90:0.6633  | best on VAL 0.250 -> 0.6973
+  K1       - 0.10:0.6938 0.20:0.6943 0.30:0.6941 0.40:0.6926 0.50:0.6916 0.60:0.6901 0.70:0.6881 0.80:0.6860 0.90:0.6827  | best on VAL 0.225 -> 0.6947
+  K2       + 0.10:0.6934 0.20:0.6898 0.30:0.6857 0.40:0.6825 0.50:0.6792 0.60:0.6774 0.70:0.6749 0.80:0.6713 0.90:0.6635  | best on VAL 0.100 -> 0.6934
+  K2       - 0.10:0.6808 0.20:0.6800 0.30:0.6797 0.40:0.6797 0.50:0.6792 0.60:0.6782 0.70:0.6764 0.80:0.6747 0.90:0.6715  | best on VAL 0.050 -> 0.6812
+  K1s10k   + 0.10:0.7005 0.20:0.7018 0.30:0.6987 0.40:0.6944 0.50:0.6887 0.60:0.6807 0.70:0.6698 0.80:0.6593 0.90:0.6461  | best on VAL 0.175 -> 0.7019
+  K1s10k   - 0.10:0.6883 0.20:0.6896 0.30:0.6893 0.40:0.6896 0.50:0.6887 0.60:0.6870 0.70:0.6856 0.80:0.6824 0.90:0.6732  | best on VAL 0.350 -> 0.6899
+  K1s20k   + 0.10:0.6966 0.20:0.6994 0.30:0.6976 0.40:0.6936 0.50:0.6870 0.60:0.6808 0.70:0.6725 0.80:0.6635 0.90:0.6519  | best on VAL 0.200 -> 0.6994
+  K1s20k   - 0.10:0.6915 0.20:0.6912 0.30:0.6905 0.40:0.6887 0.50:0.6870 0.60:0.6847 0.70:0.6822 0.80:0.6792 0.90:0.6740  | best on VAL 0.175 -> 0.6918
+
+== 2b. Both thresholds at once (joint grid on VAL; diagnostic, not a method value)
+  v1flat   D1 both 0.5 0.69480 -> add 0.700 / remove 0.900 0.69914 (+0.00433)
+  K1       D1 both 0.5 0.69164 -> add 0.250 / remove 0.225 0.70041 (+0.00877)
+  K2       D1 both 0.5 0.67917 -> add 0.100 / remove 0.050 0.69547 (+0.01631)
+  K1s10k   D1 both 0.5 0.68868 -> add 0.175 / remove 0.350 0.70308 (+0.01439)
+  K1s20k   D1 both 0.5 0.68697 -> add 0.200 / remove 0.175 0.70419 (+0.01722)
+
+== 3. Decision-theory thresholds per scan: add at D0/2, remove at 1 - D0/2 (D0 = scan's start Dice; reference)
+  v1flat   D1 at 0.5 0.6948 -> decision rule 0.6860
+  K1       D1 at 0.5 0.6916 -> decision rule 0.6787
+  K2       D1 at 0.5 0.6792 -> decision rule 0.6848
+  K1s10k   D1 at 0.5 0.6887 -> decision rule 0.6879
+  K1s20k   D1 at 0.5 0.6870 -> decision rule 0.6810
+
+== 4. Add strokes: share of T recovered by distance band (sums over scans), at 0.5 and 0.3
+  v1flat   0-5mm 0.95/0.97 (n=2047) | 5-10mm 0.83/0.90 (n=4236) | 10-15mm 0.68/0.77 (n=4451) | 15-20mm 0.50/0.62 (n=4542) | 20-30mm 0.28/0.41 (n=8738) | 30-45mm 0.08/0.17 (n=9134) | 45-60mm 0.00/0.02 (n=6891) | 60-90mm 0.00/0.00 (n=10355) | 90-120mm 0.00/0.00 (n=8214) | >120mm 0.00/0.00 (n=7446)
+           P voxels added: at 0.5 6267, at 0.3 11070
+  K1       0-5mm 0.60/0.74 (n=2047) | 5-10mm 0.36/0.51 (n=4236) | 10-15mm 0.23/0.37 (n=4451) | 15-20mm 0.18/0.31 (n=4542) | 20-30mm 0.09/0.19 (n=8738) | 30-45mm 0.05/0.10 (n=9134) | 45-60mm 0.02/0.04 (n=6891) | 60-90mm 0.00/0.02 (n=10355) | 90-120mm 0.00/0.01 (n=8214) | >120mm 0.00/0.00 (n=7446)
+           P voxels added: at 0.5 978, at 0.3 2624
+  K2       0-5mm 0.62/0.74 (n=2047) | 5-10mm 0.39/0.52 (n=4236) | 10-15mm 0.29/0.40 (n=4451) | 15-20mm 0.25/0.35 (n=4542) | 20-30mm 0.16/0.24 (n=8738) | 30-45mm 0.07/0.17 (n=9134) | 45-60mm 0.01/0.04 (n=6891) | 60-90mm 0.00/0.00 (n=10355) | 90-120mm 0.00/0.00 (n=8214) | >120mm 0.00/0.00 (n=7446)
+           P voxels added: at 0.5 1887, at 0.3 4176
+  K1s10k   0-5mm 0.66/0.83 (n=2047) | 5-10mm 0.35/0.58 (n=4236) | 10-15mm 0.20/0.38 (n=4451) | 15-20mm 0.14/0.28 (n=4542) | 20-30mm 0.06/0.16 (n=8738) | 30-45mm 0.00/0.04 (n=9134) | 45-60mm 0.00/0.00 (n=6891) | 60-90mm 0.00/0.00 (n=10355) | 90-120mm 0.00/0.00 (n=8214) | >120mm 0.00/0.00 (n=7446)
+           P voxels added: at 0.5 743, at 0.3 2066
+  K1s20k   0-5mm 0.68/0.84 (n=2047) | 5-10mm 0.37/0.57 (n=4236) | 10-15mm 0.21/0.40 (n=4451) | 15-20mm 0.15/0.33 (n=4542) | 20-30mm 0.08/0.20 (n=8738) | 30-45mm 0.04/0.13 (n=9134) | 45-60mm 0.01/0.06 (n=6891) | 60-90mm 0.00/0.02 (n=10355) | 90-120mm 0.00/0.01 (n=8214) | >120mm 0.00/0.00 (n=7446)
+           P voxels added: at 0.5 904, at 0.3 3082
+
+== 4b. Round-1 volumes (ml, sums over scans): add T fixed / background added, remove T fixed / true lesion removed
+  v1flat   both 0.5                 add T   700.77  add FP   339.14  remove T   182.42  remove TP    64.25  | add T beyond 60 mm, volume share recovered 0.0001
+  v1flat   add 0.700 / remove 0.900 add T   550.32  add FP   223.22  remove T   100.02  remove TP    22.98  | add T beyond 60 mm, volume share recovered 0.0000
+  K1       both 0.5                 add T   369.38  add FP    62.68  remove T    66.96  remove TP     5.41  | add T beyond 60 mm, volume share recovered 0.0028
+  K1       add 0.250 / remove 0.225 add T   698.16  add FP   220.28  remove T   115.29  remove TP    14.87  | add T beyond 60 mm, volume share recovered 0.0222
+  K2       both 0.5                 add T   482.91  add FP   129.75  remove T    72.07  remove TP     5.74  | add T beyond 60 mm, volume share recovered 0.0003
+  K2       add 0.100 / remove 0.050 add T  1081.58  add FP   838.64  remove T   241.02  remove TP    60.03  | add T beyond 60 mm, volume share recovered 0.0664
+  K1s10k   both 0.5                 add T   286.89  add FP    43.53  remove T    84.10  remove TP    11.39  | add T beyond 60 mm, volume share recovered 0.0000
+  K1s10k   add 0.175 / remove 0.350 add T   725.28  add FP   237.63  remove T   116.77  remove TP    22.44  | add T beyond 60 mm, volume share recovered 0.0011
+  K1s20k   both 0.5                 add T   339.15  add FP    56.87  remove T    48.41  remove TP     1.70  | add T beyond 60 mm, volume share recovered 0.0001
+  K1s20k   add 0.200 / remove 0.175 add T   947.74  add FP   409.10  remove T   114.31  remove TP    16.18  | add T beyond 60 mm, volume share recovered 0.0732
+
+== 5. Add strokes: why T voxels stay below 0.5 (sums over scans; e = pT + pO)
+  v1flat   T voxels 66054: pT>=0.5 0.213 | e>=0.5 0.599 | e<0.5 (total error score low) 0.401 | e>=0.5 but pT<0.5 (error score over, T's own score under) 0.387
+  K1       T voxels 66054: pT>=0.5 0.090 | e>=0.5 0.443 | e<0.5 (total error score low) 0.557 | e>=0.5 but pT<0.5 (error score over, T's own score under) 0.353
+  K2       T voxels 66054: pT>=0.5 0.112 | e>=0.5 0.373 | e<0.5 (total error score low) 0.627 | e>=0.5 but pT<0.5 (error score over, T's own score under) 0.261
+  K1s10k   T voxels 66054: pT>=0.5 0.074 | e>=0.5 0.461 | e<0.5 (total error score low) 0.539 | e>=0.5 but pT<0.5 (error score over, T's own score under) 0.387
+  K1s20k   T voxels 66054: pT>=0.5 0.085 | e>=0.5 0.393 | e<0.5 (total error score low) 0.607 | e>=0.5 but pT<0.5 (error score over, T's own score under) 0.307
+
+== 5b. Ranking quality, threshold-free: AUC of T against editable P, estimate [exact bounds from the bins]
+  v1flat   + pooled 0.7275 [0.4550, 1.0000] | within 30 mm 0.9199 [0.8675, 0.9724] | per-scan median 0.94590 (n=54) | within 30 mm per scan, patient mean 0.9333
+  v1flat   - pooled 0.7795 [0.6094, 0.9495] | within 30 mm 0.7097 [0.6863, 0.7331] | per-scan median 0.99376 (n=31) | within 30 mm per scan, patient mean 0.8659
+  K1       + pooled 0.7217 [0.4434, 1.0000] | within 30 mm 0.8721 [0.7646, 0.9796] | per-scan median 0.87709 (n=54) | within 30 mm per scan, patient mean 0.8901
+  K1       - pooled 0.6698 [0.3609, 0.9787] | within 30 mm 0.7766 [0.7098, 0.8433] | per-scan median 0.99413 (n=31) | within 30 mm per scan, patient mean 0.8730
+  K2       + pooled 0.7129 [0.4259, 1.0000] | within 30 mm 0.8612 [0.7462, 0.9762] | per-scan median 0.87184 (n=54) | within 30 mm per scan, patient mean 0.8918
+  K2       - pooled 0.6916 [0.4077, 0.9756] | within 30 mm 0.8175 [0.7805, 0.8545] | per-scan median 0.99242 (n=31) | within 30 mm per scan, patient mean 0.8668
+  K1s10k   + pooled 0.7106 [0.4212, 1.0000] | within 30 mm 0.9039 [0.8321, 0.9758] | per-scan median 0.94854 (n=54) | within 30 mm per scan, patient mean 0.9211
+  K1s10k   - pooled 0.6848 [0.4126, 0.9570] | within 30 mm 0.7249 [0.7040, 0.7457] | per-scan median 0.99782 (n=31) | within 30 mm per scan, patient mean 0.8607
+  K1s20k   + pooled 0.7643 [0.5286, 1.0000] | within 30 mm 0.9134 [0.8509, 0.9759] | per-scan median 0.94749 (n=54) | within 30 mm per scan, patient mean 0.9289
+  K1s20k   - pooled 0.6656 [0.3547, 0.9765] | within 30 mm 0.7644 [0.6966, 0.8321] | per-scan median 0.99488 (n=31) | within 30 mm per scan, patient mean 0.8639
+  Scans where the bounds do not overlap (within 30 mm): certainly worse / certainly better than v1 flat
+  K1       + scans 54: certainly worse 3, certainly better 4
+  K1       - scans 19: certainly worse 3, certainly better 1
+  K2       + scans 54: certainly worse 4, certainly better 4
+  K2       - scans 19: certainly worse 2, certainly better 0
+  K1s10k   + scans 54: certainly worse 3, certainly better 7
+  K1s10k   - scans 19: certainly worse 4, certainly better 0
+  K1s20k   + scans 54: certainly worse 4, certainly better 5
+  K1s20k   - scans 19: certainly worse 0, certainly better 1
+
+== 6. Boundary and interior of T, and the P ring around T, share at or above 0.5 (add / remove)
+  v1flat   + T_boundary 0.176 (n=53212) | T_interior 0.366 (n=12842) | P_ring 0.050 (n=66315)
+  v1flat   - T_boundary 0.323 (n=15069) | T_interior 0.140 (n=7805) | P_ring 0.318 (n=2595)
+  K1       + T_boundary 0.069 (n=53212) | T_interior 0.176 (n=12842) | P_ring 0.010 (n=66315)
+  K1       - T_boundary 0.123 (n=15069) | T_interior 0.050 (n=7805) | P_ring 0.024 (n=2595)
+  K2       + T_boundary 0.086 (n=53212) | T_interior 0.221 (n=12842) | P_ring 0.018 (n=66315)
+  K2       - T_boundary 0.133 (n=15069) | T_interior 0.049 (n=7805) | P_ring 0.033 (n=2595)
+  K1s10k   + T_boundary 0.054 (n=53212) | T_interior 0.158 (n=12842) | P_ring 0.009 (n=66315)
+  K1s10k   - T_boundary 0.154 (n=15069) | T_interior 0.053 (n=7805) | P_ring 0.061 (n=2595)
+  K1s20k   + T_boundary 0.063 (n=53212) | T_interior 0.177 (n=12842) | P_ring 0.010 (n=66315)
+  K1s20k   - T_boundary 0.090 (n=15069) | T_interior 0.026 (n=7805) | P_ring 0.010 (n=2595)

@@ -1,0 +1,6 @@
+v1flat base_binding=0.1772  base_error=0.2488  base_preserve=0.0444  base_target_dice=0.3634  base_total=0.8115  state_total=0.0174  state_weight=0.2500  total=0.8159
+   weights: {'state_weight': 0.25}
+K1 base_binding=0.2111  base_error=0.3508  base_preserve=0.0246  base_target_dice=0.4201  base_total=0.9944  intent_dice_gain=-0.0529  intent_hard_negative=0.2013  intent_pair_same_scope=0.0686  intent_pair_swap=0.0375  intent_ring_rank=0.1268  state_total=0.0125  state_weight=0.2500  total=1.4072
+   weights: {'state_weight': 0.25}
+K2 base_binding=0.2181  base_error=0.3551  base_preserve=0.0225  base_target_dice=0.4431  base_total=1.0276  intent_dice_gain=-0.0448  intent_hard_negative=0.2102  intent_pair_same_scope=0.0661  intent_pair_swap=0.0403  intent_ring_rank=0.1317  state_total=0.0125  state_weight=0.2500  total=1.4526
+   weights: {'state_weight': 0.25}

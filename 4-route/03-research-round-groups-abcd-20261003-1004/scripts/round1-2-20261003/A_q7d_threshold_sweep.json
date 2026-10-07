@@ -1,0 +1,293 @@
+{
+ "check_max_abs_vs_rollout_at_0.5": 8.636065321627348e-16,
+ "table": {
+  "+ 0.05": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": -3.519241938099694e-05,
+   "vol_recovery": 0.357780342469757,
+   "new_error_per_ml_target": 1.2292814638923526
+  },
+  "+ 0.10": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.009709330932139095,
+   "vol_recovery": 0.31845145051287194,
+   "new_error_per_ml_target": 0.7926918770468351
+  },
+  "+ 0.15": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.015180734035686521,
+   "vol_recovery": 0.2942636419607798,
+   "new_error_per_ml_target": 0.6068719703064303
+  },
+  "+ 0.20": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.017230613172861276,
+   "vol_recovery": 0.2753697762852955,
+   "new_error_per_ml_target": 0.4883251459562949
+  },
+  "+ 0.25": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.02010658537213286,
+   "vol_recovery": 0.2598058684988064,
+   "new_error_per_ml_target": 0.40248611076734153
+  },
+  "+ 0.30": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.021901082262692887,
+   "vol_recovery": 0.24634803175568754,
+   "new_error_per_ml_target": 0.34151688465169755
+  },
+  "+ 0.35": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.02232391082250488,
+   "vol_recovery": 0.23351916736517597,
+   "new_error_per_ml_target": 0.2933700482621928
+  },
+  "+ 0.40": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.02348114983208364,
+   "vol_recovery": 0.22254761033215417,
+   "new_error_per_ml_target": 0.2552460737366593
+  },
+  "+ 0.45": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.02480401468517122,
+   "vol_recovery": 0.21260879446216882,
+   "new_error_per_ml_target": 0.22514624403851563
+  },
+  "+ 0.50": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.025759939769197698,
+   "vol_recovery": 0.20294359513661728,
+   "new_error_per_ml_target": 0.2026836219192006
+  },
+  "+ 0.55": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.026507215321251297,
+   "vol_recovery": 0.19305485263057698,
+   "new_error_per_ml_target": 0.1836937192822878
+  },
+  "+ 0.60": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.027124103620698448,
+   "vol_recovery": 0.18354161910149816,
+   "new_error_per_ml_target": 0.16647797776477305
+  },
+  "+ 0.65": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.028470316994863912,
+   "vol_recovery": 0.1742611053403843,
+   "new_error_per_ml_target": 0.15031923981186707
+  },
+  "+ 0.70": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.029263834096244144,
+   "vol_recovery": 0.16429228461338627,
+   "new_error_per_ml_target": 0.1345963300506146
+  },
+  "+ 0.75": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.02994473931207431,
+   "vol_recovery": 0.15310365787807584,
+   "new_error_per_ml_target": 0.11864517639990418
+  },
+  "+ 0.80": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.03009196078123579,
+   "vol_recovery": 0.14072140127183366,
+   "new_error_per_ml_target": 0.10170217909659217
+  },
+  "+ 0.85": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.031956240261537726,
+   "vol_recovery": 0.12714489608065166,
+   "new_error_per_ml_target": 0.08432273410564926
+  },
+  "+ 0.90": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.03198017981389011,
+   "vol_recovery": 0.1099709800363284,
+   "new_error_per_ml_target": 0.06529176443345862
+  },
+  "+ 0.95": {
+   "patients": 52,
+   "events": 103,
+   "patient_mean_single_step_gain": 0.03050458107535117,
+   "vol_recovery": 0.08415537344244603,
+   "new_error_per_ml_target": 0.042449044427710775
+  },
+  "- 0.05": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.08283740118647277,
+   "vol_recovery": 0.8534054488708679,
+   "new_error_per_ml_target": 2.792962252813668
+  },
+  "- 0.10": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.06385551551146673,
+   "vol_recovery": 0.8037086417893221,
+   "new_error_per_ml_target": 1.9408680509793776
+  },
+  "- 0.15": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.05359164248396996,
+   "vol_recovery": 0.7665243685184691,
+   "new_error_per_ml_target": 1.5610577131850565
+  },
+  "- 0.20": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.04601900826671635,
+   "vol_recovery": 0.7346229432683842,
+   "new_error_per_ml_target": 1.3208829556610384
+  },
+  "- 0.25": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.03852569782605155,
+   "vol_recovery": 0.7057615255907248,
+   "new_error_per_ml_target": 1.1335527404458334
+  },
+  "- 0.30": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.03294578534132427,
+   "vol_recovery": 0.6756524078455685,
+   "new_error_per_ml_target": 0.9897338377957858
+  },
+  "- 0.35": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.029575100344625467,
+   "vol_recovery": 0.6501230434549394,
+   "new_error_per_ml_target": 0.8616498057206923
+  },
+  "- 0.40": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.02690420260650212,
+   "vol_recovery": 0.6244994731136558,
+   "new_error_per_ml_target": 0.7560535594557551
+  },
+  "- 0.45": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.0219375824938156,
+   "vol_recovery": 0.5990900693366467,
+   "new_error_per_ml_target": 0.6704319344423609
+  },
+  "- 0.50": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.017482202050060992,
+   "vol_recovery": 0.5750237342186321,
+   "new_error_per_ml_target": 0.5885640685563609
+  },
+  "- 0.55": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.014751463543135038,
+   "vol_recovery": 0.5492332022721372,
+   "new_error_per_ml_target": 0.5176254721526906
+  },
+  "- 0.60": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.012816376903323214,
+   "vol_recovery": 0.5237279530979454,
+   "new_error_per_ml_target": 0.45868711543588286
+  },
+  "- 0.65": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.010879101864478673,
+   "vol_recovery": 0.4979572318929538,
+   "new_error_per_ml_target": 0.3994154505620214
+  },
+  "- 0.70": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.008602813917865717,
+   "vol_recovery": 0.4683196224187337,
+   "new_error_per_ml_target": 0.3428388719188655
+  },
+  "- 0.75": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.004920200997915005,
+   "vol_recovery": 0.437431648172807,
+   "new_error_per_ml_target": 0.28778147696042955
+  },
+  "- 0.80": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": -0.0027846354472857503,
+   "vol_recovery": 0.40272132472378697,
+   "new_error_per_ml_target": 0.23524052437301296
+  },
+  "- 0.85": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": 0.0010353478370443774,
+   "vol_recovery": 0.3621701571899954,
+   "new_error_per_ml_target": 0.18130280772219118
+  },
+  "- 0.90": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": 0.004354968258166102,
+   "vol_recovery": 0.30635719783697085,
+   "new_error_per_ml_target": 0.12171279648719889
+  },
+  "- 0.95": {
+   "patients": 51,
+   "events": 97,
+   "patient_mean_single_step_gain": 0.011667675793706372,
+   "vol_recovery": 0.22626264094418963,
+   "new_error_per_ml_target": 0.06591507283190001
+  }
+ },
+ "rollout_gain_by_sign_round": {
+  "+ round1": {
+   "patients": 48,
+   "events": 177,
+   "patient_mean_gain": 0.08939428583417253
+  },
+  "+ rounds2to5": {
+   "patients": 52,
+   "events": 593,
+   "patient_mean_gain": 0.03412787531341947
+  },
+  "- round1": {
+   "patients": 35,
+   "events": 78,
+   "patient_mean_gain": 0.03592194692602135
+  },
+  "- rounds2to5": {
+   "patients": 51,
+   "events": 414,
+   "patient_mean_gain": -0.020427466043352976
+  }
+ }
+}

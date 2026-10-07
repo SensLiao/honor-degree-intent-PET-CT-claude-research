@@ -1,0 +1,331 @@
+
+========================================================================================================================
+1. resolved_config.json: is anything different between the runs?
+========================================================================================================================
+  v1 flat  sha256 d847dfd24529c1f960ac1be0a4460f34d96ac8a4745027ec2d2c4074f8cdd971  training_sha256 20d6da7db14606a1...  plan SIRB-1.1-plan-20260917-R2
+  K1       sha256 d847dfd24529c1f960ac1be0a4460f34d96ac8a4745027ec2d2c4074f8cdd971  training_sha256 20d6da7db14606a1...  plan SIRB-1.1-plan-20260917-R2
+  K2       sha256 d847dfd24529c1f960ac1be0a4460f34d96ac8a4745027ec2d2c4074f8cdd971  training_sha256 20d6da7db14606a1...  plan SIRB-1.1-plan-20260917-R2
+  K3       sha256 d847dfd24529c1f960ac1be0a4460f34d96ac8a4745027ec2d2c4074f8cdd971  training_sha256 20d6da7db14606a1...  plan SIRB-1.1-plan-20260917-R2
+  v1 N3    sha256 d847dfd24529c1f960ac1be0a4460f34d96ac8a4745027ec2d2c4074f8cdd971  training_sha256 20d6da7db14606a1...  plan SIRB-1.1-plan-20260917-R2
+  363 leaf fields compared, 0 differ - every run trained on the same resolved config; the arms differ only through the arm spec and the experiment file (below).
+
+  The shared recipe (identical for all runs), as read from resolved_config.json:
+    optimiser                                          AdamW
+    learning rate / schedule                           0.0002 / linear_warmup_1000_then_cosine
+    weight decay / gradient clip norm                  1e-05 / 5.0
+    optimiser steps                                    40000
+    pair units per step (micro-batch x accumulation)   1 x 2
+    one pair unit                                      2 sides (before/after state) x 2 tiles of 96x96x96 research voxels at [3.0, 3.0, 3.0] mm
+    global frame / token grid                          [96, 64, 64] / [8, 8, 8]
+    tile overlap (inference)                           0.5
+    second-tile category draw                          {"other": 0.3, "preserve": 0.3, "target": 0.4}
+    sampled voxels per tile                            all T; O budget 4096; P budget 4096; near/far 0.75/0.25 inside/outside 30.0 mm; hard share of near P 0.5
+    base loss weights                                  {"binding": 1.0, "error": 1.0, "preserve": 0.5, "state": 0.25, "target_dice": 1.0}
+    state loss constants                               margin 0.2, stable weight 0.1, weight 0.25 after 2000 base-only steps and a 2000-step ramp
+    state-pair type mix                                {"bridge": 0.15, "other_error": 0.25, "peripheral": 0.6}
+    state pool                                         {"episodes_per_scan": 20, "partial_repair_fraction_range": [0.3, 1.0], "partial_repair_probability": 0.5, "trajectories_per_scan": 4}
+    induced-pool share when a run reads two pools      0.5
+    augmentation                                       {"ct_shift_range": [-0.02, 0.02], "enabled": true, "flip_lr_probability": 0.5, "pet_scale_range": [0.9, 1.1], "pet_shift_range": [-0.1, 0.1]}
+    stroke distance truncation (v1) / start radius (K) 60.0 mm
+    network sizes                                      {"encoder_widths_proposed": [24, 48, 96, 192], "decoder_feature_dim": 32, "query_dim": 128, "attention_heads": 4, "cross_attention_layers": 2}
+    numerics                                           float32 storage, TF32 profile (superseded_plan_keys: no fp16/bf16)
+    TRAIN split (plan's expected counts)               {"patients": 264, "scans": 407}
+
+========================================================================================================================
+2. Arm spec, plan and the K-only blocks of run_manifest.json, side by side (every field that differs; '-' = absent)
+========================================================================================================================
+
+-- identity.arm_spec: 13 differing field(s); identical in all runs: error_reads_prompt, oracle_error_in_loss, state_change_on, state_loss, use_global, use_p0
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  identity.arm_spec.distance_mode.channels                                                     -  ["stroke_distance_mm", "stroke_...  ["stroke_distance_mm", "stroke_...  ["stroke_distance_mm", "stroke_...                                   -
+  identity.arm_spec.distance_mode.mode                                                         -                         raw_learned                         raw_learned                         raw_learned                                   -
+  identity.arm_spec.edit_contract                                                              -                                true                                true                                true                                   -
+  identity.arm_spec.far_block                                                                  -                                true                                true                                true                                   -
+  identity.arm_spec.head                                           flat_threeway_two_free_logits       flat_threeway_two_free_logits       flat_threeway_two_free_logits       flat_threeway_two_free_logits            factorized_error_binding
+  identity.arm_spec.history_delta.enabled                                                      -                                true                                true                                true                                   -
+  identity.arm_spec.history_delta.flags                                                        -  ["flags_valid", "round_1", "rou...  ["flags_valid", "round_1", "rou...  ["flags_valid", "round_1", "rou...                                   -
+  identity.arm_spec.history_delta.maps                                                         -  ["system_added_last_round", "sy...  ["system_added_last_round", "sy...  ["system_added_last_round", "sy...                                   -
+  identity.arm_spec.loss_alignment.formal_calibration_step                                     -                                1000                                1000                                1000                                   -
+  identity.arm_spec.loss_alignment.mode                                                        -       dice_gain_at_calibration_step       dice_gain_at_calibration_step       dice_gain_at_calibration_step                                   -
+  identity.arm_spec.pair_relations                                                             -                                true                                true                                true                                   -
+  identity.arm_spec.pool_mix                                                                   -                        gap_weighted                        gap_weighted                        gap_weighted                                   -
+  identity.arm_spec.trunk_width_scale                                                          -                                   -                                   -                                 1.5                                   -
+
+-- plan: 1 differing field(s); identical in all runs: accumulation, base_lr, checkpoint_every, clip_norm, continuation, log_every, milestone_every, seed, state_base_warmup, state_final_weight, state_ramp, total_steps, warmup_steps, weight_decay
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  plan.arm_id                                                                           N1_STATE                         INTENT_FULL                      INTENT_REFRESH                         INTENT_WIDE                                  N3
+
+-- data_recipe: 6 differing field(s); identical in all runs: none
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  data_recipe.distance_mode                                                                    -                         raw_learned                         raw_learned                         raw_learned                                   -
+  data_recipe.edit_contract                                                                    -                                true                                true                                true                                   -
+  data_recipe.far_block                                                                        -                                true                                true                                true                                   -
+  data_recipe.history_delta                                                                    -                                true                                true                                true                                   -
+  data_recipe.pair_relations                                                                   -                                true                                true                                true                                   -
+  data_recipe.pool_mix                                                                         -                        gap_weighted                        gap_weighted                        gap_weighted                                   -
+
+-- experiment.document.switches: 10 differing field(s); identical in all runs: none
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  experiment.document.switches.distance_mode                                                   -                         raw_learned                         raw_learned                         raw_learned                                   -
+  experiment.document.switches.edit_contract                                                   -                                true                                true                                true                                   -
+  experiment.document.switches.far_block                                                       -                                true                                true                                true                                   -
+  experiment.document.switches.head                                                            -       flat_threeway_two_free_logits       flat_threeway_two_free_logits       flat_threeway_two_free_logits                                   -
+  experiment.document.switches.history_delta                                                   -                                true                                true                                true                                   -
+  experiment.document.switches.loss_alignment                                                  -       dice_gain_at_calibration_step       dice_gain_at_calibration_step       dice_gain_at_calibration_step                                   -
+  experiment.document.switches.pair_relations                                                  -                                true                                true                                true                                   -
+  experiment.document.switches.pool_mix                                                        -                        gap_weighted                        gap_weighted                        gap_weighted                                   -
+  experiment.document.switches.state_loss                                                      -                                true                                true                                true                                   -
+  experiment.document.switches.trunk_width_scale                                               -                                   -                                   -                                 1.5                                   -
+
+-- experiment.document.refresh: 2 differing field(s); identical in all runs: none
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  experiment.document.refresh.at_steps                                                         -                                   -                      [10000, 25000]                                   -                                   -
+  experiment.document.refresh.new_state_share                                                  -                                   -                                 0.5                                   -                                   -
+
+-- experiment.document.init: 1 differing field(s); identical in all runs: none
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  experiment.document.init                                                                     -                             scratch                             scratch                             scratch                                   -
+
+-- experiment.document.reads_state_pool: 1 differing field(s); identical in all runs: none
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  experiment.document.reads_state_pool                                                         -                                true                                true                                true                                   -
+
+-- loss_alignment: 23 differing field(s); identical in all runs: none
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  loss_alignment.calibrated_at_step                                                            -                                1000                                1000                                1000                                   -
+  loss_alignment.calibrated_term                                                               -                           dice_gain                           dice_gain                           dice_gain                                   -
+  loss_alignment.calibration_step                                                              -                                1000                                1000                                1000                                   -
+  loss_alignment.enabled                                                                       -                                true                                true                                true                                   -
+  loss_alignment.formal_calibration_step                                                       -                                1000                                1000                                1000                                   -
+  loss_alignment.inherited_unchanged.stable_weight                                             -                                 0.1                                 0.1                                 0.1                                   -
+  loss_alignment.inherited_unchanged.state_margin                                              -                                 0.2                                 0.2                                 0.2                                   -
+  loss_alignment.inherited_unchanged.state_weight                                              -                                0.25                                0.25                                0.25                                   -
+  loss_alignment.inherited_unchanged.status                                                    -  inherited from the v1 recipe, n...  inherited from the v1 recipe, n...  inherited from the v1 recipe, n...                                   -
+  loss_alignment.mode                                                                          -       dice_gain_at_calibration_step       dice_gain_at_calibration_step       dice_gain_at_calibration_step                                   -
+  loss_alignment.multipliers.dice_gain                                                         -                 0.46292146252998073                  0.5925754145773268                 0.29906553842468725                                   -
+  loss_alignment.multipliers.hard_negative                                                     -                                 1.0                                 1.0                                 1.0                                   -
+  loss_alignment.multipliers.pair_same_scope                                                   -                                 1.0                                 1.0                                 1.0                                   -
+  loss_alignment.multipliers.pair_swap                                                         -                                 1.0                                 1.0                                 1.0                                   -
+  loss_alignment.multipliers.ring_rank                                                         -                                 1.0                                 1.0                                 1.0                                   -
+  loss_alignment.reference                                                                     -  mean over the units of plan wei...  mean over the units of plan wei...  mean over the units of plan wei...                                   -
+  loss_alignment.reference_gradient_norm                                                       -                  2.6340477019548416                   2.911443203687668                   2.158697947859764                                   -
+  loss_alignment.reference_term                                                                -                    base_target_dice                    base_target_dice                    base_target_dice                                   -
+  loss_alignment.state                                                                         -                          calibrated                          calibrated                          calibrated                                   -
+  loss_alignment.term_gradient_norms.dice_gain                                                 -                  5.6900530979037285                   4.913202829658985                   7.218143418431282                                   -
+  loss_alignment.units.dice_gain                                                               -                        [0, 1, 2, 3]                        [0, 1, 2, 3]                        [0, 1, 2, 3]                                   -
+  loss_alignment.units_examined                                                                -                                   4                                   4                                   4                                   -
+  loss_alignment.units_per_term                                                                -                                   4                                   4                                   4                                   -
+
+-- schedule: 3 differing field(s); identical in all runs: none
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  schedule.calibration_step                                                                    -                                1000                                1000                                1000                                   -
+  schedule.new_state_share                                                                     -                                null                                 0.5                                null                                   -
+  schedule.refresh_steps                                                                       -                                  []                      [10000, 25000]                                  []                                   -
+
+-- refresh: 16 differing field(s); identical in all runs: none
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  refresh.new_state_share                                                                      -                                   -                                 0.5                                   -                                   -
+  refresh.pools[0].first_micro_index                                                           -                                   -                               20000                                   -                                   -
+  refresh.pools[0].n_pairs                                                                     -                                   -                                1844                                   -                                   -
+  refresh.pools[0].pairs_sha256                                                                -                                   -  516718b44f3a9f7ac6586f69b091648...                                   -                                   -
+  refresh.pools[0].patient_half                                                                -                                   -                                   0                                   -                                   -
+  refresh.pools[0].pool_dir                                                                    -                                   -  /share/rlia4081/honor_degree/si...                                   -                                   -
+  refresh.pools[0].refresh_index                                                               -                                   -                                   0                                   -                                   -
+  refresh.pools[0].step                                                                        -                                   -                               10000                                   -                                   -
+  refresh.pools[1].first_micro_index                                                           -                                   -                               50000                                   -                                   -
+  refresh.pools[1].n_pairs                                                                     -                                   -                                1430                                   -                                   -
+  refresh.pools[1].pairs_sha256                                                                -                                   -  c0fb7c6eb0523b99c8b161c3d0b57a6...                                   -                                   -
+  refresh.pools[1].patient_half                                                                -                                   -                                   1                                   -                                   -
+  refresh.pools[1].pool_dir                                                                    -                                   -  /share/rlia4081/honor_degree/si...                                   -                                   -
+  refresh.pools[1].refresh_index                                                               -                                   -                                   1                                   -                                   -
+  refresh.pools[1].step                                                                        -                                   -                               25000                                   -                                   -
+  refresh.refresh_steps                                                                        -                                   -                      [10000, 25000]                                   -                                   -
+
+-- pools: 3 differing field(s); identical in all runs: none
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  pools.on_policy_pairs                                                                        0                                9831                                9831                                9831                                   0
+  pools.pair_manifest_sources                                 ["2b65638ff0fc91c25ddc05ad6415b...  ["2b65638ff0fc91c25ddc05ad6415b...  ["2b65638ff0fc91c25ddc05ad6415b...  ["2b65638ff0fc91c25ddc05ad6415b...  ["2b65638ff0fc91c25ddc05ad6415b...
+  pools.total_pairs                                                                        17872                               27703                               27703                               27703                               17872
+
+-- parameters: 6 differing field(s); identical in all runs: inactive_parameters
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  parameters.active_parameters                                                           6651002                             6652475                             6652475                            14117459                             6630266
+  parameters.arm                                                                        N1_STATE                         INTENT_FULL                      INTENT_REFRESH                         INTENT_WIDE                                  N3
+  parameters.head_kind                                             flat_threeway_two_free_logits       flat_threeway_two_free_logits       flat_threeway_two_free_logits       flat_threeway_two_free_logits            factorized_error_binding
+  parameters.head_parameters                                                               43906                               45379                               45379                               45379                               23170
+  parameters.total_parameters                                                            6651002                             6652475                             6652475                            14117459                             6630266
+  parameters.trunk_parameters                                                            6607096                             6607096                             6607096                            14072080                             6607096
+
+-- exposure: 6 differing field(s); identical in all runs: none
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  exposure.classification_voxels                                                      1117466066                          1167944544                          1182683503                                   -                          1117466066
+  exposure.optimizer_steps                                                                 40000                               40000                               40000                                   -                               40000
+  exposure.pair_count                                                                      80000                               80000                               80000                                   -                               80000
+  exposure.state_forward_count                                                            160000                              160000                              160000                                   -                              160000
+  exposure.tile_count                                                                     320000                              320000                              320000                                   -                              320000
+  exposure.valid_voxels                                                             174367147735                        157541964730                        169848056428                                   -                        174367147735
+
+-- numerics: 0 differing field(s); identical in all runs: allow_tf32_cudnn, allow_tf32_matmul, cudnn_benchmark, profile
+
+-- identity.pair_manifest_sha256: 1 differing field(s); identical in all runs: none
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  identity.pair_manifest_sha256                               2b65638ff0fc91c25ddc05ad6415bdc...  8ec4b9165587e06c2f6c9f5a24054ce...  8ec4b9165587e06c2f6c9f5a24054ce...  8ec4b9165587e06c2f6c9f5a24054ce...  2b65638ff0fc91c25ddc05ad6415bdc...
+
+-- identity.seed: 0 differing field(s); identical in all runs: identity.seed
+
+-- identity.sequence_offset: 0 differing field(s); identical in all runs: identity.sequence_offset
+
+-- identity.total_steps: 0 differing field(s); identical in all runs: identity.total_steps
+
+-- matched_input_signature: 4 differing field(s); identical in all runs: distance_feature_definition, grid_affines, occupancy_rule, optimizer_step_count, patient_manifest_hash, physical_coordinate_definition, query_attention_spec, study_normalization, tile_policy
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  matched_input_signature.current_prompt_hash                 81fc9d25a2207a3b24e338cd6005e5a...  d0c6e1447d99480cc8c7ab4d20a2951...  5eddbc0a2407debb4555742becff639...  d0c6e1447d99480cc8c7ab4d20a2951...  81fc9d25a2207a3b24e338cd6005e5a...
+  matched_input_signature.history_prompt_hash                 e35ee4d267786a7bb4d48bbd0316982...  e921f680999439aa5115996e78ed508...  eefde75d93a48a47091b770a915b585...  e921f680999439aa5115996e78ed508...  e35ee4d267786a7bb4d48bbd0316982...
+  matched_input_signature.pair_manifest_hash                  2b65638ff0fc91c25ddc05ad6415bdc...  8ec4b9165587e06c2f6c9f5a24054ce...  8ec4b9165587e06c2f6c9f5a24054ce...  8ec4b9165587e06c2f6c9f5a24054ce...  2b65638ff0fc91c25ddc05ad6415bdc...
+  matched_input_signature.state_manifest_hash                 de476cf0df462e67478ead59d957b4f...  39d456dcf842f97b61ba2be77a80c14...  39d456dcf842f97b61ba2be77a80c14...  39d456dcf842f97b61ba2be77a80c14...  de476cf0df462e67478ead59d957b4f...
+
+-- activation_checkpointing: 1 differing field(s); identical in all runs: none
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  activation_checkpointing                                                                 false                                true                                true                               false                               false
+
+-- final_checkpoint: 0 differing field(s); identical in all runs: final_checkpoint
+
+-- status: 1 differing field(s); identical in all runs: none
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  status                                                                               completed                           completed                           completed                             running                           completed
+
+-- wall_hours_total: 1 differing field(s); identical in all runs: none
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  wall_hours_total                                                            24.792667826546563                  19.922421479622525                  13.439834895796245                                   -                  27.898493373327785
+
+-- training_sha256: 0 differing field(s); identical in all runs: training_sha256
+
+-- scientific_sha256: 0 differing field(s); identical in all runs: scientific_sha256
+
+========================================================================================================================
+3. Every other differing field of run_manifest.json (attempts summarised in section 4; per-file code hashes in 5)
+========================================================================================================================
+  run ids: v1 flat = PETCT-EDITOR-SIRB-N1_STATE-S3407-TRAIN-20260927-R1; K1 = PETCT-EDITOR-SIRB-INTENT_FULL-S3407-TRAIN-20261006-R1; K2 = PETCT-EDITOR-SIRB-INTENT_REFRESH-S3407-TRAIN-20261006-R1; K3 = PETCT-EDITOR-SIRB-INTENT_WIDE-S3407-TRAIN-20261006-R1; v1 N3 = PETCT-EDITOR-SIRB-N3-S3407-TRAIN-20260926-R1
+  field                                                                                  v1 flat                                  K1                                  K2                                  K3                               v1 N3
+  error                                                                                     null                                null                                null                                   -                                null
+  experiment.document.arm_id                                                                   -                         INTENT_FULL                      INTENT_REFRESH                         INTENT_WIDE                                   -
+  experiment.document.description                                                              -  K1 intent full: the v1 flat rec...  K2 intent refresh: K1 plus two ...  K3 intent wide: K1 with the sta...                                   -
+  experiment.document.experiment                                                               -        editor-sirb-intentfull-train     editor-sirb-intentrefresh-train        editor-sirb-intentwide-train                                   -
+  experiment.document.provenance                                                               -  D-2026-10-05-01 (every candidat...  D-2026-10-05-01 and D-2026-10-0...  D-2026-10-05-01, D-2026-10-05-0...                                   -
+  experiment.source                                                                            -  configs/sirb/experiments/editor...  configs/sirb/experiments/editor...  configs/sirb/experiments/editor...                                   -
+  failed_at_step                                                                            null                                null                                null                                   -                                null
+  identity.arm_id                                                                       N1_STATE                         INTENT_FULL                      INTENT_REFRESH                         INTENT_WIDE                                  N3
+  optimizer_steps                                                                          40000                               40000                               40000                                   -                               40000
+  probe.unit_tensor_hash                                      0425171765187aa1a61f4117ecf2359...  b506886358e4a9a6f0d0b8d2b2a3dfd...  c504acc41c4232ca576b1bd748deca3...  b506886358e4a9a6f0d0b8d2b2a3dfd...  0425171765187aa1a61f4117ecf2359...
+
+========================================================================================================================
+4. Attempts: machine, software, loader and time
+========================================================================================================================
+  v1 flat  attempt 0: status completed, resumed from None, steps 40000, wall 24.79 h, host BDAV-Z390-3090, GPU NVIDIA GeForce RTX 3090, torch 2.6.0+cu124, CUDA 12.4, workers 4, activation checkpointing False, code d35ac9a5f86f, 2026-09-27T06:21:38+00:00 -> 2026-09-28T07:09:14+00:00
+  K1       attempt 0: status completed, resumed from None, steps 40000, wall 19.92 h, host BDAV-Z390-3090, GPU NVIDIA GeForce RTX 3090, torch 2.6.0+cu124, CUDA 12.4, workers 6, activation checkpointing True, code ccd93c95419b, 2026-10-05T14:45:22+00:00 -> 2026-10-06T10:40:45+00:00
+  K2       attempt 0: status refresh_requested, resumed from None, steps 10000, wall 3.93 h, host gpu1-jinman-0, GPU NVIDIA GeForce RTX 5090, torch 2.7.1+cu128, CUDA 12.8, workers 8, activation checkpointing True, code 45c09036fde3, 2026-10-05T14:55:57+00:00 -> 2026-10-05T18:52:00+00:00
+  K2       attempt 1: status refresh_requested, resumed from 10000, steps 15000, wall 5.66 h, host gpu1-jinman-0, GPU NVIDIA GeForce RTX 5090, torch 2.7.1+cu128, CUDA 12.8, workers 8, activation checkpointing True, code 45c09036fde3, 2026-10-05T22:23:25+00:00 -> 2026-10-06T04:03:01+00:00
+  K2       attempt 2: status completed, resumed from 25000, steps 15000, wall 3.85 h, host gpu1-jinman-0, GPU NVIDIA GeForce RTX 5090, torch 2.7.1+cu128, CUDA 12.8, workers 8, activation checkpointing True, code 45c09036fde3, 2026-10-06T06:12:30+00:00 -> 2026-10-06T10:03:22+00:00
+  K3       attempt 0: status running, resumed from None, steps None, wall None h, host BDAV-X99-A6000, GPU NVIDIA RTX A6000, torch 2.6.0+cu124, CUDA 12.4, workers 4, activation checkpointing False, code ccd93c95419b, 2026-10-05T14:48:40+00:00 -> None
+  v1 N3    attempt 0: status completed, resumed from None, steps 40000, wall 27.9 h, host BDAV-Z390-3090, GPU NVIDIA GeForce RTX 3090, torch 2.6.0+cu124, CUDA 12.4, workers 4, activation checkpointing False, code d35ac9a5f86f, 2026-09-26T02:25:38+00:00 -> 2026-09-27T06:19:34+00:00
+
+========================================================================================================================
+5. Code version: per-file sha256 recorded at training time (file identity only)
+========================================================================================================================
+  runs whose manifest records per-file hashes: v1 flat, K1, K2, K3, v1 N3; whole-code sha256 for the others in section 4
+  46 files recorded; files whose hash differs between v1 flat, K1, K2, K3, v1 N3: ['scripts/common/petct_locked_test_exact_grant.py', 'scripts/common/petct_sirb_2sicr_legacy_empty_reference_compatibility.py', 'scripts/common/petct_sirb_baselines.py', 'scripts/common/petct_sirb_checkpoint.py', 'scripts/common/petct_sirb_config.py', 'scripts/common/petct_sirb_dataset.py', 'scripts/common/petct_sirb_episodes.py', 'scripts/common/petct_sirb_evaluation.py', 'scripts/common/petct_sirb_executor.py', 'scripts/common/petct_sirb_experiments.py', 'scripts/common/petct_sirb_gradient_cosine.py', 'scripts/common/petct_sirb_inference.py', 'scripts/common/petct_sirb_inputs.py', 'scripts/common/petct_sirb_intent_candidates.py', 'scripts/common/petct_sirb_intent_executor.py', 'scripts/common/petct_sirb_intent_labels.py', 'scripts/common/petct_sirb_intent_scorer.py', 'scripts/common/petct_sirb_io.py', 'scripts/common/petct_sirb_losses.py', 'scripts/common/petct_sirb_network.py', 'scripts/common/petct_sirb_plots.py', 'scripts/common/petct_sirb_prompt.py', 'scripts/common/petct_sirb_refresh.py', 'scripts/common/petct_sirb_registry.py', 'scripts/common/petct_sirb_robot.py', 'scripts/common/petct_sirb_rollout.py', 'scripts/common/petct_sirb_stateselect.py', 'scripts/common/petct_sirb_statistics.py', 'scripts/common/petct_sirb_strata.py', 'scripts/common/petct_sirb_training.py', 'scripts/common/petct_sirb_trajectory_bank.py', 'scripts/editor/train_petct_editor_sirb.py']
+    scripts/common/petct_locked_test_exact_grant.py: v1 flat None, K1 7de386d6c3c3, K2 7de386d6c3c3, K3 7de386d6c3c3, v1 N3 None
+    scripts/common/petct_sirb_2sicr_legacy_empty_reference_compatibility.py: v1 flat None, K1 ec6a7336ddd3, K2 ec6a7336ddd3, K3 ec6a7336ddd3, v1 N3 None
+    scripts/common/petct_sirb_baselines.py: v1 flat 52fca3881148, K1 2bfa19dbd0aa, K2 2bfa19dbd0aa, K3 2bfa19dbd0aa, v1 N3 52fca3881148
+    scripts/common/petct_sirb_checkpoint.py: v1 flat 4434e98c63f6, K1 6bd059d45225, K2 6bd059d45225, K3 6bd059d45225, v1 N3 4434e98c63f6
+    scripts/common/petct_sirb_config.py: v1 flat 1c33ef0d25e3, K1 6e5b506c381f, K2 6e5b506c381f, K3 6e5b506c381f, v1 N3 1c33ef0d25e3
+    scripts/common/petct_sirb_dataset.py: v1 flat 84ae9e056d6f, K1 2a0b7bece4bb, K2 2a0b7bece4bb, K3 2a0b7bece4bb, v1 N3 84ae9e056d6f
+    scripts/common/petct_sirb_episodes.py: v1 flat 808aca00dd85, K1 6cd3a2556c18, K2 6cd3a2556c18, K3 6cd3a2556c18, v1 N3 808aca00dd85
+    scripts/common/petct_sirb_evaluation.py: v1 flat 1fd988e1ae58, K1 94f309cd1fc8, K2 94f309cd1fc8, K3 94f309cd1fc8, v1 N3 1fd988e1ae58
+    scripts/common/petct_sirb_executor.py: v1 flat 5a4bf9cd6c1d, K1 5c546511e387, K2 5c546511e387, K3 5c546511e387, v1 N3 5a4bf9cd6c1d
+    scripts/common/petct_sirb_experiments.py: v1 flat None, K1 2cc1043abcb1, K2 2cc1043abcb1, K3 2cc1043abcb1, v1 N3 None
+    scripts/common/petct_sirb_gradient_cosine.py: v1 flat None, K1 09aa419d95e4, K2 09aa419d95e4, K3 09aa419d95e4, v1 N3 None
+    scripts/common/petct_sirb_inference.py: v1 flat 10dcde00c6d9, K1 cc4988c88763, K2 cc4988c88763, K3 cc4988c88763, v1 N3 10dcde00c6d9
+    scripts/common/petct_sirb_inputs.py: v1 flat 227b6c4d9bf2, K1 4eca44b684d2, K2 4eca44b684d2, K3 4eca44b684d2, v1 N3 227b6c4d9bf2
+    scripts/common/petct_sirb_intent_candidates.py: v1 flat None, K1 adaf3fecace1, K2 adaf3fecace1, K3 adaf3fecace1, v1 N3 None
+    scripts/common/petct_sirb_intent_executor.py: v1 flat None, K1 bf78eb9f4d21, K2 bf78eb9f4d21, K3 bf78eb9f4d21, v1 N3 None
+    scripts/common/petct_sirb_intent_labels.py: v1 flat None, K1 425f47aa9f25, K2 425f47aa9f25, K3 425f47aa9f25, v1 N3 None
+    scripts/common/petct_sirb_intent_scorer.py: v1 flat None, K1 f6172a4dac0e, K2 f6172a4dac0e, K3 f6172a4dac0e, v1 N3 None
+    scripts/common/petct_sirb_io.py: v1 flat 3bd38c45ecf9, K1 ecbd71c88917, K2 ecbd71c88917, K3 ecbd71c88917, v1 N3 3bd38c45ecf9
+    scripts/common/petct_sirb_losses.py: v1 flat a95fad431c71, K1 097e31bca282, K2 097e31bca282, K3 097e31bca282, v1 N3 a95fad431c71
+    scripts/common/petct_sirb_network.py: v1 flat 4c2c8e915c23, K1 686e8bfc1553, K2 686e8bfc1553, K3 686e8bfc1553, v1 N3 4c2c8e915c23
+    scripts/common/petct_sirb_plots.py: v1 flat fbebc7fafd33, K1 fe0a5dcc5bba, K2 fe0a5dcc5bba, K3 fe0a5dcc5bba, v1 N3 fbebc7fafd33
+    scripts/common/petct_sirb_prompt.py: v1 flat 813468c2733f, K1 0408cf7b4003, K2 0408cf7b4003, K3 0408cf7b4003, v1 N3 813468c2733f
+    scripts/common/petct_sirb_refresh.py: v1 flat None, K1 cc6fa852be98, K2 cc6fa852be98, K3 cc6fa852be98, v1 N3 None
+    scripts/common/petct_sirb_registry.py: v1 flat 6a5cea08ccc9, K1 0c4c8b6e91ef, K2 0c4c8b6e91ef, K3 0c4c8b6e91ef, v1 N3 6a5cea08ccc9
+    scripts/common/petct_sirb_robot.py: v1 flat 8dc71a15c3b6, K1 93ebf927ad5b, K2 93ebf927ad5b, K3 93ebf927ad5b, v1 N3 8dc71a15c3b6
+    scripts/common/petct_sirb_rollout.py: v1 flat 9f6cc7567e27, K1 09038163d0ee, K2 09038163d0ee, K3 09038163d0ee, v1 N3 9f6cc7567e27
+    scripts/common/petct_sirb_stateselect.py: v1 flat 98fe4533c097, K1 cd1553465a8f, K2 cd1553465a8f, K3 cd1553465a8f, v1 N3 98fe4533c097
+    scripts/common/petct_sirb_statistics.py: v1 flat 34d620410282, K1 d88aa4dab774, K2 d88aa4dab774, K3 d88aa4dab774, v1 N3 34d620410282
+    scripts/common/petct_sirb_strata.py: v1 flat None, K1 50d454d8f392, K2 50d454d8f392, K3 50d454d8f392, v1 N3 None
+    scripts/common/petct_sirb_training.py: v1 flat 2c09c1330b86, K1 c7b23e3f47bd, K2 27ba4774a85c, K3 c7b23e3f47bd, v1 N3 2c09c1330b86
+    scripts/common/petct_sirb_trajectory_bank.py: v1 flat None, K1 490a1f778223, K2 490a1f778223, K3 490a1f778223, v1 N3 None
+    scripts/editor/train_petct_editor_sirb.py: v1 flat 8223fa026946, K1 460c540946be, K2 460c540946be, K3 460c540946be, v1 N3 8223fa026946
+  local code tree scripts/common/petct_sirb_training.py      = 27ba4774a85c; equal to the copy recorded by: K2
+  local code tree scripts/common/petct_sirb_network.py       = 686e8bfc1553; equal to the copy recorded by: K1, K2, K3
+  local code tree scripts/common/petct_sirb_losses.py        = 097e31bca282; equal to the copy recorded by: K1, K2, K3
+  local code tree scripts/common/petct_sirb_dataset.py       = 2a0b7bece4bb; equal to the copy recorded by: K1, K2, K3
+
+========================================================================================================================
+6. Code constants (not in the resolved config) that shape the K recipe, read from the source text
+========================================================================================================================
+  LOSS_ALIGNMENT_CALIBRATION_STEP    = 1000       (scripts/common/petct_sirb_registry.py)
+  TERM_GRAD_NORM_EVERY_STEPS         = 200        (scripts/common/petct_sirb_registry.py)
+  CONNECTIVITY_MAIN                  = 18         (scripts/common/petct_sirb_registry.py)
+  ALIGNMENT_UNITS_PER_TERM           = 4          (scripts/common/petct_sirb_training.py)
+  ALIGNMENT_MAX_UNITS                = 64         (scripts/common/petct_sirb_training.py)
+  RELATION_STROKE_ATTEMPTS           = 3          (scripts/common/petct_sirb_dataset.py)
+  DISTINCT_TILE_ATTEMPTS             = 4          (scripts/common/petct_sirb_dataset.py)
+  B1 hard negative: k = |T| of the state, the O/P voxels with the highest current pT, loss -log(1 - pT), multiplier 1 (petct_sirb_losses.hard_negative_loss); B1 ring rank: 18-connected T/P neighbour pairs, softplus(s_P - s_T), multiplier 1; B1 soft Dice gain: multiplier set once at step 1000 from 4 units.
+
+========================================================================================================================
+7. Training exposure: units seen, where they came from, and how often each scan / pair was seen
+========================================================================================================================
+  TRAIN split: 264 patients, 407 scans (plan's expected counts in resolved_config).
+  Offline pool: vault wiki/tasks/petct-t076-sirb-episode-pair-generation.md: TRAIN main corpus (09-20) = 407 scans, 7,414 episodes, 17,872 pairs, sha 2b65638f... (the offline pool every run reads).
+  Distinct patients/scans of the induced (on-policy) pool and of K2's refresh pools: not in the local records (UNVERIFIED); the manifests give only pair counts.
+
+  v1 flat (N1_STATE), exposure from run_manifest:
+    optimiser steps 40,000, pair units 80,000, state forwards 160,000, tiles 320,000, valid voxels 1.744e+11, classification voxels 1.117e+09
+    pools: 17872 pairs, of which induced 0 (manifest sources ['2b65638f'])
+    units by source (summed log counts): offline 80,000, induced 0 (gap-weighted 0, refreshed 0, induced natural draw 0)
+    averages: 196.6 units per TRAIN scan, 303.0 per TRAIN patient (patients are drawn uniformly, then a scan, then an episode); offline draws per offline pair 4.48
+
+  K1 (INTENT_FULL), exposure from run_manifest:
+    optimiser steps 40,000, pair units 80,000, state forwards 160,000, tiles 320,000, valid voxels 1.575e+11, classification voxels 1.168e+09
+    pools: 27703 pairs, of which induced 9831 (manifest sources ['2b65638f', '39a4902d'])
+    units by source (summed log counts): offline 39,838, induced 40,162 (gap-weighted 20,140, refreshed 0, induced natural draw 20,022)
+    units with a relation stroke: 78,765 (98.5%: swap 36,034, same target 42,731) -> about 2.98 supervised stroke-states per unit (v1: 2)
+    far second block placed in 103 of 80,000 units (0.13%)
+    averages: 196.6 units per TRAIN scan, 303.0 per TRAIN patient (patients are drawn uniformly, then a scan, then an episode); offline draws per offline pair 2.23; induced draws per induced pair 4.09
+
+  K2 (INTENT_REFRESH), exposure from run_manifest:
+    optimiser steps 40,000, pair units 80,000, state forwards 160,000, tiles 320,000, valid voxels 1.698e+11, classification voxels 1.183e+09
+    pools: 27703 pairs, of which induced 9831 (manifest sources ['2b65638f', '39a4902d'])
+    units by source (summed log counts): offline 39,838, induced 40,162 (gap-weighted 12,495, refreshed 15,149, induced natural draw 12,518)
+    units with a relation stroke: 78,939 (98.7%: swap 36,485, same target 42,454) -> about 2.99 supervised stroke-states per unit (v1: 2)
+    far second block placed in 114 of 80,000 units (0.14%)
+    averages: 196.6 units per TRAIN scan, 303.0 per TRAIN patient (patients are drawn uniformly, then a scan, then an episode); offline draws per offline pair 2.23; induced draws per induced pair 2.54
+    refresh at step 10000: 1844 pairs from TRAIN patient half 0, drawn from micro index 20,000
+    refresh at step 25000: 1430 pairs from TRAIN patient half 1, drawn from micro index 50,000
+
+  K3 (INTENT_WIDE), exposure from last log row (step 32240):
+    optimiser steps 32,240, pair units 64,480, state forwards 128,960, tiles 257,920, valid voxels 1.268e+11, classification voxels 9.341e+08
+    pools: 27703 pairs, of which induced 9831 (manifest sources ['2b65638f', '39a4902d'])
+    units by source (summed log counts): offline 32,100, induced 32,380 (gap-weighted 16,203, refreshed 0, induced natural draw 16,177)
+    units with a relation stroke: 63,483 (98.5%: swap 29,051, same target 34,432) -> about 2.98 supervised stroke-states per unit (v1: 2)
+    far second block placed in 82 of 64,480 units (0.13%)
+    averages: 158.4 units per TRAIN scan, 244.2 per TRAIN patient (patients are drawn uniformly, then a scan, then an episode); offline draws per offline pair 1.80; induced draws per induced pair 3.29
+
+  v1 N3 (N3), exposure from run_manifest:
+    optimiser steps 40,000, pair units 80,000, state forwards 160,000, tiles 320,000, valid voxels 1.744e+11, classification voxels 1.117e+09
+    pools: 17872 pairs, of which induced 0 (manifest sources ['2b65638f'])
+    units by source (summed log counts): offline 80,000, induced 0 (gap-weighted 0, refreshed 0, induced natural draw 0)
+    averages: 196.6 units per TRAIN scan, 303.0 per TRAIN patient (patients are drawn uniformly, then a scan, then an episode); offline draws per offline pair 4.48
+
+Done.

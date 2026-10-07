@@ -1,0 +1,158 @@
+{
+ "samestate-trajectory | N1_STATE-s3407 | all": {
+  "remove_events": 197,
+  "remove_touching_a_predicted_component": 197,
+  "remove_touched_component_contains_true_lesion": 159,
+  "remove_new_error_ml": 1348.0024403293514,
+  "remove_new_error_inside_touched_ml": 1285.6927067480867,
+  "remove_new_error_outside_touched_ml": 62.30973358126445,
+  "remove_inside_share": 0.9537762457121065,
+  "remove_by_component_type": {
+   "touched component contains true lesion": {
+    "n": 159,
+    "new_error_ml": 1347.7867970334362,
+    "target_recovered": 0.5991717041705907,
+    "new_error_per_ml_target": 0.7795068127103602
+   },
+   "touched component is pure FP": {
+    "n": 38,
+    "new_error_ml": 0.21564329591509881,
+    "target_recovered": 0.17526305251505678,
+    "new_error_per_ml_target": 0.00020940310556668854
+   }
+  },
+  "add_events": 200,
+  "add_new_error_per_ml_target": 0.15669641988011881,
+  "remove_new_error_per_ml_target": 0.488614708508997
+ },
+ "samestate-trajectory | N1_STATE-s3407 | own": {
+  "remove_events": 97,
+  "remove_touching_a_predicted_component": 97,
+  "remove_touched_component_contains_true_lesion": 80,
+  "remove_new_error_ml": 621.3609496045065,
+  "remove_new_error_inside_touched_ml": 594.3075966164513,
+  "remove_new_error_outside_touched_ml": 27.053352988055202,
+  "remove_inside_share": 0.9564611309975716,
+  "remove_by_component_type": {
+   "touched component contains true lesion": {
+    "n": 80,
+    "new_error_ml": 621.2282460377895,
+    "target_recovered": 0.6073393958421192,
+    "new_error_per_ml_target": 0.676927101830952
+   },
+   "touched component is pure FP": {
+    "n": 17,
+    "new_error_ml": 0.13270356671698388,
+    "target_recovered": 0.36012885768661307,
+    "new_error_per_ml_target": 0.000961581973297577
+   }
+  },
+  "add_events": 103,
+  "add_new_error_per_ml_target": 0.2026836219192006,
+  "remove_new_error_per_ml_target": 0.5885640685563609
+ },
+ "samestate-trajectory | N3-s3407 | all": {
+  "remove_events": 197,
+  "remove_touching_a_predicted_component": 197,
+  "remove_touched_component_contains_true_lesion": 159,
+  "remove_new_error_ml": 754.767331689952,
+  "remove_new_error_inside_touched_ml": 714.1826864616675,
+  "remove_new_error_outside_touched_ml": 40.58464522828469,
+  "remove_inside_share": 0.9462289323818321,
+  "remove_by_component_type": {
+   "touched component contains true lesion": {
+    "n": 159,
+    "new_error_ml": 753.8881705604518,
+    "target_recovered": 0.4144427992704075,
+    "new_error_per_ml_target": 0.436019232616836
+   },
+   "touched component is pure FP": {
+    "n": 38,
+    "new_error_ml": 0.8791611295000181,
+    "target_recovered": 0.08686704875858939,
+    "new_error_per_ml_target": 0.0008537203534641916
+   }
+  },
+  "add_events": 200,
+  "add_new_error_per_ml_target": 0.11776911134666414,
+  "remove_new_error_per_ml_target": 0.2735829021761225
+ },
+ "samestate-trajectory | N3-s3407 | own": {
+  "remove_events": 100,
+  "remove_touching_a_predicted_component": 100,
+  "remove_touched_component_contains_true_lesion": 79,
+  "remove_new_error_ml": 413.77606066004705,
+  "remove_new_error_inside_touched_ml": 389.0355722032192,
+  "remove_new_error_outside_touched_ml": 24.740488456827876,
+  "remove_inside_share": 0.9402080235928528,
+  "remove_by_component_type": {
+   "touched component contains true lesion": {
+    "n": 79,
+    "new_error_ml": 412.9632513139055,
+    "target_recovered": 0.4367021312714868,
+    "new_error_per_ml_target": 0.5090098775413662
+   },
+   "touched component is pure FP": {
+    "n": 21,
+    "new_error_ml": 0.8128093461415262,
+    "target_recovered": 0.05445996830336168,
+    "new_error_per_ml_target": 0.0009114312885383365
+   }
+  },
+  "add_events": 97,
+  "add_new_error_per_ml_target": 0.09120223391519985,
+  "remove_new_error_per_ml_target": 0.24295445096717294
+ },
+ "samestate-list | N1_STATE-s3407 | all": {
+  "remove_events": 50,
+  "remove_touching_a_predicted_component": 50,
+  "remove_touched_component_contains_true_lesion": 30,
+  "remove_new_error_ml": 395.7333637565839,
+  "remove_new_error_inside_touched_ml": 248.08405783809962,
+  "remove_new_error_outside_touched_ml": 147.6493059184842,
+  "remove_inside_share": 0.6268969982290814,
+  "remove_by_component_type": {
+   "touched component is pure FP": {
+    "n": 20,
+    "new_error_ml": 0.0,
+    "target_recovered": 0.492660608982736,
+    "new_error_per_ml_target": 0.0
+   },
+   "touched component contains true lesion": {
+    "n": 30,
+    "new_error_ml": 395.7333637565839,
+    "target_recovered": 0.600021389698353,
+    "new_error_per_ml_target": 1.0034584180557196
+   }
+  },
+  "add_events": 51,
+  "add_new_error_per_ml_target": 0.3594332213886989,
+  "remove_new_error_per_ml_target": 0.809507434458147
+ },
+ "samestate-list | N3-s3407 | all": {
+  "remove_events": 50,
+  "remove_touching_a_predicted_component": 50,
+  "remove_touched_component_contains_true_lesion": 30,
+  "remove_new_error_ml": 137.42016746205107,
+  "remove_new_error_inside_touched_ml": 127.56692763331502,
+  "remove_new_error_outside_touched_ml": 9.853239828736054,
+  "remove_inside_share": 0.9282984440296432,
+  "remove_by_component_type": {
+   "touched component is pure FP": {
+    "n": 20,
+    "new_error_ml": 0.0,
+    "target_recovered": 0.3263847206954407,
+    "new_error_per_ml_target": 0.0
+   },
+   "touched component contains true lesion": {
+    "n": 30,
+    "new_error_ml": 137.42016746205107,
+    "target_recovered": 0.3855949393813041,
+    "new_error_per_ml_target": 0.34845539062317094
+   }
+  },
+  "add_events": 51,
+  "add_new_error_per_ml_target": 0.2436557980033994,
+  "remove_new_error_per_ml_target": 0.28110505050425666
+ }
+}

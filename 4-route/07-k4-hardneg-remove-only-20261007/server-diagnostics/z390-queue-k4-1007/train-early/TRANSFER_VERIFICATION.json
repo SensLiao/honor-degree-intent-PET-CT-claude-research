@@ -1,0 +1,36 @@
+{
+  "files": [
+    {
+      "host": "z390",
+      "source": "/mnt/HDD4/honor_petct/sirb/runs/PETCT-EDITOR-SIRB-INTENT_HARDNEG_REMOVE_PRESERVE-S3407-TRAIN-20261007-R1/metrics.jsonl",
+      "file": "metrics.jsonl",
+      "bytes": 51273,
+      "check": "prefix of a growing file",
+      "local_sha256": "932509c83d1236a26cc42927bbd30b363db088455a5ce8088a4c806e06946ec2",
+      "remote_sha256": "932509c83d1236a26cc42927bbd30b363db088455a5ce8088a4c806e06946ec2",
+      "same": true
+    },
+    {
+      "host": "z390",
+      "source": "/mnt/HDD4/honor_petct/sirb/runs/PETCT-EDITOR-SIRB-INTENT_HARDNEG_REMOVE_PRESERVE-S3407-TRAIN-20261007-R1/metrics.jsonl",
+      "file": "metrics.jsonl",
+      "bytes": 95634,
+      "check": "prefix of a growing file",
+      "local_sha256": "0a62cafb7795a87249b7bd324c499dbb490981cb9f7283e982ff1b51f9f34537",
+      "remote_sha256": "0a62cafb7795a87249b7bd324c499dbb490981cb9f7283e982ff1b51f9f34537",
+      "same": true
+    },
+    {
+      "host": "z390",
+      "source": "/mnt/HDD4/honor_petct/sirb/runs/PETCT-EDITOR-SIRB-INTENT_HARDNEG_REMOVE_PRESERVE-S3407-TRAIN-20261007-R1/metrics.jsonl",
+      "file": "metrics.jsonl",
+      "bytes": 301667,
+      "check": "prefix of a growing file",
+      "local_sha256": "a50d72a2a7b5f09ce5ed86d2aef782173dabdf9f9a7be852ec7f4f1bbcc1dfda",
+      "remote_sha256": "a50d72a2a7b5f09ce5ed86d2aef782173dabdf9f9a7be852ec7f4f1bbcc1dfda",
+      "same": true
+    }
+  ],
+  "captured_at": "2026-10-07T06:49:44",
+  "method": "SFTP get (read-only), sha256 of the local copy compared with sha256sum on the server"
+}

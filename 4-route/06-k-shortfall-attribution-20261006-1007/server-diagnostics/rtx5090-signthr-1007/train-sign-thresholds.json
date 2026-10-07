@@ -1,0 +1,50 @@
+{
+  "fit_share": 0.5,
+  "networks": {
+    "K1": {
+      "add": {
+        "threshold": 0.075
+      },
+      "all": {
+        "patients": 258,
+        "round1_dice_at_half": 0.6753145909207265,
+        "round1_dice_at_thresholds": 0.7045860397488515,
+        "scans": 372,
+        "scans_add": 243,
+        "scans_remove": 129
+      },
+      "check": {
+        "patients": 134,
+        "round1_dice_at_half": 0.6932417363909555,
+        "round1_dice_at_thresholds": 0.7182397974741576,
+        "scans": 198,
+        "scans_add": 136,
+        "scans_remove": 62
+      },
+      "fit": {
+        "patients": 124,
+        "round1_dice_at_half": 0.6559417079125749,
+        "round1_dice_at_thresholds": 0.689831172529568,
+        "scans": 174,
+        "scans_add": 107,
+        "scans_remove": 67
+      },
+      "identity": {
+        "arm": "INTENT_FULL",
+        "checkpoint_sha256": "2ddbc43592434485f7443d73d05f68c0b0f38e2a6621084119fc6b0c3efc8b7e",
+        "seed": 3407,
+        "step": 40000,
+        "tta_flip": "none"
+      },
+      "remove": {
+        "threshold": 0.125
+      }
+    }
+  },
+  "partition": "train",
+  "rule": "per network one add and one remove threshold on the 0.025 grid maximising the formal round-1 Dice (patient mean of scan means) of the fit-part TRAIN patients; ties to 0.5",
+  "schema": "PETCT-SIRB-SIGN-THRESHOLDS-v2",
+  "source": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/train-round1-hist.jsonl",
+  "source_sha256": "931153ea5a6ce37b312f1779a21140ad8c0858fabdc56ed40d6540f9c26525e9",
+  "split_salt": "sirb-sign-thresholds"
+}

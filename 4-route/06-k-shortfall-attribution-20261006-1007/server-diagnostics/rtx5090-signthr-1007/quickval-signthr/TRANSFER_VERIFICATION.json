@@ -1,0 +1,76 @@
+{
+  "files": [
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/quickval-signthr/rollout_manifest.json",
+      "file": "rollout_manifest.json",
+      "bytes": 14176,
+      "check": "whole file",
+      "local_sha256": "30c37f370737b1ca68a9513cb86deac8b60cca2e341b48d49dafae011f921d1e",
+      "remote_sha256": "30c37f370737b1ca68a9513cb86deac8b60cca2e341b48d49dafae011f921d1e",
+      "same": true
+    },
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/quickval-signthr/six_state.csv",
+      "file": "six_state.csv",
+      "bytes": 154809,
+      "check": "whole file",
+      "local_sha256": "535cd25858fdf7fdb22694adb4e1d56e45c258265b77c11f490c6efb02f00377",
+      "remote_sha256": "535cd25858fdf7fdb22694adb4e1d56e45c258265b77c11f490c6efb02f00377",
+      "same": true
+    },
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/quickval-signthr/transitions.jsonl",
+      "file": "transitions.jsonl",
+      "bytes": 348956,
+      "check": "whole file",
+      "local_sha256": "51dc60f52ca57651a55f345e514bc9b8a817f518d5fc0e0318b92927718bae71",
+      "remote_sha256": "51dc60f52ca57651a55f345e514bc9b8a817f518d5fc0e0318b92927718bae71",
+      "same": true
+    },
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/quickval-signthr/trajectories.jsonl",
+      "file": "trajectories.jsonl",
+      "bytes": 1661594,
+      "check": "whole file",
+      "local_sha256": "47861e47d1047dce88160742db4bc3ede328747f2134888c31ad71759e5ecb11",
+      "remote_sha256": "47861e47d1047dce88160742db4bc3ede328747f2134888c31ad71759e5ecb11",
+      "same": true
+    },
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/quickval-signthr/sign_thresholds.json",
+      "file": "sign_thresholds.json",
+      "bytes": 1905,
+      "check": "whole file",
+      "local_sha256": "8251b72e924b2ce18eac1a77705413e3ed877fb9dd113643abfe05b7828406d2",
+      "remote_sha256": "8251b72e924b2ce18eac1a77705413e3ed877fb9dd113643abfe05b7828406d2",
+      "same": true
+    },
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/quickval-signthr/remote.jsonl",
+      "file": "remote.jsonl",
+      "bytes": 720547,
+      "check": "whole file",
+      "local_sha256": "cadac728bd155a941fff5a980d2d6ce9b362f433b2bda866a186de8ecdd62dbc",
+      "remote_sha256": "cadac728bd155a941fff5a980d2d6ce9b362f433b2bda866a186de8ecdd62dbc",
+      "same": true
+    },
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/quickval-signthr/latency.jsonl",
+      "file": "latency.jsonl",
+      "bytes": 179005,
+      "check": "whole file",
+      "local_sha256": "66e21a0e4c35d16a327a86975ec108ba30eb8595f6e115f8a05e49b5b0ba805e",
+      "remote_sha256": "66e21a0e4c35d16a327a86975ec108ba30eb8595f6e115f8a05e49b5b0ba805e",
+      "same": true
+    }
+  ],
+  "captured_at": "2026-10-07T10:32:52",
+  "method": "SFTP get (read-only), sha256 of the local copy compared with sha256sum on the server"
+}

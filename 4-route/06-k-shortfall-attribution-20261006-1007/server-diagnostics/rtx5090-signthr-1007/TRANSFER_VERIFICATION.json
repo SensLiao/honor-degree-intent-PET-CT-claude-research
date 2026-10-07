@@ -1,0 +1,56 @@
+{
+  "files": [
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/train-sign-thresholds.json",
+      "file": "train-sign-thresholds.json",
+      "bytes": 1566,
+      "check": "whole file",
+      "local_sha256": "722274e07a0e9a9da52148108cbfe0ea7c8bf179012c5ef29a2d5d2ab2064fff",
+      "remote_sha256": "722274e07a0e9a9da52148108cbfe0ea7c8bf179012c5ef29a2d5d2ab2064fff",
+      "same": true
+    },
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/train-round1-hist.jsonl",
+      "file": "train-round1-hist.jsonl",
+      "bytes": 2134056,
+      "check": "whole file",
+      "local_sha256": "931153ea5a6ce37b312f1779a21140ad8c0858fabdc56ed40d6540f9c26525e9",
+      "remote_sha256": "931153ea5a6ce37b312f1779a21140ad8c0858fabdc56ed40d6540f9c26525e9",
+      "same": true
+    },
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/quickval-signthr-valgate.json",
+      "file": "quickval-signthr-valgate.json",
+      "bytes": 232556,
+      "check": "whole file",
+      "local_sha256": "2b0848b286da4d0aba2ee497f351d675f393b4114b082ec773959187acfb0ca0",
+      "remote_sha256": "2b0848b286da4d0aba2ee497f351d675f393b4114b082ec773959187acfb0ca0",
+      "same": true
+    },
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/log.txt",
+      "file": "log.txt",
+      "bytes": 30877,
+      "check": "whole file",
+      "local_sha256": "d2c7b8959fc183dc318de9a55c695067e82d9deca65e190a182ab8dd70edc669",
+      "remote_sha256": "d2c7b8959fc183dc318de9a55c695067e82d9deca65e190a182ab8dd70edc669",
+      "same": true
+    },
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/state",
+      "file": "state",
+      "bytes": 183,
+      "check": "whole file",
+      "local_sha256": "7d2cba867fbf7d28a876c70fa63b1609b5bfb1ed5b6df5f11cb78b2d925b3ab6",
+      "remote_sha256": "7d2cba867fbf7d28a876c70fa63b1609b5bfb1ed5b6df5f11cb78b2d925b3ab6",
+      "same": true
+    }
+  ],
+  "captured_at": "2026-10-07T10:32:47",
+  "method": "SFTP get (read-only), sha256 of the local copy compared with sha256sum on the server"
+}

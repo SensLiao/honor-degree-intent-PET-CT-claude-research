@@ -1,0 +1,3 @@
+eval-sirb-v3-quickval-INTENT_REFRESH-R1-20261006        D5 0.7529  95% 0.711-0.792  n=54
+eval-sirb-v3-quickval-INTENT_FULL-R1-20261006           D5 0.7539  95% 0.712-0.793  n=54
+eval-sirb-v3-quickval-flip-INTENT_REFRESH-R1-20261006   D5 0.7571  95% 0.718-0.794  n=54

@@ -1,0 +1,56 @@
+{
+ "a_remove_bank_new_error": {
+  "states_97_total_new_error_ml": 621.3609496045065,
+  "states_97_inside_touched_ml": 594.3075966164513,
+  "states_80_total_new_error_ml": 621.2282460377895
+ },
+ "b_lesion_class_by_tag": {
+  "none | original": 4,
+  "none | repair": 3,
+  "none | residue": 1,
+  "one_erased | repair": 2,
+  "one_partial | original": 12,
+  "one_partial | other": 2,
+  "one_partial | repair": 21,
+  "one_partial | residue": 9,
+  "two_plus | original": 11,
+  "two_plus | other": 2,
+  "two_plus | repair": 13
+ },
+ "b_lesion_class_by_tag_tp_lost_ml": {
+  "none | original": 0.0,
+  "none | repair": 0.0,
+  "none | residue": 0.0,
+  "one_erased | repair": 2.255960634188726,
+  "one_partial | original": 29.405528249977152,
+  "one_partial | other": 0.3981107001509516,
+  "one_partial | repair": 82.72430599108918,
+  "one_partial | residue": 10.546689906637184,
+  "two_plus | original": 66.55083870856743,
+  "two_plus | other": 30.588172128264784,
+  "two_plus | repair": 398.7586397189141
+ },
+ "b_two_plus_detail": {
+  "states": 26,
+  "lesions_hit_median": 2.0,
+  "lesions_hit_max": 7,
+  "states_with_an_erased_lesion": 8,
+  "target_ml_median": 11.395918791820991,
+  "tp_lost_ml_median": 6.809351767165236
+ },
+ "c_round1_add_counterfactuals": {
+  "recovery_now": 0.2218371861666852,
+  "recovery_if_all_missed_within_30mm_fixed": 0.3511804872808079,
+  "recovery_if_all_missed_beyond_30mm_fixed": 0.8706566988858762,
+  "deltaD1_fix_within_30mm": 0.02604776007511916,
+  "deltaD1_fix_beyond_30mm": 0.01515276619594242,
+  "deltaD1_fix_all_missed": 0.03996875724913079
+ },
+ "d_D1_to_D5_retention_VAL": {
+  "VAL three-style flat vs N3": 0.554604760256302,
+  "quick VAL v1 flat vs v1 N3": 0.47610855965939575,
+  "quick VAL flat +8k vs N3 +8k": 0.9112240635699604
+ },
+ "e_TRAIN_other_ge_10_voxels_share": 0.7574858376045319,
+ "e_TRAIN_scans_in_bank": 397
+}

@@ -1,0 +1,168 @@
+{
+ "samestate-list": {
+  "checks": {
+   "max_neg_missed_vox": 1.1368683772161603e-13,
+   "max_gate_minus_oracle_binding_recall": 0.0,
+   "events": 101
+  },
+  "overall_voxel_weighted": {
+   "repaired": 0.4853818291628283,
+   "error_blocked": 0.37531593128603663,
+   "passed_not_executed": 0.13930223955113505
+  },
+  "overall_patient_weighted": {
+   "repaired": 0.7351358111109993,
+   "error_blocked": 0.19544138471963104,
+   "passed_not_executed": 0.06942280416936958
+  },
+  "rings": {
+   "<=15 mm": {
+    "events_with_missed": 55,
+    "events_split_exact": 26,
+    "patients": 39,
+    "target_ml": 269.8969351831081,
+    "missed_ml": 71.86995754545039,
+    "missed_share_of_ring_target": 0.2662866753069691,
+    "blocked_share_of_missed_voxel_weighted": [
+     0.7232024781824041,
+     0.9860051728978977
+    ],
+    "blocked_share_of_missed_patient_weighted": [
+     0.5495128539262677,
+     0.8974617974617977
+    ]
+   },
+   "15-30 mm": {
+    "events_with_missed": 40,
+    "events_split_exact": 10,
+    "patients": 27,
+    "target_ml": 265.53325283079505,
+    "missed_ml": 166.23550585105653,
+    "missed_share_of_ring_target": 0.626044023032348,
+    "blocked_share_of_missed_voxel_weighted": [
+     0.6659656569738905,
+     0.970468170615293
+    ],
+    "blocked_share_of_missed_patient_weighted": [
+     0.6036761475145714,
+     0.9423277012459
+    ]
+   },
+   "30-60 mm": {
+    "events_with_missed": 24,
+    "events_split_exact": 3,
+    "patients": 19,
+    "target_ml": 219.52565694793975,
+    "missed_ml": 165.03000785852,
+    "missed_share_of_ring_target": 0.7517572667948179,
+    "blocked_share_of_missed_voxel_weighted": [
+     0.46340827402007356,
+     0.9507993532521511
+    ],
+    "blocked_share_of_missed_patient_weighted": [
+     0.3957766699621444,
+     0.9623427928137022
+    ]
+   },
+   ">60 mm": {
+    "events_with_missed": 5,
+    "events_split_exact": 0,
+    "patients": 5,
+    "target_ml": 106.71774518207548,
+    "missed_ml": 97.76025442867908,
+    "missed_share_of_ring_target": 0.9160637180057201,
+    "blocked_share_of_missed_voxel_weighted": [
+     0.277426563650874,
+     0.7343897940923745
+    ],
+    "blocked_share_of_missed_patient_weighted": [
+     0.09561403508771926,
+     0.8845247854839592
+    ]
+   }
+  }
+ },
+ "samestate-trajectory": {
+  "checks": {
+   "max_neg_missed_vox": 5.684341886080802e-14,
+   "max_gate_minus_oracle_binding_recall": 0.0,
+   "events": 397
+  },
+  "overall_voxel_weighted": {
+   "repaired": 0.2641827065598291,
+   "error_blocked": 0.41182069372240776,
+   "passed_not_executed": 0.32399659971776246
+  },
+  "overall_patient_weighted": {
+   "repaired": 0.6695900446659787,
+   "error_blocked": 0.23161099950938455,
+   "passed_not_executed": 0.09879895582463663
+  },
+  "rings": {
+   "<=15 mm": {
+    "events_with_missed": 264,
+    "events_split_exact": 115,
+    "patients": 52,
+    "target_ml": 1422.5400734155019,
+    "missed_ml": 357.34695685078145,
+    "missed_share_of_ring_target": 0.25120343780038173,
+    "blocked_share_of_missed_voxel_weighted": [
+     0.4946107080909237,
+     0.9797591778364474
+    ],
+    "blocked_share_of_missed_patient_weighted": [
+     0.5273768124983593,
+     0.8752648572539894
+    ]
+   },
+   "15-30 mm": {
+    "events_with_missed": 189,
+    "events_split_exact": 23,
+    "patients": 40,
+    "target_ml": 1641.5226794774123,
+    "missed_ml": 959.1749882699975,
+    "missed_share_of_ring_target": 0.5843202779113329,
+    "blocked_share_of_missed_voxel_weighted": [
+     0.34780601523435306,
+     0.9929818801692502
+    ],
+    "blocked_share_of_missed_patient_weighted": [
+     0.39718726347935845,
+     0.9332049114365407
+    ]
+   },
+   "30-60 mm": {
+    "events_with_missed": 111,
+    "events_split_exact": 5,
+    "patients": 26,
+    "target_ml": 2002.6759634721566,
+    "missed_ml": 1791.6630928288132,
+    "missed_share_of_ring_target": 0.8946345417370976,
+    "blocked_share_of_missed_voxel_weighted": [
+     0.16015494652516618,
+     0.928929895496513
+    ],
+    "blocked_share_of_missed_patient_weighted": [
+     0.2545400176359557,
+     0.8962860004736428
+    ]
+   },
+   ">60 mm": {
+    "events_with_missed": 45,
+    "events_split_exact": 0,
+    "patients": 14,
+    "target_ml": 3295.863925807757,
+    "missed_ml": 3283.920604803228,
+    "missed_share_of_ring_target": 0.9963762699937311,
+    "blocked_share_of_missed_voxel_weighted": [
+     0.27460684838307736,
+     0.733045199863924
+    ],
+    "blocked_share_of_missed_patient_weighted": [
+     0.06229945442645159,
+     0.8810775791037632
+    ]
+   }
+  }
+ }
+}

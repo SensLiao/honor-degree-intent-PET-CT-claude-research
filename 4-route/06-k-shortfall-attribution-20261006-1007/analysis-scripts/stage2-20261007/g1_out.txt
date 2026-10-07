@@ -1,0 +1,28 @@
+K4 last logged step 2580
+
+diag_error_gate_recall (mean of the 10 log rows ending at the step; nan = no value)
+  step   200: v1 flat 0.965 | K1 0.859 | K4 0.829
+  step   400: v1 flat 0.809 | K1 0.135 | K4 0.464
+  step   600: v1 flat 0.844 | K1 0.320 | K4 0.691
+  step   800: v1 flat 0.819 | K1 0.410 | K4 0.647
+  step  1000: v1 flat 0.817 | K1 0.449 | K4 0.667
+  step  1400: v1 flat 0.835 | K1 0.475 | K4 0.733
+  step  2000: v1 flat 0.854 | K1 0.501 | K4 0.713
+
+diag_target_recall (mean of the 10 log rows ending at the step; nan = no value)
+  step   200: v1 flat 0.024 | K1 0.002 | K4 0.005
+  step   400: v1 flat 0.002 | K1 0.000 | K4 0.033
+  step   600: v1 flat 0.361 | K1 0.138 | K4 0.326
+  step   800: v1 flat 0.661 | K1 0.265 | K4 0.462
+  step  1000: v1 flat 0.681 | K1 0.332 | K4 0.526
+  step  1400: v1 flat 0.732 | K1 0.327 | K4 0.587
+  step  2000: v1 flat 0.752 | K1 0.350 | K4 0.569
+
+diag_preserve_edit_voxels (mean of the 10 log rows ending at the step; nan = no value)
+  step   200: v1 flat 5234.159 | K1 1822.746 | K4 4479.596
+  step   400: v1 flat 0.191 | K1 0.000 | K4 0.949
+  step   600: v1 flat 42.912 | K1 0.191 | K4 15.023
+  step   800: v1 flat 110.810 | K1 2.617 | K4 25.557
+  step  1000: v1 flat 88.956 | K1 4.456 | K4 27.434
+  step  1400: v1 flat 93.576 | K1 5.317 | K4 55.773
+  step  2000: v1 flat 127.936 | K1 6.591 | K4 43.715

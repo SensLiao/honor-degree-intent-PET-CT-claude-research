@@ -1,0 +1,22 @@
+{
+  "add_network": {
+    "arm": "N1_STATE",
+    "checkpoint": "/mnt/HDD4/honor_petct/runs/editor-sirb-mainline-20260920-R1/runs-formal/PETCT-EDITOR-SIRB-N1_STATE-S3407-TRAIN-20260927-R1/checkpoints/final.pt",
+    "checkpoint_sha256": "9f49fd7da7f632cd3efbce564207615afded5a271e7607a60162be6eab71c612",
+    "seed": 3407
+  },
+  "model_id": "ROUTED-ADD_N1_STATE-REMOVE_INTENT_REFRESH",
+  "note": "rollout_manifest.json records the remove network's checkpoint identity; this file has both",
+  "remove_network": {
+    "arm": "INTENT_REFRESH",
+    "checkpoint": "/mnt/HDD4/honor_petct/sirb/diag/k2-from-5090/checkpoints/final.pt",
+    "checkpoint_sha256": "35d19f731b1be217806958bbe4d288cbbe73e75af95d6d4764fd49daf73e8d53",
+    "seed": 3407
+  },
+  "rounds_predicted": {
+    "add_network_rounds": 220,
+    "remove_network_rounds": 199
+  },
+  "schema": "PETCT-SIRB-SIGN-ROUTED-ROLLOUT-v1",
+  "tta_flip": "none"
+}

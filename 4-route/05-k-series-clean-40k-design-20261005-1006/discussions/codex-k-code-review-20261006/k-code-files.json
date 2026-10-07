@@ -1,0 +1,31 @@
+{
+ "changed": [
+  "scripts/common/petct_sirb_checkpoint.py",
+  "scripts/common/petct_sirb_config.py",
+  "scripts/common/petct_sirb_dataset.py",
+  "scripts/common/petct_sirb_io.py",
+  "scripts/common/petct_sirb_registry.py",
+  "scripts/common/petct_sirb_training.py",
+  "scripts/data/gen_petct_dataset_sirb_onpolicy.py",
+  "scripts/editor/train_petct_editor_sirb.py",
+  "scripts/evaluation/eval_petct_editor_sirb_rollout.py",
+  "scripts/orchestration/launch_editor_sirb_train.sh",
+  "scripts/orchestration/petct_editor_sirb_launch_common.sh",
+  "scripts/orchestration/queue_editor_sirb_v3_intent.sh",
+  "tests/test_petct_sirb_inference_rollout.py",
+  "tests/test_petct_sirb_intent_arm_model.py",
+  "tests/test_petct_sirb_launch_queue.py",
+  "tests/test_petct_sirb_pipeline_integration.py",
+  "tests/test_petct_sirb_v2_arms.py"
+ ],
+ "added": [
+  "configs/sirb/experiments/editor-sirb-intentfull-train.json",
+  "configs/sirb/experiments/editor-sirb-intentrefresh-train.json",
+  "configs/sirb/experiments/editor-sirb-intentwide-train.json",
+  "scripts/common/petct_sirb_experiments.py",
+  "scripts/common/petct_sirb_refresh.py",
+  "tests/test_petct_sirb_k_experiments.py",
+  "tests/test_petct_sirb_refresh.py"
+ ],
+ "removed": []
+}

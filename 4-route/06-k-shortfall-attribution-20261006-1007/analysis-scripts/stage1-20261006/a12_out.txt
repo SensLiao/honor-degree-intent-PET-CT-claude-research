@@ -1,0 +1,23 @@
+1. Round-1 ADD fill fraction, true median (statistics.median) over strokes with a target
+   v1flat n=54 median 53.70%
+   K1     n=54 median 17.46%
+   K2     n=54 median 18.43%
+2. Round-1 ADD strokes with target < 5 ml: Dice gain D1-D0, scan mean and patient mean
+   v1flat n=26 scan mean +0.18010 patient mean +0.15390
+   K1     n=26 scan mean +0.17814 patient mean +0.15171
+   K2     n=26 scan mean +0.13827 patient mean +0.11929
+3. First strokes: scans with a stroke in round 1, and same sign/target as the oracle
+   v1flat first stroke on 85 scans, same as oracle 85; second stroke same as oracle 54 of 99
+   K1     first stroke on 85 scans, same as oracle 85; second stroke same as oracle 45 of 99
+   K2     first stroke on 85 scans, same as oracle 85; second stroke same as oracle 48 of 99
+4. Round-1 splice: v1flat on ADD scans + K on REMOVE scans, D1 patient mean (states identical before round 1)
+   v1-ADD + K1-REMOVE D1 0.69832 vs K1 own D1 0.69164 (diff +0.00668)
+   v1-ADD + K2-REMOVE D1 0.69712 vs K2 own D1 0.67934 (diff +0.01778)
+5. Paired patient bootstrap (10000, seed 3407) for K2-K1 and K2flip-K2 at D5
+   K2 - K1 mean -0.00107 95% [-0.0121, +0.0095]
+   K2flip - K2 mean +0.00419 95% [-0.0040, +0.0131]
+6. Round-1 ideal top-up of the model's own round-1 result: fill the remaining T within / beyond 30 mm
+   K1: fill remaining T within 30 mm +0.06191, beyond 30 mm +0.01479 (patient mean of D1 change; 0 states not reconstructable)
+   K2: fill remaining T within 30 mm +0.06387, beyond 30 mm +0.01493 (patient mean of D1 change; 0 states not reconstructable)
+7. Dice rebuilt from the GT volume (sum of lesion volumes in trajectories.jsonl) and fp_ml / fn_ml
+   2040 states, max abs error 3.33e-16

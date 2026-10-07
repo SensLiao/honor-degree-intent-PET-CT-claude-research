@@ -1,0 +1,30 @@
+v1flat  steps 38020-40000
+   diag_hard_dice_target            mean     0.6941
+   diag_target_recall               mean     0.8204
+   diag_binding_accuracy_in_error   mean     0.9443
+   diag_error_gate_recall           mean     0.8836
+   diag_preserve_edit_voxels        mean    78.9303
+   diag_target_voxels               mean   201.5733
+   diag_other_voxels                mean   339.0508
+   sampled_target                   mean 32251.7300
+   other keys: ['base_binding', 'base_error', 'base_preserve', 'base_target_dice', 'base_total', 'pair_fallback', 'pair_type_bridge', 'pair_type_other_error', 'pair_type_peripheral']
+K1      steps 38020-40000
+   diag_hard_dice_target            mean     0.6346
+   diag_target_recall               mean     0.6021
+   diag_binding_accuracy_in_error   mean     0.9244
+   diag_error_gate_recall           mean     0.6847
+   diag_preserve_edit_voxels        mean    42.0962
+   diag_target_voxels               mean   476.0782
+   diag_other_voxels                mean   428.4514
+   sampled_target                   mean 88359.4100
+   other keys: ['base_binding', 'base_error', 'base_preserve', 'base_target_dice', 'base_total', 'intent_dice_gain', 'intent_dice_gain_count', 'intent_hard_negative', 'intent_hard_negative_count', 'intent_pair_same_scope', 'intent_pair_same_scope_count', 'intent_pair_swap', 'intent_pair_swap_count', 'intent_ring_rank', 'intent_ring_rank_count', 'pair_fallback', 'pair_type_bridge', 'pair_type_other_error', 'pair_type_peripheral']
+K2      steps 38020-40000
+   diag_hard_dice_target            mean     0.6092
+   diag_target_recall               mean     0.5772
+   diag_binding_accuracy_in_error   mean     0.9209
+   diag_error_gate_recall           mean     0.6652
+   diag_preserve_edit_voxels        mean    35.3174
+   diag_target_voxels               mean   380.8993
+   diag_other_voxels                mean   455.7586
+   sampled_target                   mean 70746.1500
+   other keys: ['base_binding', 'base_error', 'base_preserve', 'base_target_dice', 'base_total', 'intent_dice_gain', 'intent_dice_gain_count', 'intent_hard_negative', 'intent_hard_negative_count', 'intent_pair_same_scope', 'intent_pair_same_scope_count', 'intent_pair_swap', 'intent_pair_swap_count', 'intent_ring_rank', 'intent_ring_rank_count', 'pair_fallback', 'pair_type_bridge', 'pair_type_other_error', 'pair_type_peripheral']

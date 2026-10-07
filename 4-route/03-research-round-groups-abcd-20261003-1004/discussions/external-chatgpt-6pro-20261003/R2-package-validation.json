@@ -1,0 +1,27 @@
+{
+  "audit_date_utc": "2026-10-03",
+  "original_file_count": 80,
+  "original_files_missing": [],
+  "original_files_modified": [
+    "PLAN.md",
+    "research/README.md",
+    "research/S1-literature-digest.md",
+    "research/S2-causal-map.md"
+  ],
+  "original_plan_backup_matches_uploaded_bytes": true,
+  "literature_unique": 168,
+  "literature_relevant_original_sections": 127,
+  "literature_limited_access": 41,
+  "literature_route_records": 179,
+  "literature_duplicate_source_identity_check": "No cross-record duplicate arXiv IDs or exact primary URLs found",
+  "new_markdown_local_links": "Checked: no missing relative targets",
+  "r2_json_parse": "passed",
+  "new_model_experiments_run": false,
+  "production_code_available": false,
+  "server_changes_made": false,
+  "paper_pdfs_in_original_attachment": 0,
+  "mathematics_scope": "Algebraic checks and existing JSON arithmetic only; no model efficacy inference",
+  "input_archive_sha256": "188364839e794fb579b9281cf706605275ee8232b10f90d1132ca6131595f7a0",
+  "plan_sha256": "83fad8a515acd42c911159f62bb0bf957d8ae5684feb52c7f8e7057e4ac6e742",
+  "report_sha256": "287a3186d91de375ec5b5511f8ad108bb0eb2ce6c609183b4c2a7c1d039ecc02"
+}

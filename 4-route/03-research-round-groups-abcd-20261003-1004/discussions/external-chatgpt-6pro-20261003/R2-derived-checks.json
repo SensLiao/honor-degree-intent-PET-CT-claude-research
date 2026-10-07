@@ -1,0 +1,11 @@
+{
+  "provided_json_arithmetic_only": true,
+  "raw_trajectories_reexecuted": false,
+  "remove_oracle_skip_share": 0.8475012782545823,
+  "utility_identity_max_absolute_error_randomized_20000": 8.881784197001252e-16,
+  "zero_tp_correct_remove": {
+    "before_dice": 0.0,
+    "after_correct_remove_dice": 0.0,
+    "comment": "Positive GT, no true positives: immediate Dice cannot reward removing false positives."
+  }
+}

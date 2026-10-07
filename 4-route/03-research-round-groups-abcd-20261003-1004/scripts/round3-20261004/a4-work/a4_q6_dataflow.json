@@ -1,0 +1,123 @@
+{
+ "cases": 506,
+ "problems": [],
+ "split_scans": {
+  "train": 407,
+  "val": 99
+ },
+ "split_patients": {
+  "train": 264,
+  "val": 57
+ },
+ "patients_in_both_train_and_val": 0,
+ "all_from_oof_run": true,
+ "m0_rule": {
+  "strict_greater_than_0.5": 506
+ },
+ "m0_voxels_disagreeing_max": 0,
+ "fold_split_scans": {
+  "0": {
+   "train": 87,
+   "val": 17
+  },
+  "1": {
+   "train": 82,
+   "val": 20
+  },
+  "2": {
+   "train": 82,
+   "val": 18
+  },
+  "3": {
+   "train": 68,
+   "val": 32
+  },
+  "4": {
+   "train": 88,
+   "val": 12
+  }
+ },
+ "fold_split_patients": {
+  "0": {
+   "train": 55,
+   "val": 9
+  },
+  "1": {
+   "train": 52,
+   "val": 13
+  },
+  "2": {
+   "train": 55,
+   "val": 8
+  },
+  "3": {
+   "train": 47,
+   "val": 19
+  },
+  "4": {
+   "train": 55,
+   "val": 8
+  }
+ },
+ "patients_spanning_two_folds": 0,
+ "base_fold_exposure": {
+  "0": {
+   "model_trained_on_scans": 402,
+   "val_scans_in_its_training": 82,
+   "val_patients_in_its_training": 48,
+   "train_scans_it_produced_start_for": 87,
+   "val_scans_it_produced_start_for": 17
+  },
+  "1": {
+   "model_trained_on_scans": 404,
+   "val_scans_in_its_training": 79,
+   "val_patients_in_its_training": 44,
+   "train_scans_it_produced_start_for": 82,
+   "val_scans_it_produced_start_for": 20
+  },
+  "2": {
+   "model_trained_on_scans": 406,
+   "val_scans_in_its_training": 81,
+   "val_patients_in_its_training": 49,
+   "train_scans_it_produced_start_for": 82,
+   "val_scans_it_produced_start_for": 18
+  },
+  "3": {
+   "model_trained_on_scans": 406,
+   "val_scans_in_its_training": 67,
+   "val_patients_in_its_training": 38,
+   "train_scans_it_produced_start_for": 68,
+   "val_scans_it_produced_start_for": 32
+  },
+  "4": {
+   "model_trained_on_scans": 406,
+   "val_scans_in_its_training": 87,
+   "val_patients_in_its_training": 49,
+   "train_scans_it_produced_start_for": 88,
+   "val_scans_it_produced_start_for": 12
+  }
+ },
+ "train_scans_whose_start_model_saw_some_val_labels": 407,
+ "2sicr_fold0_val_equals_base_fold": {
+  "listed": 104,
+  "base": 104,
+  "equal": true,
+  "sirb_val_overlap": 17,
+  "sirb_train_overlap": 87
+ },
+ "2sicr_fold1_val_equals_base_fold": {
+  "listed": 102,
+  "base": 102,
+  "equal": true,
+  "sirb_val_overlap": 20,
+  "sirb_train_overlap": 82
+ },
+ "sirb_val_rollout_equals_cache_val": true,
+ "train_oracle_equals_cache_train": true,
+ "test": {
+  "scans": 91,
+  "patients": 57,
+  "patient_overlap_with_pool": 0,
+  "scan_overlap_with_pool": 0
+ }
+}

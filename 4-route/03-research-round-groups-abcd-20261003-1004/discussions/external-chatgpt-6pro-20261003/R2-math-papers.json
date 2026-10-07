@@ -1,0 +1,423 @@
+[
+  {
+    "id": "M01",
+    "title": "Maximin Affinity Learning of Image Segmentation",
+    "year": 2009,
+    "domain": "图传播／结构化损失",
+    "url": "https://papers.nips.cc/paper_files/paper/2009/file/68d30a9594728bc39aa24be94b319d21-Paper.pdf",
+    "access_depth": "全文相关段：§2–5、最大最小路径／最大生成树关系、训练损失和讨论；非逐字通读。",
+    "verified_claim": "阈值亲和图中的连通性等价于最大最小路径值过阈值；最大生成树包含这些瓶颈路径。MALIS 让点对连通错误的梯度落到决定连接的瓶颈边。原文明确指出单条错误亲和边可造成大型合并。",
+    "limitation": "监督目标是点对 Rand 分割误差，不是医疗交互中的 T/O/P 或整例 Dice；精确连通计算不保证边权正确，也不自动避免单桥泄漏。",
+    "project_use": "借用 seed-to-target 连通监督和误接桥负监督；只把最大最小连通作为可学习特征，保留 T/O/P 语义目标。",
+    "source_refs": [
+      "turn2view2",
+      "turn1search50"
+    ]
+  },
+  {
+    "id": "M02",
+    "title": "Large Scale Image Segmentation with Structured Loss Based Deep Learning for Connectome Reconstruction",
+    "year": 2018,
+    "domain": "连接组学／constrained MALIS",
+    "url": "https://arxiv.org/pdf/1709.02974",
+    "access_depth": "全文相关段：§2.2、正负两遍 constrained MALIS、计算复杂度、watershed/agglomeration 流程；2018 在线发表，2019 卷期。",
+    "verified_claim": "约束的两遍学习分别控制真段内连接和不同真段间分离，避免训练时利用错误路径。文中给出高效 MALIS 损失计算，而最终分割仍使用 watershed 加区域合并。作者指出单纯阈值化亲和图通常不足以获得高质量结果。",
+    "limitation": "不能把优化后的 MALIS 误写成原始朴素实现的平方复杂度；该工作不能证明 SIRB 的 rule-CC 失败完全由逐体素损失造成。",
+    "project_use": "学习边时加入决定 T 内连通和 T 外误接的结构化监督；对 max-min 支路采用软接入，不立即硬裁剪。",
+    "source_refs": [
+      "turn9view0"
+    ]
+  },
+  {
+    "id": "M03",
+    "title": "Interactive Graph Cuts for Optimal Boundary & Region Segmentation of Objects in N-D Images",
+    "year": 2001,
+    "domain": "交互分割／最小割",
+    "url": "https://csd.uwo.ca/~yboykov/Papers/iccv01.pdf",
+    "access_depth": "全文相关段：二元能量、图构造、硬种子约束、最优性和示例。",
+    "verified_claim": "最小割精确最小化所构造的区域项加非负边界项二元能量，并满足种子约束。该表述允许对象拓扑和不连通区域由能量决定。",
+    "limitation": "全局最优是针对指定能量，并非语义真值或 Dice；区域与边界的权衡仍是建模选择。一般多标签能量也不能因此声称一次精确解。",
+    "project_use": "把任务语义、图能量和求解器保证分开写；通用医学 residual scope 不应无理由等同于整个病灶的单个连通块。",
+    "source_refs": [
+      "turn12view4",
+      "turn9view3"
+    ]
+  },
+  {
+    "id": "M04",
+    "title": "Power Watershed: A Unifying Graph-Based Optimization Framework",
+    "year": 2011,
+    "domain": "图割／随机游走／watershed 统一",
+    "url": "https://www.esiee.fr/~coupriec/power_watershed.pdf",
+    "access_depth": "全文相关段：统一能量、不同极限、平台求解、唯一性、失败模式。",
+    "verified_claim": "统一能量随参数对应图割、随机游走与 watershed 类方法。power watershed 对等权平台作相应求解；适当 q>1 条件下连续解唯一。不同路径聚合方式具有不同边界泄漏与种子敏感性。",
+    "limitation": "随机游走是 Dirichlet／线性系统问题，不能一概说用并查集解决；排序不变性不使学出的亲和值成为概率。",
+    "project_use": "精确陈述选用 max-min 的归纳偏好：保留长而弯的通路，但容易受单桥影响；不把它描述为所有传播问题的统一最佳算法。",
+    "source_refs": [
+      "turn26view0",
+      "turn46view5",
+      "turn46view6"
+    ]
+  },
+  {
+    "id": "M05",
+    "title": "End-to-End Learned Random Walker for Seeded Image Segmentation",
+    "year": 2019,
+    "domain": "可微随机游走／连接组学",
+    "url": "https://arxiv.org/html/1905.09045v1",
+    "access_depth": "全文相关段：§2–4、训练目标、数据准备、Table 1 和失败示例。",
+    "verified_claim": "CREMI A 的 VOI 为 RW 0.177±0.015、LRW 0.062±0.021。三个集合汇总 LRW 0.162、watershed 0.165；CREMI C 是 watershed 更好。实验以 2D 中心切片为输出、三切片为输入、每个真段一个种子、半分辨率图和两像素边界容差。",
+    "limitation": "不是三维医疗 Dice 0.177→0.062，也不是只改一个因素的严格同配方对比。LRW 的结构化目标还含边辅助项；优于 RW 不等于优于所有传播。",
+    "project_use": "支持求解器后的任务监督有用，不能据此兑现 SIRB 任何百分点；也提示多路径信息可比单条瓶颈路径更稳。",
+    "source_refs": [
+      "turn69view0",
+      "turn146view3",
+      "turn144view1"
+    ]
+  },
+  {
+    "id": "M06",
+    "title": "The Mutex Watershed and its Objective: Efficient, Parameter-Free Graph Partitioning",
+    "year": 2020,
+    "domain": "带排斥边的图划分",
+    "url": "https://arxiv.org/html/1904.12654v2",
+    "access_depth": "全文相关段：算法、复杂度、§IV 定义与 Theorem IV.1；2021 修订版，2020 在线发表。",
+    "verified_claim": "吸引和排斥边共同决定划分。全局最优性定理针对独异边权和 dominant power 重写后的 Mutex Watershed objective，不是原始任意 multicut 能量。",
+    "limitation": "有限精度相等边权须有确定 tie 约定；无可调阈值不等于网络、图邻接、排斥边和训练全部没有选择。",
+    "project_use": "负边提供不该合并的结构信息，但当前效果路线不必额外实现一套 MWS；用于约束创新与最优性表述。",
+    "source_refs": [
+      "turn22view5",
+      "turn146view2",
+      "turn154view0"
+    ]
+  },
+  {
+    "id": "M07",
+    "title": "High-precision automated reconstruction of neurons with flood-filling networks",
+    "year": 2018,
+    "domain": "有状态迭代分割／连接组学",
+    "url": "https://www.nature.com/articles/s41592-018-0049-4",
+    "access_depth": "出版方摘要和可访问的补充图注；未取得完整方法全文。",
+    "verified_claim": "原始出版页面报告 FFN 通过迭代分割与现有对象状态获得较高精度，数字包括 97 mm 路径中的 4 次合并错误及约 1.1 mm 平均无错路径。",
+    "limitation": "上述指标不是病灶 Dice，也不能由摘要验证本项目需要的每一项移动／停止实现。迭代队列结束不意味着无计算预算、视野或移动参数。",
+    "project_use": "借用当前掩膜状态影响下一次编辑的思想；不把 FFN 精度或停止规则作为整卷医疗纠错的保证。",
+    "source_refs": [
+      "turn22view1",
+      "turn16search12"
+    ]
+  },
+  {
+    "id": "M08",
+    "title": "RankSEG: A Consistent Ranking-based Framework for Segmentation",
+    "year": 2023,
+    "domain": "统计决策／Dice 最优分割",
+    "url": "https://jmlr.org/papers/volume24/22-0712/22-0712.pdf",
+    "access_depth": "全文相关段：§2、Theorem 1、Remark 2、概率估计／排序／体积估计、实验条件。",
+    "verified_claim": "方法先估条件概率，再排序和选择预测体积；不是新 Dice 损失。核心推导有给定 X 后标签条件独立等假设。Remark 2 明确区分逐图期望 Dice 与二元分类总体 F1 的半阈值结论。",
+    "limitation": "训练中带 T/O/P 配额、Dice、难例采样的 pT 不自动是所需后验；固定阈值非普遍最优不表示任意学习选择器一定更好。",
+    "project_use": "借用每个状态选择候选体积，放弃把当前 Dice/2 当直接输出阈值；用实际执行标签训练轻量选择器。",
+    "source_refs": [
+      "turn59view0",
+      "turn146view4"
+    ]
+  },
+  {
+    "id": "M09",
+    "title": "Thresholding Classifiers to Maximize F1 Score",
+    "year": 2014,
+    "domain": "F-measure 决策",
+    "url": "https://arxiv.org/pdf/1402.1892",
+    "access_depth": "全文相关段：最优规则及校准概率条件下 Corollary 1。",
+    "verified_claim": "校准条件下的半阈值是最优可达 F1 的一半；该最优值取决于预测集合／分布。它不是随手代入当前分割 Dice 的规则。",
+    "limitation": "总体 F1 的定义与逐病例 Dice 期望不相同；本项目 pT 表示指定错误而不是全病灶概率。",
+    "project_use": "保留已知候选实际内容的精确 Dice 算式，禁止把定理名称当作未校准 pT 执行阈值的来源。",
+    "source_refs": [
+      "turn46view1",
+      "turn52view1"
+    ]
+  },
+  {
+    "id": "M10",
+    "title": "Marginal Thresholding in Noisy Image Segmentation",
+    "year": 2023,
+    "domain": "噪声标签／Dice 决策理论",
+    "url": "https://arxiv.org/pdf/2304.04116",
+    "access_depth": "全文相关段：目标定义、噪声标签体积条件、阈值构造、局限和代码。",
+    "verified_claim": "论文分析 soft-Dice／Dice 与条件边缘概率阈值的关系；明示理论精确成立需噪声标签体积恒定，其噪声模型另有假设。",
+    "limitation": "期望 Dice 与把边缘概率直接代入分子分母通常不同；不能省略恒定标签体积条件，将其推广到多发病灶、残差和多轮状态。",
+    "project_use": "支持用候选真实执行结果直接监督决策，避免把所有概率理论简化成一个当前 Dice 标量。",
+    "source_refs": [
+      "turn59view1",
+      "turn134view0"
+    ]
+  },
+  {
+    "id": "M11",
+    "title": "Optimizing the Dice Score and Jaccard Index for Medical Image Segmentation: Theory and Practice",
+    "year": 2019,
+    "domain": "医学分割损失理论",
+    "url": "https://arxiv.org/pdf/1911.01685",
+    "access_depth": "全文相关段：Propositions 1–2、近似定义、实验设置与讨论。",
+    "verified_claim": "Dice 和 Jaccard 有明确相互近似界；文中定义的加权 Hamming 相似性无法给 Dice 非平凡统一近似界，特别是小对象。",
+    "limitation": "不能推出任何加权交叉熵在任意数据上都无法学出好 Dice，也不能把该定理解释为边界负样本不该训练。",
+    "project_use": "把执行后的 metric 信号加入原有 T/O/P 监督有依据；避免将更换损失与保证达到 0.80 等同。",
+    "source_refs": [
+      "turn59view2",
+      "turn134view1"
+    ]
+  },
+  {
+    "id": "M12",
+    "title": "The Lovász-Softmax Loss: A Tractable Surrogate for the Optimization of the Intersection-Over-Union Measure in Neural Networks",
+    "year": 2018,
+    "domain": "IoU 损失／概率决策复核",
+    "url": "https://arxiv.org/pdf/1705.08790",
+    "access_depth": "全文相关段：损失定义、§4.3 原文数字、讨论；未将所有补充表逐格复核。",
+    "verified_claim": "20 批随机选取、每批 21 张且全类别出现的图像中，CE 基线 mIoU 68.7±1.2，套 Nowozin 决策后 65.1±1.4，Lovász 方案 72.5±1.2。作者将前者下降归因于失校准的措辞是推测。",
+    "limitation": "不是 Dice/PET 实验；没有通过只改变校准这一因素证明下降的唯一原因。凸扩展也不意味着深网优化全局凸。",
+    "project_use": "改正计划中的条件和因果语气，保留实测 action score 的理由，避免额外发动大规模校准实验。",
+    "source_refs": [
+      "turn3view1",
+      "turn154view2"
+    ]
+  },
+  {
+    "id": "M13",
+    "title": "On Calibration of Modern Neural Networks",
+    "year": 2017,
+    "domain": "置信度校准",
+    "url": "https://proceedings.mlr.press/v70/guo17a/guo17a.pdf",
+    "access_depth": "全文相关段：校准定义、temperature scaling、实验和局限。",
+    "verified_claim": "temperature scaling 用独立数据拟合标量温度，可改善多类分类置信度校准且不改变类别 argmax。",
+    "limitation": "概率可靠性与动作排序、分割 Dice、域外可靠性是不同目标；一维温度不能自动修复状态或候选依赖的偏差。",
+    "project_use": "不把校准当先决的庞大模块；直接检查选择器挑中候选的真实收益与误改。",
+    "source_refs": [
+      "turn59view3",
+      "turn77view2"
+    ]
+  },
+  {
+    "id": "M14",
+    "title": "On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+    "year": 2010,
+    "domain": "模型选择／评估偏差",
+    "url": "https://jmlr.org/papers/volume11/cawley10a/cawley10a.pdf",
+    "access_depth": "全文相关段：模型选择准则的偏差与方差、§4.1 和评估讨论。",
+    "verified_claim": "优化带噪声的有限样本选择准则本身可以过拟合，选择准则方差会影响最终表现；无偏评估不等于选择结果无偏。",
+    "limitation": "原实验是模型选择，迁移到每状态 20–40 个候选属于数学机制类比，不是该论文直接验证 SIRB。",
+    "project_use": "留出患者上测已被 argmax 选中的候选，不能只报全部候选 MSE、排序相关或 oracle 上限。",
+    "source_refs": [
+      "turn59view4",
+      "turn77view3"
+    ]
+  },
+  {
+    "id": "M15",
+    "title": "Decision-Focused Learning: Through the Lens of Learning to Rank",
+    "year": 2022,
+    "domain": "决策导向学习／排序",
+    "url": "https://proceedings.mlr.press/v162/mandi22a/mandi22a.pdf",
+    "access_depth": "全文相关段：候选解缓存、pointwise/pairwise/listwise 损失、实验设置。",
+    "verified_claim": "预测参数误差小与选到高质量决策不是同一目标；利用缓存可行解的排序损失能直接训练决策相关区分。",
+    "limitation": "该方法仍有损失／温度／求解频率等选择，不能称零超参数；候选质量限制了选择器的上限。",
+    "project_use": "用当前可执行候选的真实效用监督，并优先检查赢家相对原执行器的收益；首轮无需可微求解器或强化学习。",
+    "source_refs": [
+      "turn46view2",
+      "turn52view2"
+    ]
+  },
+  {
+    "id": "M16",
+    "title": "Efficient Connectivity-Preserving Instance Segmentation with Supervoxel-Based Loss Function",
+    "year": 2025,
+    "domain": "拓扑／连通性损失",
+    "url": "https://arxiv.org/html/2501.01022v1",
+    "access_depth": "全文相关段：supervoxel 简单点思想、复杂度声明、3D 结果表；预印本。",
+    "verified_claim": "该方法以 supervoxel 为单位设计连接保持监督，改善其所测连通指标；结果并不在所有 IoU 指标上优于 MALIS 等方法。",
+    "limitation": "连接保持与区域重合不是同一优化目标；不能用其对朴素 MALIS 的描述代替 Funke 高效实现的复杂度。",
+    "project_use": "论文主创新若改善 scope/连接仍需用真实五轮 Dice 选择效果路线，拓扑指标不替代主目标。",
+    "source_refs": [
+      "turn46view3",
+      "turn52view3",
+      "turn146view1"
+    ]
+  },
+  {
+    "id": "M17",
+    "title": "Selective Classification for Deep Neural Networks",
+    "year": 2017,
+    "domain": "选择性预测／拒绝",
+    "url": "https://proceedings.neurips.cc/paper/2017/file/4a8423d5e91fda00bb7e46540e2b0cf1-Paper.pdf",
+    "access_depth": "全文相关段：risk–coverage 定义、控制程序、假设和实验。",
+    "verified_claim": "选择性分类通过拒绝部分样本交换覆盖率与风险，所述保证依赖样本假设和预先给定风险／置信要求。",
+    "limitation": "把 no-op 的当前增益定为 0 不是风险控制定理；医学五轮交互中的机会成本与分类拒答不同。",
+    "project_use": "允许不改，但记录它占用的一次交互和重复目标，不把拒绝率越高解释为越安全或越好。",
+    "source_refs": [
+      "turn82view0"
+    ]
+  },
+  {
+    "id": "M18",
+    "title": "SelectiveNet: A Deep Neural Network with an Integrated Reject Option",
+    "year": 2019,
+    "domain": "有拒绝选项的联合学习",
+    "url": "https://proceedings.mlr.press/v97/geifman19a/geifman19a.pdf",
+    "access_depth": "全文相关段：risk/coverage 约束、三头模型、覆盖率校准和实验。",
+    "verified_claim": "模型联合学习预测和选择，但训练目标包含用户指定覆盖率，测试覆盖率也可能偏离，文中另做校准。",
+    "limitation": "集成 reject 头不能消除效用定义和部署分布问题；多加一个头不自动使零阈值正确。",
+    "project_use": "只借鉴可拒绝动作，当前首轮保留便宜的回归树与固定 no-op 参照，不扩为全套 SelectiveNet。",
+    "source_refs": [
+      "turn82view1",
+      "turn144view5"
+    ]
+  },
+  {
+    "id": "M19",
+    "title": "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning",
+    "year": 2011,
+    "domain": "序列分布偏移／DAgger",
+    "url": "https://proceedings.mlr.press/v15/ross11a/ross11a.pdf",
+    "access_depth": "全文相关段：Algorithm 3.1、学习者状态收集、数据聚合与定理条件。",
+    "verified_claim": "DAgger 在当前策略访问到的状态上收集专家标签并聚合训练，针对训练状态与部署策略状态不一致的问题。",
+    "limitation": "一次回放补数据不继承原定理的多轮、无遗憾和样本条件保证；本项目不是必须完整实现 DAgger。",
+    "project_use": "质量头初训后用实际网络＋选择器做一次 TRAIN 五轮回放并补标签，这是最便宜的闭环补强。",
+    "source_refs": [
+      "turn82view2",
+      "turn134view2"
+    ]
+  },
+  {
+    "id": "M20",
+    "title": "Reinforcement and Imitation Learning via Interactive No-Regret Learning",
+    "year": 2014,
+    "domain": "代价敏感模仿／AggreVaTe",
+    "url": "https://arxiv.org/pdf/1406.5979",
+    "access_depth": "全文相关段：§2.2–2.3、cost-to-go 标签和动作比较。",
+    "verified_claim": "AggreVaTe 用学习者到达状态上的未来代价信息来比较动作，明确即时误差和后续累计成本的区别。",
+    "limitation": "当前候选的单步 ΔDice 不是 Q 值；若候选用两步标签而 no-op 仍用单步 0，二者基准不相同。",
+    "project_use": "仅当 TRAIN 实际发现重复 no-op 或返工时，给 proposal/no-op 两支同剩余 horizon 续演，并预测相对 no-op 的 Advantage。",
+    "source_refs": [
+      "turn87view2"
+    ]
+  },
+  {
+    "id": "M21",
+    "title": "The Foundations of Cost-Sensitive Learning",
+    "year": 2001,
+    "domain": "代价敏感决策／先验变化",
+    "url": "https://cseweb.ucsd.edu/~elkan/rescale.pdf",
+    "access_depth": "全文相关段：代价决策、Theorems 1–2 和类内分布不变条件；PDF 部分公式字符抽取损坏，按可读文字核条件。",
+    "verified_claim": "先验调整公式需要只改变类别基率、类条件分布不变；这些结论讲真实概率，而不是自动保证任意学习器输出正确。",
+    "limitation": "距离依赖难负样本采样改变了类内输入分布，不能简单以一个先验修正恢复部署 pT；代价矩阵仍是任务约定。",
+    "project_use": "不因等量保留样本或自适应采样就声称 pT 被校准，直接学执行结果能绕开部分概率解释要求。",
+    "source_refs": [
+      "turn82view3",
+      "turn137view4"
+    ]
+  },
+  {
+    "id": "M22",
+    "title": "Optimal Decisions from Probabilistic Models: the Intersection-over-Union Case",
+    "year": 2014,
+    "domain": "概率决策／IoU",
+    "url": "https://www.nowozin.net/sebastian/papers/nowozin2014intersectionoverunion.pdf",
+    "access_depth": "全文相关段：期望 IoU 决策、比值期望近似、条件独立和§5。",
+    "verified_claim": "论文研究在概率模型假设下最大化 IoU 的决策，并讨论近似及概率质量对决策的影响。",
+    "limitation": "期望的比值不是比值的期望；既非所有空间相关标签的精确解，也不是当前 Dice/2 的无条件定理。",
+    "project_use": "不再套用体素标量规则，用原生执行后的监督标签检查真实候选价值。",
+    "source_refs": [
+      "turn90view0"
+    ]
+  },
+  {
+    "id": "M23",
+    "title": "Confidence Calibration and Predictive Uncertainty Estimation for Deep Medical Image Segmentation",
+    "year": 2020,
+    "domain": "医学分割校准／域移",
+    "url": "https://arxiv.org/pdf/1911.13273",
+    "access_depth": "全文相关段：贡献、数据分割、§V 损失和指标、图例；非所有附表逐格复核。",
+    "verified_claim": "脑、心脏、前列腺任务中比较 Dice 与 CE 训练，观察分割质量与校准的权衡，并研究模型集成与结构级质量/OOD 识别。",
+    "limitation": "更好的校准不等于更高 Dice；该文不保证模型在 PET/CT 或交互状态迁移中可靠。集成计算成本也不符合本轮首要轻量要求。",
+    "project_use": "保留预测值的非概率解释边界，首轮检验已选动作真实结果，不因校准文献启动多模型集成。",
+    "source_refs": [
+      "turn141view0",
+      "turn139view1"
+    ]
+  },
+  {
+    "id": "M24",
+    "title": "Differentiation of Blackbox Combinatorial Solvers",
+    "year": 2020,
+    "domain": "离散优化／可微求解器",
+    "url": "https://arxiv.org/html/1912.02175v2",
+    "access_depth": "全文相关段：§3、分段常数解、Algorithm 1 和插值参数。",
+    "verified_claim": "离散最优解对代价常为分段常数，直接梯度几乎处处为 0；论文用代价扰动后再次调用求解器构造有信息的替代梯度，并引入 λ 控制插值。",
+    "limitation": "这不是求解器原始梯度，也不无超参数；max-min 连通数值是分段线性的另一种对象，不能把两种微分问题混同。",
+    "project_use": "明确连通模块应输出连续瓶颈值并有自定义梯度或独立边监督；不要把 Python/CPU 并查集写成自动端到端可微。",
+    "source_refs": [
+      "turn141view1",
+      "turn144view4"
+    ]
+  },
+  {
+    "id": "M25",
+    "title": "Learning to Rank Using Gradient Descent",
+    "year": 2005,
+    "domain": "学习排序／RankNet",
+    "url": "https://icml.cc/2015/wp-content/uploads/2015/06/icml_ranking.pdf",
+    "access_depth": "全文相关段：§2 的分差 logistic 概率、交叉熵和相等排序。",
+    "verified_claim": "RankNet 根据两个分数之差的 logistic 形式学习成对次序；相等目标可用对称标签处理。",
+    "limitation": "成对排序只约束分差，对共同平移不敏感，不能单独赋予 0 分绝对的“不值得改”意义。",
+    "project_use": "边界成对排序有直接作用；若给选择器加入排序损失仍应保留绝对收益/no-op 锚，首轮可先用简单回归。",
+    "source_refs": [
+      "turn105view2",
+      "turn134view3"
+    ]
+  },
+  {
+    "id": "M26",
+    "title": "Double Q-learning",
+    "year": 2010,
+    "domain": "极值选择偏差／序列决策",
+    "url": "https://papers.nips.cc/paper/3964-double-q-learning.pdf",
+    "access_depth": "全文相关段：§2 的最大值估计、偏差论证、讨论。",
+    "verified_claim": "多个带噪估计取最大值会引入乐观偏差；选择与独立评估分离可改变这种偏差，但双估计也可能低估。",
+    "limitation": "本项目候选高度相关，不能套独立高斯近似给出固定扣分系数；此处借用统计机制，不推荐将系统改为 Double Q/RL。",
+    "project_use": "20–40 候选后必须核查 argmax 赢家，而非只看平均预测误差；候选去重、保留 baseline/no-op、患者留出和真实五轮即可。",
+    "source_refs": [
+      "turn105view1",
+      "turn134view5",
+      "turn137view5"
+    ]
+  },
+  {
+    "id": "M27",
+    "title": "Conformal Risk Control",
+    "year": 2024,
+    "domain": "有限样本风险控制",
+    "url": "https://arxiv.org/pdf/2208.02814",
+    "access_depth": "全文相关段：假设、主保证、非单调风险反例、医学 FNR 例子；2022 预印本，2024 ICLR。",
+    "verified_claim": "标准 CRC 对相应有界、单调风险与可交换样本提供边际控制；原文明确给出非单调损失会失控的反例，医学示例控制 FNR。",
+    "limitation": "随编辑阈值变化的 Dice 或新错不一般单调；边际风险控制不是每一患者保证。必须给 α 风险预算，不能说无阈值无参数。",
+    "project_use": "当前不把 CRC 加入效果主线；防止把 no-op 或候选置信界包装成现成的理论安全保证。",
+    "source_refs": [
+      "turn105view3",
+      "turn134view4"
+    ]
+  },
+  {
+    "id": "M28",
+    "title": "Contour Detection and Hierarchical Image Segmentation",
+    "year": 2010,
+    "domain": "层次分割／超度量轮廓",
+    "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2010/EECS-2010-17.html",
+    "access_depth": "作者所在大学原始技术报告摘要；归档 PDF 未成功取得，未核全文定理；2011 同题期刊版不另计篇数。",
+    "verified_claim": "原始摘要描述将轮廓检测转为层次区域树，并允许用用户标注交互细化。",
+    "limitation": "仅凭摘要不声称某一种超度量构造具备本项目所需全部性质；层次候选仍受初始轮廓与树结构限制。",
+    "project_use": "候选可按实际 merge/体积次序组织，19 个均匀概率档是计算预算选择而不是自然定律；暂不新增一套 UCM 实现。",
+    "source_refs": [
+      "turn137view3",
+      "turn139view3"
+    ]
+  }
+]

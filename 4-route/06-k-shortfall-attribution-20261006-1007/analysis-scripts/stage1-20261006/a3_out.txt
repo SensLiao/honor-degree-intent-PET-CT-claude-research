@@ -1,0 +1,20 @@
+patients: 54
+K1 - v1flat at D5: mean -0.0022  median -0.0038  better 16  worse 21  |diff|<0.01 17
+K2 - v1flat at D5: mean -0.0033  median -0.0085  better 14  worse 24  |diff|<0.01 16
+K2 - K1 at D5: mean -0.0011  median +0.0000  better 11  worse 13  |diff|<0.01 30
+
+oracle - K1 at D5: mean 0.1640; share of the summed gap from the 10 worst patients 49%, 20 worst 70%
+patients with K1 D5 < 0.5: 3 ; their D0 mean 0.231, K1 D5 mean 0.306, oracle D5 mean 0.884
+  if the 5 worst-gap patients reached the ideal repair, K1 D5 mean would be 0.8031
+  if the 10 worst-gap patients reached the ideal repair, K1 D5 mean would be 0.8337
+
+round-1 ADD strokes: 54; target volume ml: median 5.7, quartiles 1.1 / 35.2, max 709.6
+  target    0-5    ml: n=26  share of volume  1.2%  fill fraction (median):  v1flat   88%  K1   43%  K2   41%  dD1 oracle +0.326  dD1 v1flat +0.180  dD1 K1 +0.178  dD1 K2 +0.138
+  target    5-20   ml: n=10  share of volume  3.4%  fill fraction (median):  v1flat   44%  K1    9%  K2   11%  dD1 oracle +0.043  dD1 v1flat +0.018  dD1 K1 +0.007  dD1 K2 +0.007
+  target   20-80   ml: n= 8  share of volume  9.6%  fill fraction (median):  v1flat   36%  K1    4%  K2    7%  dD1 oracle +0.255  dD1 v1flat +0.106  dD1 K1 +0.087  dD1 K2 +0.082
+  target   80-inf  ml: n=10  share of volume 85.8%  fill fraction (median):  v1flat   18%  K1    6%  K2    4%  dD1 oracle +0.187  dD1 v1flat +0.040  dD1 K1 +0.018  dD1 K2 +0.015
+
+ADD strokes in rounds 2-5 that recovered < 1% of their target:
+  v1flat   1 of 189 ADD strokes (1%)
+  K1      57 of 232 ADD strokes (25%)
+  K2      40 of 212 ADD strokes (19%)

@@ -1,0 +1,388 @@
+{
+ "flat": {
+  "patient_mean_contribution": {
+   "ADD|r1": 0.06239313462542841,
+   "ADD|r2-5": 0.069816020106755,
+   "REMOVE|r1": 0.01857396467105678,
+   "REMOVE|r2-5": -0.007889956587779265,
+   "none|r2-5": 0.0
+  },
+  "sum_contributions": 0.14289316281546094,
+  "check_patient_mean_D5_minus_D0": 0.14289316281546094,
+  "counts": {
+   "ADD|r1": 177,
+   "REMOVE|r2-5": 414,
+   "ADD|r2-5": 593,
+   "REMOVE|r1": 78,
+   "none|r2-5": 13
+  },
+  "worse": {
+   "REMOVE|r2-5": 140,
+   "ADD|r2-5": 74,
+   "REMOVE|r1": 20,
+   "ADD|r1": 8
+  },
+  "better": {
+   "ADD|r1": 169,
+   "ADD|r2-5": 518,
+   "REMOVE|r2-5": 263,
+   "REMOVE|r1": 56
+  },
+  "zero": {
+   "none|r2-5": 13,
+   "REMOVE|r2-5": 11,
+   "REMOVE|r1": 2,
+   "ADD|r2-5": 1
+  },
+  "per_stroke_gain": {
+   "ADD|r1": {
+    "n": 177,
+    "mean": 0.10244318983536198,
+    "median": 0.025074143576203523,
+    "q1": 0.007151027785952224,
+    "q3": 0.10943598377592412,
+    "min": -0.1324675324675325,
+    "max": 0.7692307692307693
+   },
+   "REMOVE|r2-5": {
+    "n": 414,
+    "mean": -0.008524890495319735,
+    "median": 0.0029279696848624193,
+    "q1": -0.005598711206100837,
+    "q3": 0.02564102564102566,
+    "min": -0.875,
+    "max": 0.37142857142857144
+   },
+   "ADD|r2-5": {
+    "n": 593,
+    "mean": 0.03227230291163706,
+    "median": 0.008399508919800236,
+    "q1": 0.001971299226029899,
+    "q3": 0.025869623867922242,
+    "min": -0.21347714571533877,
+    "max": 0.7580645161290323
+   },
+   "REMOVE|r1": {
+    "n": 78,
+    "mean": 0.04227299550404432,
+    "median": 0.008741467482918736,
+    "q1": -0.0004556116070321692,
+    "q3": 0.08600148920327633,
+    "min": -0.3630769230769231,
+    "max": 0.3298596034158344
+   },
+   "none|r2-5": {
+    "n": 13,
+    "mean": 0.0,
+    "median": 0.0,
+    "q1": 0.0,
+    "q3": 0.0,
+    "min": 0.0,
+    "max": 0.0
+   }
+  },
+  "volumes": {
+   "ADD|r1": {
+    "target_volume_ml": 9243.891201545595,
+    "target_recovery_ml": 2050.6388133818537,
+    "new_error_ml": 1163.5197909781104,
+    "fp_added_ml": 1163.5197909781104,
+    "tp_lost_ml": 0.0,
+    "other_repair_ml": 29.813083351634443,
+    "zero_recovery_with_damage": 0.0
+   },
+   "REMOVE|r2-5": {
+    "target_volume_ml": 6714.535172867523,
+    "target_recovery_ml": 3015.8776126213525,
+    "new_error_ml": 2159.2840879344276,
+    "fp_added_ml": 0.0,
+    "tp_lost_ml": 2159.2840879344276,
+    "other_repair_ml": 377.14448395667307,
+    "zero_recovery_with_damage": 3.0
+   },
+   "ADD|r2-5": {
+    "target_volume_ml": 24013.566503345228,
+    "target_recovery_ml": 4008.6584314059874,
+    "new_error_ml": 2813.132256711449,
+    "fp_added_ml": 2813.132256711449,
+    "tp_lost_ml": 0.0,
+    "other_repair_ml": 178.10593975869205,
+    "zero_recovery_with_damage": 0.0
+   },
+   "REMOVE|r1": {
+    "target_volume_ml": 2354.706062490926,
+    "target_recovery_ml": 680.7263778306784,
+    "new_error_ml": 176.70606269889464,
+    "fp_added_ml": 0.0,
+    "tp_lost_ml": 176.70606269889464,
+    "other_repair_ml": 33.73821764863719,
+    "zero_recovery_with_damage": 0.0
+   }
+  },
+  "patients_later_remove_net_negative": 22,
+  "patients_later_remove_net_positive": 29,
+  "patients_total": 54,
+  "patient_mean_negative_part": {
+   "ADD|r1": -0.0016765213714142356,
+   "ADD|r2-5": -0.011184640648031173,
+   "REMOVE|r1": -0.003961151630509489,
+   "REMOVE|r2-5": -0.04970960438568466,
+   "none|r2-5": 0.0
+  }
+ },
+ "N3": {
+  "patient_mean_contribution": {
+   "ADD|r1": 0.04199878941737083,
+   "ADD|r2-5": 0.05726667659818952,
+   "REMOVE|r1": 0.010597758074249222,
+   "REMOVE|r2-5": 0.017295495643575028,
+   "none|r2-5": 0.0
+  },
+  "sum_contributions": 0.1271587197333846,
+  "check_patient_mean_D5_minus_D0": 0.1271587197333846,
+  "counts": {
+   "ADD|r1": 177,
+   "REMOVE|r2-5": 468,
+   "ADD|r2-5": 540,
+   "REMOVE|r1": 78,
+   "none|r2-5": 12
+  },
+  "worse": {
+   "REMOVE|r2-5": 132,
+   "ADD|r2-5": 90,
+   "REMOVE|r1": 14,
+   "ADD|r1": 12
+  },
+  "better": {
+   "ADD|r1": 165,
+   "ADD|r2-5": 446,
+   "REMOVE|r2-5": 266,
+   "REMOVE|r1": 57
+  },
+  "zero": {
+   "REMOVE|r2-5": 70,
+   "none|r2-5": 12,
+   "ADD|r2-5": 4,
+   "REMOVE|r1": 7
+  },
+  "per_stroke_gain": {
+   "ADD|r1": {
+    "n": 177,
+    "mean": 0.06965536501073699,
+    "median": 0.02294847549573631,
+    "q1": 0.00766145789446715,
+    "q3": 0.08981218240021493,
+    "min": -0.10606060606060608,
+    "max": 0.48794549266247383
+   },
+   "REMOVE|r2-5": {
+    "n": 468,
+    "mean": 0.00397192411942297,
+    "median": 0.0010497992539220125,
+    "q1": -0.0008285784958859121,
+    "q3": 0.012838764435448125,
+    "min": -0.6017533606078316,
+    "max": 0.24806370677429912
+   },
+   "ADD|r2-5": {
+    "n": 540,
+    "mean": 0.030881319793547413,
+    "median": 0.00691910655696612,
+    "q1": 0.0014146323548139411,
+    "q3": 0.022547496672918416,
+    "min": -0.16745346040794518,
+    "max": 0.6039553382470992
+   },
+   "REMOVE|r1": {
+    "n": 78,
+    "mean": 0.013590623756733816,
+    "median": 0.005477875981526437,
+    "q1": 0.0,
+    "q3": 0.06835443037974687,
+    "min": -0.6539007092198582,
+    "max": 0.17987726454268183
+   },
+   "none|r2-5": {
+    "n": 12,
+    "mean": 0.0,
+    "median": 0.0,
+    "q1": 0.0,
+    "q3": 0.0,
+    "min": 0.0,
+    "max": 0.0
+   }
+  },
+  "volumes": {
+   "ADD|r1": {
+    "target_volume_ml": 9243.891201545595,
+    "target_recovery_ml": 1605.8344299693315,
+    "new_error_ml": 775.2790357130716,
+    "fp_added_ml": 775.2790357130716,
+    "tp_lost_ml": 0.0,
+    "other_repair_ml": 87.38046756079193,
+    "zero_recovery_with_damage": 2.0
+   },
+   "REMOVE|r2-5": {
+    "target_volume_ml": 7046.191708014166,
+    "target_recovery_ml": 1456.5833899978004,
+    "new_error_ml": 1190.8874882773023,
+    "fp_added_ml": 0.0,
+    "tp_lost_ml": 1190.8874882773023,
+    "other_repair_ml": 272.0265898919187,
+    "zero_recovery_with_damage": 6.0
+   },
+   "ADD|r2-5": {
+    "target_volume_ml": 21767.11026222362,
+    "target_recovery_ml": 3144.081376913314,
+    "new_error_ml": 1922.3015374909453,
+    "fp_added_ml": 1922.3015374909453,
+    "tp_lost_ml": 0.0,
+    "other_repair_ml": 225.01433390499355,
+    "zero_recovery_with_damage": 4.0
+   },
+   "REMOVE|r1": {
+    "target_volume_ml": 2354.706062490926,
+    "target_recovery_ml": 386.87462212106556,
+    "new_error_ml": 57.534850437933365,
+    "fp_added_ml": 0.0,
+    "tp_lost_ml": 57.534850437933365,
+    "other_repair_ml": 27.88945755688345,
+    "zero_recovery_with_damage": 0.0
+   }
+  },
+  "patients_later_remove_net_negative": 21,
+  "patients_later_remove_net_positive": 28,
+  "patients_total": 54,
+  "patient_mean_negative_part": {
+   "ADD|r1": -0.0013522649927072028,
+   "ADD|r2-5": -0.008751399670543501,
+   "REMOVE|r1": -0.0048691504345231935,
+   "REMOVE|r2-5": -0.020500179138737515,
+   "none|r2-5": 0.0
+  }
+ },
+ "oracle": {
+  "patient_mean_contribution": {
+   "ADD|r1": 0.13845747669622163,
+   "ADD|r2-5": 0.06967416378788124,
+   "REMOVE|r1": 0.04455368521770731,
+   "REMOVE|r2-5": 0.05502643132633039,
+   "none|r2-5": 0.0
+  },
+  "sum_contributions": 0.3077117570281406,
+  "check_patient_mean_D5_minus_D0": 0.3077117570281405,
+  "counts": {
+   "ADD|r1": 177,
+   "ADD|r2-5": 566,
+   "REMOVE|r2-5": 334,
+   "none|r2-5": 120,
+   "REMOVE|r1": 78
+  },
+  "worse": {},
+  "better": {
+   "ADD|r1": 177,
+   "ADD|r2-5": 566,
+   "REMOVE|r2-5": 334,
+   "REMOVE|r1": 76
+  },
+  "zero": {
+   "none|r2-5": 120,
+   "REMOVE|r1": 2
+  },
+  "per_stroke_gain": {
+   "ADD|r1": {
+    "n": 177,
+    "mean": 0.21510343326272072,
+    "median": 0.08305299424304757,
+    "q1": 0.02723307862433233,
+    "q3": 0.2188436018957346,
+    "min": 0.0032159487003309284,
+    "max": 1.0
+   },
+   "ADD|r2-5": {
+    "n": 566,
+    "mean": 0.0323834188191716,
+    "median": 0.014054054054054022,
+    "q1": 0.006164024913040411,
+    "q3": 0.037701272726030216,
+    "min": 0.00042278487951807886,
+    "max": 0.9230769230769231
+   },
+   "REMOVE|r2-5": {
+    "n": 334,
+    "mean": 0.04132498236567232,
+    "median": 0.01753898779749702,
+    "q1": 0.006669156093271733,
+    "q3": 0.0405755286435594,
+    "min": 0.0004054050028603484,
+    "max": 0.46153846153846156
+   },
+   "none|r2-5": {
+    "n": 120,
+    "mean": 0.0,
+    "median": 0.0,
+    "q1": 0.0,
+    "q3": 0.0,
+    "min": 0.0,
+    "max": 0.0
+   },
+   "REMOVE|r1": {
+    "n": 78,
+    "mean": 0.12099562663052232,
+    "median": 0.0706704971272849,
+    "q1": 0.01245138168019827,
+    "q3": 0.1699569680148545,
+    "min": 0.0,
+    "max": 0.5200803212851406
+   }
+  },
+  "volumes": {
+   "ADD|r1": {
+    "target_volume_ml": 9243.891201545595,
+    "target_recovery_ml": 9243.891201545595,
+    "new_error_ml": 0.0,
+    "fp_added_ml": 0.0,
+    "tp_lost_ml": 0.0,
+    "other_repair_ml": 0.0,
+    "zero_recovery_with_damage": 0.0
+   },
+   "ADD|r2-5": {
+    "target_volume_ml": 5969.679508348378,
+    "target_recovery_ml": 5969.679508348378,
+    "new_error_ml": 0.0,
+    "fp_added_ml": 0.0,
+    "tp_lost_ml": 0.0,
+    "other_repair_ml": 0.0,
+    "zero_recovery_with_damage": 0.0
+   },
+   "REMOVE|r2-5": {
+    "target_volume_ml": 3222.8074122889698,
+    "target_recovery_ml": 3222.8074122889698,
+    "new_error_ml": 0.0,
+    "fp_added_ml": 0.0,
+    "tp_lost_ml": 0.0,
+    "other_repair_ml": 0.0,
+    "zero_recovery_with_damage": 0.0
+   },
+   "REMOVE|r1": {
+    "target_volume_ml": 2354.706062490926,
+    "target_recovery_ml": 2354.706062490926,
+    "new_error_ml": 0.0,
+    "fp_added_ml": 0.0,
+    "tp_lost_ml": 0.0,
+    "other_repair_ml": 0.0,
+    "zero_recovery_with_damage": 0.0
+   }
+  },
+  "patients_later_remove_net_negative": 0,
+  "patients_later_remove_net_positive": 47,
+  "patients_total": 54,
+  "patient_mean_negative_part": {
+   "ADD|r1": 0.0,
+   "ADD|r2-5": 0.0,
+   "REMOVE|r1": 0.0,
+   "REMOVE|r2-5": 0.0,
+   "none|r2-5": 0.0
+  }
+ }
+}

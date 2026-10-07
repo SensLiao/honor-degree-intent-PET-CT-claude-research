@@ -1,0 +1,4 @@
+v1flat  rounds 2-5 | + n=189 target  7150.1 fixed 1295.8 (median share 0.552) fp+  949.1 tp-    0.0 | - n=147 target  2226.1 fixed 1015.5 (median share 0.676) fp+    0.0 tp-  654.6
+K1      rounds 2-5 | + n=232 target  9045.2 fixed  974.9 (median share 0.081) fp+  720.4 tp-    0.0 | - n=106 target  3508.3 fixed  576.7 (median share 0.370) fp+    0.0 tp-  355.9
+K2      rounds 2-5 | + n=212 target  8195.9 fixed  479.3 (median share 0.100) fp+  318.2 tp-    0.0 | - n=126 target  3327.6 fixed  396.7 (median share 0.308) fp+    0.0 tp-   98.7
+routed  rounds 2-5 | + n=166 target  6768.5 fixed 1061.2 (median share 0.596) fp+  808.0 tp-    0.0 | - n=168 target  3768.6 fixed  551.2 (median share 0.284) fp+    0.0 tp-  188.4

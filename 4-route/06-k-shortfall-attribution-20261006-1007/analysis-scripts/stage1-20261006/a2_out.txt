@@ -1,0 +1,110 @@
+Per-round Dice gain (patient mean over 85 positive scans / 54 pts), split by the sign of that round's stroke
+contribution = patient mean of (Dice_k - Dice_k-1) where the round had that sign, else 0; rows sum to the round gain
+== K2
+  round 1: + +0.0451  - +0.0248  none +0.0000   strokes on pos scans: ADD 54  REMOVE 31
+  round 2: + +0.0141  - +0.0165  none +0.0000   strokes on pos scans: ADD 54  REMOVE 31
+  round 3: + +0.0071  - +0.0089  none +0.0000   strokes on pos scans: ADD 49  REMOVE 36
+  round 4: + +0.0113  - +0.0036  none +0.0000   strokes on pos scans: ADD 51  REMOVE 33
+  round 5: + +0.0080  - +0.0039  none +0.0000   strokes on pos scans: ADD 58  REMOVE 26
+  5 rounds: ADD +0.0857  REMOVE +0.0577  none +0.0000  total +0.1434
+== K1
+  round 1: + +0.0562  - +0.0260  none +0.0000   strokes on pos scans: ADD 54  REMOVE 31
+  round 2: + +0.0147  - +0.0122  none +0.0000   strokes on pos scans: ADD 61  REMOVE 24
+  round 3: + +0.0079  - +0.0010  none +0.0000   strokes on pos scans: ADD 58  REMOVE 27
+  round 4: + +0.0108  - +0.0052  none +0.0000   strokes on pos scans: ADD 56  REMOVE 28
+  round 5: + +0.0073  - +0.0032  none +0.0000   strokes on pos scans: ADD 57  REMOVE 27
+  5 rounds: ADD +0.0969  REMOVE +0.0475  none +0.0000  total +0.1445
+== K2flip
+  round 1: + +0.0485  - +0.0248  none +0.0000   strokes on pos scans: ADD 54  REMOVE 31
+  round 2: + +0.0179  - +0.0140  none +0.0000   strokes on pos scans: ADD 58  REMOVE 27
+  round 3: + +0.0087  - +0.0051  none +0.0000   strokes on pos scans: ADD 54  REMOVE 31
+  round 4: + +0.0128  - +0.0061  none +0.0000   strokes on pos scans: ADD 49  REMOVE 35
+  round 5: + +0.0072  - +0.0024  none +0.0000   strokes on pos scans: ADD 60  REMOVE 24
+  5 rounds: ADD +0.0952  REMOVE +0.0524  none +0.0000  total +0.1476
+== v1flat
+  round 1: + +0.0629  - +0.0224  none +0.0000   strokes on pos scans: ADD 54  REMOVE 31
+  round 2: + +0.0087  - -0.0028  none +0.0000   strokes on pos scans: ADD 48  REMOVE 36
+  round 3: + +0.0259  - -0.0042  none +0.0000   strokes on pos scans: ADD 48  REMOVE 36
+  round 4: + +0.0218  - -0.0004  none +0.0000   strokes on pos scans: ADD 47  REMOVE 37
+  round 5: + +0.0110  - +0.0014  none +0.0000   strokes on pos scans: ADD 46  REMOVE 38
+  5 rounds: ADD +0.1302  REMOVE +0.0165  none +0.0000  total +0.1467
+== oracle
+  round 1: + +0.1376  - +0.0496  none +0.0000   strokes on pos scans: ADD 54  REMOVE 31
+  round 2: + +0.0280  - +0.0267  none +0.0000   strokes on pos scans: ADD 49  REMOVE 31
+  round 3: + +0.0220  - +0.0149  none +0.0000   strokes on pos scans: ADD 53  REMOVE 24
+  round 4: + +0.0123  - +0.0044  none +0.0000   strokes on pos scans: ADD 45  REMOVE 27
+  round 5: + +0.0072  - +0.0056  none +0.0000   strokes on pos scans: ADD 45  REMOVE 26
+  5 rounds: ADD +0.2072  REMOVE +0.1013  none +0.0000  total +0.3085
+
+Stroke-level repair of the targeted error component (all 99 scans incl. negatives; volumes in ml)
+== K2
+  r1 ADD n= 54 target  3107.83  recovered  482.98 ( 15.5% by vol, median stroke  18.4%)  zero-recovery   3  other same-sign   2.96  new error 129.75 (tp_lost  0.00 fp_added 129.75)
+  r1 REM n= 31 target   722.62  recovered   72.07 ( 10.0% by vol, median stroke  59.5%)  zero-recovery   2  other same-sign   1.88  new error   5.71 (tp_lost  5.71 fp_added  0.00)
+  r2 ADD n= 54 target  2479.37  recovered  253.86 ( 10.2% by vol, median stroke  21.9%)  zero-recovery   2  other same-sign  27.40  new error 278.63 (tp_lost  0.00 fp_added 278.63)
+  r2 REM n= 31 target   694.70  recovered   84.66 ( 12.2% by vol, median stroke  66.2%)  zero-recovery   2  other same-sign   2.70  new error   8.47 (tp_lost  8.47 fp_added  0.00)
+  r3 ADD n= 49 target  1904.04  recovered   82.22 (  4.3% by vol, median stroke   9.2%)  zero-recovery   9  other same-sign   1.50  new error  16.01 (tp_lost  0.00 fp_added 16.01)
+  r3 REM n= 36 target  1120.74  recovered  176.21 ( 15.7% by vol, median stroke  40.7%)  zero-recovery   4  other same-sign   2.48  new error  51.08 (tp_lost 51.08 fp_added  0.00)
+  r4 ADD n= 51 target  1866.53  recovered   90.12 (  4.8% by vol, median stroke  14.1%)  zero-recovery   4  other same-sign   1.62  new error  17.90 (tp_lost  0.00 fp_added 17.90)
+  r4 REM n= 33 target   845.85  recovered   98.88 ( 11.7% by vol, median stroke  29.7%)  zero-recovery   4  other same-sign   3.02  new error  33.51 (tp_lost 33.51 fp_added  0.00)
+  r5 ADD n= 58 target  1945.92  recovered   53.07 (  2.7% by vol, median stroke   7.4%)  zero-recovery  11  other same-sign   0.60  new error   5.67 (tp_lost  0.00 fp_added  5.67)
+  r5 REM n= 26 target   666.29  recovered   37.00 (  5.6% by vol, median stroke  15.1%)  zero-recovery   5  other same-sign   2.83  new error   5.68 (tp_lost  5.68 fp_added  0.00)
+== K1
+  r1 ADD n= 54 target  3107.83  recovered  369.41 ( 11.9% by vol, median stroke  17.5%)  zero-recovery   3  other same-sign   5.64  new error  62.68 (tp_lost  0.00 fp_added 62.68)
+  r1 REM n= 31 target   722.62  recovered   66.94 (  9.3% by vol, median stroke  66.0%)  zero-recovery   1  other same-sign   2.80  new error   5.41 (tp_lost  5.41 fp_added  0.00)
+  r2 ADD n= 61 target  2689.43  recovered  465.05 ( 17.3% by vol, median stroke  14.5%)  zero-recovery   4  other same-sign  28.49  new error 428.63 (tp_lost  0.00 fp_added 428.63)
+  r2 REM n= 24 target   672.90  recovered   49.02 (  7.3% by vol, median stroke  61.3%)  zero-recovery   0  other same-sign   3.16  new error   6.92 (tp_lost  6.92 fp_added  0.00)
+  r3 ADD n= 58 target  2121.55  recovered  108.82 (  5.1% by vol, median stroke  11.9%)  zero-recovery   9  other same-sign   4.15  new error  32.75 (tp_lost  0.00 fp_added 32.75)
+  r3 REM n= 27 target  1254.02  recovered  377.27 ( 30.1% by vol, median stroke  40.0%)  zero-recovery   1  other same-sign   4.95  new error 226.67 (tp_lost 226.67 fp_added  0.00)
+  r4 ADD n= 56 target  1986.01  recovered   99.58 (  5.0% by vol, median stroke   7.0%)  zero-recovery   9  other same-sign   0.85  new error  14.42 (tp_lost  0.00 fp_added 14.42)
+  r4 REM n= 28 target   921.44  recovered  115.98 ( 12.6% by vol, median stroke  29.8%)  zero-recovery   1  other same-sign  13.70  new error 114.63 (tp_lost 114.63 fp_added  0.00)
+  r5 ADD n= 57 target  2248.16  recovered  301.48 ( 13.4% by vol, median stroke   2.2%)  zero-recovery  17  other same-sign  18.69  new error 244.56 (tp_lost  0.00 fp_added 244.56)
+  r5 REM n= 27 target   659.92  recovered   34.44 (  5.2% by vol, median stroke  18.7%)  zero-recovery   2  other same-sign   0.91  new error   7.73 (tp_lost  7.73 fp_added  0.00)
+== K2flip
+  r1 ADD n= 54 target  3107.83  recovered  470.58 ( 15.1% by vol, median stroke  17.9%)  zero-recovery   3  other same-sign   3.25  new error 114.95 (tp_lost  0.00 fp_added 114.95)
+  r1 REM n= 31 target   722.62  recovered   67.23 (  9.3% by vol, median stroke  56.2%)  zero-recovery   2  other same-sign   1.90  new error   4.79 (tp_lost  4.79 fp_added  0.00)
+  r2 ADD n= 58 target  2498.75  recovered  246.19 (  9.9% by vol, median stroke  26.1%)  zero-recovery   2  other same-sign  20.65  new error 225.86 (tp_lost  0.00 fp_added 225.86)
+  r2 REM n= 27 target   693.09  recovered   84.65 ( 12.2% by vol, median stroke  66.7%)  zero-recovery   1  other same-sign   2.88  new error   8.86 (tp_lost  8.86 fp_added  0.00)
+  r3 ADD n= 54 target  2224.46  recovered  134.39 (  6.0% by vol, median stroke  11.5%)  zero-recovery   7  other same-sign   1.60  new error  43.45 (tp_lost  0.00 fp_added 43.45)
+  r3 REM n= 31 target   773.25  recovered   53.46 (  6.9% by vol, median stroke  34.5%)  zero-recovery   2  other same-sign   3.21  new error  14.02 (tp_lost 14.02 fp_added  0.00)
+  r4 ADD n= 49 target  1847.87  recovered   87.38 (  4.7% by vol, median stroke  12.5%)  zero-recovery   7  other same-sign   0.17  new error  12.80 (tp_lost  0.00 fp_added 12.80)
+  r4 REM n= 35 target  1007.00  recovered   89.71 (  8.9% by vol, median stroke  27.3%)  zero-recovery   2  other same-sign   2.54  new error  36.86 (tp_lost 36.86 fp_added  0.00)
+  r5 ADD n= 60 target  1789.33  recovered   44.77 (  2.5% by vol, median stroke   6.2%)  zero-recovery  12  other same-sign   0.28  new error   3.76 (tp_lost  0.00 fp_added  3.76)
+  r5 REM n= 24 target   854.87  recovered   70.39 (  8.2% by vol, median stroke  18.6%)  zero-recovery   2  other same-sign   3.11  new error  35.93 (tp_lost 35.93 fp_added  0.00)
+== v1flat
+  r1 ADD n= 54 target  3107.83  recovered  700.77 ( 22.5% by vol, median stroke  53.7%)  zero-recovery   0  other same-sign   7.64  new error 339.14 (tp_lost  0.00 fp_added 339.14)
+  r1 REM n= 31 target   722.62  recovered  182.42 ( 25.2% by vol, median stroke 100.0%)  zero-recovery   0  other same-sign  11.23  new error  64.25 (tp_lost 64.25 fp_added  0.00)
+  r2 ADD n= 48 target  1800.85  recovered  314.62 ( 17.5% by vol, median stroke  76.4%)  zero-recovery   0  other same-sign  26.15  new error 270.38 (tp_lost  0.00 fp_added 270.38)
+  r2 REM n= 36 target   813.39  recovered  329.44 ( 40.5% by vol, median stroke  73.2%)  zero-recovery   0  other same-sign  57.95  new error 236.75 (tp_lost 236.75 fp_added  0.00)
+  r3 ADD n= 48 target  2535.86  recovered  420.76 ( 16.6% by vol, median stroke  52.8%)  zero-recovery   0  other same-sign  12.42  new error 334.57 (tp_lost  0.00 fp_added 334.57)
+  r3 REM n= 36 target   528.56  recovered  224.66 ( 42.5% by vol, median stroke  55.0%)  zero-recovery   1  other same-sign  16.81  new error  94.98 (tp_lost 94.98 fp_added  0.00)
+  r4 ADD n= 47 target  1524.59  recovered  311.74 ( 20.4% by vol, median stroke  69.0%)  zero-recovery   0  other same-sign  14.97  new error 221.76 (tp_lost  0.00 fp_added 221.76)
+  r4 REM n= 37 target   321.95  recovered  215.20 ( 66.8% by vol, median stroke  75.2%)  zero-recovery   2  other same-sign  30.47  new error 205.17 (tp_lost 205.17 fp_added  0.00)
+  r5 ADD n= 46 target  1288.77  recovered  248.67 ( 19.3% by vol, median stroke  49.8%)  zero-recovery   1  other same-sign   7.80  new error 122.35 (tp_lost  0.00 fp_added 122.35)
+  r5 REM n= 38 target   562.18  recovered  246.21 ( 43.8% by vol, median stroke  61.5%)  zero-recovery   3  other same-sign  15.86  new error 117.69 (tp_lost 117.69 fp_added  0.00)
+== oracle
+  r1 ADD n= 54 target  3107.83  recovered 3107.83 (100.0% by vol, median stroke 100.0%)  zero-recovery   0  other same-sign   0.00  new error   0.00 (tp_lost  0.00 fp_added  0.00)
+  r1 REM n= 31 target   722.62  recovered  722.62 (100.0% by vol, median stroke 100.0%)  zero-recovery   0  other same-sign   0.00  new error   0.00 (tp_lost  0.00 fp_added  0.00)
+  r2 ADD n= 49 target   867.70  recovered  867.70 (100.0% by vol, median stroke 100.0%)  zero-recovery   0  other same-sign   0.00  new error   0.00 (tp_lost  0.00 fp_added  0.00)
+  r2 REM n= 31 target   504.67  recovered  504.67 (100.0% by vol, median stroke 100.0%)  zero-recovery   0  other same-sign   0.00  new error   0.00 (tp_lost  0.00 fp_added  0.00)
+  r3 ADD n= 53 target   452.47  recovered  452.47 (100.0% by vol, median stroke 100.0%)  zero-recovery   0  other same-sign   0.00  new error   0.00 (tp_lost  0.00 fp_added  0.00)
+  r3 REM n= 24 target   282.94  recovered  282.94 (100.0% by vol, median stroke 100.0%)  zero-recovery   0  other same-sign   0.00  new error   0.00 (tp_lost  0.00 fp_added  0.00)
+  r4 ADD n= 45 target   369.00  recovered  369.00 (100.0% by vol, median stroke 100.0%)  zero-recovery   0  other same-sign   0.00  new error   0.00 (tp_lost  0.00 fp_added  0.00)
+  r4 REM n= 27 target   135.44  recovered  135.44 (100.0% by vol, median stroke 100.0%)  zero-recovery   0  other same-sign   0.00  new error   0.00 (tp_lost  0.00 fp_added  0.00)
+  r5 ADD n= 45 target   305.82  recovered  305.82 (100.0% by vol, median stroke 100.0%)  zero-recovery   0  other same-sign   0.00  new error   0.00 (tp_lost  0.00 fp_added  0.00)
+  r5 REM n= 26 target   115.18  recovered  115.18 (100.0% by vol, median stroke 100.0%)  zero-recovery   0  other same-sign   0.00  new error   0.00 (tp_lost  0.00 fp_added  0.00)
+
+Matched round 1 (identical D0 mask and identical first stroke for every system)
+  K1: first stroke identical to oracle's (sign and target volume) on 99 of 99 scans
+  K2: first stroke identical to oracle's (sign and target volume) on 99 of 99 scans
+  v1flat: first stroke identical to oracle's (sign and target volume) on 99 of 99 scans
+
+Round 1 ADD strokes: target volume beyond R mm of the stroke (oracle repairs all of it) and what the model repaired there
+  K1     R=15 mm: target beyond R 2645.18 of 3107.83 ml (85.1%); model repaired beyond R 167.38 ( 6.3% of it); within R target  462.65 repaired 202.03 (43.7%)
+  K1     R=30 mm: target beyond R 2030.08 of 3107.83 ml (65.3%); model repaired beyond R  47.03 ( 2.3% of it); within R target 1077.75 repaired 322.38 (29.9%)
+  K1     R=60 mm: target beyond R 1306.40 of 3107.83 ml (42.0%); model repaired beyond R   3.65 ( 0.3% of it); within R target 1801.43 repaired 365.76 (20.3%)
+  K2     R=15 mm: target beyond R 2645.18 of 3107.83 ml (85.1%); model repaired beyond R 250.96 ( 9.5% of it); within R target  462.65 repaired 232.02 (50.2%)
+  K2     R=30 mm: target beyond R 2030.08 of 3107.83 ml (65.3%); model repaired beyond R  53.83 ( 2.7% of it); within R target 1077.75 repaired 429.15 (39.8%)
+  K2     R=60 mm: target beyond R 1306.40 of 3107.83 ml (42.0%); model repaired beyond R   0.41 ( 0.0% of it); within R target 1801.43 repaired 482.56 (26.8%)
+  v1flat R=15 mm: target beyond R 2645.18 of 3107.83 ml (85.1%); model repaired beyond R 326.01 (12.3% of it); within R target  462.65 repaired 374.76 (81.0%)
+  v1flat R=30 mm: target beyond R 2030.08 of 3107.83 ml (65.3%); model repaired beyond R  58.87 ( 2.9% of it); within R target 1077.75 repaired 641.90 (59.6%)
+  v1flat R=60 mm: target beyond R 1306.40 of 3107.83 ml (42.0%); model repaired beyond R   0.08 ( 0.0% of it); within R target 1801.43 repaired 700.69 (38.9%)

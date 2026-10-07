@@ -1,0 +1,326 @@
+{
+ "flat": {
+  "per_round": {
+   "0": {
+    "n": 255,
+    "mean_fp_added_ml": 4.5628227097180805,
+    "mean_tp_lost_ml": 0.6929649517603711,
+    "median_new_error_ml": 1.061628533735871,
+    "share_with_damage": 0.8313725490196079,
+    "share_damage_exceeds_target_repair": 0.2235294117647059,
+    "patient_mean_new_fp_ml": 4.443914726216655,
+    "patient_mean_new_fn_ml": 0.6537816549873826,
+    "D_pts_first_order_damage": 0.04809345002023777,
+    "share_ADD": 0.6941176470588235
+   },
+   "1": {
+    "n": 252,
+    "mean_fp_added_ml": 3.0669832130597605,
+    "mean_tp_lost_ml": 3.0065128421669263,
+    "median_new_error_ml": 0.8293972919811493,
+    "share_with_damage": 0.8492063492063492,
+    "share_damage_exceeds_target_repair": 0.24206349206349206,
+    "patient_mean_new_fp_ml": 2.7786438937594533,
+    "patient_mean_new_fn_ml": 2.4981403469863768,
+    "D_pts_first_order_damage": 0.05579632967845804,
+    "share_ADD": 0.5873015873015873
+   },
+   "2": {
+    "n": 252,
+    "mean_fp_added_ml": 2.888705901426416,
+    "mean_tp_lost_ml": 1.8282212828420112,
+    "median_new_error_ml": 0.7090265001170339,
+    "share_with_damage": 0.8015873015873016,
+    "share_damage_exceeds_target_repair": 0.23809523809523808,
+    "patient_mean_new_fp_ml": 2.534084235671988,
+    "patient_mean_new_fn_ml": 1.516565004875645,
+    "D_pts_first_order_damage": 0.03591772301827888,
+    "share_ADD": 0.6031746031746031
+   },
+   "3": {
+    "n": 252,
+    "mean_fp_added_ml": 3.393097487470735,
+    "mean_tp_lost_ml": 2.0486788839941523,
+    "median_new_error_ml": 0.6635178335849194,
+    "share_with_damage": 0.8293650793650794,
+    "share_damage_exceeds_target_repair": 0.2857142857142857,
+    "patient_mean_new_fp_ml": 3.144286195934694,
+    "patient_mean_new_fn_ml": 1.904102777953923,
+    "D_pts_first_order_damage": 0.035231617086691674,
+    "share_ADD": 0.5634920634920635
+   },
+   "4": {
+    "n": 251,
+    "mean_fp_added_ml": 1.8216654701924564,
+    "mean_tp_lost_ml": 1.6918884847237057,
+    "median_new_error_ml": 0.4400874674320222,
+    "share_with_damage": 0.7649402390438247,
+    "share_damage_exceeds_target_repair": 0.23107569721115537,
+    "patient_mean_new_fp_ml": 1.6206965470432917,
+    "patient_mean_new_fn_ml": 1.380117909106896,
+    "D_pts_first_order_damage": 0.021022953765673622,
+    "share_ADD": 0.601593625498008
+   }
+  },
+  "five_round_totals": {
+   "patient_mean_new_fp_ml": 14.521625598626079,
+   "patient_mean_new_fn_ml": 7.952707693910225,
+   "patient_mean_target_repaired_ml": 35.394291694881844,
+   "D5pts_first_order_damage": 0.19606207356934
+  },
+  "damage_relative_to_target": {
+   "ADD <0.5": {
+    "n": 155,
+    "median_damage_over_target": 0.7333333333333333,
+    "p75_damage_over_target": 2.0,
+    "share_damage_gt_target_repair": 0.36774193548387096,
+    "share_damage_gt_half_target": 0.5419354838709678
+   },
+   "ADD 0.5-10": {
+    "n": 356,
+    "median_damage_over_target": 0.48484848484848486,
+    "p75_damage_over_target": 1.1111111111111112,
+    "share_damage_gt_target_repair": 0.36797752808988765,
+    "share_damage_gt_half_target": 0.48314606741573035
+   },
+   "ADD >=10": {
+    "n": 259,
+    "median_damage_over_target": 0.07996548252552856,
+    "p75_damage_over_target": 0.25288768739247974,
+    "share_damage_gt_target_repair": 0.10424710424710425,
+    "share_damage_gt_half_target": 0.10424710424710425
+   },
+   "REMOVE <0.5": {
+    "n": 105,
+    "median_damage_over_target": 0.18181818181818182,
+    "p75_damage_over_target": 1.1052631578947367,
+    "share_damage_gt_target_repair": 0.3142857142857143,
+    "share_damage_gt_half_target": 0.34285714285714286
+   },
+   "REMOVE 0.5-10": {
+    "n": 257,
+    "median_damage_over_target": 0.06557377049180328,
+    "p75_damage_over_target": 0.4814814814814815,
+    "share_damage_gt_target_repair": 0.14396887159533073,
+    "share_damage_gt_half_target": 0.22957198443579765
+   },
+   "REMOVE >=10": {
+    "n": 130,
+    "median_damage_over_target": 0.16083395383469845,
+    "p75_damage_over_target": 0.4723756906077348,
+    "share_damage_gt_target_repair": 0.17692307692307693,
+    "share_damage_gt_half_target": 0.23846153846153847
+   }
+  },
+  "concentration": {
+   "top10pct_events_share_of_damage_ml": 0.7318868702671834,
+   "top10pct_events_share_of_damage_dice": 0.6996965139895164
+  },
+  "worse_rounds": {
+   "n": 242,
+   "share": 0.19175911251980982,
+   "by_sign": {
+    "-": 160,
+    "+": 82
+   },
+   "share_with_damage_gt_target_repair": 0.7231404958677686,
+   "patient_mean_sum_of_negative_gains": -0.06653191803563956
+  },
+  "location": {
+   "all beyond_15mm_share_of_new_error_ml": 0.6056109865451564,
+   "all beyond_15mm_event_mean_share": 0.21219462072218662,
+   "all beyond_30mm_share_of_new_error_ml": 0.1739440614533974,
+   "all beyond_30mm_event_mean_share": 0.02356959953976888,
+   "all beyond_60mm_share_of_new_error_ml": 0.024897781609130972,
+   "all beyond_60mm_event_mean_share": 0.0010504093995201557,
+   "ADD beyond_15mm_share_of_new_error_ml": 0.5503934825591581,
+   "ADD beyond_15mm_event_mean_share": 0.19092889802234245,
+   "ADD beyond_30mm_share_of_new_error_ml": 0.11218232818556798,
+   "ADD beyond_30mm_event_mean_share": 0.01273967840448536,
+   "ADD beyond_60mm_share_of_new_error_ml": 0.01259743015855939,
+   "ADD beyond_60mm_event_mean_share": 0.000705623858896753,
+   "REMOVE beyond_15mm_share_of_new_error_ml": 0.6996100131398119,
+   "REMOVE beyond_15mm_event_mean_share": 0.2570389543913438,
+   "REMOVE beyond_30mm_share_of_new_error_ml": 0.27908359853654224,
+   "REMOVE beyond_30mm_event_mean_share": 0.04640731842927915,
+   "REMOVE beyond_60mm_share_of_new_error_ml": 0.045837175454586904,
+   "REMOVE beyond_60mm_event_mean_share": 0.0017774798144903517
+  },
+  "persistent_by_type_event_ratio": {
+   "D5_without_FP_damage_only": 0.8016314007724181,
+   "D5_without_FN_damage_only": 0.7830269068113151,
+   "D5_without_FP_damage_only_max_feasible": 0.8099873555984821,
+   "D5_without_FN_damage_only_max_feasible": 0.8096101377223213
+  },
+  "persistent_d5": {
+   "patient_mean_persistent_damage_ml": 13.476505112681936,
+   "patient_mean_wrong_at_final_correct_at_start_ml": 11.101280666526751,
+   "D5": 0.7523582393784932,
+   "D5_without_persistent_damage_all_fp": 0.8300981128146504,
+   "D5_without_persistent_damage_all_fn": 0.8421815683089611,
+   "D5_without_persistent_damage_event_ratio": 0.8334929819744451
+  }
+ },
+ "N3": {
+  "per_round": {
+   "0": {
+    "n": 255,
+    "mean_fp_added_ml": 3.04030994397283,
+    "mean_tp_lost_ml": 0.22562686446248378,
+    "median_new_error_ml": 0.9046242386102679,
+    "share_with_damage": 0.7843137254901961,
+    "share_damage_exceeds_target_repair": 0.23137254901960785,
+    "patient_mean_new_fp_ml": 2.6336410079849624,
+    "patient_mean_new_fn_ml": 0.21149012933736697,
+    "D_pts_first_order_damage": 0.03498339274156973,
+    "share_ADD": 0.6941176470588235
+   },
+   "1": {
+    "n": 252,
+    "mean_fp_added_ml": 2.1795488446378415,
+    "mean_tp_lost_ml": 0.8445190397101218,
+    "median_new_error_ml": 0.5971660502264274,
+    "share_with_damage": 0.7976190476190477,
+    "share_damage_exceeds_target_repair": 0.2222222222222222,
+    "patient_mean_new_fp_ml": 2.149982093805755,
+    "patient_mean_new_fn_ml": 0.7099848098580392,
+    "D_pts_first_order_damage": 0.03396331387236374,
+    "share_ADD": 0.5714285714285714
+   },
+   "2": {
+    "n": 252,
+    "mean_fp_added_ml": 2.620179856073573,
+    "mean_tp_lost_ml": 1.3407548042553699,
+    "median_new_error_ml": 0.5639901585471815,
+    "share_with_damage": 0.7936507936507936,
+    "share_damage_exceeds_target_repair": 0.2976190476190476,
+    "patient_mean_new_fp_ml": 2.2559309021198444,
+    "patient_mean_new_fn_ml": 1.2126685664789818,
+    "D_pts_first_order_damage": 0.027540512914055792,
+    "share_ADD": 0.5873015873015873
+   },
+   "3": {
+    "n": 252,
+    "mean_fp_added_ml": 1.229615863336703,
+    "mean_tp_lost_ml": 1.4576270259912114,
+    "median_new_error_ml": 0.3317589167924597,
+    "share_with_damage": 0.7023809523809523,
+    "share_damage_exceeds_target_repair": 0.20238095238095238,
+    "patient_mean_new_fp_ml": 1.1924157808763765,
+    "patient_mean_new_fn_ml": 1.1890276260168595,
+    "D_pts_first_order_damage": 0.019548089634481222,
+    "share_ADD": 0.47619047619047616
+   },
+   "4": {
+    "n": 252,
+    "mean_fp_added_ml": 1.5988361402810354,
+    "mean_tp_lost_ml": 1.0828431311437048,
+    "median_new_error_ml": 0.3317589167924597,
+    "share_with_damage": 0.7341269841269841,
+    "share_damage_exceeds_target_repair": 0.31746031746031744,
+    "patient_mean_new_fp_ml": 1.385232792349782,
+    "patient_mean_new_fn_ml": 0.9488295001795946,
+    "D_pts_first_order_damage": 0.013600728225801361,
+    "share_ADD": 0.5079365079365079
+   }
+  },
+  "five_round_totals": {
+   "patient_mean_new_fp_ml": 9.61720257713672,
+   "patient_mean_new_fn_ml": 4.272000631870841,
+   "patient_mean_target_repaired_ml": 24.385864429804474,
+   "D5pts_first_order_damage": 0.1296360373882718
+  },
+  "damage_relative_to_target": {
+   "ADD <0.5": {
+    "n": 125,
+    "median_damage_over_target": 1.0,
+    "p75_damage_over_target": 3.0,
+    "share_damage_gt_target_repair": 0.488,
+    "share_damage_gt_half_target": 0.592
+   },
+   "ADD 0.5-10": {
+    "n": 343,
+    "median_damage_over_target": 0.5236593059936909,
+    "p75_damage_over_target": 1.1923076923076923,
+    "share_damage_gt_target_repair": 0.4198250728862974,
+    "share_damage_gt_half_target": 0.5014577259475219
+   },
+   "ADD >=10": {
+    "n": 249,
+    "median_damage_over_target": 0.0587248322147651,
+    "p75_damage_over_target": 0.1580188679245283,
+    "share_damage_gt_target_repair": 0.11646586345381527,
+    "share_damage_gt_half_target": 0.028112449799196786
+   },
+   "REMOVE <0.5": {
+    "n": 109,
+    "median_damage_over_target": 0.0,
+    "p75_damage_over_target": 0.23076923076923075,
+    "share_damage_gt_target_repair": 0.1651376146788991,
+    "share_damage_gt_half_target": 0.1743119266055046
+   },
+   "REMOVE 0.5-10": {
+    "n": 320,
+    "median_damage_over_target": 0.02531645569620253,
+    "p75_damage_over_target": 0.22999999999999998,
+    "share_damage_gt_target_repair": 0.13125,
+    "share_damage_gt_half_target": 0.14375
+   },
+   "REMOVE >=10": {
+    "n": 117,
+    "median_damage_over_target": 0.059040590405904064,
+    "p75_damage_over_target": 0.2607385079125848,
+    "share_damage_gt_target_repair": 0.23076923076923078,
+    "share_damage_gt_half_target": 0.1452991452991453
+   }
+  },
+  "concentration": {
+   "top10pct_events_share_of_damage_ml": 0.679727715425121,
+   "top10pct_events_share_of_damage_dice": 0.7819641463139347
+  },
+  "worse_rounds": {
+   "n": 248,
+   "share": 0.19635787806809185,
+   "by_sign": {
+    "-": 146,
+    "+": 102
+   },
+   "share_with_damage_gt_target_repair": 0.75,
+   "patient_mean_sum_of_negative_gains": -0.03547299423651141
+  },
+  "location": {
+   "all beyond_15mm_share_of_new_error_ml": 0.7360263261725505,
+   "all beyond_15mm_event_mean_share": 0.38251117561396014,
+   "all beyond_30mm_share_of_new_error_ml": 0.25191907656050516,
+   "all beyond_30mm_event_mean_share": 0.07110718533521876,
+   "all beyond_60mm_share_of_new_error_ml": 0.004725947201472151,
+   "all beyond_60mm_event_mean_share": 0.004975945376974845,
+   "ADD beyond_15mm_share_of_new_error_ml": 0.7211199868063517,
+   "ADD beyond_15mm_event_mean_share": 0.3802436064231768,
+   "ADD beyond_30mm_share_of_new_error_ml": 0.24388497240747256,
+   "ADD beyond_30mm_event_mean_share": 0.07206768600512925,
+   "ADD beyond_60mm_share_of_new_error_ml": 0.0039908268011912,
+   "ADD beyond_60mm_event_mean_share": 0.00035994601758194256,
+   "REMOVE beyond_15mm_share_of_new_error_ml": 0.7682358199030342,
+   "REMOVE beyond_15mm_event_mean_share": 0.3873334412631913,
+   "REMOVE beyond_30mm_share_of_new_error_ml": 0.26927910178131487,
+   "REMOVE beyond_30mm_event_mean_share": 0.06906456215732462,
+   "REMOVE beyond_60mm_share_of_new_error_ml": 0.00631438922887501,
+   "REMOVE beyond_60mm_event_mean_share": 0.014792437521138324
+  },
+  "persistent_by_type_event_ratio": {
+   "D5_without_FP_damage_only": 0.7855188293105153,
+   "D5_without_FN_damage_only": 0.750951420219876,
+   "D5_without_FP_damage_only_max_feasible": 0.7901614581723718,
+   "D5_without_FN_damage_only_max_feasible": 0.7764459498258558
+  },
+  "persistent_d5": {
+   "patient_mean_persistent_damage_ml": 11.043952215808657,
+   "patient_mean_wrong_at_final_correct_at_start_ml": 10.074095317229778,
+   "D5": 0.7366237962964169,
+   "D5_without_persistent_damage_all_fp": 0.7981712586447854,
+   "D5_without_persistent_damage_all_fn": 0.8094095844618623,
+   "D5_without_persistent_damage_event_ratio": 0.8005138281389306
+  }
+ }
+}

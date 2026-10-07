@@ -1,0 +1,112 @@
+{
+ "STATIC": {
+  "+ round1": {
+   "strokes": 54,
+   "patients": 37,
+   "patient_mean_gain": 0.11197492503509739
+  },
+  "- rounds2to5": {
+   "strokes": 137,
+   "patients": 44,
+   "patient_mean_gain": 0.0015497726507076371
+  },
+  "+ rounds2to5": {
+   "strokes": 196,
+   "patients": 46,
+   "patient_mean_gain": 0.023623060184454408
+  },
+  "- round1": {
+   "strokes": 31,
+   "patients": 27,
+   "patient_mean_gain": 0.04817644602613244
+  }
+ },
+ "INDUCED": {
+  "+ round1": {
+   "strokes": 54,
+   "patients": 37,
+   "patient_mean_gain": 0.10973499960821413
+  },
+  "- rounds2to5": {
+   "strokes": 153,
+   "patients": 44,
+   "patient_mean_gain": 0.01033181036319724
+  },
+  "+ rounds2to5": {
+   "strokes": 180,
+   "patients": 47,
+   "patient_mean_gain": 0.022310941053215013
+  },
+  "- round1": {
+   "strokes": 31,
+   "patients": 27,
+   "patient_mean_gain": 0.05365211163850581
+  }
+ },
+ "N4_STATIC": {
+  "+ round1": {
+   "strokes": 54,
+   "patients": 37,
+   "patient_mean_gain": 0.0789870707782718
+  },
+  "- rounds2to5": {
+   "strokes": 131,
+   "patients": 43,
+   "patient_mean_gain": 0.003400091134285525
+  },
+  "+ rounds2to5": {
+   "strokes": 173,
+   "patients": 42,
+   "patient_mean_gain": 0.030922789597648843
+  },
+  "- round1": {
+   "strokes": 31,
+   "patients": 27,
+   "patient_mean_gain": 0.019814900236686816
+  }
+ },
+ "v1_flat": {
+  "+ round1": {
+   "strokes": 54,
+   "patients": 37,
+   "patient_mean_gain": 0.10897849148181268
+  },
+  "- rounds2to5": {
+   "strokes": 142,
+   "patients": 45,
+   "patient_mean_gain": -0.022594628669716427
+  },
+  "+ rounds2to5": {
+   "strokes": 188,
+   "patients": 49,
+   "patient_mean_gain": 0.031710049148334994
+  },
+  "- round1": {
+   "strokes": 31,
+   "patients": 27,
+   "patient_mean_gain": 0.04588389296653217
+  }
+ },
+ "v1_N3": {
+  "+ round1": {
+   "strokes": 54,
+   "patients": 37,
+   "patient_mean_gain": 0.07410247175434334
+  },
+  "+ rounds2to5": {
+   "strokes": 170,
+   "patients": 45,
+   "patient_mean_gain": 0.03285077350775695
+  },
+  "- rounds2to5": {
+   "strokes": 142,
+   "patients": 44,
+   "patient_mean_gain": 0.008884203477966849
+  },
+  "- round1": {
+   "strokes": 29,
+   "patients": 25,
+   "patient_mean_gain": 0.014982387174045049
+  }
+ }
+}

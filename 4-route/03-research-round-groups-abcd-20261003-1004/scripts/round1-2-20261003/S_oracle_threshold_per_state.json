@@ -1,0 +1,66 @@
+{
+ "+": {
+  "states": 103,
+  "patients": 52,
+  "at_0.5": 0.025759939769197698,
+  "best_threshold": 0.045665768872087814,
+  "best_or_no_edit": 0.04691019361084075,
+  "no_edit_only_if_harmful_at_0.5": 0.031861339571933024,
+  "spearman_bestthr_vs_D0": -0.046911216240931836,
+  "median_best_thr_by_D0_tercile": [
+   {
+    "D0_range": [
+     0.0,
+     0.683
+    ],
+    "median_best_thr": 0.65
+   },
+   {
+    "D0_range": [
+     0.687,
+     0.808
+    ],
+    "median_best_thr": 0.55
+   },
+   {
+    "D0_range": [
+     0.81,
+     0.947
+    ],
+    "median_best_thr": 0.5
+   }
+  ]
+ },
+ "-": {
+  "states": 97,
+  "patients": 51,
+  "at_0.5": -0.017482202050060992,
+  "best_threshold": 0.022041091963300573,
+  "best_or_no_edit": 0.03245134776851945,
+  "no_edit_only_if_harmful_at_0.5": 0.0248365452489748,
+  "spearman_bestthr_vs_D0": 0.021986409569064193,
+  "median_best_thr_by_D0_tercile": [
+   {
+    "D0_range": [
+     0.394,
+     0.623
+    ],
+    "median_best_thr": 0.55
+   },
+   {
+    "D0_range": [
+     0.64,
+     0.818
+    ],
+    "median_best_thr": 0.65
+   },
+   {
+    "D0_range": [
+     0.824,
+     0.95
+    ],
+    "median_best_thr": 0.7
+   }
+  ]
+ }
+}

@@ -1,0 +1,36 @@
+{
+  "files": [
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/d2-term-gradient-influence-train48.jsonl",
+      "file": "d2-term-gradient-influence-train48.jsonl",
+      "bytes": 921508,
+      "check": "whole file",
+      "local_sha256": "86bd0b17932dc0175b298422f526daa8ec1824d89541456dfc0219db77599de8",
+      "remote_sha256": "86bd0b17932dc0175b298422f526daa8ec1824d89541456dfc0219db77599de8",
+      "same": true
+    },
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/d2-5090.log",
+      "file": "d2-5090.log",
+      "bytes": 3026,
+      "check": "whole file",
+      "local_sha256": "e09766b30fbcf84b10b243d79e924a6ba7ee854c482025737146c188f895366c",
+      "remote_sha256": "e09766b30fbcf84b10b243d79e924a6ba7ee854c482025737146c188f895366c",
+      "same": true
+    },
+    {
+      "host": "rtx5090",
+      "source": "/share/rlia4081/honor_degree/sirb/diag/run-d2-5090.sh",
+      "file": "run-d2-5090.sh",
+      "bytes": 1630,
+      "check": "whole file",
+      "local_sha256": "1d7d9e5276181316c837357db5ffb62261875a5ca10dacd64821174159fbc6e1",
+      "remote_sha256": "1d7d9e5276181316c837357db5ffb62261875a5ca10dacd64821174159fbc6e1",
+      "same": true
+    }
+  ],
+  "captured_at": "2026-10-07T06:10:38",
+  "method": "SFTP get (read-only), sha256 of the local copy compared with sha256sum on the server"
+}

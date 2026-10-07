@@ -1,0 +1,10 @@
+k1_final.pt step 40000 | learned radius scale s = 0.017147429287433624 -> R = 61.03771448135376 mm
+   flat_head.local.distance_lift.weight                    shape (64, 1, 1, 1, 1)   |w| mean 0.04476 max 0.13455
+   flat_head.local.history_lift.weight                     shape (64, 2, 1, 1, 1)   |w| mean 0.02972 max 0.13075
+   flat_head.local.history_film.weight                     shape (128, 10)          |w| mean 0.02861 max 0.27092
+k2_final.pt step 40000 | learned radius scale s = 0.01664082705974579 -> R = 61.00680112838745 mm
+   flat_head.local.distance_lift.weight                    shape (64, 1, 1, 1, 1)   |w| mean 0.04330 max 0.13429
+   flat_head.local.history_lift.weight                     shape (64, 2, 1, 1, 1)   |w| mean 0.03061 max 0.14299
+   flat_head.local.history_film.weight                     shape (128, 10)          |w| mean 0.02469 max 0.27245
+k1_final.pt sha256 2ddbc43592434485f7443d73d05f68c0b0f38e2a6621084119fc6b0c3efc8b7e (z390 final.pt of PETCT-EDITOR-SIRB-INTENT_FULL-S3407-TRAIN-20261006-R1; equals rollout_manifest checkpoint_sha256)
+k2_final.pt sha256 35d19f731b1be217806958bbe4d288cbbe73e75af95d6d4764fd49daf73e8d53 (5090 final.pt of PETCT-EDITOR-SIRB-INTENT_REFRESH-S3407-TRAIN-20261006-R1)

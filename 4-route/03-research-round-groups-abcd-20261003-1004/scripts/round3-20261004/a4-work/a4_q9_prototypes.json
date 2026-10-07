@@ -1,0 +1,74 @@
+{
+ "E16_N1_STATE": {
+  "rows": 600,
+  "last_step": 12000,
+  "diag_hard_dice_target_10k_12k": 0.6155756278115141,
+  "diag_target_recall_10k_12k": 0.7793287636135996,
+  "diag_error_gate_recall_10k_12k": 0.8613088828983955,
+  "base_total_10k_12k": 1.041197208589823
+ },
+ "E16_N2_ES": {
+  "rows": 600,
+  "last_step": 12000,
+  "diag_hard_dice_target_10k_12k": 0.6124055920256168,
+  "diag_target_recall_10k_12k": 0.7911769290458325,
+  "diag_error_gate_recall_10k_12k": 0.8850888664866369,
+  "base_total_10k_12k": 1.0180345230704706
+ },
+ "E16_N2_NOGLOBAL": {
+  "rows": 600,
+  "last_step": 12000,
+  "diag_hard_dice_target_10k_12k": 0.542009925443648,
+  "diag_target_recall_10k_12k": 0.7297029188108703,
+  "diag_error_gate_recall_10k_12k": 0.8506807796728506,
+  "base_total_10k_12k": 1.1835340153623835
+ },
+ "E16_N2_P0": {
+  "rows": 600,
+  "last_step": 12000,
+  "diag_hard_dice_target_10k_12k": 0.550062392888716,
+  "diag_target_recall_10k_12k": 0.7391457068778959,
+  "diag_error_gate_recall_10k_12k": 0.8507364868891315,
+  "base_total_10k_12k": 1.155289423444541
+ },
+ "N0": {
+  "rows": 600,
+  "last_step": 12000,
+  "diag_hard_dice_target_10k_12k": 0.55854967590326,
+  "diag_target_recall_10k_12k": 0.8666016480425653,
+  "diag_error_gate_recall_10k_12k": null,
+  "base_total_10k_12k": 0.7692058445339478
+ },
+ "N1": {
+  "rows": 600,
+  "last_step": 12000,
+  "diag_hard_dice_target_10k_12k": 0.6197407094220683,
+  "diag_target_recall_10k_12k": 0.7836165270989868,
+  "diag_error_gate_recall_10k_12k": 0.8638669620399776,
+  "base_total_10k_12k": 1.0352202355864464
+ },
+ "N2": {
+  "rows": 600,
+  "last_step": 12000,
+  "diag_hard_dice_target_10k_12k": 0.5502006387693803,
+  "diag_target_recall_10k_12k": 0.7323324184480982,
+  "diag_error_gate_recall_10k_12k": 0.8490930444311536,
+  "base_total_10k_12k": 1.167879495076952
+ },
+ "N3": {
+  "rows": 600,
+  "last_step": 12000,
+  "diag_hard_dice_target_10k_12k": 0.5496316791767488,
+  "diag_target_recall_10k_12k": 0.7301399862298329,
+  "diag_error_gate_recall_10k_12k": 0.8445604675030386,
+  "base_total_10k_12k": 1.1743470837317875
+ },
+ "N3_CHANGE_ON_BINDING": {
+  "rows": 600,
+  "last_step": 12000,
+  "diag_hard_dice_target_10k_12k": 0.550585150210971,
+  "diag_target_recall_10k_12k": 0.7359062536864484,
+  "diag_error_gate_recall_10k_12k": 0.8506863569118637,
+  "base_total_10k_12k": 1.1658640546577512
+ }
+}

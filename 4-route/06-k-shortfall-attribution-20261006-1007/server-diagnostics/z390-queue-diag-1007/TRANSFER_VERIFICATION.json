@@ -1,0 +1,26 @@
+{
+  "files": [
+    {
+      "host": "z390",
+      "source": "/mnt/HDD4/honor_petct/sirb/eval/diag-round1-hist-val/round1-score-histograms.jsonl",
+      "file": "round1-score-histograms.jsonl",
+      "bytes": 2361831,
+      "check": "whole file",
+      "local_sha256": "bd59b26bb623b1b856e4f28190bb019ddf8fb354b1f20f54ee717c9b7c9d1386",
+      "remote_sha256": "bd59b26bb623b1b856e4f28190bb019ddf8fb354b1f20f54ee717c9b7c9d1386",
+      "same": true
+    },
+    {
+      "host": "z390",
+      "source": "/mnt/HDD4/honor_petct/sirb/eval/diag-round1-hist-val.log",
+      "file": "diag-round1-hist-val.log",
+      "bytes": 5960,
+      "check": "whole file",
+      "local_sha256": "6c54e7b1b1fe14f728da60db830889f3ab5b4c9dc7b7b00fe5459a837ea43f5e",
+      "remote_sha256": "6c54e7b1b1fe14f728da60db830889f3ab5b4c9dc7b7b00fe5459a837ea43f5e",
+      "same": true
+    }
+  ],
+  "captured_at": "2026-10-07T05:29:51",
+  "method": "SFTP get (read-only), sha256 of the local copy compared with sha256sum on the server"
+}

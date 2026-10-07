@@ -1,0 +1,393 @@
+[
+  {
+    "id": "MS01",
+    "title": "nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation",
+    "year": 2021,
+    "domain": "自配置医学分割",
+    "url": "https://www.nature.com/articles/s41592-020-01008-z",
+    "access_depth": "原始预印本正文：Automated Design of Deep Learning Methods for Biomedical Image Segmentation, arXiv:1904.08128v2，第2节及设计方法；期刊书目信息核对",
+    "verified_claim": "将参数分成固定 blueprint、根据数据和硬件用启发式规则推导的 inferred、训练集交叉验证选出的 empirical；不等于全部参数由网络学出。",
+    "limitation": "是适配后重新训练的方法框架；其通用性不意味着一套预训练权重零样本适用所有模态。",
+    "project_use": "把物理几何、学习的语义范围和计算预算分开登记，避免把无手工半径写成无超参数。",
+    "source_refs": [
+      "turn132view0",
+      "turn14search0"
+    ]
+  },
+  {
+    "id": "MS02",
+    "title": "nnU-Net Revisited: A Call for Rigorous Validation in 3D Medical Image Segmentation",
+    "year": 2024,
+    "domain": "医学分割基线与评估",
+    "url": "https://arxiv.org/html/2404.09556v2",
+    "access_depth": "正文方法、实验与讨论",
+    "verified_claim": "数据预处理、训练方案、预算和预训练差异会混淆架构收益；以充分配置的 nnU-Net / ResEnc 为比较基线。",
+    "limitation": "不同任务上的平均结论不能推出本项目任何组合的确定提升。",
+    "project_use": "效果开发可先组合；最终方法归因时补同预算、同数据和同父模型比较。",
+    "source_refs": [
+      "turn81view0"
+    ]
+  },
+  {
+    "id": "MS03",
+    "title": "nnInteractive: Redefining 3D Promptable Segmentation",
+    "year": 2025,
+    "domain": "通用3D交互分割",
+    "url": "https://arxiv.org/html/2503.08373v1",
+    "access_depth": "正文第2.1—2.6节、训练与自动缩放方法",
+    "verified_claim": "早期融合提示、根据自身分割误差模拟下一提示、多种交互代理、标签变化训练以消歧用户意图，以及带有限放大预算的 AutoZoom。",
+    "limitation": "完整对象与提示歧义任务，不等同于本项目指定方向的当前残差并集；AutoZoom 仍有 1.5 倍、最大4倍等设定。",
+    "project_use": "必须纳入 intent 最近邻；优先借早期空间条件和自身误差训练，创新收窄到残差指代与保留约束。",
+    "source_refs": [
+      "turn62view0"
+    ]
+  },
+  {
+    "id": "MS04",
+    "title": "Segment anything in medical images",
+    "year": 2024,
+    "domain": "医学提示基础模型",
+    "url": "https://www.nature.com/articles/s41467-024-44824-z",
+    "access_depth": "期刊正文方法、数据和评估",
+    "verified_claim": "MedSAM 在多模态医疗图像上微调 SAM，框提示是核心设定；分割精度和交互形式需一起理解。",
+    "limitation": "框往往给出对象位置和大小，不能把框分割成绩当作单笔残差修复成绩。",
+    "project_use": "保留医学预训练作为未来初始化选项；本轮先修现有输入与执行问题。",
+    "source_refs": [
+      "turn54view3",
+      "turn61view2"
+    ]
+  },
+  {
+    "id": "MS05",
+    "title": "MedSAM2: Segment Anything in 3D Medical Images and Videos",
+    "year": 2025,
+    "domain": "3D/视频医学记忆模型",
+    "url": "https://arxiv.org/html/2504.03600v1",
+    "access_depth": "正文架构、数据、评估协议",
+    "verified_claim": "以 SAM2.1 Tiny 全模型微调，主要在中间切片给框后双向传播，利用历史切片特征与预测；覆盖 CT、PET、MRI 和视频。",
+    "limitation": "切片传播记忆不是自动处理物理各向异性的保证；中间框任务与五轮纠错协议不同。",
+    "project_use": "借用显式历史预测的设计动机，不直接迁移论文 Dice 到本项目。",
+    "source_refs": [
+      "turn125view0"
+    ]
+  },
+  {
+    "id": "MS06",
+    "title": "SAM-Med3D: Towards General-purpose Segmentation Models for Volumetric Medical Images",
+    "year": 2024,
+    "domain": "3D提示基础模型",
+    "url": "https://arxiv.org/html/2310.15161v3",
+    "access_depth": "正文数据整理、模型及验证划分，版本v3",
+    "verified_claim": "完全3D模型；数据整理中剔除低于1立方厘米或任一维短于1.5厘米的掩膜，并有前景占比及连通域过滤。",
+    "limitation": "所谓通用的训练分布经过小目标过滤，不能据此保证 PSMA 微小灶能力；部分验证数据集的官方训练部分在训练集中。",
+    "project_use": "审查任何基础模型是否见过当前小残差的尺寸和形态，不能仅看总数据量。",
+    "source_refs": [
+      "turn127view1",
+      "turn129view0"
+    ]
+  },
+  {
+    "id": "MS07",
+    "title": "VISTA3D: A Unified Segmentation Foundation Model For 3D Medical Imaging",
+    "year": 2025,
+    "domain": "自动与交互统一3D分割",
+    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/He_VISTA3D_A_Unified_Segmentation_Foundation_Model_For_3D_Medical_Imaging_CVPR_2025_paper.html",
+    "access_depth": "CVPR书目信息；arXiv:2406.05285v2正文第3节及算法1，预印本题名为 Versatile Imaging SegmenTation and Annotation model for 3D Computed Tomography",
+    "verified_claim": "双头共享编码器；合并时在两次分割的正负差分连通块中，仅修改含相应正负点击的块；训练含迭代纠错。",
+    "limitation": "一点击结果中有每128立方patch一点击设定，不等于每整例一笔；其目标/邻接不同于本项目 native18 残差目标。",
+    "project_use": "直接近邻；不能宣称按提示选差分连通范围从未出现，应比较监督对象和保留范围的区别。",
+    "source_refs": [
+      "turn43search0",
+      "turn54view0"
+    ]
+  },
+  {
+    "id": "MS08",
+    "title": "SegVol: Universal and Interactive Volumetric Medical Image Segmentation",
+    "year": 2024,
+    "domain": "语义与空间提示/多尺度3D",
+    "url": "https://arxiv.org/html/2311.13385v2",
+    "access_depth": "正文语义空间歧义、4.5缩放推理及4.6评估",
+    "verified_claim": "联合语义与空间提示；先全局缩小预测，再从原图裁出预测ROI滑窗细化，并相应转换提示。",
+    "limitation": "粗预测漏掉的目标可能不进入ROI；缩放机制不等于无视野预算。",
+    "project_use": "可借全局覆盖和局部细化分工；不能以预测范围作为唯一硬裁剪依据。",
+    "source_refs": [
+      "turn133view3",
+      "turn133view0"
+    ]
+  },
+  {
+    "id": "MS09",
+    "title": "STU-Net: Scalable and Transferable Medical Image Segmentation Models Empowered by Large-Scale Supervised Pre-training",
+    "year": 2023,
+    "domain": "可迁移医学预训练",
+    "url": "https://arxiv.org/pdf/2304.06716",
+    "access_depth": "PDF架构、预训练和迁移方法",
+    "verified_claim": "为迁移而固定部分网络结构，采用可兼容不同下采样配置的设计；研究有监督大规模预训练。",
+    "limitation": "可迁移架构仍有固定层数、核和训练超参数；迁移结果不等于现有PETCT模型零样本通用。",
+    "project_use": "反驳所有系数必须学习才算general；允许透明、合理的计算与结构默认值。",
+    "source_refs": [
+      "turn54view2",
+      "turn61view1"
+    ]
+  },
+  {
+    "id": "MS10",
+    "title": "SAM 2: Segment Anything in Images and Videos",
+    "year": 2024,
+    "domain": "视频分割与交互记忆",
+    "url": "https://arxiv.org/html/2408.00714v2",
+    "access_depth": "正文架构和记忆方法",
+    "verified_claim": "以历史提示和预测的记忆支持连续分割与交互纠正。",
+    "limitation": "视频帧时间序列与医学物理切片轴并不等同；不能忽略层厚和方向。",
+    "project_use": "支持显式上一轮编辑输入的动机，同时标记这是迁移假设。",
+    "source_refs": [
+      "turn97view1"
+    ]
+  },
+  {
+    "id": "MS11",
+    "title": "SAM 3: Segment Anything with Concepts",
+    "year": 2025,
+    "domain": "概念存在判别与定位",
+    "url": "https://arxiv.org/html/2511.16719v1",
+    "access_depth": "正文架构与 Presence Token，附录A.1",
+    "verified_claim": "把全局概念是否存在与局部候选定位分开；存在头和候选匹配头采用有条件监督，推理综合二者。",
+    "limitation": "自然图像概念存在概率不是本项目整例ΔDice；相乘结构自身不保证校准或公平消融。",
+    "project_use": "支持是否值得执行与修改范围分工的思想，不把其公式直接复制为Dice决策定理。",
+    "source_refs": [
+      "turn133view2",
+      "turn133view5"
+    ]
+  },
+  {
+    "id": "MS12",
+    "title": "Interactive 3D segmentation for primary gross tumor volume in oropharyngeal cancer",
+    "year": 2025,
+    "domain": "PETCT交互残差/2S-ICR",
+    "url": "https://www.nature.com/articles/s41598-025-13601-3",
+    "access_depth": "期刊元数据；arXiv:2409.06605v1正文方法和结果",
+    "verified_claim": "PET/CT 头颈肿瘤迭代修正、两阶段训练、上一掩膜随机置为0.5及交互步训练；研究了mask dropout。",
+    "limitation": "局部头颈肿瘤、裁剪和点击协议，与全身PSMA五轮三画法不相同；不能直接比较论文分数。",
+    "project_use": "保持当前分割作为合法编辑依据；若借dropout，仅对可选软记忆通道且显式指示缺失。",
+    "source_refs": [
+      "turn24search8",
+      "turn33view3",
+      "turn35view5"
+    ]
+  },
+  {
+    "id": "MS13",
+    "title": "Anatomy-Aware Promptable Segmentation with Online Interactive Training for AUTOPET V",
+    "year": 2026,
+    "domain": "PETCT交互/UAM",
+    "url": "https://arxiv.org/abs/2608.28461",
+    "access_depth": "原始arXiv索引摘要；本轮HTML/PDF访问失败，未核全文",
+    "verified_claim": "摘要确认两阶段nnU-Net、器官辅助监督、在线交互训练和示踪剂分类/路由。",
+    "limitation": "本轮不能复核旧文摘中的0.788/0.753数字、分母、点击数和划分；不得标为全文已核。",
+    "project_use": "保留为直接邻近工作但数字待核；不作为达到0.80概率的依据。",
+    "source_refs": [
+      "turn24academia35"
+    ]
+  },
+  {
+    "id": "MS14",
+    "title": "From FDG to PSMA: A Hitchhiker’s Guide to Multitracer, Multicenter Lesion Segmentation in PET/CT Imaging",
+    "year": 2024,
+    "domain": "PETCT/LesionTracer",
+    "url": "https://arxiv.org/html/2409.09478v2",
+    "access_depth": "正文方法、对照表、讨论",
+    "verified_claim": "采用ResEncL、预训练、器官监督、PETCT错位增强等组合；报告更细1mm重采样因固定patch中的上下文减少而变差。",
+    "limitation": "具体组合在该数据和训练预算成立；1mm变差不等于所有任务都应粗分辨率。",
+    "project_use": "不要把更细网格或更大模型当免费增益；维持本次冻结网格，区分细节和视野。",
+    "source_refs": [
+      "turn73view0"
+    ]
+  },
+  {
+    "id": "MS15",
+    "title": "Towards Interactive Lesion Segmentation in Whole-Body PET/CT with Promptable Models",
+    "year": 2025,
+    "domain": "全身PETCT/LesionLocator",
+    "url": "https://arxiv.org/html/2508.21680v1",
+    "access_depth": "正文第1—2节、输入编码和在线交互方法",
+    "verified_claim": "基于强nnU-Net全身基线，加入正负提示通道；比较EDT和归一化高斯，并在增强后在线生成提示。",
+    "limitation": "其观察同时涉及编码缩放和幅值；不能推成高斯普遍劣于EDT或所有截断均有害。",
+    "project_use": "空间信息通路与训练时提示生成是低成本优先项。",
+    "source_refs": [
+      "turn125view2"
+    ]
+  },
+  {
+    "id": "MS16",
+    "title": "autoPET IV challenge: Incorporating organ supervision and human guidance for lesion segmentation in PET/CT",
+    "year": 2025,
+    "domain": "全身PETCT/BIRTH",
+    "url": "https://arxiv.org/html/2509.02402v1",
+    "access_depth": "正文数据、训练、表1—2及结果解释",
+    "verified_claim": "对比密集提示和随机提示数；表2的100例交互分析明确承认已被五折ensemble训练见过；还有示踪剂特定SUV后处理。",
+    "limitation": "不能将表2高Dice看作未见患者测试；固定SUV规则不适用于general medical方法主张。",
+    "project_use": "借训练匹配交互强度的教训；排除将其0.85级表现直接映射到本项目目标的论证。",
+    "source_refs": [
+      "turn125view1",
+      "turn130view3"
+    ]
+  },
+  {
+    "id": "MS17",
+    "title": "A Whole-Body PSMA-PET/CT dataset with manually annotated tumor lesions",
+    "year": 2026,
+    "domain": "PSMA数据集与标签协议",
+    "url": "https://www.nature.com/articles/s41597-026-07821-z",
+    "access_depth": "期刊正文数据、注释、版本和技术验证",
+    "verified_claim": "597次检查来自378名患者，存在同患者多次检查；TCIA v2描述为539阳性/58阴性，需核标签版本。",
+    "limitation": "与旧挑战论文537/60不一致；不能据此改写本地冻结数据分母或mask版本。",
+    "project_use": "所有训练/校准/验证分组按患者；记录本地scan、patient、阳性资格与标签hash。",
+    "source_refs": [
+      "turn29view3"
+    ]
+  },
+  {
+    "id": "MS18",
+    "title": "The autoPET3 Challenge - Automated Lesion Segmentation in Whole-Body PET/CT - Multitracer Multicenter Generalization",
+    "year": 2026,
+    "domain": "挑战评测、跨中心和标签偏移",
+    "url": "https://arxiv.org/html/2605.05775v1",
+    "access_depth": "正文数据表、标签程序和指标章节",
+    "verified_claim": "不同中心/示踪剂的成像与标注程序不同；原挑战表仍为537个PSMA阳性检查，区分DSC及病灶级FPV/FNV。",
+    "limitation": "挑战汇总不能替代本项目划分与逐轮交互评估；标签偏移和域偏移可能混在一起。",
+    "project_use": "报告外部验证的具体任务与标注标准，不只写跨数据集。",
+    "source_refs": [
+      "turn133view1",
+      "turn133view4"
+    ]
+  },
+  {
+    "id": "MS19",
+    "title": "HeMIS: Hetero-Modal Image Segmentation",
+    "year": 2016,
+    "domain": "缺失模态学习",
+    "url": "https://arxiv.org/pdf/1607.05194",
+    "access_depth": "PDF方法第2节与数据/训练",
+    "verified_claim": "每模态独立编码，在可用模态特征上计算均值/方差，并在训练时随机丢模态。",
+    "limitation": "验证是脑MRI任务；不能凭输入接口对未知PET/MRI任务宣称零样本有效。",
+    "project_use": "未来采用模态特定适配器+显式可用性；不是简单补0就支持缺失模态。",
+    "source_refs": [
+      "turn127view2"
+    ]
+  },
+  {
+    "id": "MS20",
+    "title": "mmFormer: Multimodal Medical Transformer for Incomplete Multimodal Learning of Brain Tumor Segmentation",
+    "year": 2022,
+    "domain": "缺失模态与跨模态融合",
+    "url": "https://arxiv.org/pdf/2206.02425",
+    "access_depth": "PDF正文方法第2节和BraTS表格",
+    "verified_claim": "模态专有编码器、跨模态Transformer、模态级dropout和辅助监督共同构成不完整模态学习。",
+    "limitation": "基于固定四种MRI序列，不是任意未知模态；其性能提升不能迁移为本任务的预期增益。",
+    "project_use": "把通用残差编辑器与模态编码接口分离；当前有限预算先不新增大型融合模块。",
+    "source_refs": [
+      "turn131view3"
+    ]
+  },
+  {
+    "id": "MS21",
+    "title": "RFNet: Region-Aware Fusion Network for Incomplete Multi-Modal Brain Tumor Segmentation",
+    "year": 2021,
+    "domain": "区域感知缺失模态融合",
+    "url": "https://openaccess.thecvf.com/content/ICCV2021/html/Ding_RFNet_Region-Aware_Fusion_Network_for_Incomplete_Multi-Modal_Brain_Tumor_Segmentation_ICCV_2021_paper.html",
+    "access_depth": "官方CVF摘要/书目信息；PDF本轮未成功获取",
+    "verified_claim": "原文工作存在，研究区域感知的缺失MRI模态融合。",
+    "limitation": "本轮不核其具体公式、数字或优于其他模型的幅度。",
+    "project_use": "列为general medical缺失模态扩展的后续细读线索，不入当前执行主线。",
+    "source_refs": [
+      "turn79search6"
+    ]
+  },
+  {
+    "id": "MS22",
+    "title": "HyperSpace: Hypernetworks for spacing-adaptive image segmentation",
+    "year": 2024,
+    "domain": "体素间距适配与几何",
+    "url": "https://arxiv.org/html/2407.03681v1",
+    "access_depth": "正文方法、实验和讨论",
+    "verified_claim": "以三轴spacing条件化网络权重，训练随机重采样；讨论真实物理尺度有语义、单纯scale equivariance未必总适合医学。",
+    "limitation": "实验数量有限；超出训练spacing范围和有限感受野仍会失败，学习spacing并未消除FOV。",
+    "project_use": "保留显式物理坐标；学习的范围尺度只是条件，不能替代坐标变换。",
+    "source_refs": [
+      "turn89view0"
+    ]
+  },
+  {
+    "id": "MS23",
+    "title": "Guiding the Guidance: A Comparative Analysis of User Guidance Signals for Interactive Segmentation of Volumetric Images",
+    "year": 2023,
+    "domain": "提示编码与自适应尺度",
+    "url": "https://arxiv.org/pdf/2303.06942",
+    "access_depth": "PDF方法、提示公式、实验变量和结果",
+    "verified_claim": "自适应高斯仍用手定a=13、b=.15及局部邻域；比较中截断有时有益，其效果与编码、任务有关。",
+    "limitation": "autoPET仅PET且剔除阴性，另一个数据集为脾脏；不能推出全部距离截断都应删除。",
+    "project_use": "新表示应保持远端可区分信息；去掉硬编码的语义剪裁，不把距离图形式本身当主创新。",
+    "source_refs": [
+      "turn127view3"
+    ]
+  },
+  {
+    "id": "MS24",
+    "title": "LAD: Learnable Anisotropic Deformation for 3D Medical Image Analysis",
+    "year": 2026,
+    "domain": "轴向尺度学习",
+    "url": "https://papers.miccai.org/miccai-2026/paper/0291_paper.pdf",
+    "access_depth": "官方MICCAI PDF方法第2.1—2.3节",
+    "verified_claim": "从各轴特征回归尺度，使用1+tanh且零初始化最后层，再调制RoPE与特征。",
+    "limitation": "学习尺度仍有(0,2)参数化界限和架构假设；由图像推理的几何偏差并非测量到的spacing。",
+    "project_use": "可借轴向条件化而非单球半径；暂不改主干为新Transformer。",
+    "source_refs": [
+      "turn130view2"
+    ]
+  },
+  {
+    "id": "MS25",
+    "title": "Metrics reloaded: recommendations for image analysis validation",
+    "year": 2024,
+    "domain": "指标与医学验证",
+    "url": "https://www.nature.com/articles/s41592-023-02151-z",
+    "access_depth": "期刊摘要及作者机构原始条目；全文本轮受访问限制",
+    "verified_claim": "倡导根据问题选择并正确应用指标，特别区分指标选择、聚合与解释。",
+    "limitation": "本轮未逐条核其全部清单；患者bootstrap的具体实现为本项目统计推导，不冒称论文给定方案。",
+    "project_use": "固定阳性资格、scan/patient权重、空mask规则和配对集群bootstrap定义。",
+    "source_refs": [
+      "turn130search0",
+      "turn130search10"
+    ]
+  },
+  {
+    "id": "MS26",
+    "title": "DeepIGeoS: A Deep Interactive Geodesic Framework for Medical Image Segmentation",
+    "year": 2018,
+    "domain": "经典医学交互与测地传播",
+    "url": "https://arxiv.org/html/1707.00652v3",
+    "access_depth": "2017预印本正文方法；期刊年2018",
+    "verified_claim": "先自动分割，再用图像、当前分割、正负点击/涂鸦的测地距离进行修正；有可学习成对势和用户约束CRF。",
+    "limitation": "不是指定单个残差对象的等价方法，但已存在边界感知传播与空间提示修正，不宜将这些基础想法称新。",
+    "project_use": "解释跨领域机制已有医学桥接；剩余新意必须具体到残差目标和训练语义。",
+    "source_refs": [
+      "turn130view0",
+      "turn129search1"
+    ]
+  },
+  {
+    "id": "MS27",
+    "title": "SynthSeg: Segmentation of brain MRI scans of any contrast and resolution without retraining",
+    "year": 2023,
+    "domain": "分辨率/对比度域随机化",
+    "url": "https://arxiv.org/abs/2107.09559",
+    "access_depth": "原始摘要；全文本轮访问失败",
+    "verified_claim": "用标签条件合成图像、随机化对比度与分辨率，面向无需重新训练的跨域分割。",
+    "limitation": "本轮不核具体生成超参及定量表；脑结构到微小病灶意图修复仍需新证据。",
+    "project_use": "未来补强学习域覆盖可用的方向，不把没有尺度增强单独当作已证明根因。",
+    "source_refs": [
+      "turn129academia27"
+    ]
+  }
+]

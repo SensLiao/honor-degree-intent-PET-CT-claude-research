@@ -1,0 +1,18 @@
+{
+ "schema": "PETCT-CODE-TREE-DEPLOY-RECEIPT-v2",
+ "decision": "D-2026-09-25-08",
+ "host": "z390",
+ "storage_root": "/mnt/HDD4/honor_petct",
+ "storage_prefix": "/mnt/HDD4/honor_petct/",
+ "storage_source": "setting SIRB_STORAGE_ROOT",
+ "run_root": "/mnt/HDD4/honor_petct/sirb/code-1007",
+ "files": 1208,
+ "tarball_sha256": "cd7278ccd7d1cba36feddbc17fe2ac5209fc6b4060f17201047207e55ae32720",
+ "manifest_sha256": "bd227dbd6a4fdcd81d9266516c1715e7bd3a6a21aac77ecd6d93acbe16b529ef",
+ "server_manifest_check": "ALL_OK",
+ "deployed_at": "2026-10-07T01:37:55+1100",
+ "vendored": {
+  "upstream/autoPETV/metrics.py": "93e303219deb46b10fc5e5532873a42745aec1ecd6f78335f36cebba62104b83",
+  "upstream/autoPETV/interactive/simulate_scribbles.py": "a2124e8aa4207e53ac93259214a35b7cf74626f83ab164e519769f86557d7cd2"
+ }
+}

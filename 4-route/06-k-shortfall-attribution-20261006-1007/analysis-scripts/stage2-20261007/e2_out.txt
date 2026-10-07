@@ -1,0 +1,25 @@
+== 1. Patients by start missed volume (fn_ml at D0), three groups (VAL D5, patient mean)
+  low  n=18 median     0.58 ml | v1flat 0.8194 K1 0.8397 K2 0.8368 K2flip 0.8385 oracle 0.9799 | K1-v1 +0.0203 K2-v1 +0.0174 K2flip-v1 +0.0191
+  mid  n=18 median     5.60 ml | v1flat 0.7253 K1 0.7237 K2 0.7235 K2flip 0.7346 oracle 0.9428 | K1-v1 -0.0016 K2-v1 -0.0018 K2flip-v1 +0.0093
+  high n=18 median   265.12 ml | v1flat 0.7238 K1 0.6984 K2 0.6983 K2flip 0.6981 oracle 0.8313 | K1-v1 -0.0254 K2-v1 -0.0255 K2flip-v1 -0.0257
+== 1. Patients by reference lesion volume, three groups (VAL D5, patient mean)
+  low  n=18 median     1.74 ml | v1flat 0.7819 K1 0.7952 K2 0.8080 K2flip 0.8128 oracle 0.9869 | K1-v1 +0.0134 K2-v1 +0.0262 K2flip-v1 +0.0310
+  mid  n=18 median    22.14 ml | v1flat 0.7592 K1 0.7652 K2 0.7491 K2flip 0.7570 oracle 0.9339 | K1-v1 +0.0060 K2-v1 -0.0100 K2flip-v1 -0.0021
+  high n=18 median   908.72 ml | v1flat 0.7275 K1 0.7014 K2 0.7015 K2flip 0.7013 oracle 0.8331 | K1-v1 -0.0260 K2-v1 -0.0260 K2flip-v1 -0.0262
+
+== 2. Spearman correlation of per-patient D5(K) - D5(v1) with start features (n patients)
+  K1      n=54 start Dice +0.150 | start missed ml -0.229 | start over-seg ml -0.182 | reference ml -0.171 | wins 18 / ties 10 / losses 26
+  K2      n=54 start Dice +0.202 | start missed ml -0.248 | start over-seg ml -0.128 | reference ml -0.203 | wins 16 / ties 9 / losses 29
+  K2flip  n=54 start Dice +0.145 | start missed ml -0.286 | start over-seg ml -0.191 | reference ml -0.253 | wins 18 / ties 10 / losses 26
+
+== 3. Add-stroke recovery share (T fixed / |T|), median and mean over strokes
+  v1flat  r1    n= 54 median 0.537 mean 0.571
+  v1flat  r2-5  n=189 median 0.552 mean 0.576
+  K1      r1    n= 54 median 0.175 mean 0.279
+  K1      r2-5  n=232 median 0.081 mean 0.222
+  K2      r1    n= 54 median 0.184 mean 0.296
+  K2      r2-5  n=212 median 0.100 mean 0.238
+  K2flip  r1    n= 54 median 0.179 mean 0.284
+  K2flip  r2-5  n=221 median 0.103 mean 0.244
+  oracle  r1    n= 54 median 1.000 mean 1.000
+  oracle  r2-5  n=192 median 1.000 mean 1.000

@@ -1,0 +1,143 @@
+Code tree: C:\Users\廖神\Desktop\Honor degree\projects\petct_textual_intent\scripts
+Python 3.10.21 | torch 2.4.1+cpu | CPU only, no checkpoint loaded
+Files of the code tree used here vs the per-file sha256 that K1's run manifest recorded at training time
+  scripts/common/petct_sirb_network.py          same as K1's training copy: True
+  scripts/common/petct_sirb_registry.py         same as K1's training copy: True
+  scripts/common/petct_sirb_inputs.py           same as K1's training copy: True
+  scripts/common/petct_sirb_config.py           same as K1's training copy: True
+  scripts/common/petct_sirb_experiments.py      same as K1's training copy: True
+  scripts/common/petct_sirb_prompt.py           same as K1's training copy: True
+  scripts/common/petct_sirb_losses.py           same as K1's training copy: True
+  scripts/common/petct_sirb_dataset.py          same as K1's training copy: True
+  scripts/common/petct_sirb_training.py         same as K1's training copy: False (local 27ba4774a85c, recorded c7b23e3f47bd)
+  experiment file editor-sirb-intentfull-train.json        same as the analysis copy: True
+  experiment file editor-sirb-intentrefresh-train.json     same as the analysis copy: True
+  experiment file editor-sirb-intentwide-train.json        same as the analysis copy: True
+
+==============================================================================================================
+1. Totals: built here vs recorded in each run_manifest.json 'parameters'
+==============================================================================================================
+  v1 flat N1_STATE        total   6,651,002 (manifest   6,651,002)  trunk   6,607,096 (manifest   6,607,096)  head  43,906 (manifest  43,906)  match=True
+  v1 N3   N3              total   6,630,266 (manifest   6,630,266)  trunk   6,607,096 (manifest   6,607,096)  head  23,170 (manifest  23,170)  match=True
+  K1      INTENT_FULL     total   6,652,475 (manifest   6,652,475)  trunk   6,607,096 (manifest   6,607,096)  head  45,379 (manifest  45,379)  match=True
+  K2      INTENT_REFRESH  total   6,652,475 (manifest   6,652,475)  trunk   6,607,096 (manifest   6,607,096)  head  45,379 (manifest  45,379)  match=True
+  K3      INTENT_WIDE     total  14,117,459 (manifest  14,117,459)  trunk  14,072,080 (manifest  14,072,080)  head  45,379 (manifest  45,379)  match=True
+  ('head' = every arm-specific module of network.HEAD_MODULE_NAMES: ('error_head', 'binding_head', 'flat_head', 'target_head', 'spatial_head', 'prompt_distance') )
+
+==============================================================================================================
+2. Parameters per module
+==============================================================================================================
+  module                                                              v1 flat        v1 N3           K1           K2           K3
+  state encoder: encoder levels (4 levels x 2 residual blocks)      4,650,768    4,650,768    4,650,768    4,650,768   10,491,904
+  state encoder: up-convolutions                                      193,704      193,704      193,704      193,704      438,016
+  state encoder: decoder levels                                     1,004,976    1,004,976    1,004,976    1,004,976    2,285,696
+  state encoder: 1x1 projection to the 32 decoder features                800          800          800          800        1,312
+  global branch: 3 stride-2 stages                                    217,312      217,312      217,312      217,312      217,312
+  global branch: injected map (16 channels)                               528          528          528          528          528
+  global branch: token projection to the query size                     8,320        8,320        8,320        8,320        8,320
+  fusion of tile and global features                                    1,600        1,600        1,600        1,600        1,600
+  query encoder: sign embedding                                            32           32           32           32           32
+  query encoder: stroke position MLP                                      320          320          320          320          320
+  query encoder: pooled-stroke MLP                                    234,368      234,368      234,368      234,368      320,384
+  query encoder: tile-token projection                                 24,704       24,704       24,704       24,704       36,992
+  query encoder: token position encoder                                 4,448        4,448        4,448        4,448        4,448
+  query encoder: token type embedding                                     256          256          256          256          256
+  query encoder: cross-attention (2 layers)                           132,096      132,096      132,096      132,096      132,096
+  query encoder: attention norms                                          512          512          512          512          512
+  query encoder: feed-forward (2 layers)                              131,840      131,840      131,840      131,840      131,840
+  query encoder: feed-forward norms                                       512          512          512          512          512
+  B2 learnable radius (one scalar, log scale)                               0            0            1            1            1
+  B2 log-distance input layer (zero start)                                  0            0           64           64           64
+  B3 history maps input layer (zero start)                                  0            0          128          128          128
+  B3 interaction-flag FiLM (zero start)                                     0            0        1,280        1,280        1,280
+  flat head: query-dot term                                            41,216            0       41,216       41,216       41,216
+  flat head: local 1x1 MLP (lift, norm, sign FiLM, output)              2,690            0        2,690        2,690        2,690
+  factorized head: error branch (no stroke input)                           0        1,249            0            0            0
+  factorized head: binding branch (query-dot + local)                       0       21,921            0            0            0
+  TOTAL                                                             6,651,002    6,630,266    6,652,475    6,652,475   14,117,459
+
+  Grouped as asked (B2/B3 rows are the K-only layers; 'output head (v1 parts)' is the rest of the head):
+  group                                                               v1 flat        v1 N3           K1           K2           K3
+  state trunk / encoder                                             5,850,248    5,850,248    5,850,248    5,850,248   13,216,928
+  global branch                                                       226,160      226,160      226,160      226,160      226,160
+  fusion                                                                1,600        1,600        1,600        1,600        1,600
+  prompt / query encoder                                              529,088      529,088      529,088      529,088      627,392
+  B2 distance layers (radius + log-distance lift)                           0            0           65           65           65
+  B3 history channels (maps lift + flag FiLM)                               0            0        1,408        1,408        1,408
+  output head (v1 parts)                                               43,906       23,170       43,906       43,906       43,906
+  ungrouped parameters: none
+
+  K1 - v1 flat = 1,473 parameters (all in the B2/B3 layers); K3 / K1 = 2.122
+
+==============================================================================================================
+3. Sizes that differ between the arms
+==============================================================================================================
+  v1 flat state-encoder widths [24, 48, 96, 192] (trunk_width_scale 1.0); decoder features 32; query dim 128; global widths [16, 32, 64]; head kind flat_threeway_two_free_logits
+  v1 N3   state-encoder widths [24, 48, 96, 192] (trunk_width_scale 1.0); decoder features 32; query dim 128; global widths [16, 32, 64]; head kind factorized_error_binding
+  K1      state-encoder widths [24, 48, 96, 192] (trunk_width_scale 1.0); decoder features 32; query dim 128; global widths [16, 32, 64]; head kind flat_threeway_two_free_logits
+          learnable radius: R = 60.0 mm x exp(s), s starts at 0.0 (stage 1, a11: trained s gives R = 61.04 mm K1, 61.01 mm K2)
+  K2      state-encoder widths [24, 48, 96, 192] (trunk_width_scale 1.0); decoder features 32; query dim 128; global widths [16, 32, 64]; head kind flat_threeway_two_free_logits
+          learnable radius: R = 60.0 mm x exp(s), s starts at 0.0 (stage 1, a11: trained s gives R = 61.04 mm K1, 61.01 mm K2)
+  K3      state-encoder widths [40, 72, 144, 288] (trunk_width_scale 1.5); decoder features 32; query dim 128; global widths [16, 32, 64]; head kind flat_threeway_two_free_logits
+          learnable radius: R = 60.0 mm x exp(s), s starts at 0.0 (stage 1, a11: trained s gives R = 61.04 mm K1, 61.01 mm K2)
+  scaled_encoder_widths([24, 48, 96, 192], 1.5, 8) = [40, 72, 144, 288]
+  attention context: 2240 tokens (8x8x8 global + 12x12x12 tile cells of a 96^3 tile)
+
+==============================================================================================================
+4. Same start? Shared parameters of K1 vs v1 flat built with the same seed (the trainer builds with seed 3407)
+==============================================================================================================
+  K1 vs v1 flat: tensors in common with equal shape 169, of which bit-different 0; only in K1 4; same name but other shape 0
+      only in K1: ['flat_head.local.distance_lift.weight', 'flat_head.local.history_lift.weight', 'flat_head.local.history_film.weight', 'prompt_distance.log_radius_scale']
+  K2 vs K1: tensors in common with equal shape 173, of which bit-different 0; only in K2 0; same name but other shape 0
+  K3 vs K1: tensors in common with equal shape 77, of which bit-different 36; only in K3 0; same name but other shape 96
+      first different: ['state.project.bias', 'global_encoder.stages.0.0.weight', 'global_encoder.stages.0.3.weight', 'global_encoder.stages.1.0.weight']
+  v1 N3 vs v1 flat: tensors in common with equal shape 160, of which bit-different 0; only in v1 N3 15; same name but other shape 0
+      only in v1 N3: ['error_head.lift.weight', 'error_head.norm.weight', 'error_head.norm.bias', 'error_head.film.weight', 'error_head.out.weight', 'error_head.out.bias', 'binding_head.dot.voxel', 'binding_head.dot.query.weight', 'binding_head.dot.query.bias', 'binding_head.local.lift.weight', 'binding_head.local.norm.weight', 'binding_head.local.norm.bias', 'binding_head.local.film.weight', 'binding_head.local.out.weight', 'binding_head.local.out.bias']
+  values of the K-only tensors at build time (all must be 0, so K1 starts as the v1 function):
+      prompt_distance.log_radius_scale              shape ()                 max |value| 0.0
+      flat_head.local.distance_lift.weight          shape (64, 1, 1, 1, 1)   max |value| 0.0
+      flat_head.local.history_lift.weight           shape (64, 2, 1, 1, 1)   max |value| 0.0
+      flat_head.local.history_film.weight           shape (128, 10)          max |value| 0.0
+
+==============================================================================================================
+5. Input channels per arm (code: registry STATE_CHANNELS / PROMPT_DENSE_* / HISTORY_DELTA_MAPS / INTERACTION_FLAG_FEATURES)
+==============================================================================================================
+
+  v1 flat (N1_STATE):
+    state encoder and global branch (6 channels, global branch use_global=True): PET [on]; CT [on]; M [on]; p0 [blanked to 0.0 inside the network (use_p0=False)]; history_positive [on]; history_negative [on]
+    query encoder: current-stroke points (features sampled at the exact stroke coordinates on feature levels 0-3, mean+max pooled), sign embedding (ADD/REMOVE), 9-number stroke position code; attends to the global tokens and the anchor tile's deepest-level tokens
+    head dense prompt input (computed on the CPU): ['stroke_distance', 'stroke_occupancy'] = [1 - min(d, 60 mm)/60, occupancy]; every voxel farther than 60 mm reads 0
+    B3 history inputs: none
+    switches: error_reads_prompt=False spatial_residual='none' state_loss=True state_change_on='change_on_target' far_block=False edit_contract=False pair_relations=False loss_alignment=False pool_mix='v2' trunk_width_scale=1.0
+
+  v1 N3 (N3):
+    state encoder and global branch (6 channels, global branch use_global=True): PET [on]; CT [on]; M [on]; p0 [blanked to 0.0 inside the network (use_p0=False)]; history_positive [on]; history_negative [on]
+    query encoder: current-stroke points (features sampled at the exact stroke coordinates on feature levels 0-3, mean+max pooled), sign embedding (ADD/REMOVE), 9-number stroke position code; attends to the global tokens and the anchor tile's deepest-level tokens
+    head dense prompt input (computed on the CPU): ['stroke_distance', 'stroke_occupancy'] = [1 - min(d, 60 mm)/60, occupancy]; every voxel farther than 60 mm reads 0
+    B3 history inputs: none
+    switches: error_reads_prompt=False spatial_residual='none' state_loss=True state_change_on='change_on_target' far_block=False edit_contract=False pair_relations=False loss_alignment=False pool_mix='v2' trunk_width_scale=1.0
+
+  K1 (INTENT_FULL):
+    state encoder and global branch (6 channels, global branch use_global=True): PET [on]; CT [on]; M [on]; p0 [blanked to 0.0 inside the network (use_p0=False)]; history_positive [on]; history_negative [on]
+    query encoder: current-stroke points (features sampled at the exact stroke coordinates on feature levels 0-3, mean+max pooled), sign embedding (ADD/REMOVE), 9-number stroke position code; attends to the global tokens and the anchor tile's deepest-level tokens
+    head dense prompt input delivered: ['stroke_distance_mm', 'stroke_occupancy', 'stroke_log_distance'] (distance NOT truncated); the network turns it into [1 - min(d, R)/R with learnable R (start 60 mm), occupancy] for the same head inputs, and feeds log(1 + d / voxel edge) through the zero-start distance layer
+    B3 history: maps ['system_added_last_round', 'system_removed_last_round'] -> zero-start 1x1 layer into the head's hidden layer; 10 flags ['flags_valid', 'round_1', 'round_2', 'round_3', 'round_4', 'round_5', 'previous_same_sign', 'previous_opposite_sign', 'stroke_repeats_previous', 'previous_edit_empty'] -> zero-start FiLM; both are all-zero for an offline-bank state (flags_valid 0) and for round 1 at inference
+    switches: error_reads_prompt=False spatial_residual='none' state_loss=True state_change_on='change_on_target' far_block=True edit_contract=True pair_relations=True loss_alignment='dice_gain_at_calibration_step' pool_mix='gap_weighted' trunk_width_scale=1.0
+
+  K2 (INTENT_REFRESH):
+    state encoder and global branch (6 channels, global branch use_global=True): PET [on]; CT [on]; M [on]; p0 [blanked to 0.0 inside the network (use_p0=False)]; history_positive [on]; history_negative [on]
+    query encoder: current-stroke points (features sampled at the exact stroke coordinates on feature levels 0-3, mean+max pooled), sign embedding (ADD/REMOVE), 9-number stroke position code; attends to the global tokens and the anchor tile's deepest-level tokens
+    head dense prompt input delivered: ['stroke_distance_mm', 'stroke_occupancy', 'stroke_log_distance'] (distance NOT truncated); the network turns it into [1 - min(d, R)/R with learnable R (start 60 mm), occupancy] for the same head inputs, and feeds log(1 + d / voxel edge) through the zero-start distance layer
+    B3 history: maps ['system_added_last_round', 'system_removed_last_round'] -> zero-start 1x1 layer into the head's hidden layer; 10 flags ['flags_valid', 'round_1', 'round_2', 'round_3', 'round_4', 'round_5', 'previous_same_sign', 'previous_opposite_sign', 'stroke_repeats_previous', 'previous_edit_empty'] -> zero-start FiLM; both are all-zero for an offline-bank state (flags_valid 0) and for round 1 at inference
+    switches: error_reads_prompt=False spatial_residual='none' state_loss=True state_change_on='change_on_target' far_block=True edit_contract=True pair_relations=True loss_alignment='dice_gain_at_calibration_step' pool_mix='gap_weighted' trunk_width_scale=1.0
+
+  K3 (INTENT_WIDE):
+    state encoder and global branch (6 channels, global branch use_global=True): PET [on]; CT [on]; M [on]; p0 [blanked to 0.0 inside the network (use_p0=False)]; history_positive [on]; history_negative [on]
+    query encoder: current-stroke points (features sampled at the exact stroke coordinates on feature levels 0-3, mean+max pooled), sign embedding (ADD/REMOVE), 9-number stroke position code; attends to the global tokens and the anchor tile's deepest-level tokens
+    head dense prompt input delivered: ['stroke_distance_mm', 'stroke_occupancy', 'stroke_log_distance'] (distance NOT truncated); the network turns it into [1 - min(d, R)/R with learnable R (start 60 mm), occupancy] for the same head inputs, and feeds log(1 + d / voxel edge) through the zero-start distance layer
+    B3 history: maps ['system_added_last_round', 'system_removed_last_round'] -> zero-start 1x1 layer into the head's hidden layer; 10 flags ['flags_valid', 'round_1', 'round_2', 'round_3', 'round_4', 'round_5', 'previous_same_sign', 'previous_opposite_sign', 'stroke_repeats_previous', 'previous_edit_empty'] -> zero-start FiLM; both are all-zero for an offline-bank state (flags_valid 0) and for round 1 at inference
+    switches: error_reads_prompt=False spatial_residual='none' state_loss=True state_change_on='change_on_target' far_block=True edit_contract=True pair_relations=True loss_alignment='dice_gain_at_calibration_step' pool_mix='gap_weighted' trunk_width_scale=1.5
+
+  Not wired in any arm: the multi-scale occupancy pyramid (network.py comment: heads read level 0 only; the query samples every level at the stroke coordinates).
+
+Done.

@@ -1,0 +1,77 @@
+{
+ "a_all_later_remove": {
+  "strokes": 414,
+  "tp_lost_total_ml": 2159.2840879344276,
+  "tp_lost_by_tag_ml": {
+   "repair": 1578.0159084997297,
+   "original": 394.61814299289796,
+   "other": 97.04705933014813,
+   "residue": 89.60297711165279
+  },
+  "strokes_by_tag": {
+   "repair": 163,
+   "original": 150,
+   "other": 33,
+   "residue": 68
+  },
+  "repair_share_of_tp_lost": 0.7308051392205926
+ },
+ "b_round2_repair": {
+  "actual_gain": -0.01685174239283928,
+  "ideal_gain": 0.034682007706534144,
+  "shortfall": 0.05153375009937343,
+  "round2_total_shortfall": 0.09586662620956128
+ },
+ "c_round1": {
+  "+ true_dDice": {
+   "at_0.5": 0.22217418670213948,
+   "best_or_no_edit": 0.28613852918280197,
+   "skip_harmful_at_0.5": 0.22217418670213948,
+   "events": 9
+  },
+  "+ g_T": {
+   "at_0.5": 0.22199827579307058,
+   "best_or_no_edit": 0.28585608831142034,
+   "skip_harmful_at_0.5": 0.22199827579307058,
+   "events": 9
+  },
+  "- true_dDice": {
+   "at_0.5": 0.05956051800408861,
+   "best_or_no_edit": 0.07349715037536249,
+   "skip_harmful_at_0.5": 0.06256768579235751,
+   "events": 10
+  },
+  "- g_T": {
+   "at_0.5": 0.059356920736658436,
+   "best_or_no_edit": 0.07300516837056636,
+   "skip_harmful_at_0.5": 0.06237788274938909,
+   "events": 10
+  }
+ },
+ "c_later": {
+  "+ true_dDice": {
+   "at_0.5": 0.025759939769197698,
+   "best_or_no_edit": 0.04691019361084075,
+   "skip_harmful_at_0.5": 0.031861339571933024,
+   "events": 103
+  },
+  "+ g_T": {
+   "at_0.5": 0.024279743518519137,
+   "best_or_no_edit": 0.04512036962533254,
+   "skip_harmful_at_0.5": 0.030790368017674596,
+   "events": 103
+  },
+  "- true_dDice": {
+   "at_0.5": -0.017482202050060992,
+   "best_or_no_edit": 0.03245134776851945,
+   "skip_harmful_at_0.5": 0.0248365452489748,
+   "events": 97
+  },
+  "- g_T": {
+   "at_0.5": -0.01982076394353378,
+   "best_or_no_edit": 0.031028620752297995,
+   "skip_harmful_at_0.5": 0.024157046515372822,
+   "events": 97
+  }
+ }
+}

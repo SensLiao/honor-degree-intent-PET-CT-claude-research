@@ -1,0 +1,78 @@
+{
+ "flat": {
+  "round0 FN": {
+   "trajectories": 255,
+   "total_error_ml": 30839.24387824938,
+   "share_in_largest_component": 0.34451429720521437,
+   "trajectories_with_largest_ge10ml": 81,
+   "volume_in_largest_ge10ml_share": 0.33195610411642484,
+   "median_component_count": 15,
+   "p90_component_count": 574
+  },
+  "round0 FP": {
+   "trajectories": 255,
+   "total_error_ml": 17193.862153040278,
+   "share_in_largest_component": 0.25228224386504045,
+   "trajectories_with_largest_ge10ml": 63,
+   "volume_in_largest_ge10ml_share": 0.23073204587714805,
+   "median_component_count": 13,
+   "p90_component_count": 368
+  },
+  "round5 FN": {
+   "trajectories": 255,
+   "total_error_ml": 26908.01776098453,
+   "share_in_largest_component": 0.2538041555809466,
+   "trajectories_with_largest_ge10ml": 69,
+   "volume_in_largest_ge10ml_share": 0.2424849086026778,
+   "median_component_count": 18,
+   "p90_component_count": 605
+  },
+  "round5 FP": {
+   "trajectories": 255,
+   "total_error_ml": 17063.027508672494,
+   "share_in_largest_component": 0.16206906575160954,
+   "trajectories_with_largest_ge10ml": 68,
+   "volume_in_largest_ge10ml_share": 0.14047019360592927,
+   "median_component_count": 18,
+   "p90_component_count": 373
+  }
+ },
+ "oracle": {
+  "round0 FN": {
+   "trajectories": 255,
+   "total_error_ml": 30839.24387824938,
+   "share_in_largest_component": 0.34451429720521437,
+   "trajectories_with_largest_ge10ml": 81,
+   "volume_in_largest_ge10ml_share": 0.33195610411642484,
+   "median_component_count": 15,
+   "p90_component_count": 574
+  },
+  "round0 FP": {
+   "trajectories": 255,
+   "total_error_ml": 17193.862153040278,
+   "share_in_largest_component": 0.25228224386504045,
+   "trajectories_with_largest_ge10ml": 63,
+   "volume_in_largest_ge10ml_share": 0.23073204587714805,
+   "median_component_count": 13,
+   "p90_component_count": 368
+  },
+  "round5 FN": {
+   "trajectories": 255,
+   "total_error_ml": 15625.67316835542,
+   "share_in_largest_component": 0.08636049789838111,
+   "trajectories_with_largest_ge10ml": 43,
+   "volume_in_largest_ge10ml_share": 0.06582008122955112,
+   "median_component_count": 11,
+   "p90_component_count": 569
+  },
+  "round5 FP": {
+   "trajectories": 255,
+   "total_error_ml": 11616.348678260387,
+   "share_in_largest_component": 0.1043582052565875,
+   "trajectories_with_largest_ge10ml": 31,
+   "volume_in_largest_ge10ml_share": 0.07545955814817175,
+   "median_component_count": 11,
+   "p90_component_count": 364
+  }
+ }
+}

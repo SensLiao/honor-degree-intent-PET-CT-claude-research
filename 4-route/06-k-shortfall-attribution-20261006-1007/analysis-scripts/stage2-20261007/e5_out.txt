@@ -1,0 +1,6 @@
+K1                 D5 0.7539  gain add +0.0969 remove +0.0475 | r1 add T fixed  369.4 FP   62.7 | r1 remove T fixed   66.9 TP lost   5.4
+K1flip             D5 0.7500  gain add +0.0906 remove +0.0499 | r1 add T fixed  327.7 FP   44.5 | r1 remove T fixed   65.5 TP lost   4.2
+K2                 D5 0.7529  gain add +0.0857 remove +0.0577 | r1 add T fixed  483.0 FP  129.7 | r1 remove T fixed   72.1 TP lost   5.7
+K2flip             D5 0.7571  gain add +0.0952 remove +0.0524 | r1 add T fixed  470.6 FP  114.9 | r1 remove T fixed   67.2 TP lost   4.8
+cont_induced       D5 0.7606 (no transitions table)
+cont_induced_flip  D5 0.7728 (no transitions table)

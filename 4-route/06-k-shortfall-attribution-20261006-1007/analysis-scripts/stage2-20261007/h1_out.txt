@@ -1,0 +1,22 @@
+== 1. Remove strokes per round and median T-recovered share per remove stroke (VAL, 99 scans)
+  v1flat  r1:  31 remove, median share 1.000 | r2:  36 remove, median share 0.732 | r3:  36 remove, median share 0.550 | r4:  37 remove, median share 0.752 | r5:  38 remove, median share 0.615 | five rounds: add 243, remove 178, no stroke 74
+  routed  r1:  31 remove, median share 0.595 | r2:  42 remove, median share 0.399 | r3:  40 remove, median share 0.297 | r4:  41 remove, median share 0.300 | r5:  45 remove, median share 0.150 | five rounds: add 220, remove 199, no stroke 76
+
+== 2. Round-2 remove strokes split by round-1 sign (scans counted)
+  v1flat  round-1 add scans 54, of which round-2 remove 21; round-1 remove scans 31, of which round-2 remove 15
+  routed  round-1 add scans 54, of which round-2 remove 21; round-1 remove scans 31, of which round-2 remove 21
+
+== 3. Same-state round-2 remove: v1 removes (v1 run) vs K2 removes (routed run), identical mask after round 1
+  round-1 add in both systems: mask after round 1 identical 54, different 0
+  of these, round-2 remove in both with the same target volume: 21 scans, 19 patients
+  v1 removes: target  360.92 ml, T fixed  185.45, O fixed  52.61, true lesion removed  217.27, median T share 0.684, patient-mean round-2 Dice change -0.0454 (19 patients)
+  K2 removes: target  360.92 ml, T fixed  130.40, O fixed   8.47, true lesion removed  107.70, median T share 0.381, patient-mean round-2 Dice change +0.0201 (19 patients)
+  round 3 on the same scans, v1 run: 8 remove strokes
+  round 3 on the same scans, routed run: 11 remove strokes
+
+== 4. Rounds 2-5 cleared volume by remove strokes (ml) and final patient-mean FP / FN at D5 (positive scans)
+  v1flat  T  1015.51  T+O  1136.60  | D5 patient-mean FP  56.89 ml, FN 101.13 ml
+  routed  T   551.24  T+O   572.88  | D5 patient-mean FP  61.98 ml, FN  98.53 ml
+
+== 5. Routed system: consecutive remove-remove rounds
+  pairs 104; next target = previous target - previous T fixed: 34; mask unchanged by the first: 3

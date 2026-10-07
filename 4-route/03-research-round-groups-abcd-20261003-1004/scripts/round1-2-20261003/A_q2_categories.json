@@ -1,0 +1,1309 @@
+{
+ "flat": {
+  "checks": {
+   "gt_constancy_max_rel": 1.9122716069317704e-15,
+   "identity_max_abs_fp_ml": 1.1368683772161603e-13,
+   "identity_max_abs_fn_ml": 1.1368683772161603e-13,
+   "dice_reconstruction_max_abs": 1.0708720998817912e-15
+  },
+  "n_transitions": 1262,
+  "first_order_total": 0.3992945309105719,
+  "first_order_total_by_component": {
+   "target": 0.21161005401632463,
+   "damage": 0.19606207356933997,
+   "collateral": -0.00837759667509287
+  },
+  "categories": {
+   "ADD <0.5 mL": {
+    "n": 155,
+    "share": 0.12282091917591126,
+    "share_t0": 0.07058823529411765,
+    "mean_V_ml": 0.21621671683649346,
+    "median_V_ml": 0.16587945839622986,
+    "vol_weighted_recovery": 0.7479481330770129,
+    "event_mean_recovery": 0.8070969155349462,
+    "zero_recovery_rate": 0.0064516129032258064,
+    "full_recovery_rate": 0.5870967741935483,
+    "mean_gain_actual": 0.00542708745859755,
+    "mean_gain_perfect": 0.04548750943991742,
+    "efficiency_sum_gain_over_sum_perfect": 0.11930939999618945,
+    "dice_worse_rate": 0.2967741935483871,
+    "damage_ml_per_ml_target": 1.6103070862590532,
+    "collateral_ml_per_ml_target": 0.06919576884933588,
+    "mean_damage_ml": 0.34817531128947254,
+    "D5pts_first_order": 0.029667035472786284,
+    "D5pts_target_incomplete": 0.009842494283936128,
+    "D5pts_damage": 0.021202107513688055,
+    "D5pts_collateral": -0.0013775663248379183,
+    "D5pts_first_order_t0_exact": 0.004031219927498291,
+    "D5pts_first_order_t1to4": 0.025635815545288
+   },
+   "ADD 0.5-10 mL": {
+    "n": 356,
+    "share": 0.2820919175911252,
+    "share_t0": 0.3607843137254902,
+    "mean_V_ml": 2.7993695647976122,
+    "median_V_ml": 1.7583222590000365,
+    "vol_weighted_recovery": 0.6403453406388874,
+    "event_mean_recovery": 0.7004346629685715,
+    "zero_recovery_rate": 0.0,
+    "full_recovery_rate": 0.10955056179775281,
+    "mean_gain_actual": 0.07864097295383457,
+    "mean_gain_perfect": 0.15961353047853105,
+    "efficiency_sum_gain_over_sum_perfect": 0.49269615625983687,
+    "dice_worse_rate": 0.08426966292134831,
+    "damage_ml_per_ml_target": 0.7623004699599373,
+    "collateral_ml_per_ml_target": 0.06505721031770499,
+    "mean_damage_ml": 2.133960734836765,
+    "D5pts_first_order": 0.10464486049776213,
+    "D5pts_target_incomplete": 0.04878839466361519,
+    "D5pts_damage": 0.05773977458388888,
+    "D5pts_collateral": -0.001883308749741933,
+    "D5pts_first_order_t0_exact": 0.03836536929437126,
+    "D5pts_first_order_t1to4": 0.0662794912033909
+   },
+   "ADD >=10 mL": {
+    "n": 259,
+    "share": 0.205229793977813,
+    "share_t0": 0.2627450980392157,
+    "mean_V_ml": 124.42999439657613,
+    "median_V_ml": 52.91554722839732,
+    "vol_weighted_recovery": 0.16743775679489328,
+    "event_mean_recovery": 0.3231780419290873,
+    "zero_recovery_rate": 0.0,
+    "full_recovery_rate": 0.003861003861003861,
+    "mean_gain_actual": 0.03255805135062609,
+    "mean_gain_perfect": 0.12686999251558154,
+    "efficiency_sum_gain_over_sum_perfect": 0.2566253115103437,
+    "dice_worse_rate": 0.023166023166023165,
+    "damage_ml_per_ml_target": 0.09814623393954074,
+    "collateral_ml_per_ml_target": 0.004367889921254555,
+    "mean_damage_ml": 12.212335339142104,
+    "D5pts_first_order": 0.09631566881239913,
+    "D5pts_target_incomplete": 0.0815053631955765,
+    "D5pts_damage": 0.015182135259798602,
+    "D5pts_collateral": -0.00037182964297595113,
+    "D5pts_first_order_t0_exact": 0.033667752848923684,
+    "D5pts_first_order_t1to4": 0.06264791596347548
+   },
+   "REMOVE <0.5 mL": {
+    "n": 105,
+    "share": 0.0832012678288431,
+    "share_t0": 0.06274509803921569,
+    "mean_V_ml": 0.2670881183263535,
+    "median_V_ml": 0.2985830251132137,
+    "vol_weighted_recovery": 0.6894152400653739,
+    "event_mean_recovery": 0.6918961873793805,
+    "zero_recovery_rate": 0.11428571428571428,
+    "full_recovery_rate": 0.49523809523809526,
+    "mean_gain_actual": -0.03603676954932924,
+    "mean_gain_perfect": 0.0451779975492047,
+    "efficiency_sum_gain_over_sum_perfect": -0.7976619483871662,
+    "dice_worse_rate": 0.4380952380952381,
+    "damage_ml_per_ml_target": 0.7747778612292269,
+    "collateral_ml_per_ml_target": 0.08172368904077133,
+    "mean_damage_ml": 0.20693396107663084,
+    "D5pts_first_order": 0.033973899285263544,
+    "D5pts_target_incomplete": 0.005714106726052787,
+    "D5pts_damage": 0.030375691214187775,
+    "D5pts_collateral": -0.002115898654977021,
+    "D5pts_first_order_t0_exact": 0.0035853512377058035,
+    "D5pts_first_order_t1to4": 0.03038854804755775
+   },
+   "REMOVE 0.5-10 mL": {
+    "n": 257,
+    "share": 0.20364500792393028,
+    "share_t0": 0.1450980392156863,
+    "mean_V_ml": 2.997725300532213,
+    "median_V_ml": 1.9573776090755124,
+    "vol_weighted_recovery": 0.7025369339369603,
+    "event_mean_recovery": 0.7060308961468357,
+    "zero_recovery_rate": 0.007782101167315175,
+    "full_recovery_rate": 0.30739299610894943,
+    "mean_gain_actual": 0.010386579903234546,
+    "mean_gain_perfect": 0.11957424954395468,
+    "efficiency_sum_gain_over_sum_perfect": 0.08686301559782325,
+    "dice_worse_rate": 0.28793774319066145,
+    "damage_ml_per_ml_target": 0.4168435172350474,
+    "collateral_ml_per_ml_target": 0.06883759991657241,
+    "mean_damage_ml": 1.2495823579783372,
+    "D5pts_first_order": 0.09780844097399453,
+    "D5pts_target_incomplete": 0.042917020873865834,
+    "D5pts_damage": 0.05698321970878348,
+    "D5pts_collateral": -0.0020917996086548367,
+    "D5pts_first_order_t0_exact": 0.008270658335708399,
+    "D5pts_first_order_t1to4": 0.08953778263828614
+   },
+   "REMOVE >=10 mL": {
+    "n": 130,
+    "share": 0.10301109350237718,
+    "share_t0": 0.09803921568627451,
+    "mean_V_ml": 63.62139677459534,
+    "median_V_ml": 27.204231176981697,
+    "vol_weighted_recovery": 0.37916907251041615,
+    "event_mean_recovery": 0.576068529798203,
+    "zero_recovery_rate": 0.0,
+    "full_recovery_rate": 0.0,
+    "mean_gain_actual": 0.006788451936933701,
+    "mean_gain_perfect": 0.0666905312452004,
+    "efficiency_sum_gain_over_sum_perfect": 0.10179034130009655,
+    "dice_worse_rate": 0.3076923076923077,
+    "damage_ml_per_ml_target": 0.2409832008345437,
+    "collateral_ml_per_ml_target": 0.042989561644558305,
+    "mean_damage_ml": 15.331687836306498,
+    "D5pts_first_order": 0.036884625868366216,
+    "D5pts_target_incomplete": 0.022842674273278237,
+    "D5pts_damage": 0.014579145288993182,
+    "D5pts_collateral": -0.000537193693905209,
+    "D5pts_first_order_t0_exact": 0.014123710973236355,
+    "D5pts_first_order_t1to4": 0.02276091489512986
+   },
+   "ALL": {
+    "n": 1262,
+    "share": 1.0,
+    "share_t0": 1.0,
+    "mean_V_ml": 33.53938109369986,
+    "median_V_ml": 2.3223124175472183,
+    "vol_weighted_recovery": 0.2304904818826498,
+    "event_mean_recovery": 0.6237288618404917,
+    "zero_recovery_rate": 0.011885895404120444,
+    "full_recovery_rate": 0.2076069730586371,
+    "mean_gain_actual": 0.029348580991848623,
+    "mean_gain_perfect": 0.11162943725231272,
+    "efficiency_sum_gain_over_sum_perfect": 0.26291076721557677,
+    "dice_worse_rate": 0.19175911251980982,
+    "damage_ml_per_ml_target": 0.1491409053003207,
+    "collateral_ml_per_ml_target": 0.014619654738234414,
+    "mean_damage_ml": 5.002093659526857,
+    "D5pts_first_order": 0.3992945309105719,
+    "D5pts_target_incomplete": 0.21161005401632463,
+    "D5pts_damage": 0.19606207356933997,
+    "D5pts_collateral": -0.00837759667509287,
+    "D5pts_first_order_t0_exact": 0.10204406261744375,
+    "D5pts_first_order_t1to4": 0.29725046829312807
+   }
+  },
+  "by_round": {
+   "0": {
+    "shortfall": 0.10204406261744375,
+    "target": 0.05577774290284384,
+    "damage": 0.048093450020237766,
+    "collateral": -0.00182713030563784,
+    "gain_actual": 0.0809670992964852,
+    "gain_perfect": 0.183011161913929
+   },
+   "1": {
+    "shortfall": 0.09586662620956128,
+    "target": 0.0420035975208708,
+    "damage": 0.055796329678458045,
+    "collateral": -0.0019333009897675613,
+    "gain_actual": 0.001213315938657158,
+    "gain_perfect": 0.09707994214821847
+   },
+   "2": {
+    "shortfall": 0.0801077656312425,
+    "target": 0.04571330098470027,
+    "damage": 0.035917723018278884,
+    "collateral": -0.0015232583717366603,
+    "gain_actual": 0.026284505168225076,
+    "gain_perfect": 0.10639227079946757
+   },
+   "3": {
+    "shortfall": 0.06472055208044664,
+    "target": 0.03119950191151029,
+    "damage": 0.035231617086691674,
+    "collateral": -0.0017105669177553558,
+    "gain_actual": 0.02139305649782853,
+    "gain_perfect": 0.08611360857827517
+   },
+   "4": {
+    "shortfall": 0.05655552437187765,
+    "target": 0.03691591069639947,
+    "damage": 0.021022953765673615,
+    "collateral": -0.001383340090195453,
+    "gain_actual": 0.013035185914264991,
+    "gain_perfect": 0.06959071028614264
+   }
+  }
+ },
+ "N3": {
+  "checks": {
+   "gt_constancy_max_rel": 1.831754907692539e-15,
+   "identity_max_abs_fp_ml": 1.1368683772161603e-13,
+   "identity_max_abs_fn_ml": 1.1368683772161603e-13,
+   "dice_reconstruction_max_abs": 4.145989107584569e-16
+  },
+  "n_transitions": 1263,
+  "first_order_total": 0.45575980670949107,
+  "first_order_total_by_component": {
+   "target": 0.33483835083541175,
+   "damage": 0.12963603738827187,
+   "collateral": -0.008714581514192337
+  },
+  "categories": {
+   "ADD <0.5 mL": {
+    "n": 125,
+    "share": 0.09897070467141726,
+    "share_t0": 0.07058823529411765,
+    "mean_V_ml": 0.22900965787080113,
+    "median_V_ml": 0.16587945839622986,
+    "vol_weighted_recovery": 0.749039986676801,
+    "event_mean_recovery": 0.8064898590229858,
+    "zero_recovery_rate": 0.008,
+    "full_recovery_rate": 0.528,
+    "mean_gain_actual": 0.0053393789328543325,
+    "mean_gain_perfect": 0.05031176616155695,
+    "efficiency_sum_gain_over_sum_perfect": 0.10612584968114544,
+    "dice_worse_rate": 0.416,
+    "damage_ml_per_ml_target": 1.7324617694818851,
+    "collateral_ml_per_ml_target": 0.14795311179802495,
+    "mean_damage_ml": 0.39675047710328926,
+    "D5pts_first_order": 0.02467815295877147,
+    "D5pts_target_incomplete": 0.007143051042948061,
+    "D5pts_damage": 0.019224954922211327,
+    "D5pts_collateral": -0.001689853006387923,
+    "D5pts_first_order_t0_exact": 0.003856681074188234,
+    "D5pts_first_order_t1to4": 0.020821471884583234
+   },
+   "ADD 0.5-10 mL": {
+    "n": 343,
+    "share": 0.27157561361836896,
+    "share_t0": 0.3607843137254902,
+    "mean_V_ml": 2.8061445606420765,
+    "median_V_ml": 1.7914981506792824,
+    "vol_weighted_recovery": 0.5938957017122317,
+    "event_mean_recovery": 0.6346240826825781,
+    "zero_recovery_rate": 0.014577259475218658,
+    "full_recovery_rate": 0.1457725947521866,
+    "mean_gain_actual": 0.06256905680960176,
+    "mean_gain_perfect": 0.166603637685593,
+    "efficiency_sum_gain_over_sum_perfect": 0.37555636646829593,
+    "dice_worse_rate": 0.13119533527696792,
+    "damage_ml_per_ml_target": 0.7507534094438925,
+    "collateral_ml_per_ml_target": 0.10805087201079917,
+    "mean_damage_ml": 2.1067225962944724,
+    "D5pts_first_order": 0.12598698926136723,
+    "D5pts_target_incomplete": 0.07501658695285088,
+    "D5pts_damage": 0.05296736102780684,
+    "D5pts_collateral": -0.0019969587192904406,
+    "D5pts_first_order_t0_exact": 0.049981642368674424,
+    "D5pts_first_order_t1to4": 0.07600534689269282
+   },
+   "ADD >=10 mL": {
+    "n": 249,
+    "share": 0.19714964370546317,
+    "share_t0": 0.2627450980392157,
+    "mean_V_ml": 120.56171755917718,
+    "median_V_ml": 56.917713526636376,
+    "vol_weighted_recovery": 0.13846978145279645,
+    "event_mean_recovery": 0.261084388722375,
+    "zero_recovery_rate": 0.01606425702811245,
+    "full_recovery_rate": 0.0,
+    "mean_gain_actual": 0.027615676478376955,
+    "mean_gain_perfect": 0.15673668750327927,
+    "efficiency_sum_gain_over_sum_perfect": 0.17619152808623173,
+    "dice_worse_rate": 0.020080321285140562,
+    "damage_ml_per_ml_target": 0.06413688874511117,
+    "collateral_ml_per_ml_target": 0.006800818826218154,
+    "mean_damage_ml": 7.732453466012463,
+    "D5pts_first_order": 0.12808816060331607,
+    "D5pts_target_incomplete": 0.12472340649054116,
+    "D5pts_damage": 0.004372977841409674,
+    "D5pts_collateral": -0.0010082237286347722,
+    "D5pts_first_order_t0_exact": 0.04262036383598814,
+    "D5pts_first_order_t1to4": 0.08546779676732795
+   },
+   "REMOVE <0.5 mL": {
+    "n": 109,
+    "share": 0.08630245447347586,
+    "share_t0": 0.06274509803921569,
+    "mean_V_ml": 0.2732633673584007,
+    "median_V_ml": 0.31784094870090496,
+    "vol_weighted_recovery": 0.31686472085097406,
+    "event_mean_recovery": 0.3269618378563332,
+    "zero_recovery_rate": 0.5504587155963303,
+    "full_recovery_rate": 0.1559633027522936,
+    "mean_gain_actual": -0.016476798530479272,
+    "mean_gain_perfect": 0.05055799132987708,
+    "efficiency_sum_gain_over_sum_perfect": -0.32589899434438885,
+    "dice_worse_rate": 0.21100917431192662,
+    "damage_ml_per_ml_target": 0.45012369884565046,
+    "collateral_ml_per_ml_target": 0.07843709493775049,
+    "mean_damage_ml": 0.12300231767438109,
+    "D5pts_first_order": 0.03295490660406568,
+    "D5pts_target_incomplete": 0.023175960808503062,
+    "D5pts_damage": 0.012069172550675954,
+    "D5pts_collateral": -0.00229022675511335,
+    "D5pts_first_order_t0_exact": 0.005992172441417219,
+    "D5pts_first_order_t1to4": 0.026962734162648463
+   },
+   "REMOVE 0.5-10 mL": {
+    "n": 320,
+    "share": 0.25336500395882816,
+    "share_t0": 0.1450980392156863,
+    "mean_V_ml": 2.995781782186115,
+    "median_V_ml": 2.123257067471742,
+    "vol_weighted_recovery": 0.5144043399723197,
+    "event_mean_recovery": 0.525583300707456,
+    "zero_recovery_rate": 0.06875,
+    "full_recovery_rate": 0.10625,
+    "mean_gain_actual": 0.011521417116879457,
+    "mean_gain_perfect": 0.12421342106745233,
+    "efficiency_sum_gain_over_sum_perfect": 0.09275501002925372,
+    "dice_worse_rate": 0.26875,
+    "damage_ml_per_ml_target": 0.29433130113885214,
+    "collateral_ml_per_ml_target": 0.09504276100740786,
+    "mean_damage_ml": 0.8817523498789086,
+    "D5pts_first_order": 0.11850542601582383,
+    "D5pts_target_incomplete": 0.08118879478537383,
+    "D5pts_damage": 0.03862230732072689,
+    "D5pts_collateral": -0.0013056760902769393,
+    "D5pts_first_order_t0_exact": 0.014083640037562028,
+    "D5pts_first_order_t1to4": 0.10442178597826178
+   },
+   "REMOVE >=10 mL": {
+    "n": 117,
+    "share": 0.09263657957244656,
+    "share_t0": 0.09803921568627451,
+    "mean_V_ml": 71.90138370225174,
+    "median_V_ml": 25.744961046475524,
+    "vol_weighted_recovery": 0.1593928366372791,
+    "event_mean_recovery": 0.32654973873773313,
+    "zero_recovery_rate": 0.0,
+    "full_recovery_rate": 0.0,
+    "mean_gain_actual": 0.008786723960136767,
+    "mean_gain_perfect": 0.05863149314787872,
+    "efficiency_sum_gain_over_sum_perfect": 0.1498635543525241,
+    "dice_worse_rate": 0.3162393162393162,
+    "damage_ml_per_ml_target": 0.11326700153041198,
+    "collateral_ml_per_ml_target": 0.024542991898727468,
+    "mean_damage_ml": 8.144054137841685,
+    "D5pts_first_order": 0.02554617126614692,
+    "D5pts_target_incomplete": 0.02359055075519466,
+    "D5pts_damage": 0.002379263725441163,
+    "D5pts_collateral": -0.00042364321448891125,
+    "D5pts_first_order_t0_exact": 0.013880114664478862,
+    "D5pts_first_order_t1to4": 0.011666056601668069
+   },
+   "ALL": {
+    "n": 1263,
+    "share": 1.0,
+    "share_t0": 1.0,
+    "mean_V_ml": 31.99675315461148,
+    "median_V_ml": 2.571131605141563,
+    "vol_weighted_recovery": 0.16315426752844936,
+    "event_mean_recovery": 0.4952724635905861,
+    "zero_recovery_rate": 0.0728424386381631,
+    "full_recovery_rate": 0.13222486144101345,
+    "mean_gain_actual": 0.025276200662178287,
+    "mean_gain_perfect": 0.12239149182859296,
+    "efficiency_sum_gain_over_sum_perfect": 0.20651926277340538,
+    "dice_worse_rate": 0.19635787806809185,
+    "damage_ml_per_ml_target": 0.09764457960868496,
+    "collateral_ml_per_ml_target": 0.015151746404318244,
+    "mean_damage_ml": 3.1243095106249026,
+    "D5pts_first_order": 0.45575980670949107,
+    "D5pts_target_incomplete": 0.33483835083541175,
+    "D5pts_damage": 0.12963603738827187,
+    "D5pts_collateral": -0.008714581514192337,
+    "D5pts_first_order_t0_exact": 0.13041461442230895,
+    "D5pts_first_order_t1to4": 0.32534519228718245
+   }
+  },
+  "by_round": {
+   "0": {
+    "shortfall": 0.13041461442230895,
+    "target": 0.09783612062958848,
+    "damage": 0.03498339274156972,
+    "collateral": -0.002404898948849297,
+    "gain_actual": 0.05259654749162004,
+    "gain_perfect": 0.183011161913929
+   },
+   "1": {
+    "shortfall": 0.09820585093200372,
+    "target": 0.06588122368669784,
+    "damage": 0.03396331387236373,
+    "collateral": -0.0016386866270578684,
+    "gain_actual": 0.023240100629488062,
+    "gain_perfect": 0.12144595156149175
+   },
+   "2": {
+    "shortfall": 0.0863353133300519,
+    "target": 0.06109432391518106,
+    "damage": 0.0275405129140558,
+    "collateral": -0.0022995234991849797,
+    "gain_actual": 0.021803032072046126,
+    "gain_perfect": 0.108138345402098
+   },
+   "3": {
+    "shortfall": 0.07372969379171286,
+    "target": 0.055544561846299106,
+    "damage": 0.019548089634481222,
+    "collateral": -0.0013629576890674968,
+    "gain_actual": 0.015051394727428549,
+    "gain_perfect": 0.08878108851914143
+   },
+   "4": {
+    "shortfall": 0.06707433423341388,
+    "target": 0.05448212075764519,
+    "damage": 0.01360072822580136,
+    "collateral": -0.0010085147500326944,
+    "gain_actual": 0.01446764481280182,
+    "gain_perfect": 0.08154197904621571
+   }
+  }
+ },
+ "oracle_own_states": {
+  "ADD <0.5 mL": {
+   "n": 174,
+   "mean_gain": 0.01950430864936807
+  },
+  "ADD 0.5-10 mL": {
+   "n": 350,
+   "mean_gain": 0.09976124992988819
+  },
+  "ADD >=10 mL": {
+   "n": 219,
+   "mean_gain": 0.08261249113562431
+  },
+  "REMOVE <0.5 mL": {
+   "n": 133,
+   "mean_gain": 0.030469977013810278
+  },
+  "REMOVE 0.5-10 mL": {
+   "n": 190,
+   "mean_gain": 0.07508340239061953
+  },
+  "REMOVE >=10 mL": {
+   "n": 89,
+   "mean_gain": 0.0553016807894474
+  }
+ },
+ "distance_t0": {
+  "flat": {
+   "table": {
+    "ADD 0.5-10 mL | 15 mm": {
+     "n": 92,
+     "n_with_far_part": 36,
+     "near_ml": 182.364030008526,
+     "near_recovered": 0.7935106658086598,
+     "far_ml": 82.52034296727693,
+     "far_recovered": 0.1776181291744915,
+     "far_share_of_target_ml": 0.3115334515215631
+    },
+    "ADD 0.5-10 mL | 30 mm": {
+     "n": 92,
+     "n_with_far_part": 10,
+     "near_ml": 252.3249900986833,
+     "near_recovered": 0.6315859231619271,
+     "far_ml": 12.559382877119582,
+     "far_recovered": 0.0,
+     "far_share_of_target_ml": 0.047414585979622434
+    },
+    "ADD 0.5-10 mL | 60 mm": {
+     "n": 92,
+     "n_with_far_part": 0,
+     "near_ml": 264.88437297580276,
+     "near_recovered": 0.601639538104647,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "ADD <0.5 mL | 15 mm": {
+     "n": 18,
+     "n_with_far_part": 0,
+     "near_ml": 5.288958576412404,
+     "near_recovered": 0.8653012087922997,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "ADD <0.5 mL | 30 mm": {
+     "n": 18,
+     "n_with_far_part": 0,
+     "near_ml": 5.288958576412404,
+     "near_recovered": 0.8653012087922997,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "ADD <0.5 mL | 60 mm": {
+     "n": 18,
+     "n_with_far_part": 0,
+     "near_ml": 5.288958576412404,
+     "near_recovered": 0.8653012087922997,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "ADD >=10 mL | 15 mm": {
+     "n": 67,
+     "n_with_far_part": 67,
+     "near_ml": 1159.5662892378177,
+     "near_recovered": 0.8422007598644019,
+     "far_ml": 7814.151580755555,
+     "far_recovered": 0.11646942601629136,
+     "far_share_of_target_ml": 0.8707819539195438
+    },
+    "ADD >=10 mL | 30 mm": {
+     "n": 67,
+     "n_with_far_part": 59,
+     "near_ml": 2847.6880427514357,
+     "near_recovered": 0.6130324347376155,
+     "far_ml": 6126.029827241934,
+     "far_recovered": 0.023012004361475883,
+     "far_share_of_target_ml": 0.6826635198468146
+    },
+    "ADD >=10 mL | 60 mm": {
+     "n": 67,
+     "n_with_far_part": 38,
+     "near_ml": 5031.990075073096,
+     "near_recovered": 0.37489114882825625,
+     "far_ml": 3941.727794920275,
+     "far_recovered": 6.312439634086336e-05,
+     "far_share_of_target_ml": 0.4392524761783253
+    },
+    "REMOVE 0.5-10 mL | 15 mm": {
+     "n": 37,
+     "n_with_far_part": 20,
+     "near_ml": 113.93137370758295,
+     "near_recovered": 0.8652361147712289,
+     "far_ml": 17.165891464861108,
+     "far_recovered": 0.3536902151746835,
+     "far_share_of_target_ml": 0.13094011871476696
+    },
+    "REMOVE 0.5-10 mL | 30 mm": {
+     "n": 37,
+     "n_with_far_part": 1,
+     "near_ml": 130.95056934996668,
+     "near_recovered": 0.7991484687897359,
+     "far_ml": 0.14669582247734075,
+     "far_recovered": 0.0,
+     "far_share_of_target_ml": 0.0011189846125651708
+    },
+    "REMOVE 0.5-10 mL | 60 mm": {
+     "n": 37,
+     "n_with_far_part": 0,
+     "near_ml": 131.09726517244403,
+     "near_recovered": 0.7982542339500052,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "REMOVE <0.5 mL | 15 mm": {
+     "n": 16,
+     "n_with_far_part": 0,
+     "near_ml": 4.76709193509165,
+     "near_recovered": 0.8086176995112381,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "REMOVE <0.5 mL | 30 mm": {
+     "n": 16,
+     "n_with_far_part": 0,
+     "near_ml": 4.76709193509165,
+     "near_recovered": 0.8086176995112381,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "REMOVE <0.5 mL | 60 mm": {
+     "n": 16,
+     "n_with_far_part": 0,
+     "near_ml": 4.76709193509165,
+     "near_recovered": 0.8086176995112381,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "REMOVE >=10 mL | 15 mm": {
+     "n": 25,
+     "n_with_far_part": 25,
+     "near_ml": 354.1148848079163,
+     "near_recovered": 0.8408734724286165,
+     "far_ml": 1864.7268205754729,
+     "far_recovered": 0.14718341586453076,
+     "far_share_of_target_ml": 0.8404055215165835
+    },
+    "REMOVE >=10 mL | 30 mm": {
+     "n": 25,
+     "n_with_far_part": 21,
+     "near_ml": 759.77225371118,
+     "near_recovered": 0.688888431677659,
+     "far_ml": 1459.0694516722099,
+     "far_recovered": 0.03346267005065747,
+     "far_share_of_target_ml": 0.6575815877861821
+    },
+    "REMOVE >=10 mL | 60 mm": {
+     "n": 25,
+     "n_with_far_part": 11,
+     "near_ml": 1173.148008905335,
+     "near_recovered": 0.48776682190982645,
+     "far_ml": 1045.6936964780548,
+     "far_recovered": 0.0,
+     "far_share_of_target_ml": 0.4712790885176602
+    },
+    "all | 15 mm": {
+     "n": 255,
+     "n_with_far_part": 148,
+     "near_ml": 1820.032628273347,
+     "near_recovered": 0.8384850019729311,
+     "far_ml": 9778.564635763178,
+     "far_recovered": 0.12325890089183707,
+     "far_share_of_target_ml": 0.8430816600627494
+    },
+    "all | 30 mm": {
+     "n": 255,
+     "n_with_far_part": 91,
+     "near_ml": 4000.7919064227694,
+     "near_recovered": 0.6352663837344399,
+     "far_ml": 7597.805357613742,
+     "far_recovered": 0.024980448407398194,
+     "far_share_of_target_ml": 0.655062434245568
+    },
+    "all | 60 mm": {
+     "n": 255,
+     "n_with_far_part": 49,
+     "near_ml": 6611.175772638184,
+     "near_recovered": 0.41310599898557654,
+     "far_ml": 4987.421491398331,
+     "far_recovered": 4.9889344227969584e-05,
+     "far_share_of_target_ml": 0.43000212679706595
+    },
+    "size 0.5-10 | 15 mm": {
+     "n": 129,
+     "n_with_far_part": 56,
+     "near_ml": 296.2954037161089,
+     "near_recovered": 0.8210905027808466,
+     "far_ml": 99.68623443213806,
+     "far_recovered": 0.20793760443091233,
+     "far_share_of_target_ml": 0.25174458820440987
+    },
+    "size 0.5-10 | 30 mm": {
+     "n": 129,
+     "n_with_far_part": 11,
+     "near_ml": 383.27555944865014,
+     "near_recovered": 0.6888356230469284,
+     "far_ml": 12.706078699596922,
+     "far_recovered": 0.0,
+     "far_share_of_target_ml": 0.032087545167536376
+    },
+    "size 0.5-10 | 60 mm": {
+     "n": 129,
+     "n_with_far_part": 0,
+     "near_ml": 395.98163814824704,
+     "near_recovered": 0.6667325788794021,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "size <0.5 | 15 mm": {
+     "n": 34,
+     "n_with_far_part": 0,
+     "near_ml": 10.056050511504052,
+     "near_recovered": 0.8384302717741018,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "size <0.5 | 30 mm": {
+     "n": 34,
+     "n_with_far_part": 0,
+     "near_ml": 10.056050511504052,
+     "near_recovered": 0.8384302717741018,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "size <0.5 | 60 mm": {
+     "n": 34,
+     "n_with_far_part": 0,
+     "near_ml": 10.056050511504052,
+     "near_recovered": 0.8384302717741018,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "size >=10 | 15 mm": {
+     "n": 92,
+     "n_with_far_part": 92,
+     "near_ml": 1513.681174045734,
+     "near_recovered": 0.8418902504615706,
+     "far_ml": 9678.878401331036,
+     "far_recovered": 0.1223867646026525,
+     "far_share_of_target_ml": 0.8647600520817617
+    },
+    "size >=10 | 30 mm": {
+     "n": 92,
+     "n_with_far_part": 80,
+     "near_ml": 3607.460296462616,
+     "near_recovered": 0.6290085722460891,
+     "far_ml": 7585.099278914145,
+     "far_recovered": 0.025022294075034736,
+     "far_share_of_target_ml": 0.6776912133307824
+    },
+    "size >=10 | 60 mm": {
+     "n": 92,
+     "n_with_far_part": 49,
+     "near_ml": 6205.138083978434,
+     "near_recovered": 0.3962315073081744,
+     "far_ml": 4987.421491398331,
+     "far_recovered": 4.9889344227969584e-05,
+     "far_share_of_target_ml": 0.4456015139173779
+    }
+   },
+   "t0_target_incomplete_D1pts_beyond_30mm": 0.01709437599010558,
+   "t0_target_incomplete_D1pts_within_30mm": 0.03868336691273825,
+   "t0_target_incomplete_D1pts_targets_with_any_part_beyond_30mm": 0.034091621923801045,
+   "n_t0_targets_with_part_beyond_30mm": 91,
+   "n_t0_targets": 255
+  },
+  "N3": {
+   "table": {
+    "ADD 0.5-10 mL | 15 mm": {
+     "n": 92,
+     "n_with_far_part": 36,
+     "near_ml": 182.364030008526,
+     "near_recovered": 0.7686162695488479,
+     "far_ml": 82.52034296727693,
+     "far_recovered": 0.4035737238761666,
+     "far_share_of_target_ml": 0.3115334515215631
+    },
+    "ADD 0.5-10 mL | 30 mm": {
+     "n": 92,
+     "n_with_far_part": 10,
+     "near_ml": 252.3249900986833,
+     "near_recovered": 0.6865042709267477,
+     "far_ml": 12.559382877119582,
+     "far_recovered": 0.019811418286135567,
+     "far_share_of_target_ml": 0.047414585979622434
+    },
+    "ADD 0.5-10 mL | 60 mm": {
+     "n": 92,
+     "n_with_far_part": 0,
+     "near_ml": 264.88437297580276,
+     "near_recovered": 0.65489330534322,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "ADD <0.5 mL | 15 mm": {
+     "n": 18,
+     "n_with_far_part": 0,
+     "near_ml": 5.288958576412404,
+     "near_recovered": 0.8682739304536689,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "ADD <0.5 mL | 30 mm": {
+     "n": 18,
+     "n_with_far_part": 0,
+     "near_ml": 5.288958576412404,
+     "near_recovered": 0.8682739304536689,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "ADD <0.5 mL | 60 mm": {
+     "n": 18,
+     "n_with_far_part": 0,
+     "near_ml": 5.288958576412404,
+     "near_recovered": 0.8682739304536689,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "ADD >=10 mL | 15 mm": {
+     "n": 67,
+     "n_with_far_part": 67,
+     "near_ml": 1159.5662892378177,
+     "near_recovered": 0.4490870120394624,
+     "far_ml": 7814.151580755555,
+     "far_recovered": 0.11607466186151133,
+     "far_share_of_target_ml": 0.8707819539195438
+    },
+    "ADD >=10 mL | 30 mm": {
+     "n": 67,
+     "n_with_far_part": 59,
+     "near_ml": 2847.6880427514357,
+     "near_recovered": 0.41702068304378265,
+     "far_ml": 6126.029827241934,
+     "far_recovered": 0.0392140352980672,
+     "far_share_of_target_ml": 0.6826635198468146
+    },
+    "ADD >=10 mL | 60 mm": {
+     "n": 67,
+     "n_with_far_part": 38,
+     "near_ml": 5031.990075073096,
+     "near_recovered": 0.2837388669820764,
+     "far_ml": 3941.727794920275,
+     "far_recovered": 0.0,
+     "far_share_of_target_ml": 0.4392524761783253
+    },
+    "REMOVE 0.5-10 mL | 15 mm": {
+     "n": 37,
+     "n_with_far_part": 20,
+     "near_ml": 113.93137370758295,
+     "near_recovered": 0.6396077283173824,
+     "far_ml": 17.165891464861108,
+     "far_recovered": 0.36173199506737397,
+     "far_share_of_target_ml": 0.13094011871476696
+    },
+    "REMOVE 0.5-10 mL | 30 mm": {
+     "n": 37,
+     "n_with_far_part": 1,
+     "near_ml": 130.95056934996668,
+     "near_recovered": 0.6038983998346413,
+     "far_ml": 0.14669582247734075,
+     "far_recovered": 0.0,
+     "far_share_of_target_ml": 0.0011189846125651708
+    },
+    "REMOVE 0.5-10 mL | 60 mm": {
+     "n": 37,
+     "n_with_far_part": 0,
+     "near_ml": 131.09726517244403,
+     "near_recovered": 0.6032226468176737,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "REMOVE <0.5 mL | 15 mm": {
+     "n": 16,
+     "n_with_far_part": 0,
+     "near_ml": 4.76709193509165,
+     "near_recovered": 0.5624524675148549,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "REMOVE <0.5 mL | 30 mm": {
+     "n": 16,
+     "n_with_far_part": 0,
+     "near_ml": 4.76709193509165,
+     "near_recovered": 0.5624524675148549,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "REMOVE <0.5 mL | 60 mm": {
+     "n": 16,
+     "n_with_far_part": 0,
+     "near_ml": 4.76709193509165,
+     "near_recovered": 0.5624524675148549,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "REMOVE >=10 mL | 15 mm": {
+     "n": 25,
+     "n_with_far_part": 25,
+     "near_ml": 354.1148848079163,
+     "near_recovered": 0.3738388542169538,
+     "far_ml": 1864.7268205754729,
+     "far_recovered": 0.09263052126871676,
+     "far_share_of_target_ml": 0.8404055215165835
+    },
+    "REMOVE >=10 mL | 30 mm": {
+     "n": 25,
+     "n_with_far_part": 21,
+     "near_ml": 759.77225371118,
+     "near_recovered": 0.35943855931586133,
+     "far_ml": 1459.0694516722099,
+     "far_recovered": 0.021946231478297776,
+     "far_share_of_target_ml": 0.6575815877861821
+    },
+    "REMOVE >=10 mL | 60 mm": {
+     "n": 25,
+     "n_with_far_part": 11,
+     "near_ml": 1173.148008905335,
+     "near_recovered": 0.2600801585949275,
+     "far_ml": 1045.6936964780548,
+     "far_recovered": 0.0,
+     "far_share_of_target_ml": 0.4712790885176602
+    },
+    "all | 15 mm": {
+     "n": 255,
+     "n_with_far_part": 148,
+     "near_ml": 1820.032628273347,
+     "near_recovered": 0.47990399972171394,
+     "far_ml": 9778.564635763178,
+     "far_recovered": 0.11446139140549229,
+     "far_share_of_target_ml": 0.8430816600627494
+    },
+    "all | 30 mm": {
+     "n": 255,
+     "n_with_far_part": 91,
+     "near_ml": 4000.7919064227694,
+     "near_recovered": 0.4299680781520847,
+     "far_ml": 7597.805357613742,
+     "far_recovered": 0.03586512580587703,
+     "far_share_of_target_ml": 0.655062434245568
+    },
+    "all | 60 mm": {
+     "n": 255,
+     "n_with_far_part": 49,
+     "near_ml": 6611.175772638184,
+     "near_recovered": 0.30141522788392117,
+     "far_ml": 4987.421491398331,
+     "far_recovered": 0.0,
+     "far_share_of_target_ml": 0.43000212679706595
+    },
+    "size 0.5-10 | 15 mm": {
+     "n": 129,
+     "n_with_far_part": 56,
+     "near_ml": 296.2954037161089,
+     "near_recovered": 0.7190099640234506,
+     "far_ml": 99.68623443213806,
+     "far_recovered": 0.39636861095836595,
+     "far_share_of_target_ml": 0.25174458820440987
+    },
+    "size 0.5-10 | 30 mm": {
+     "n": 129,
+     "n_with_far_part": 11,
+     "near_ml": 383.27555944865014,
+     "near_recovered": 0.6582810107044619,
+     "far_ml": 12.706078699596922,
+     "far_recovered": 0.019582689000835336,
+     "far_share_of_target_ml": 0.032087545167536376
+    },
+    "size 0.5-10 | 60 mm": {
+     "n": 129,
+     "n_with_far_part": 0,
+     "near_ml": 395.98163814824704,
+     "near_recovered": 0.6377867494583672,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "size <0.5 | 15 mm": {
+     "n": 34,
+     "n_with_far_part": 0,
+     "near_ml": 10.056050511504052,
+     "near_recovered": 0.7232986215204303,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "size <0.5 | 30 mm": {
+     "n": 34,
+     "n_with_far_part": 0,
+     "near_ml": 10.056050511504052,
+     "near_recovered": 0.7232986215204303,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "size <0.5 | 60 mm": {
+     "n": 34,
+     "n_with_far_part": 0,
+     "near_ml": 10.056050511504052,
+     "near_recovered": 0.7232986215204303,
+     "far_ml": 0.0,
+     "far_recovered": null,
+     "far_share_of_target_ml": 0.0
+    },
+    "size >=10 | 15 mm": {
+     "n": 92,
+     "n_with_far_part": 92,
+     "near_ml": 1513.681174045734,
+     "near_recovered": 0.43148324369232416,
+     "far_ml": 9678.878401331036,
+     "far_recovered": 0.11155792800702717,
+     "far_share_of_target_ml": 0.8647600520817617
+    },
+    "size >=10 | 30 mm": {
+     "n": 92,
+     "n_with_far_part": 80,
+     "near_ml": 3607.460296462616,
+     "near_recovered": 0.40489323150643974,
+     "far_ml": 7585.099278914145,
+     "far_recovered": 0.03589240111446016,
+     "far_share_of_target_ml": 0.6776912133307824
+    },
+    "size >=10 | 60 mm": {
+     "n": 92,
+     "n_with_far_part": 49,
+     "near_ml": 6205.138083978434,
+     "near_recovered": 0.2792659340252225,
+     "far_ml": 4987.421491398331,
+     "far_recovered": 0.0,
+     "far_share_of_target_ml": 0.4456015139173779
+    }
+   },
+   "t0_target_incomplete_D1pts_beyond_30mm": 0.01749411910325428,
+   "t0_target_incomplete_D1pts_within_30mm": 0.08034200152633421,
+   "t0_target_incomplete_D1pts_targets_with_any_part_beyond_30mm": 0.043967045926653375,
+   "n_t0_targets_with_part_beyond_30mm": 91,
+   "n_t0_targets": 255
+  }
+ },
+ "target_incompleteness_share_beyond_30mm": {
+  "t0": 0.33472913279317423,
+  "bank": 0.23217672052127525
+ },
+ "distance_bank_rounds1to4": {
+  "bank_states_reproduce_rollout": 200,
+  "bank_states_differ": 0,
+  "table": {
+   "ADD 0.5-10 mL | 15 mm": {
+    "n": 40,
+    "near_ml": 84.85260934106498,
+    "near_recovered": 0.8608050704871565,
+    "far_ml": 28.90637075495347,
+    "far_recovered": 0.2867308214775135
+   },
+   "ADD 0.5-10 mL | 30 mm": {
+    "n": 40,
+    "near_ml": 105.12199732082296,
+    "near_recovered": 0.7671593818825169,
+    "far_ml": 8.636982775195502,
+    "far_recovered": 0.0792611642602622
+   },
+   "ADD 0.5-10 mL | 60 mm": {
+    "n": 40,
+    "near_ml": 113.66118333738162,
+    "near_recovered": 0.7155468684145545,
+    "far_ml": 0.09779675863683226,
+    "far_recovered": 0.0
+   },
+   "ADD <0.5 mL | 15 mm": {
+    "n": 33,
+    "near_ml": 7.285144505770875,
+    "near_recovered": 0.6591594717515266,
+    "far_ml": 0.0,
+    "far_recovered": null
+   },
+   "ADD <0.5 mL | 30 mm": {
+    "n": 33,
+    "near_ml": 7.285144505770875,
+    "near_recovered": 0.6591594717515266,
+    "far_ml": 0.0,
+    "far_recovered": null
+   },
+   "ADD <0.5 mL | 60 mm": {
+    "n": 33,
+    "near_ml": 7.285144505770875,
+    "near_recovered": 0.6591594717515266,
+    "far_ml": 0.0,
+    "far_recovered": null
+   },
+   "ADD >=10 mL | 15 mm": {
+    "n": 30,
+    "near_ml": 394.59826947540375,
+    "near_recovered": 0.7137573353902289,
+    "far_ml": 2046.6742415509448,
+    "far_recovered": 0.07437742736509341
+   },
+   "ADD >=10 mL | 30 mm": {
+    "n": 30,
+    "near_ml": 854.177144755223,
+    "near_recovered": 0.49100949131501204,
+    "far_ml": 1587.0953662711254,
+    "far_recovered": 0.009113938002437733
+   },
+   "ADD >=10 mL | 60 mm": {
+    "n": 30,
+    "near_ml": 1454.9590212017642,
+    "near_recovered": 0.29820343239148583,
+    "far_ml": 986.3134898245843,
+    "far_recovered": 0.0
+   },
+   "REMOVE 0.5-10 mL | 15 mm": {
+    "n": 56,
+    "near_ml": 130.7661946708036,
+    "near_recovered": 0.8117790668932086,
+    "far_ml": 42.571167217509114,
+    "far_recovered": 0.2696460802090497
+   },
+   "REMOVE 0.5-10 mL | 30 mm": {
+    "n": 56,
+    "near_ml": 168.05943813663367,
+    "near_recovered": 0.6999452643982415,
+    "far_ml": 5.277923751679016,
+    "far_recovered": 0.0
+   },
+   "REMOVE 0.5-10 mL | 60 mm": {
+    "n": 56,
+    "near_ml": 173.3373618883127,
+    "near_recovered": 0.6786327343377974,
+    "far_ml": 0.0,
+    "far_recovered": null
+   },
+   "REMOVE <0.5 mL | 15 mm": {
+    "n": 15,
+    "near_ml": 3.0314878352629018,
+    "near_recovered": 0.6117575760054456,
+    "far_ml": 0.0,
+    "far_recovered": null
+   },
+   "REMOVE <0.5 mL | 30 mm": {
+    "n": 15,
+    "near_ml": 3.0314878352629018,
+    "near_recovered": 0.6117575760054456,
+    "far_ml": 0.0,
+    "far_recovered": null
+   },
+   "REMOVE <0.5 mL | 60 mm": {
+    "n": 15,
+    "near_ml": 3.0314878352629018,
+    "near_recovered": 0.6117575760054456,
+    "far_ml": 0.0,
+    "far_recovered": null
+   },
+   "REMOVE >=10 mL | 15 mm": {
+    "n": 26,
+    "near_ml": 262.08442352876995,
+    "near_recovered": 0.8715885754487328,
+    "far_ml": 617.2702797137581,
+    "far_recovered": 0.4198312722712075
+   },
+   "REMOVE >=10 mL | 30 mm": {
+    "n": 26,
+    "near_ml": 583.5058044282604,
+    "near_recovered": 0.7156327460146288,
+    "far_ml": 295.84889881426767,
+    "far_recovered": 0.23661840676192838
+   },
+   "REMOVE >=10 mL | 60 mm": {
+    "n": 26,
+    "near_ml": 814.229490297952,
+    "near_recovered": 0.5908774652274852,
+    "far_ml": 65.12521294457581,
+    "far_recovered": 0.09933631822376689
+   },
+   "all | 15 mm": {
+    "n": 200,
+    "near_ml": 882.6181293570754,
+    "near_recovered": 0.7884821295680612,
+    "far_ml": 2735.422059237166,
+    "far_recovered": 0.1576148828496524
+   },
+   "all | 30 mm": {
+    "n": 200,
+    "near_ml": 1721.1810169819732,
+    "near_recovered": 0.6053513710641086,
+    "far_ml": 1896.8591716122673,
+    "far_recovered": 0.04489134588201147
+   },
+   "all | 60 mm": {
+    "n": 200,
+    "near_ml": 2566.5036890664446,
+    "near_recovered": 0.43662612118513183,
+    "far_ml": 1051.5364995277969,
+    "far_recovered": 0.006152234259446124
+   }
+  }
+ },
+ "target_origin_rounds1to4": {
+  "flat": {
+   "original": {
+    "n": 420,
+    "share_of_rounds_1to4": 0.4170804369414101,
+    "by_t": {
+     "1": 129,
+     "2": 118,
+     "3": 94,
+     "4": 79
+    },
+    "mean_gain_actual": 0.018051491330932746,
+    "patient_mean_gain_sum": 0.02789235184811281,
+    "patient_mean_shortfall_sum": 0.047185771022217486
+   },
+   "residue_of_previous_target": {
+    "n": 212,
+    "share_of_rounds_1to4": 0.21052631578947367,
+    "by_t": {
+     "1": 52,
+     "2": 48,
+     "3": 59,
+     "4": 53
+    },
+    "mean_gain_actual": 0.018802753202532173,
+    "patient_mean_gain_sum": 0.017687402076485077,
+    "patient_mean_shortfall_sum": 0.08139723279552495
+   },
+   "after_opposite_round_with_damage": {
+    "n": 293,
+    "share_of_rounds_1to4": 0.29096325719960275,
+    "by_t": {
+     "1": 69,
+     "2": 67,
+     "3": 75,
+     "4": 82
+    },
+    "mean_gain_actual": 0.010293900290678401,
+    "patient_mean_gain_sum": 0.011078734266625234,
+    "patient_mean_shortfall_sum": 0.15217044370141963
+   },
+   "other_modified": {
+    "n": 82,
+    "share_of_rounds_1to4": 0.0814299900695134,
+    "by_t": {
+     "1": 2,
+     "2": 19,
+     "3": 24,
+     "4": 37
+    },
+    "mean_gain_actual": 0.01249083095659839,
+    "patient_mean_gain_sum": 0.005267575327752625,
+    "patient_mean_shortfall_sum": 0.01649702077396598
+   }
+  },
+  "N3": {
+   "original": {
+    "n": 397,
+    "share_of_rounds_1to4": 0.39384920634920634,
+    "by_t": {
+     "1": 135,
+     "2": 94,
+     "3": 89,
+     "4": 79
+    },
+    "mean_gain_actual": 0.015784419082062108,
+    "patient_mean_gain_sum": 0.024039252797750328,
+    "patient_mean_shortfall_sum": 0.06838180726160269
+   },
+   "residue_of_previous_target": {
+    "n": 323,
+    "share_of_rounds_1to4": 0.32043650793650796,
+    "by_t": {
+     "1": 73,
+     "2": 83,
+     "3": 77,
+     "4": 90
+    },
+    "mean_gain_actual": 0.022363696369946017,
+    "patient_mean_gain_sum": 0.03216039813153144,
+    "patient_mean_shortfall_sum": 0.15469950871675953
+   },
+   "after_opposite_round_with_damage": {
+    "n": 211,
+    "share_of_rounds_1to4": 0.20932539682539683,
+    "by_t": {
+     "1": 41,
+     "2": 60,
+     "3": 61,
+     "4": 49
+    },
+    "mean_gain_actual": 0.021914823173890836,
+    "patient_mean_gain_sum": 0.015680953862773097,
+    "patient_mean_shortfall_sum": 0.0870707847791763
+   },
+   "other_modified": {
+    "n": 77,
+    "share_of_rounds_1to4": 0.0763888888888889,
+    "by_t": {
+     "1": 3,
+     "2": 15,
+     "3": 25,
+     "4": 34
+    },
+    "mean_gain_actual": 0.005465677709654437,
+    "patient_mean_gain_sum": 0.002681567449709684,
+    "patient_mean_shortfall_sum": 0.01519309152964382
+   }
+  }
+ }
+}

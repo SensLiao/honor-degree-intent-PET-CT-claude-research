@@ -1,0 +1,34 @@
+== 1. VAL Dice by round (patient mean over positive scans) and paired differences [95% patient bootstrap]
+  v1flat                                 D0 0.6095 D1 0.6948 D2 0.7007 D3 0.7224 D4 0.7438 D5 0.7562  nAUC 0.7089
+  K1                                     D0 0.6095 D1 0.6916 D2 0.7185 D3 0.7274 D4 0.7434 D5 0.7539  nAUC 0.7125
+  K2                                     D0 0.6095 D1 0.6793 D2 0.7100 D3 0.7260 D4 0.7409 D5 0.7529  nAUC 0.7075
+  K2flip                                 D0 0.6095 D1 0.6828 D2 0.7147 D3 0.7285 D4 0.7475 D5 0.7571  nAUC 0.7114
+  diag-routed-v1add-k2remove-val         D0 0.6095 D1 0.6971 D2 0.7136 D3 0.7325 D4 0.7450 D5 0.7472  nAUC 0.7133
+  diag-routed-v1add-k2remove-val minus v1flat  D5 -0.0090 [-0.0250, +0.0060] (54 patients)
+  diag-routed-v1add-k2remove-val minus K1      D5 -0.0068 [-0.0299, +0.0164] (54 patients)
+  diag-routed-v1add-k2remove-val minus K2      D5 -0.0057 [-0.0267, +0.0151] (54 patients)
+  diag-routed-v1add-k2remove-val minus K2flip  D5 -0.0099 [-0.0312, +0.0111] (54 patients)
+
+== 2. Five-round Dice gain split by the sign of each round's stroke (patient mean of per-round deltas)
+  v1flat                                 add +0.1302  remove +0.0165  total +0.1467
+  K1                                     add +0.0969  remove +0.0475  total +0.1445
+  K2                                     add +0.0857  remove +0.0577  total +0.1434
+  K2flip                                 add +0.0952  remove +0.0524  total +0.1476
+  diag-routed-v1add-k2remove-val         add +0.0910  remove +0.0467  total +0.1377
+
+== 3. Round 1 identity: routed system vs v1 flat (add strokes) and K2 (remove strokes), same start, same stroke
+  diag-routed-v1add-k2remove-val: round-1 strokes identical to the expected network 84, different 1
+
+== 4. Volumes (ml, sums over the 99 scans): add T fixed / FP added, remove T fixed / true lesion removed, r1 and r2-5
+  v1flat                                 r1: +T  700.8 +FP  339.1 -T  182.4 -TP   64.2 | r2-5: +T 1295.8 +FP  949.1 -T 1015.5 -TP  654.6
+  K1                                     r1: +T  369.4 +FP   62.7 -T   66.9 -TP    5.4 | r2-5: +T  974.9 +FP  720.4 -T  576.7 -TP  355.9
+  K2                                     r1: +T  483.0 +FP  129.7 -T   72.1 -TP    5.7 | r2-5: +T  479.3 +FP  318.2 -T  396.7 -TP   98.7
+  K2flip                                 r1: +T  470.6 +FP  114.9 -T   67.2 -TP    4.8 | r2-5: +T  512.7 +FP  285.9 -T  298.2 -TP   95.7
+  diag-routed-v1add-k2remove-val         r1: +T  700.8 +FP  339.1 -T   72.1 -TP    5.7 | r2-5: +T 1061.2 +FP  808.0 -T  551.2 -TP  188.4
+
+== 5. Lesion-level outcomes (trajectories.jsonl)
+  v1flat                                 lesions erased  24  persistent damage at D5  1165.0 ml  detection-loss events  32
+  K1                                     lesions erased   6  persistent damage at D5   481.7 ml  detection-loss events  14
+  K2                                     lesions erased   5  persistent damage at D5   371.1 ml  detection-loss events  15
+  K2flip                                 lesions erased   3  persistent damage at D5   406.1 ml  detection-loss events  11
+  diag-routed-v1add-k2remove-val         lesions erased   5  persistent damage at D5   926.8 ml  detection-loss events  24

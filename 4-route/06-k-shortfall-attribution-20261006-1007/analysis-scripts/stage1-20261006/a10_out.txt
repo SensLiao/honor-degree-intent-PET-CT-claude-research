@@ -1,0 +1,28 @@
+A. Round-5 lesion F1 (DMM), FP ml, FN ml on positive scans (patient mean); FP ml on negative scans (scan mean)
+  v1flat  lesion F1 0.671->0.788  FP ml 56.80->56.89  FN ml 116.68->101.13  | negatives (14 scans) FP ml 0.38->0.38
+  K1      lesion F1 0.671->0.792  FP ml 56.80->57.65  FN ml 116.68->105.82  | negatives (14 scans) FP ml 0.38->0.38
+  K2      lesion F1 0.671->0.780  FP ml 56.80->56.26  FN ml 116.68->106.97  | negatives (14 scans) FP ml 0.38->0.38
+  K2flip  lesion F1 0.671->0.787  FP ml 56.80->56.62  FN ml 116.68->106.95  | negatives (14 scans) FP ml 0.38->0.38
+  oracle  lesion F1 0.671->0.876  FP ml 56.80->39.20  FN ml 116.68->58.46  | negatives (14 scans) FP ml 0.38->0.38
+
+B. Round-5 Dice by drawing style (patient mean within style)
+  centerline n=31 scans:  v1flat 0.7568  K1 0.7531  K2 0.7359  K2flip 0.7475  oracle 0.9069
+  boundary   n=27 scans:  v1flat 0.7561  K1 0.7413  K2 0.7598  K2flip 0.7628  oracle 0.9332
+  random     n=27 scans:  v1flat 0.7293  K1 0.7395  K2 0.7385  K2flip 0.7360  oracle 0.9025
+
+C. Per patient: K1 minus v1 flat at round 5 against how big the missed volume was at the start (FN ml at round 0)
+  smallest missed volume  18 pts: FN at start 0.6 ml (median), K1-v1flat +0.0203, D0 0.616, K1 D5 0.840, v1 D5 0.819, ideal D5 0.980
+  middle                  18 pts: FN at start 5.6 ml (median), K1-v1flat -0.0016, D0 0.536, K1 D5 0.724, v1 D5 0.725, ideal D5 0.943
+  largest missed volume   18 pts: FN at start 265.1 ml (median), K1-v1flat -0.0254, D0 0.676, K1 D5 0.698, v1 D5 0.724, ideal D5 0.831
+
+D. Lesion voxels wrongly deleted (tp_lost ml) by remove strokes, rounds 1 and 2-5, all 99 scans
+  v1flat  tp_lost by REMOVE: round1   64.2 ml, rounds2-5  654.6 ml | fp_added by ADD: round1  339.1, rounds2-5  949.1
+  K1      tp_lost by REMOVE: round1    5.4 ml, rounds2-5  355.9 ml | fp_added by ADD: round1   62.7, rounds2-5  720.4
+  K2      tp_lost by REMOVE: round1    5.7 ml, rounds2-5   98.7 ml | fp_added by ADD: round1  129.7, rounds2-5  318.2
+  K2flip  tp_lost by REMOVE: round1    4.8 ml, rounds2-5   95.7 ml | fp_added by ADD: round1  114.9, rounds2-5  285.9
+  oracle  tp_lost by REMOVE: round1    0.0 ml, rounds2-5    0.0 ml | fp_added by ADD: round1    0.0, rounds2-5    0.0
+
+E. Stuck: scans whose ADD strokes of rounds 2-5 point at a target of (almost) the same size as the round before and recover < 1%
+  v1flat   0 scans,   0 strokes repeat on the same unfilled target
+  K1      18 scans,  40 strokes repeat on the same unfilled target
+  K2      14 scans,  24 strokes repeat on the same unfilled target

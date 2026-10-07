@@ -1,0 +1,100 @@
+== 1. Quick-VAL Dice by round (patient mean; positive scans), D5 and nAUC minus v1 flat [95% patient bootstrap]
+system                             n D0     D1     D2     D3     D4     D5      nAUC    dD5 vs v1 [CI]            dnAUC [CI]
+v1 flat 40k                       54 0.6095 0.6948 0.7007 0.7224 0.7438 0.7562  0.7089  
+v1 N3 40k                         54 0.6095 0.6685 0.6885 0.7134 0.7319 0.7436  0.6958  -0.0125 [-0.0349,+0.0091]  -0.0131 [-0.0336,+0.0068]
+K1                                54 0.6095 0.6916 0.7185 0.7274 0.7434 0.7539  0.7125  -0.0022 [-0.0254,+0.0205]  +0.0036 [-0.0166,+0.0246]
+K1 + flip                         54 0.6095 0.6891 0.7151 0.7254 0.7421 0.7500  0.7103  -0.0062 [-0.0283,+0.0157]  +0.0014 [-0.0189,+0.0224]
+K2                                54 0.6095 0.6793 0.7100 0.7260 0.7409 0.7529  0.7075  -0.0033 [-0.0249,+0.0183]  -0.0014 [-0.0204,+0.0190]
+K2 + flip                         54 0.6095 0.6828 0.7147 0.7285 0.7475 0.7571  0.7114  +0.0009 [-0.0183,+0.0200]  +0.0025 [-0.0149,+0.0211]
+ideal repair                      54 0.6095 0.7966 0.8514 0.8884 0.9051 0.9180  0.8410  +0.1618 [+0.1286,+0.1971]  +0.1321 [+0.1001,+0.1656]
+no edit                           54 0.6095 0.6095 0.6095 0.6095 0.6095 0.6095  0.6095  -0.1467 [-0.1900,-0.1054]  -0.0994 [-0.1341,-0.0661]
+v1 flat +8k cont.                 54 0.6095 0.6985 0.7183 0.7414 0.7513 0.7602  0.7189  +0.0041 [-0.0152,+0.0208]  +0.0100 [-0.0000,+0.0219]
+v1 flat +8k induced states        54 0.6095 0.6992 0.7274 0.7460 0.7591 0.7606  0.7234  +0.0044 [-0.0166,+0.0190]  +0.0145 [+0.0042,+0.0263]
+  same + flip                     54 0.6095 0.7023 0.7194 0.7366 0.7575 0.7728  0.7214  +0.0167 [+0.0056,+0.0286]  +0.0125 [+0.0015,+0.0256]
++8k spatial branch                54 0.6095 0.6963 0.7190 0.7377 0.7463 0.7548  0.7163  -0.0013 [-0.0140,+0.0110]  +0.0074 [-0.0020,+0.0189]
+N3 +8k error-sees-stroke          54 0.6095 0.6844 0.7090 0.7199 0.7436 0.7544  0.7078  -0.0018 [-0.0194,+0.0161]  -0.0011 [-0.0170,+0.0155]
+N3 +8k cont.                      54 0.6095 0.6720 0.6946 0.7048 0.7219 0.7360  0.6932  -0.0201 [-0.0420,+0.0008]  -0.0157 [-0.0338,+0.0029]
+induced + group A executor        54 0.6095 0.7016 0.7268 0.7474 0.7631 0.7722  0.7259  +0.0161 [+0.0037,+0.0300]  +0.0171 [+0.0052,+0.0312]
+weight average of two cont.       54 0.6095 0.6978 0.7158 0.7433 0.7559 0.7595  0.7195  +0.0033 [-0.0174,+0.0198]  +0.0106 [+0.0023,+0.0210]
+
+== 2. Lesion-level outcomes (sums over the 99 scans; trajectories.jsonl)
+system         lesions det.loss ev scans w/ loss init.erased erased@D5 damage ev ml persist D5 ml wrong@final ml
+v1flat            3138          32            21          24        18       2007.0        1165.0          933.9
+v1N3              3138          33            21           8         7       1327.2        1054.8          980.7
+K1                3138          14            10           6         5       1144.4         481.7          388.6
+K1flip            3138          11            10           8         8        588.6         324.3          187.1
+K2                3138          15            10           5         5        552.4         371.1          310.1
+K2flip            3138          11             8           3         3        501.3         406.1          355.8
+oracle            3138           9             8           0         0          0.0           0.0            0.0
+noop              3138           0             0           0         0          0.0           0.0            0.0
+
+== 3. Remote edits (remote.jsonl), sums in ml: T repaired / O repaired / new error beyond each radius
+v1flat   r1    T total   883.2 | >15mm T   394.0 O  15.6 new  233.9 | >30mm T    71.9 O   3.9 new   51.6 | >60mm T     0.1 O   0.2 new    3.1
+v1flat   r2-5  T total  2311.3 | >15mm T  1028.5 O 167.2 new  946.9 | >30mm T   206.2 O  79.6 new  243.1 | >60mm T     0.0 O  31.4 new   43.6
+v1N3     r1    T total   642.7 | >15mm T   351.0 O  34.2 new  159.0 | >30mm T    70.2 O   8.4 new   49.6 | >60mm T     0.0 O   0.0 new    0.0
+v1N3     r2-5  T total  1493.9 | >15mm T   809.0 O 161.2 new  809.9 | >30mm T   223.5 O  62.7 new  270.7 | >60mm T     0.0 O   1.3 new    2.9
+K1       r1    T total   436.4 | >15mm T   170.8 O   7.7 new   30.8 | >30mm T    47.1 O   5.4 new   14.0 | >60mm T     3.6 O   3.2 new    1.6
+K1       r2-5  T total  1551.6 | >15mm T   986.0 O  72.0 new  937.9 | >30mm T   637.3 O  58.4 new  629.1 | >60mm T   211.2 O   9.1 new  116.1
+K1flip   r1    T total   393.2 | >15mm T   120.6 O   1.8 new   15.1 | >30mm T     8.7 O   0.1 new    2.8 | >60mm T     0.0 O   0.0 new    0.0
+K1flip   r2-5  T total  1028.1 | >15mm T   523.2 O  50.8 new  435.7 | >30mm T   287.8 O  41.7 new  271.5 | >60mm T    66.8 O   4.9 new   29.0
+K2       r1    T total   555.0 | >15mm T   258.2 O   4.1 new   74.8 | >30mm T    54.0 O   2.2 new   27.8 | >60mm T     0.4 O   0.7 new    1.2
+K2       r2-5  T total   876.0 | >15mm T   334.5 O  38.8 new  308.4 | >30mm T   113.8 O  29.4 new  161.3 | >60mm T     0.0 O   3.6 new    9.0
+K2flip   r1    T total   537.8 | >15mm T   241.6 O   4.5 new   64.6 | >30mm T    40.8 O   2.6 new   24.2 | >60mm T     0.0 O   0.8 new    0.2
+K2flip   r2-5  T total   810.9 | >15mm T   292.9 O  31.4 new  265.7 | >30mm T    82.5 O  22.6 new  120.5 | >60mm T     0.0 O   0.7 new    3.8
+oracle   r1    T total  3830.4 | >15mm T  3231.3 O   0.0 new    0.0 | >30mm T  2513.7 O   0.0 new    0.0 | >60mm T  1684.3 O   0.0 new    0.0
+oracle   r2-5  T total  3033.2 | >15mm T  2030.3 O   0.0 new    0.0 | >30mm T  1160.0 O   0.0 new    0.0 | >60mm T   368.3 O   0.0 new    0.0
+noop     r1    T total     0.0 | >15mm T     0.0 O   0.0 new    0.0 | >30mm T     0.0 O   0.0 new    0.0 | >60mm T     0.0 O   0.0 new    0.0
+noop     r2-5  T total     0.0 | >15mm T     0.0 O   0.0 new    0.0 | >30mm T     0.0 O   0.0 new    0.0 | >60mm T     0.0 O   0.0 new    0.0
+
+== 3b. Remote edits split by stroke sign (ml beyond 30 mm and 60 mm): T repaired / new error
+v1flat   r1    +>30 T   58.9 new   43.7 | +>60 T    0.1 new    3.1 | ->30 T   13.0 new    8.0 | ->60 T    0.0 new    0.0
+v1flat   r2-5  +>30 T   80.6 new  135.0 | +>60 T    0.0 new   36.3 | ->30 T  125.5 new  108.1 | ->60 T    0.0 new    7.3
+v1N3     r1    +>30 T   63.0 new   48.4 | +>60 T    0.0 new    0.0 | ->30 T    7.2 new    1.2 | ->60 T    0.0 new    0.0
+v1N3     r2-5  +>30 T  179.2 new  160.0 | +>60 T    0.0 new    2.8 | ->30 T   44.3 new  110.8 | ->60 T    0.0 new    0.2
+K1       r1    +>30 T   47.0 new   14.0 | +>60 T    3.6 new    1.6 | ->30 T    0.0 new    0.0 | ->60 T    0.0 new    0.0
+K1       r2-5  +>30 T  416.0 new  419.8 | +>60 T  180.0 new   68.2 | ->30 T  221.3 new  209.3 | ->60 T   31.2 new   47.9
+K1flip   r1    +>30 T    8.7 new    2.8 | +>60 T    0.0 new    0.0 | ->30 T    0.0 new    0.0 | ->60 T    0.0 new    0.0
+K1flip   r2-5  +>30 T  147.3 new  201.4 | +>60 T   36.9 new   14.3 | ->30 T  140.5 new   70.2 | ->60 T   29.9 new   14.7
+K2       r1    +>30 T   53.8 new   27.7 | +>60 T    0.4 new    1.2 | ->30 T    0.2 new    0.1 | ->60 T    0.0 new    0.0
+K2       r2-5  +>30 T   60.9 new  140.1 | +>60 T    0.0 new    9.0 | ->30 T   52.9 new   21.2 | ->60 T    0.0 new    0.1
+K2flip   r1    +>30 T   40.7 new   24.2 | +>60 T    0.0 new    0.2 | ->30 T    0.1 new    0.0 | ->60 T    0.0 new    0.0
+K2flip   r2-5  +>30 T   55.3 new  100.8 | +>60 T    0.0 new    3.7 | ->30 T   27.2 new   19.7 | ->60 T    0.0 new    0.0
+oracle   r1    +>30 T 2030.1 new    0.0 | +>60 T 1306.4 new    0.0 | ->30 T  483.6 new    0.0 | ->60 T  377.9 new    0.0
+oracle   r2-5  +>30 T  697.1 new    0.0 | +>60 T  210.7 new    0.0 | ->30 T  462.8 new    0.0 | ->60 T  157.6 new    0.0
+noop     r1    +>30 T    0.0 new    0.0 | +>60 T    0.0 new    0.0 | ->30 T    0.0 new    0.0 | ->60 T    0.0 new    0.0
+noop     r2-5  +>30 T    0.0 new    0.0 | +>60 T    0.0 new    0.0 | ->30 T    0.0 new    0.0 | ->60 T    0.0 new    0.0
+
+== 4. Negative scans (no lesion in the reference): false-positive volume, ml
+v1flat   n=14 FP@D0 sum    5.30 median  0.000 | FP@D5 sum    5.30 median  0.000
+v1N3     n=14 FP@D0 sum    5.30 median  0.000 | FP@D5 sum    5.30 median  0.000
+K1       n=14 FP@D0 sum    5.30 median  0.000 | FP@D5 sum    5.30 median  0.000
+K1flip   n=14 FP@D0 sum    5.30 median  0.000 | FP@D5 sum    5.30 median  0.000
+K2       n=14 FP@D0 sum    5.30 median  0.000 | FP@D5 sum    5.30 median  0.000
+K2flip   n=14 FP@D0 sum    5.30 median  0.000 | FP@D5 sum    5.30 median  0.000
+oracle   n=14 FP@D0 sum    5.30 median  0.000 | FP@D5 sum    5.30 median  0.000
+noop     n=14 FP@D0 sum    5.30 median  0.000 | FP@D5 sum    5.30 median  0.000
+
+== 5. Strokes: tiny effect (|T fixed| < 1% of |T| and new error < 0.1 ml), repeats, single-stroke Dice drops
+v1flat   strokes  421  tiny-effect   7 (add 1, remove 6)  zero-recovery-with-damage   1  drops<=-0.3: 4 on 4 scans
+v1N3     strokes  421  tiny-effect  32 (add 1, remove 31)  zero-recovery-with-damage   5  drops<=-0.3: 3 on 3 scans
+K1       strokes  423  tiny-effect  67 (add 60, remove 7)  zero-recovery-with-damage   3  drops<=-0.3: 2 on 2 scans
+K1flip   strokes  423  tiny-effect  70 (add 58, remove 12)  zero-recovery-with-damage   4  drops<=-0.3: 1 on 1 scans
+K2       strokes  423  tiny-effect  59 (add 42, remove 17)  zero-recovery-with-damage   4  drops<=-0.3: 1 on 1 scans
+K2flip   strokes  423  tiny-effect  57 (add 48, remove 9)  zero-recovery-with-damage   3  drops<=-0.3: 2 on 2 scans
+oracle   strokes  385  tiny-effect   0 (add 0, remove 0)  zero-recovery-with-damage   0  drops<=-0.3: 0 on 0 scans
+noop     strokes  425  tiny-effect 425 (add 270, remove 155)  zero-recovery-with-damage   0  drops<=-0.3: 0 on 0 scans
+
+== 6. By drawing style: D0 -> D5 (patient mean within the style's scans)
+v1flat   boundary: 0.631->0.756 (n=27) | centerline: 0.598->0.757 (n=31) | random: 0.555->0.729 (n=27)
+K1       boundary: 0.631->0.741 (n=27) | centerline: 0.598->0.753 (n=31) | random: 0.555->0.739 (n=27)
+K2       boundary: 0.631->0.760 (n=27) | centerline: 0.598->0.736 (n=31) | random: 0.555->0.739 (n=27)
+K2flip   boundary: 0.631->0.763 (n=27) | centerline: 0.598->0.748 (n=31) | random: 0.555->0.736 (n=27)
+oracle   boundary: 0.631->0.933 (n=27) | centerline: 0.598->0.907 (n=31) | random: 0.555->0.902 (n=27)
+
+== 7. Seconds per round (latency.jsonl, warm rounds): median model / robot / round
+v1flat   n=420 model 11.3s robot 0.27s round 11.7s
+v1N3     n=420 model 11.4s robot 0.27s round 11.8s
+K1       n=422 model 13.7s robot 0.30s round 14.1s
+K1flip   n=422 model 19.2s robot 0.32s round 19.6s
+K2       n=422 model 7.5s robot 0.22s round 7.8s
+K2flip   n=422 model 10.6s robot 0.22s round 10.9s

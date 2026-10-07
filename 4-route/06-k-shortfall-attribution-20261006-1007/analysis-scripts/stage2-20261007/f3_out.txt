@@ -1,0 +1,115 @@
+units: 192 rows; networks ['v1c', 'K1', 'K1s5k', 'K2']; footer {'kind': 'footer', 'weights_unchanged': True, 'changed': [], 'wall_seconds': 1191.0268685817719, 'peak_gpu_gb': 16.132366180419922}
+
+== 1. Influence on region target logits (median over units; share of units where the term lowers T)
+-- v1c sign + (28 units)
+   base_binding             T +350 T_near +350 T_far +1.49e+03 T_boundary +350 T_interior +93.1 P_ring +283 O +431 | lowers T in 11%
+   base_error               T +142 T_near +142 T_far +233 T_boundary +141 T_interior +326 P_ring +149 O +11.5 | lowers T in 18%
+   base_preserve            T -43.2 T_near -43.2 T_far -163 T_boundary -43.2 T_interior -80.8 P_ring -43 O -15.1 | lowers T in 100%
+   base_target_dice         T -616 T_near -616 T_far +375 T_boundary -614 T_interior -500 P_ring -726 O -469 | lowers T in 75%
+   intent_dice_gain         T -69.5 T_near -69.5 T_far +6.41 T_boundary -69.5 T_interior -87.9 P_ring -84.1 O -7.73 | lowers T in 82%
+   intent_hard_negative     T -1.33e+04 T_near -1.37e+04 T_far -2.72e+03 T_boundary -1.3e+04 T_interior -1.59e+04 P_ring -1.61e+04 O -1.28e+03 | lowers T in 100%
+   intent_ring_rank         T +12.2 T_near +11.9 T_far +2.6 T_boundary +8.91 T_interior -0.884 P_ring -9.91 O +11.3 | lowers T in 32%
+   state_total              T +0.0255 T_near +0.0255 T_far +0.0772 T_boundary +0.0255 T_interior +0.609 P_ring +0.0476 O -0.000505 | lowers T in 43%
+-- v1c sign - (20 units)
+   base_binding             T +60.5 T_near +60.5 T_far +1.63e+03 T_boundary +58.4 T_interior +69.5 P_ring +116 O +0.216 | lowers T in 20%
+   base_error               T +104 T_near +104 T_far +353 T_boundary +104 T_interior +356 P_ring +69.9 O -28 | lowers T in 15%
+   base_preserve            T -6.41 T_near -6.31 T_far -19.7 T_boundary -6.4 T_interior -0.75 P_ring -71.8 O -6.42 | lowers T in 60%
+   base_target_dice         T +1.55 T_near +1.55 T_far +18.9 T_boundary +1.54 T_interior +220 P_ring -479 O -84.8 | lowers T in 45%
+   intent_dice_gain         T -2.64 T_near -2.75 T_far -0.479 T_boundary -2.63 T_interior +0.208 P_ring -9.89 O -0.351 | lowers T in 56%
+   intent_hard_negative     T -333 T_near -327 T_far -508 T_boundary -333 T_interior -60.7 P_ring -3.61e+03 O -345 | lowers T in 70%
+   intent_ring_rank         T -0 T_near -0 T_far +46 T_boundary -0 T_interior -0 P_ring -68.3 O -0 | lowers T in 25%
+   state_total              T +1.71e-05 T_near +1.71e-05 T_far -0.0258 T_boundary +1.71e-05 T_interior +0.0135 P_ring -0.0329 O -8e-15 | lowers T in 50%
+-- K1 sign + (28 units)
+   base_binding             T +28.5 T_near +21.8 T_far +1.47e+03 T_boundary +28.8 T_interior +54.4 P_ring +42.8 O +327 | lowers T in 25%
+   base_error               T +570 T_near +580 T_far +620 T_boundary +556 T_interior +1.01e+03 P_ring +558 O -36.2 | lowers T in 7%
+   base_preserve            T -4.93 T_near -4.93 T_far -126 T_boundary -4.93 T_interior -16.6 P_ring -5.86 O -1.74 | lowers T in 100%
+   base_target_dice         T +284 T_near +284 T_far +271 T_boundary +269 T_interior +417 P_ring +206 O -258 | lowers T in 32%
+   intent_dice_gain         T +1.41 T_near +1.41 T_far +38.3 T_boundary +1.41 T_interior +11 P_ring +0.199 O -1.07 | lowers T in 43%
+   intent_hard_negative     T -1.05e+03 T_near -1.06e+03 T_far -560 T_boundary -1.09e+03 T_interior -1.32e+03 P_ring -1.14e+03 O -168 | lowers T in 100%
+   intent_ring_rank         T +20 T_near +20 T_far -11 T_boundary +19.8 T_interior +17 P_ring -10.5 O -2.03 | lowers T in 25%
+   state_total              T +0.00279 T_near +0.00279 T_far -0.202 T_boundary +0.00279 T_interior +0.619 P_ring +0.00111 O -0.00463 | lowers T in 43%
+-- K1 sign - (20 units)
+   base_binding             T +23.5 T_near +23.5 T_far +1.86e+03 T_boundary +23.5 T_interior +138 P_ring +150 O +1.24 | lowers T in 15%
+   base_error               T +230 T_near +238 T_far +279 T_boundary +217 T_interior +562 P_ring +513 O +227 | lowers T in 25%
+   base_preserve            T -1.7 T_near -1.53 T_far -8.4 T_boundary -1.68 T_interior -0.919 P_ring -39.6 O -2.54 | lowers T in 55%
+   base_target_dice         T +48.3 T_near +48.3 T_far +330 T_boundary +48.2 T_interior +253 P_ring +215 O -94.9 | lowers T in 20%
+   intent_dice_gain         T +0.0697 T_near +0.102 T_far +0.000832 T_boundary +0.0682 T_interior +0.176 P_ring -0.972 O -0.806 | lowers T in 31%
+   intent_hard_negative     T -58.9 T_near -49.9 T_far -197 T_boundary -58.5 T_interior -39.1 P_ring -1e+03 O -307 | lowers T in 60%
+   intent_ring_rank         T -0 T_near -0 T_far -89.5 T_boundary -0 T_interior -0 P_ring -48.4 O -0 | lowers T in 40%
+   state_total              T +0.000708 T_near +0.000708 T_far -0.0768 T_boundary +0.000708 T_interior -0.00143 P_ring -0.0557 O -0.0366 | lowers T in 40%
+-- K1s5k sign + (28 units)
+   base_binding             T +23 T_near +23 T_far +477 T_boundary +23 T_interior +30.8 P_ring +26 O -35.6 | lowers T in 25%
+   base_error               T +194 T_near +209 T_far +153 T_boundary +181 T_interior +257 P_ring +181 O -32.1 | lowers T in 0%
+   base_preserve            T -4.96 T_near -4.96 T_far -5.76 T_boundary -4.96 T_interior -5.63 P_ring -5.11 O -2.46 | lowers T in 100%
+   base_target_dice         T +35.5 T_near +35.5 T_far +85.4 T_boundary +35.4 T_interior +66.9 P_ring +4.52 O -111 | lowers T in 25%
+   intent_dice_gain         T -1.76 T_near -1.76 T_far +3.21 T_boundary -1.76 T_interior -0.0134 P_ring -6.55 O -4.29 | lowers T in 64%
+   intent_hard_negative     T -500 T_near -500 T_far -33.8 T_boundary -500 T_interior -335 P_ring -343 O -109 | lowers T in 100%
+   intent_ring_rank         T +10 T_near +10 T_far +8.11 T_boundary +8.53 T_interior +32 P_ring -22.4 O -3.65 | lowers T in 21%
+   state_total              T +0.000924 T_near +0.000924 T_far -0.0239 T_boundary +0.000924 T_interior +0.033 P_ring +0.00126 O -0.0117 | lowers T in 43%
+-- K1s5k sign - (20 units)
+   base_binding             T +63.7 T_near +63.7 T_far +260 T_boundary +63.7 T_interior +158 P_ring +17.5 O -2.86 | lowers T in 15%
+   base_error               T +93.3 T_near +93.3 T_far +30 T_boundary +93.1 T_interior +285 P_ring +55 O +11.6 | lowers T in 25%
+   base_preserve            T -2.86 T_near -2.49 T_far -3.84 T_boundary -2.77 T_interior -1.56 P_ring -49.5 O -2.37 | lowers T in 55%
+   base_target_dice         T +51.8 T_near +51.9 T_far +46 T_boundary +51.8 T_interior +205 P_ring -164 O -21.8 | lowers T in 25%
+   intent_dice_gain         T -0.397 T_near -0.36 T_far -0.278 T_boundary -0.395 T_interior -0.175 P_ring -8.39 O -0.281 | lowers T in 62%
+   intent_hard_negative     T -112 T_near -109 T_far -30.4 T_boundary -111 T_interior -33.9 P_ring -852 O -44.2 | lowers T in 60%
+   intent_ring_rank         T -0 T_near -0 T_far -17.5 T_boundary -0 T_interior -8.95 P_ring -97.4 O -0 | lowers T in 40%
+   state_total              T -0.00446 T_near -0.0037 T_far -0.0337 T_boundary -0.00457 T_interior -0.01 P_ring -0.0204 O -0.0198 | lowers T in 60%
+-- K2 sign + (28 units)
+   base_binding             T +41 T_near +41 T_far +719 T_boundary +41.8 T_interior +30.4 P_ring +52.3 O +21 | lowers T in 25%
+   base_error               T +463 T_near +485 T_far +417 T_boundary +444 T_interior +1.02e+03 P_ring +494 O -20.8 | lowers T in 7%
+   base_preserve            T -8.85 T_near -8.75 T_far -59.8 T_boundary -8.86 T_interior -15.8 P_ring -7.85 O -1.57 | lowers T in 100%
+   base_target_dice         T +317 T_near +335 T_far +206 T_boundary +291 T_interior +387 P_ring +251 O -296 | lowers T in 29%
+   intent_dice_gain         T +1.02 T_near +1.02 T_far +40.9 T_boundary +0.948 T_interior +83.3 P_ring -0.206 O -0.813 | lowers T in 43%
+   intent_hard_negative     T -1.34e+03 T_near -1.34e+03 T_far -530 T_boundary -1.36e+03 T_interior -1.61e+03 P_ring -1.3e+03 O -206 | lowers T in 100%
+   intent_ring_rank         T -0.899 T_near -0.725 T_far +4.35 T_boundary -0.169 T_interior -5.87 P_ring -31.3 O -21.5 | lowers T in 54%
+   state_total              T +0.000315 T_near +0.000315 T_far -0.446 T_boundary +0.00032 T_interior -0.0358 P_ring -0.000734 O -0.048 | lowers T in 46%
+-- K2 sign - (20 units)
+   base_binding             T +6.71 T_near +6.71 T_far +1.04e+03 T_boundary +6.21 T_interior +117 P_ring +516 O +0.256 | lowers T in 25%
+   base_error               T +144 T_near +144 T_far +399 T_boundary +148 T_interior +440 P_ring +593 O -47.4 | lowers T in 25%
+   base_preserve            T -1.11 T_near -1.03 T_far -2.46 T_boundary -1.08 T_interior -0.489 P_ring -20.6 O -0.609 | lowers T in 60%
+   base_target_dice         T +40.2 T_near +40.2 T_far +132 T_boundary +39.7 T_interior +273 P_ring +2.87 O -128 | lowers T in 25%
+   intent_dice_gain         T +0.048 T_near +0.048 T_far +0.0679 T_boundary +0.048 T_interior +0.114 P_ring -0.934 O -0.0951 | lowers T in 38%
+   intent_hard_negative     T -115 T_near -113 T_far -124 T_boundary -115 T_interior -15.2 P_ring -768 O -30 | lowers T in 60%
+   intent_ring_rank         T -0 T_near -0 T_far -67.4 T_boundary -0 T_interior -0 P_ring -124 O -0 | lowers T in 40%
+   state_total              T +0.00858 T_near +0.00858 T_far -0.181 T_boundary +0.00321 T_interior +0.236 P_ring -0.0515 O -0.0109 | lowers T in 35%
+
+== 2. Balance on T: sum of positive influences vs sum of negative influences (median over units)
+  v1c    +: up 873  down 1.43e+04  up/down median 0.05  hard-negative share of the downward push 94%
+  v1c    -: up 619  down 586  up/down median 10.85  hard-negative share of the downward push 77%
+  K1     +: up 2.15e+03  down 1.42e+03  up/down median 1.24  hard-negative share of the downward push 93%
+  K1     -: up 608  down 265  up/down median 1.65  hard-negative share of the downward push 56%
+  K1s5k  +: up 413  down 532  up/down median 0.85  hard-negative share of the downward push 94%
+  K1s5k  -: up 265  down 214  up/down median 0.88  hard-negative share of the downward push 53%
+  K2     +: up 2.01e+03  down 1.53e+03  up/down median 1.15  hard-negative share of the downward push 91%
+  K2     -: up 606  down 160  up/down median 2.30  hard-negative share of the downward push 66%
+
+== 3. Cosine of each term's gradient with the target soft Dice gradient (median)
+  v1c    +: b.binding -0.32 | b.error +0.09 | b.preserve +0.88 | i.dice_gain +0.96 | i.hard_negative +0.82 | i.ring_rank +0.15 | state_total -0.21
+  v1c    -: b.binding +0.58 | b.error +0.29 | b.preserve +0.06 | i.dice_gain +0.90 | i.hard_negative +0.01 | i.ring_rank +0.00 | state_total +0.76
+  K1     +: b.binding +0.26 | b.error +0.43 | b.preserve -0.06 | i.dice_gain +0.94 | i.hard_negative -0.21 | i.ring_rank +0.29 | state_total -0.16
+  K1     -: b.binding +0.46 | b.error +0.21 | b.preserve +0.00 | i.dice_gain +0.69 | i.hard_negative +0.00 | i.ring_rank +0.00 | state_total +0.31
+  K1s5k  +: b.binding +0.39 | b.error +0.30 | b.preserve +0.21 | i.dice_gain +0.88 | i.hard_negative +0.05 | i.ring_rank +0.34 | state_total -0.03
+  K1s5k  -: b.binding +0.52 | b.error +0.59 | b.preserve +0.16 | i.dice_gain +0.95 | i.hard_negative +0.16 | i.ring_rank +0.00 | state_total +0.09
+  K2     +: b.binding +0.29 | b.error +0.41 | b.preserve -0.14 | i.dice_gain +0.85 | i.hard_negative -0.21 | i.ring_rank +0.28 | state_total -0.06
+  K2     -: b.binding +0.42 | b.error +0.38 | b.preserve +0.00 | i.dice_gain +0.76 | i.hard_negative +0.00 | i.ring_rank +0.00 | state_total +0.14
+
+== 3b. Unit counts behind the medians
+  v1c    + (28 units): hard negative lowers T 28/28, cosine with target Dice < 0 in 6/28; P ring lowered 28/28 (median -1.611e+04); base_target_dice lowers T in 21/28
+  v1c    - (20 units): hard negative lowers T 14/20, cosine with target Dice < 0 in 6/20; P ring lowered 11/11 (median -3613); base_target_dice lowers T in 9/20
+  K1     + (28 units): hard negative lowers T 28/28, cosine with target Dice < 0 in 18/28; P ring lowered 28/28 (median -1138); base_target_dice lowers T in 9/28
+  K1     - (20 units): hard negative lowers T 12/20, cosine with target Dice < 0 in 8/20; P ring lowered 11/11 (median -999.6); base_target_dice lowers T in 4/20
+  K1s5k  + (28 units): hard negative lowers T 28/28, cosine with target Dice < 0 in 13/28; P ring lowered 27/28 (median -343.2); base_target_dice lowers T in 7/28
+  K1s5k  - (20 units): hard negative lowers T 12/20, cosine with target Dice < 0 in 5/20; P ring lowered 11/11 (median -851.8); base_target_dice lowers T in 5/20
+  K2     + (28 units): hard negative lowers T 28/28, cosine with target Dice < 0 in 18/28; P ring lowered 28/28 (median -1299); base_target_dice lowers T in 8/28
+  K2     - (20 units): hard negative lowers T 12/20, cosine with target Dice < 0 in 8/20; P ring lowered 11/11 (median -767.8); base_target_dice lowers T in 5/20
+
+== 4. Hard-negative choice on the before state: share of the chosen voxels that are O / P ring / other P
+  v1c    +: requested k=6709, chosen 6709: O 0.035 P-ring 0.282 other P 0.683  mean pT of chosen 0.457
+  v1c    -: requested k=1807, chosen 1312: O 0.322 P-ring 0.145 other P 0.534  mean pT of chosen 0.078
+  K1     +: requested k=6709, chosen 6709: O 0.039 P-ring 0.215 other P 0.746  mean pT of chosen 0.109
+  K1     -: requested k=1807, chosen 1312: O 0.447 P-ring 0.107 other P 0.446  mean pT of chosen 0.012
+  K1s5k  +: requested k=6709, chosen 6709: O 0.078 P-ring 0.141 other P 0.781  mean pT of chosen 0.210
+  K1s5k  -: requested k=1807, chosen 1312: O 0.361 P-ring 0.158 other P 0.481  mean pT of chosen 0.177
+  K2     +: requested k=6709, chosen 6709: O 0.132 P-ring 0.277 other P 0.591  mean pT of chosen 0.109
+  K2     -: requested k=1807, chosen 1312: O 0.387 P-ring 0.106 other P 0.507  mean pT of chosen 0.018

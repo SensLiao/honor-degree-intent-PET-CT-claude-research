@@ -1,0 +1,30 @@
+== 1. Thresholds learned on TRAIN (fit half) and the TRAIN round-1 Dice at 0.5 / 0.5 and at the learned pair
+  add 0.075  remove 0.125
+  fit   124 patients 174 scans: 0.6559 -> 0.6898 (+0.0339)
+  check 134 patients 198 scans: 0.6932 -> 0.7182 (+0.0250)
+  all   258 patients 372 scans: 0.6753 -> 0.7046 (+0.0293)
+  rollout used add [0.075, 0.075, 0.075, 0.075, 0.075] remove [0.125, 0.125, 0.125, 0.125, 0.125]
+
+== 2. VAL Dice by round (patient mean over positive scans) and paired differences [95% patient bootstrap]
+  v1flat     D0 0.6095 D1 0.6948 D2 0.7007 D3 0.7224 D4 0.7438 D5 0.7562  nAUC 0.7089
+  K1         D0 0.6095 D1 0.6916 D2 0.7185 D3 0.7274 D4 0.7434 D5 0.7539  nAUC 0.7125
+  K1signthr  D0 0.6095 D1 0.6969 D2 0.7190 D3 0.7345 D4 0.7361 D5 0.7526  nAUC 0.7135
+  K1signthr minus K1     D1 +0.0053 [-0.0182, +0.0233] (54 patients)
+  K1signthr minus v1flat D1 +0.0021 [-0.0122, +0.0146] (54 patients)
+  K1signthr minus K1     D5 -0.0014 [-0.0250, +0.0225] (54 patients)
+  K1signthr minus v1flat D5 -0.0036 [-0.0197, +0.0125] (54 patients)
+
+== 3. Five-round Dice gain split by the sign of each round's stroke (patient mean of per-round deltas)
+  v1flat     add +0.1302  remove +0.0165  total +0.1467
+  K1         add +0.0969  remove +0.0475  total +0.1445
+  K1signthr  add +0.0969  remove +0.0462  total +0.1431
+
+== 4. Volumes (ml, sums over the 99 scans) and stroke counts: round 1 and rounds 2-5
+  v1flat     r1: add  54 +T  700.8 +FP  339.1 | remove  31 -T  182.4 -TP   64.2 || r2-5: add 189 +T 1295.8 +FP  949.1 | remove 147 -T 1015.5 -TP  654.6
+  K1         r1: add  54 +T  369.4 +FP   62.7 | remove  31 -T   66.9 -TP    5.4 || r2-5: add 232 +T  974.9 +FP  720.4 | remove 106 -T  576.7 -TP  355.9
+  K1signthr  r1: add  54 +T 1196.4 +FP  861.5 | remove  31 -T  149.9 -TP   25.4 || r2-5: add 198 +T 2968.9 +FP 2253.6 | remove 138 -T 1859.3 -TP 2479.7
+
+== 5. Lesion-level outcomes (trajectories.jsonl)
+  v1flat     lesions erased  24  persistent damage at D5  1165.0 ml  detection-loss events  32
+  K1         lesions erased   6  persistent damage at D5   481.7 ml  detection-loss events  14
+  K1signthr  lesions erased  19  persistent damage at D5  2549.5 ml  detection-loss events  43

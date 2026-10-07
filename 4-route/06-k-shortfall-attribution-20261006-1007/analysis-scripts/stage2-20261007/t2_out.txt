@@ -1,0 +1,14 @@
+== VAL Dice by round (patient mean over positive scans)
+  v1flat  D0 0.6095 D1 0.6948 D2 0.7007 D3 0.7224 D4 0.7438 D5 0.7562  nAUC 0.7089
+  K1      D0 0.6095 D1 0.6916 D2 0.7185 D3 0.7274 D4 0.7434 D5 0.7539  nAUC 0.7125
+  K2      D0 0.6095 D1 0.6793 D2 0.7100 D3 0.7260 D4 0.7409 D5 0.7529  nAUC 0.7075
+  K3      D0 0.6095 D1 0.6847 D2 0.7122 D3 0.7280 D4 0.7336 D5 0.7483  nAUC 0.7075
+  K3 minus v1flat D5 -0.0079 [-0.0292, +0.0137] (54 patients)
+  K3 minus K1     D5 -0.0056 [-0.0204, +0.0081] (54 patients)
+  K3 minus K2     D5 -0.0046 [-0.0143, +0.0048] (54 patients)
+
+== Five-round Dice gain split by stroke sign
+  v1flat  add +0.1302  remove +0.0165
+  K1      add +0.0969  remove +0.0475
+  K2      add +0.0857  remove +0.0577
+  K3      add +0.0975  remove +0.0413

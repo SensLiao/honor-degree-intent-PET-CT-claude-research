@@ -1,0 +1,488 @@
+{
+ "a_flat": {
+  "gap_from_excess_FP": 0.08137350329676034,
+  "gap_from_excess_FN": 0.08344509091591927,
+  "one_minus_D0_from_FP": 0.13098606624847284,
+  "one_minus_D0_from_FN": 0.25954885718849485,
+  "one_minus_D5_from_FP": 0.1148633528289296,
+  "one_minus_D5_from_FN": 0.1327784077925771,
+  "patient_mean_FP0_FN0_ml": [
+   56.7950396677366,
+   116.67615481330677
+  ],
+  "patient_mean_FP5_FN5_ml": [
+   56.712935847542454,
+   101.73339069038477
+  ],
+  "oracle_patient_mean_FP5_FN5_ml": [
+   38.409812143840455,
+   58.64847898959494
+  ],
+  "median_scan_FP0_FN0_ml": [
+   5.440846235396339,
+   9.289249670188871
+  ]
+ },
+ "a_N3": {
+  "gap_from_excess_FP": 0.09718340639364985,
+  "gap_from_excess_FN": 0.08336963090110609,
+  "one_minus_D0_from_FP": 0.13098606624847284,
+  "one_minus_D0_from_FN": 0.25954885718849485,
+  "one_minus_D5_from_FP": 0.13071607270826513,
+  "one_minus_D5_from_FN": 0.13266013099531793,
+  "patient_mean_FP0_FN0_ml": [
+   56.7950396677366,
+   116.67615481330677
+  ],
+  "patient_mean_FP5_FN5_ml": [
+   58.8861407998584,
+   101.90810339625295
+  ],
+  "oracle_patient_mean_FP5_FN5_ml": [
+   38.409812143840455,
+   58.64847898959494
+  ],
+  "median_scan_FP0_FN0_ml": [
+   5.440846235396339,
+   9.289249670188871
+  ]
+ },
+ "b_flat": {
+  "max_fp": {
+   "persistent_damage_share_pts": 0.07980048515262039,
+   "unrepaired_original_error_pts": 0.08501810906005923
+  },
+  "max_fn": {
+   "persistent_damage_share_pts": 0.09278716955799221,
+   "unrepaired_original_error_pts": 0.0720314246546874
+  },
+  "event_ratio": {
+   "persistent_damage_share_pts": 0.08327791565930125,
+   "unrepaired_original_error_pts": 0.08154067855337838
+  },
+  "worst12_patients": [
+   {
+    "patient": "psma_41260c3678449a2f",
+    "gap": 0.5544839208303085,
+    "damage_part": 0.4032356894848432,
+    "unrepaired_part": 0.15124823134546536,
+    "mean_scan_gt_ml": 0.9127697472771011
+   },
+   {
+    "patient": "psma_69ea0c011af2e2d4",
+    "gap": 0.4659518015189803,
+    "damage_part": 0.2554930653299432,
+    "unrepaired_part": 0.2104587361890371,
+    "mean_scan_gt_ml": 6.220479689858621
+   },
+   {
+    "patient": "psma_9ca84fd27a4b228b",
+    "gap": 0.39324434761800897,
+    "damage_part": 0.04929005341134109,
+    "unrepaired_part": 0.3439542942066679,
+    "mean_scan_gt_ml": 624.1546381074941
+   },
+   {
+    "patient": "psma_2771d2bae29384ca",
+    "gap": 0.3813435736907603,
+    "damage_part": 0.31096888637040543,
+    "unrepaired_part": 0.07037468732035483,
+    "mean_scan_gt_ml": 6.203891744018997
+   },
+   {
+    "patient": "psma_0cd58730e7446445",
+    "gap": 0.3802996925314243,
+    "damage_part": 0.3485632272483879,
+    "unrepaired_part": 0.031736465283036405,
+    "mean_scan_gt_ml": 3.1172862276434903
+   },
+   {
+    "patient": "psma_3f55913f4da93e63",
+    "gap": 0.36543037231644754,
+    "damage_part": 0.06768543822078009,
+    "unrepaired_part": 0.29774493409566744,
+    "mean_scan_gt_ml": 368.5509806647435
+   },
+   {
+    "patient": "psma_1122a9de80627036",
+    "gap": 0.36131780184008533,
+    "damage_part": 0.2411807515529368,
+    "unrepaired_part": 0.12013705028714854,
+    "mean_scan_gt_ml": 3.080612272024156
+   },
+   {
+    "patient": "psma_bbbe1ae9a074871b",
+    "gap": 0.3186506880050793,
+    "damage_part": 0.2619947548089224,
+    "unrepaired_part": 0.05665593319615688,
+    "mean_scan_gt_ml": 41.88456324504804
+   },
+   {
+    "patient": "psma_5f2413a58d43dcac",
+    "gap": 0.3013791243933469,
+    "damage_part": 0.14464662189861677,
+    "unrepaired_part": 0.15673250249473017,
+    "mean_scan_gt_ml": 2.811666394118221
+   },
+   {
+    "patient": "psma_a1e1b43ebcf4e89c",
+    "gap": 0.301265580928674,
+    "damage_part": 0.011023363145833057,
+    "unrepaired_part": 0.29024221778284093,
+    "mean_scan_gt_ml": 4.254178851842881
+   },
+   {
+    "patient": "psma_af293f5b5149087a",
+    "gap": 0.30007204055735237,
+    "damage_part": 0.10469261689866531,
+    "unrepaired_part": 0.19537942365868705,
+    "mean_scan_gt_ml": 60.52112039586446
+   },
+   {
+    "patient": "psma_faa4c90c3d2d53a3",
+    "gap": 0.2983970350762802,
+    "damage_part": 0.14155962290090793,
+    "unrepaired_part": 0.15683741217537225,
+    "mean_scan_gt_ml": 5.905308718905783
+   }
+  ],
+  "patients_damage_part_larger": 23,
+  "patients": 54,
+  "top10_damage_part_sum_share": 0.5477062244432314
+ },
+ "b_N3": {
+  "max_fp": {
+   "persistent_damage_share_pts": 0.06560811336147737,
+   "unrepaired_original_error_pts": 0.1149449239332786
+  },
+  "max_fn": {
+   "persistent_damage_share_pts": 0.07582587203864927,
+   "unrepaired_original_error_pts": 0.10472716525610666
+  },
+  "event_ratio": {
+   "persistent_damage_share_pts": 0.06766504024283475,
+   "unrepaired_original_error_pts": 0.11288799705192124
+  },
+  "worst12_patients": [
+   {
+    "patient": "psma_41260c3678449a2f",
+    "gap": 0.6343752826223672,
+    "damage_part": 0.49205402960820943,
+    "unrepaired_part": 0.14232125301415774,
+    "mean_scan_gt_ml": 0.9127697472771011
+   },
+   {
+    "patient": "psma_9ca84fd27a4b228b",
+    "gap": 0.5543530144056843,
+    "damage_part": 0.023847409318194596,
+    "unrepaired_part": 0.5305056050874897,
+    "mean_scan_gt_ml": 624.1546381074941
+   },
+   {
+    "patient": "psma_3f55913f4da93e63",
+    "gap": 0.47061173987933724,
+    "damage_part": 0.00646279842938922,
+    "unrepaired_part": 0.464148941449948,
+    "mean_scan_gt_ml": 368.5509806647435
+   },
+   {
+    "patient": "psma_69ea0c011af2e2d4",
+    "gap": 0.4236015598203322,
+    "damage_part": 0.09668582510718005,
+    "unrepaired_part": 0.32691573471315216,
+    "mean_scan_gt_ml": 6.220479689858621
+   },
+   {
+    "patient": "psma_5f2413a58d43dcac",
+    "gap": 0.42032253614764464,
+    "damage_part": 0.20444168726939965,
+    "unrepaired_part": 0.215880848878245,
+    "mean_scan_gt_ml": 2.811666394118221
+   },
+   {
+    "patient": "psma_29bdce6d61139fd7",
+    "gap": 0.35115371957477226,
+    "damage_part": 0.0544012923724231,
+    "unrepaired_part": 0.2967524272023492,
+    "mean_scan_gt_ml": 1.4929151255660686
+   },
+   {
+    "patient": "psma_c80781b803041d12",
+    "gap": 0.3464591921182928,
+    "damage_part": 0.2503023494357672,
+    "unrepaired_part": 0.09615684268252558,
+    "mean_scan_gt_ml": 1.6136465175077326
+   },
+   {
+    "patient": "psma_2771d2bae29384ca",
+    "gap": 0.3407360467907109,
+    "damage_part": 0.17225282724518046,
+    "unrepaired_part": 0.16848321954553047,
+    "mean_scan_gt_ml": 6.203891744018997
+   },
+   {
+    "patient": "psma_af293f5b5149087a",
+    "gap": 0.31973457831310503,
+    "damage_part": 0.06147391715285562,
+    "unrepaired_part": 0.2582606611602494,
+    "mean_scan_gt_ml": 60.52112039586446
+   },
+   {
+    "patient": "psma_a1e1b43ebcf4e89c",
+    "gap": 0.28284164772178577,
+    "damage_part": 0.013817653428488489,
+    "unrepaired_part": 0.26902399429329726,
+    "mean_scan_gt_ml": 4.254178851842881
+   },
+   {
+    "patient": "psma_d7c4cf294221ea45",
+    "gap": 0.27976744595294256,
+    "damage_part": 0.13304892196103293,
+    "unrepaired_part": 0.14671852399190963,
+    "mean_scan_gt_ml": 1.4265633422075767
+   },
+   {
+    "patient": "psma_0b1200b317289bbb",
+    "gap": 0.26769279182618366,
+    "damage_part": 0.15528689091518952,
+    "unrepaired_part": 0.11240590091099412,
+    "mean_scan_gt_ml": 2.1232570674717417
+   }
+  ],
+  "patients_damage_part_larger": 20,
+  "patients": 54,
+  "top10_damage_part_sum_share": 0.33196837402983
+ },
+ "c_gap_by_gt_burden": {
+  "<5 mL": {
+   "scans": 27,
+   "patients": 21,
+   "flat_D0": 0.5384862307742587,
+   "flat_D5": 0.779182138801006,
+   "oracle_D5": 0.9864093398090293,
+   "contribution_to_overall_gap_pts": 0.0685680847697578,
+   "fn5_share_of_error": 0.2840364718635018
+  },
+  "5-50 mL": {
+   "scans": 20,
+   "patients": 16,
+   "flat_D0": 0.5928804950961557,
+   "flat_D5": 0.7561701592111584,
+   "oracle_D5": 0.9423099527548573,
+   "contribution_to_overall_gap_pts": 0.049316264284441504,
+   "fn5_share_of_error": 0.38784247208676753
+  },
+  "50-200 mL": {
+   "scans": 8,
+   "patients": 7,
+   "flat_D0": 0.5803099926925405,
+   "flat_D5": 0.6795248391728252,
+   "oracle_D5": 0.850304724373353,
+   "contribution_to_overall_gap_pts": 0.011080666451304188,
+   "fn5_share_of_error": 0.5688760906703447
+  },
+  ">=200 mL": {
+   "scans": 30,
+   "patients": 20,
+   "flat_D0": 0.6845700978211662,
+   "flat_D5": 0.7254089367643698,
+   "oracle_D5": 0.830649334221596,
+   "contribution_to_overall_gap_pts": 0.03585357870717611,
+   "fn5_share_of_error": 0.6169460013167174
+  }
+ },
+ "c_scan_gt_ml_quartiles": [
+  0.6966937252641647,
+  4.047458784868009,
+  30.316995177418004,
+  379.4658490272153,
+  2858.6836462714277
+ ],
+ "d_lesions_three_styles_trajectory_count": {
+  "flat": {
+   "<0.5": {
+    "n": 2394,
+    "matched0": 1026,
+    "matched5": 1029,
+    "lost_from_d0_to_d5": 12,
+    "gained_d0_to_d5": 15,
+    "erasure_event": 37,
+    "erasure_persistent_d5": 36
+   },
+   "0.5-10": {
+    "n": 5826,
+    "matched0": 4608,
+    "matched5": 4677,
+    "lost_from_d0_to_d5": 50,
+    "gained_d0_to_d5": 119,
+    "erasure_event": 29,
+    "erasure_persistent_d5": 13
+   },
+   ">=10": {
+    "n": 1194,
+    "matched0": 1005,
+    "matched5": 1047,
+    "lost_from_d0_to_d5": 3,
+    "gained_d0_to_d5": 45,
+    "erasure_event": 0,
+    "erasure_persistent_d5": 0
+   }
+  },
+  "N3": {
+   "<0.5": {
+    "n": 2394,
+    "matched0": 1026,
+    "matched5": 1031,
+    "lost_from_d0_to_d5": 15,
+    "gained_d0_to_d5": 20,
+    "erasure_event": 26,
+    "erasure_persistent_d5": 25
+   },
+   "0.5-10": {
+    "n": 5826,
+    "matched0": 4608,
+    "matched5": 4667,
+    "lost_from_d0_to_d5": 54,
+    "gained_d0_to_d5": 113,
+    "erasure_event": 5,
+    "erasure_persistent_d5": 4
+   },
+   ">=10": {
+    "n": 1194,
+    "matched0": 1005,
+    "matched5": 1030,
+    "lost_from_d0_to_d5": 7,
+    "gained_d0_to_d5": 32,
+    "erasure_event": 0,
+    "erasure_persistent_d5": 0
+   }
+  },
+  "oracle": {
+   "<0.5": {
+    "n": 2394,
+    "matched0": 1026,
+    "matched5": 1101,
+    "lost_from_d0_to_d5": 6,
+    "gained_d0_to_d5": 81,
+    "erasure_event": 0,
+    "erasure_persistent_d5": 0
+   },
+   "0.5-10": {
+    "n": 5826,
+    "matched0": 4608,
+    "matched5": 4794,
+    "lost_from_d0_to_d5": 12,
+    "gained_d0_to_d5": 198,
+    "erasure_event": 0,
+    "erasure_persistent_d5": 0
+   },
+   ">=10": {
+    "n": 1194,
+    "matched0": 1005,
+    "matched5": 1077,
+    "lost_from_d0_to_d5": 4,
+    "gained_d0_to_d5": 76,
+    "erasure_event": 0,
+    "erasure_persistent_d5": 0
+   }
+  }
+ },
+ "e_roundtrip": {
+  "samestate-trajectory": {
+   "0.1-0.5": {
+    "n": 56,
+    "mean_roundtrip_dice": 0.7232623840421832,
+    "survive_rate": 1.0
+   },
+   "0.5-10": {
+    "n": 201,
+    "mean_roundtrip_dice": 0.8851548911694606,
+    "survive_rate": 1.0
+   },
+   "<0.1": {
+    "n": 34,
+    "mean_roundtrip_dice": 0.7122549019607843,
+    "survive_rate": 0.8529411764705882
+   },
+   ">=10": {
+    "n": 106,
+    "mean_roundtrip_dice": 0.9249733175014306,
+    "survive_rate": 1.0
+   }
+  },
+  "samestate-list": {
+   "0.1-0.5": {
+    "n": 16,
+    "mean_roundtrip_dice": 0.8119607253970353,
+    "survive_rate": 1.0
+   },
+   "0.5-10": {
+    "n": 44,
+    "mean_roundtrip_dice": 0.8940452604830377,
+    "survive_rate": 1.0
+   },
+   "<0.1": {
+    "n": 18,
+    "mean_roundtrip_dice": 0.47962962962962963,
+    "survive_rate": 0.6666666666666666
+   },
+   ">=10": {
+    "n": 23,
+    "mean_roundtrip_dice": 0.9336279561509899,
+    "survive_rate": 1.0
+   }
+  }
+ },
+ "e_rollout_small_targets": {
+  "lt0.1": {
+   "n": 89,
+   "event_mean_recovery": 0.8501872659176031,
+   "first_order_target_pts": 0.0008953698827580314,
+   "first_order_total_pts": 0.012092055039876086
+  },
+  "0.1-0.5": {
+   "n": 171,
+   "event_mean_recovery": 0.7139324848893857,
+   "first_order_target_pts": 0.014661231127230888,
+   "first_order_total_pts": 0.05154887971817375
+  }
+ },
+ "f_round0_remove_ge10": {
+  "n_trajectories": 25,
+  "scans": 13,
+  "patients": 12,
+  "median_V_ml": 25.3294786810875,
+  "vol_weighted_recovery": 0.2578925186710076,
+  "D1_pts_shortfall": 0.014123710973236355
+ },
+ "f_remove_isolated_vs_attached": {
+  "isolated_fp_component": {
+   "0.5-10": {
+    "n": 32,
+    "event_mean_recovery": 0.9248242957494213
+   },
+   "<0.5": {
+    "n": 2,
+    "event_mean_recovery": 1.0
+   },
+   ">=10": {
+    "n": 4,
+    "event_mean_recovery": 0.1923639403753769
+   }
+  },
+  "component_contains_true_lesion": {
+   "0.5-10": {
+    "n": 86,
+    "event_mean_recovery": 0.6855824392618776
+   },
+   "<0.5": {
+    "n": 30,
+    "event_mean_recovery": 0.7209860101771867
+   },
+   ">=10": {
+    "n": 43,
+    "event_mean_recovery": 0.6409633252294713
+   }
+  }
+ }
+}

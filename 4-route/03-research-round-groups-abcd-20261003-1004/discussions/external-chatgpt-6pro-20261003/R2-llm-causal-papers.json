@@ -1,0 +1,474 @@
+[
+  {
+    "id": "LC01",
+    "title": "Can We Edit Factual Knowledge by In-Context Learning?",
+    "year": 2023,
+    "domain": "LLM知识编辑",
+    "url": "https://aclanthology.org/2023.emnlp-main.296/",
+    "access_depth": "全文重点精读：方法、Table 3、相关实验",
+    "verified_claim": "GPT-J / CounterFact / 32个上下文示例中，完整 IKE 综合分89.6，去掉 retain 演示后28.0；综合分是 efficacy、paraphrase、neighborhood 的调和平均。",
+    "limitation": "删掉的是推理上下文演示，不是稠密监督训练样本；不支持体素1:1抽样比例或医学收益。",
+    "project_use": "保留语义相邻但不应修改的样本；区分修回与越界，不搬数字或演示算法。",
+    "source_refs": [
+      "turn25view0",
+      "turn20search3"
+    ]
+  },
+  {
+    "id": "LC02",
+    "title": "Memory-Based Model Editing at Scale",
+    "year": 2022,
+    "domain": "LLM知识编辑/范围路由",
+    "url": "https://proceedings.mlr.press/v162/mitchell22a.html",
+    "access_depth": "全文重点精读：范围分类器、损失、Table 4",
+    "verified_claim": "SERAC把编辑缓存、范围判断和反事实回答分开；困难的范围内外输入是范围分类的重要失败点。",
+    "limitation": "范围是输入语义集合，编辑对象是模型行为；与体素三分类存在类比，但并非代数同构。",
+    "project_use": "当前笔对应范围与纠正内容分开监督；训练保留边界上的难例。",
+    "source_refs": [
+      "turn25view1",
+      "turn96view0"
+    ]
+  },
+  {
+    "id": "LC03",
+    "title": "Fast Model Editing at Scale",
+    "year": 2022,
+    "domain": "LLM知识编辑/保留蒸馏",
+    "url": "https://arxiv.org/abs/2110.11309",
+    "access_depth": "全文重点精读：目标定义与方法，未复核全部实验表",
+    "verified_claim": "MEND用小网络变换微调梯度；编辑损失之外，在无关输入上约束原模型与编辑后模型的输出分布。",
+    "limitation": "保留原输出有作用域条件；原模型在应修区域的错误不能蒸馏保留。",
+    "project_use": "若用蒸馏，仅在本轮有效保留区对齐当前状态/可靠教师；已知T/O/P时直接监督保留更简。",
+    "source_refs": [
+      "turn103view3",
+      "turn30academia47"
+    ]
+  },
+  {
+    "id": "LC04",
+    "title": "Editing Factual Knowledge in Language Models",
+    "year": 2021,
+    "domain": "知识编辑/等价集监督",
+    "url": "https://aclanthology.org/2021.emnlp-main.522/",
+    "access_depth": "全文重点精读：约束优化、等价集、指标定义",
+    "verified_claim": "超网络预测权重更新，在编辑等价集上学习成功、在无关输入上限制输出变化。",
+    "limitation": "约束松弛与退火仍有算法设置；不同输入的信息量和语义必须支持等价。",
+    "project_use": "同目标的不同有效画法共享监督；先验证等价标签与可见范围。",
+    "source_refs": [
+      "turn83view1",
+      "turn30search0"
+    ]
+  },
+  {
+    "id": "LC05",
+    "title": "Locating and Editing Factual Associations in GPT",
+    "year": 2022,
+    "domain": "知识定位/模型编辑",
+    "url": "https://arxiv.org/abs/2202.05262",
+    "access_depth": "primary摘要、作者项目页与会议元数据；未独立复核Table 4数字",
+    "verified_claim": "ROME通过因果追踪定位有关表征，以秩一参数更新修改事实并评估邻域和改写。",
+    "limitation": "权重空间局部性不是空间掩码局部性；干预隐藏态也不等于识别医生心理意图。",
+    "project_use": "借用诊断思路：在合法输入范围内干预笔信息，观察输出；不搬权重更新算法。",
+    "source_refs": [
+      "turn30academia48",
+      "turn30search51",
+      "turn30search4"
+    ]
+  },
+  {
+    "id": "LC06",
+    "title": "Mass-Editing Memory in a Transformer",
+    "year": 2023,
+    "domain": "批量知识编辑",
+    "url": "https://arxiv.org/abs/2210.07229",
+    "access_depth": "primary摘要、作者项目页与ICLR元数据",
+    "verified_claim": "MEMIT把单次事实编辑拓展到多个层和大批事实。",
+    "limitation": "没有编辑成功时高保留分可能只是模型没有变化；未复核附件所有数值。",
+    "project_use": "NOOP、修回、误改必须一起报告，防止保留率掩盖不响应。",
+    "source_refs": [
+      "turn30academia49",
+      "turn30search52"
+    ]
+  },
+  {
+    "id": "LC07",
+    "title": "Multimodal Knowledge Edit-Scoped Generalization for Online Recursive MLLM Editing",
+    "year": 2026,
+    "domain": "多模态知识编辑/范围",
+    "url": "https://arxiv.org/abs/2607.01978",
+    "access_depth": "全文重点精读：Section III-B、Figure 2、脚注、方法",
+    "verified_claim": "M-ORE/LLaVA-v1.5试验仅在可靠编辑中统计：proper62.20%、under28.60%、over7.20%、entangled2.00%；分类使用预设阈值。",
+    "limitation": "2026-07预印本；不是三个互斥完备类别，且百分比不代表全部编辑或医学编辑。",
+    "project_use": "范围不足与越界是两个轴，允许两者并存；保留连续修回/误改指标，不照搬阈值。",
+    "source_refs": [
+      "turn149view0",
+      "turn25view2"
+    ]
+  },
+  {
+    "id": "LC08",
+    "title": "Blended Diffusion for Text-driven Editing of Natural Images",
+    "year": 2022,
+    "domain": "局部图像编辑",
+    "url": "https://omriavrahami.com/blended-diffusion-page/",
+    "access_depth": "作者项目页与primary摘要；Fig 3原论文重载摘录，官方PDF过大未完整读取",
+    "verified_claim": "按用户给定ROI在噪声过程中混合编辑与原图，保护ROI外；Fig 3展示背景保留系数的定性取舍。",
+    "limitation": "ROI由用户提供，等于已知允许区域；不能证明学习出来的pT支持集等于真实T，也不能由三张图推出所有局部性损失无效。",
+    "project_use": "已知限制由执行器直接保留；未知范围仍需学习和实测。",
+    "source_refs": [
+      "turn143view1",
+      "turn149view1",
+      "turn140search1"
+    ]
+  },
+  {
+    "id": "LC09",
+    "title": "SmartBrush: Text and Shape Guided Object Inpainting With Diffusion Model",
+    "year": 2023,
+    "domain": "图像局部编辑/粗提示细化",
+    "url": "https://openaccess.thecvf.com/content/CVPR2023/html/Xie_SmartBrush_Text_and_Shape_Guided_Object_Inpainting_With_Diffusion_Model_CVPR_2023_paper.html",
+    "access_depth": "primary摘要与会议元数据；全文抓取失败",
+    "verified_claim": "结合文字和形状条件进行物体修补，研究提示形状/精度和局部控制。",
+    "limitation": "生成图像任务；本次未复核附件关于额外掩码通道与λ=0.01的细节，不作为已核数字。",
+    "project_use": "支持把粗交互转为精确编辑范围的任务分解；具体结构先采用本项目监督。",
+    "source_refs": [
+      "turn39search1",
+      "turn39academia51"
+    ]
+  },
+  {
+    "id": "LC10",
+    "title": "Prompt-to-Prompt Image Editing with Cross Attention Control",
+    "year": 2023,
+    "domain": "扩散编辑/条件控制",
+    "url": "https://prompt-to-prompt.github.io/",
+    "access_depth": "作者项目页和primary摘要；ICLR2023，预印本2022",
+    "verified_claim": "通过控制交叉注意力保持布局并改变文本条件所指内容。",
+    "limitation": "布局一致不等于像素严格不变；扩散时间控制参数不能直接成为医学半径。",
+    "project_use": "条件输入可以控制空间作用域，但注意图只能当证据，不能当真实范围。",
+    "source_refs": [
+      "turn39search2",
+      "turn39academia49"
+    ]
+  },
+  {
+    "id": "LC11",
+    "title": "MasaCtrl: Tuning-Free Mutual Self-Attention Control for Consistent Image Synthesis and Editing",
+    "year": 2023,
+    "domain": "图像编辑/特征复用",
+    "url": "https://openaccess.thecvf.com/content/ICCV2023/html/Cao_MasaCtrl_Tuning-Free_Mutual_Self-Attention_Control_for_Consistent_Image_Synthesis_and_ICCV_2023_paper.html",
+    "access_depth": "primary摘要和作者仓库",
+    "verified_claim": "互相使用自注意力信息以保留图像内容并进行一致编辑。",
+    "limitation": "生成一致性不是体素授权性；本次未作实验数字复核。",
+    "project_use": "历史特征复用可作为轻量输入，不能据此宣称重复笔一定要求扩大范围。",
+    "source_refs": [
+      "turn39search23",
+      "turn39search4"
+    ]
+  },
+  {
+    "id": "LC12",
+    "title": "GECToR – Grammatical Error Correction: Tag, Not Rewrite",
+    "year": 2020,
+    "domain": "文本纠错/编辑式动作",
+    "url": "https://aclanthology.org/2020.bea-1.16/",
+    "access_depth": "primary摘要与作者仓库",
+    "verified_claim": "把语法纠错转为编辑标签预测，区分保留和局部编辑操作。",
+    "limitation": "文本编辑边界和医学对象范围不同；编辑式参数化自身不能保证无误改。",
+    "project_use": "SIRB已有定向保留/翻转参数化，优先增强决策与监督，不为形式另换输出系统。",
+    "source_refs": [
+      "turn104search2",
+      "turn104search3"
+    ]
+  },
+  {
+    "id": "LC13",
+    "title": "System Combination via Quality Estimation for Grammatical Error Correction",
+    "year": 2023,
+    "domain": "纠错验证器/候选组合",
+    "url": "https://aclanthology.org/2023.emnlp-main.785/",
+    "access_depth": "ACL原文摘要、会议元数据与预印本记录；未复核全文表格",
+    "verified_claim": "论文研究以纠错质量估计指导系统组合/候选选择。",
+    "limitation": "候选验证器本身会犯错；全文表格本次未复核，不能继承附件所有F0.5数值。",
+    "project_use": "候选用真实修正质量标签训练，并测选择后的实际收益，不能只看预测分数。",
+    "source_refs": [
+      "turn104search1",
+      "turn104academia48",
+      "turn155view0"
+    ]
+  },
+  {
+    "id": "LC14",
+    "title": "Training Verifiers to Solve Math Word Problems",
+    "year": 2021,
+    "domain": "LLM验证器/正确性",
+    "url": "https://arxiv.org/abs/2110.14168",
+    "access_depth": "primary摘要与作者论文链接",
+    "verified_claim": "训练验证器给候选解答的正确性打分，再从多个解答中选择。",
+    "limitation": "验证码会受候选分布与错误类型影响；数学回答正确性不是pT不确定性。",
+    "project_use": "直接预测候选编辑后会修对多少、误改多少，比仅用熵作为收益更对题。",
+    "source_refs": [
+      "turn104academia49",
+      "turn104search56"
+    ]
+  },
+  {
+    "id": "LC15",
+    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "year": 2023,
+    "domain": "偏好优化",
+    "url": "https://arxiv.org/abs/2305.18290",
+    "access_depth": "HTML全文重点精读：KL约束目标、Bradley–Terry、奖励平移等价",
+    "verified_claim": "DPO把KL正则化偏好优化转为策略与参考策略概率比上的分类目标；奖励加输入相关常数不改变偏好。",
+    "limitation": "需要参考策略、概率比和β；这里已知有限候选的精确数值标签，直接回归/排序更简；仅有排序不能决定收益零点。",
+    "project_use": "不默认引入DPO/RL；候选排名含NOOP锚，绝对ΔDice用回归校准。",
+    "source_refs": [
+      "turn83view5",
+      "turn96view3"
+    ]
+  },
+  {
+    "id": "LC16",
+    "title": "Learning to Rank using Gradient Descent",
+    "year": 2005,
+    "domain": "成对排序",
+    "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2005/08/icml_ranking.pdf",
+    "access_depth": "全文重点精读：Section 3、式1–4",
+    "verified_claim": "RankNet使用分数差的logistic交叉熵；每组分数可加常数而排名不变；目标0.5代表打平。",
+    "limitation": "排序概率不等于Dice变化，若无NOOP锚不能把正分解释为有益。",
+    "project_use": "边界与同状态候选排序可用；必须保留绝对收益标签/NOOP比较与ties处理。",
+    "source_refs": [
+      "turn142view0"
+    ]
+  },
+  {
+    "id": "LC17",
+    "title": "Weakly Supervised Disentanglement with Guarantees",
+    "year": 2020,
+    "domain": "弱监督解耦理论",
+    "url": "https://arxiv.org/abs/1910.09772",
+    "access_depth": "primary摘要、框架说明；PDF文本解析不可用，未独立逐行核验全部定理",
+    "verified_claim": "研究分布匹配学习下，受限标记、匹配对和排序对能够提供何种解耦保证。",
+    "limitation": "不能把附件的定理直接升级为有稠密目标标签的SIRB必须具有两类配对的普遍定理。",
+    "project_use": "两种有效配对作为互补监督设计；创新依据来自项目实验而非移植可识别性保证。",
+    "source_refs": [
+      "turn150view0",
+      "turn47academia40"
+    ]
+  },
+  {
+    "id": "LC18",
+    "title": "Counterfactual Invariance to Spurious Correlations: Why and How to Pass Stress Tests",
+    "year": 2021,
+    "domain": "反事实不变性",
+    "url": "https://arxiv.org/abs/2106.00545",
+    "access_depth": "全文重点精读：Theorem 3.2、必要不充分说明",
+    "verified_claim": "可观察的不变性条件依赖因果结构；条件独立或边缘独立一般只是反事实不变性的必要条件。",
+    "limitation": "不能不画出本项目因果图就认定某个正则理论正确；也不能用不变输出证明识别心理意图。",
+    "project_use": "在目标、状态、动作和有效可见内容条件下定义画法一致。",
+    "source_refs": [
+      "turn98view6",
+      "turn110view6"
+    ]
+  },
+  {
+    "id": "LC19",
+    "title": "Weakly supervised causal representation learning",
+    "year": 2022,
+    "domain": "因果表示可识别性",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/fa567e2b2c870f8f09a87b6e73370869-Abstract-Conference.html",
+    "access_depth": "全文重点精读：Definitions 1–3、Theorem 1、方法",
+    "verified_claim": "实值因果变量、可逆光滑映射、随机完美原子干预、满支撑与共享未干预噪声等条件下给出可识别性。",
+    "limitation": "换笔可能连带位置、长度、裁剪、尺度多变量变化；离散CC身份与此定理不匹配。",
+    "project_use": "程序生成配对便于标签控制，但只称已知标签下的受控干预增强，不声称已识别因果表征。",
+    "source_refs": [
+      "turn143view0",
+      "turn142search0"
+    ]
+  },
+  {
+    "id": "LC20",
+    "title": "Self-Supervised Learning with Data Augmentations Provably Isolates Content from Style",
+    "year": 2021,
+    "domain": "增强/内容风格解耦",
+    "url": "https://arxiv.org/abs/2106.04619",
+    "access_depth": "primary摘要和会议版本检索；全文体积过大",
+    "verified_claim": "在内容由增强保持、风格可改变等假设下讨论内容识别。",
+    "limitation": "裁剪抹掉目标或证据时内容不再保持；本次未独立核每条定理条件。",
+    "project_use": "有效正对必须共同保留任务信息，不能把任意两块crop都强制相同输出。",
+    "source_refs": [
+      "turn55academia49",
+      "turn55search51"
+    ]
+  },
+  {
+    "id": "LC21",
+    "title": "Domain Generalization using Causal Matching",
+    "year": 2021,
+    "domain": "域泛化/同对象配对",
+    "url": "https://proceedings.mlr.press/v139/mahajan21b.html",
+    "access_depth": "论文HTML相关方法段及PMLR摘要",
+    "verified_claim": "仅按类条件域不变不足；同一对象在不同域的匹配可提供更细约束。",
+    "limitation": "病灶类别相同不代表同一指代对象；对象相同也不保证裁剪保留充分内容。",
+    "project_use": "使用患者、状态、带符号错误组件身份作为正对键，按真实物理坐标对齐。",
+    "source_refs": [
+      "turn150view1",
+      "turn47search33"
+    ]
+  },
+  {
+    "id": "LC22",
+    "title": "Supervised Contrastive Learning",
+    "year": 2020,
+    "domain": "监督对比学习",
+    "url": "https://arxiv.org/abs/2004.11362",
+    "access_depth": "primary摘要与NeurIPS元数据",
+    "verified_claim": "推广对比损失到同类多个正样本，学习有监督表示。",
+    "limitation": "全局语义同类与当前笔scope同对象不是一回事；温度与样本构成仍是设计设置。",
+    "project_use": "作用域头按对象/角色定义对比关系；不要把另一病灶当本笔正例。",
+    "source_refs": [
+      "turn55academia52",
+      "turn55search29"
+    ]
+  },
+  {
+    "id": "LC23",
+    "title": "Debiased Contrastive Learning",
+    "year": 2020,
+    "domain": "对比学习标签污染",
+    "url": "https://arxiv.org/abs/2007.00224",
+    "access_depth": "primary摘要与NeurIPS元数据",
+    "verified_claim": "讨论无标签对比学习中的同类假负例，并作去偏修正。",
+    "limitation": "此文针对假负例，不是直接证明裁剪造成假正例；SIRB的真负例应由任务标签判断。",
+    "project_use": "难例挖掘先核验目标身份；不因外观相似便推断T/P标签错误。",
+    "source_refs": [
+      "turn55academia50",
+      "turn55search26"
+    ]
+  },
+  {
+    "id": "LC24",
+    "title": "DoReMi: Optimizing Data Mixtures Speeds Up Language Model Pretraining",
+    "year": 2023,
+    "domain": "数据混合/超额损失",
+    "url": "https://arxiv.org/abs/2305.10429",
+    "access_depth": "primary摘要、作者项目说明与仓库；不复核全部实验表",
+    "verified_claim": "小代理模型用相对参考模型的超额损失调整数据域混合，再用于大模型训练。",
+    "limitation": "代理语言建模域损失不等于交互轨迹可改进Dice；步长、平滑、组划分仍需选择。",
+    "project_use": "如启用自动配额，按同状态同目标可比较损失更新，保留自然策略覆盖，不叠加多个自动课程。",
+    "source_refs": [
+      "turn55academia48",
+      "turn55search1",
+      "turn55search6"
+    ]
+  },
+  {
+    "id": "LC25",
+    "title": "GradNorm: Gradient Normalization for Adaptive Loss Balancing in Deep Multitask Networks",
+    "year": 2018,
+    "domain": "多任务损失平衡",
+    "url": "https://proceedings.mlr.press/v80/chen18a.html",
+    "access_depth": "全文重点精读：算法、α、目标梯度、权重归一化",
+    "verified_claim": "按共享层梯度幅值和相对学习速度调整任务权重；包含不对称参数α。",
+    "limitation": "梯度同量级不等于方向不冲突；可把某任务权重压得很小，不能维护硬执行规则。",
+    "project_use": "固定主任务地位，只对附加项归一化；明确共享层、零梯度、权重更新及计算成本。",
+    "source_refs": [
+      "turn83view4",
+      "turn96view2"
+    ]
+  },
+  {
+    "id": "LC26",
+    "title": "Gradient Surgery for Multi-Task Learning",
+    "year": 2020,
+    "domain": "多任务梯度冲突",
+    "url": "https://arxiv.org/abs/2001.06782",
+    "access_depth": "primary摘要与NeurIPS论文元数据",
+    "verified_claim": "PCGrad对冲突任务梯度作投影，处理方向冲突。",
+    "limitation": "不是GradNorm的同义词，也不保证逐轮指代不越界；会改变更新方向。",
+    "project_use": "若已有日志证实冲突再考虑，不在效果主组合里同时堆两种平衡器。",
+    "source_refs": [
+      "turn44academia48",
+      "turn44search52"
+    ]
+  },
+  {
+    "id": "LC27",
+    "title": "BoxInst: High-Performance Instance Segmentation with Box Annotations",
+    "year": 2021,
+    "domain": "弱监督分割/边界",
+    "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Tian_BoxInst_High-Performance_Instance_Segmentation_With_Box_Annotations_CVPR_2021_paper.html",
+    "access_depth": "primary摘要；原论文Table 1及段落的重载检索摘录；原站PDF读取受阻",
+    "verified_claim": "框投影加经颜色筛选的同标签正边约束可学习实例掩码；τ=0较τ=0.1引入更多错误正边并显著变差。",
+    "limitation": "不能说只有正边必塌，因为成功方案本身仍使用筛选正边。9.4/30.7来自原论文重载表，未用原站PDF图像二次核对。",
+    "project_use": "稠密标签可直接监督开/闭边；重点防跨边界假正连通，不搬颜色阈值。",
+    "source_refs": [
+      "turn143view2",
+      "turn75search0",
+      "turn140search2"
+    ]
+  },
+  {
+    "id": "LC28",
+    "title": "Label-efficient Segmentation via Affinity Propagation",
+    "year": 2023,
+    "domain": "弱监督分割/图传播",
+    "url": "https://arxiv.org/abs/2310.10533",
+    "access_depth": "HTML全文重点精读：式2–8、Algorithm 1、讨论",
+    "verified_claim": "APro使用树上瓶颈亲和力与全像素归一化加权和生成软伪标签，DSU与lazy propagation降低全局计算复杂度。",
+    "limitation": "不等同于从笔种子取maximin可达度；改为seed-max算子是本项目改造，2D耗时不能直接搬到3D全例。",
+    "project_use": "借边排序、并查集、共享状态图；重新验证种子算子、标签边界和训练梯度。",
+    "source_refs": [
+      "turn151view2",
+      "turn108view3"
+    ]
+  },
+  {
+    "id": "LC29",
+    "title": "Learnable Tree Filter for Structure-preserving Feature Transform",
+    "year": 2019,
+    "domain": "全监督结构建模",
+    "url": "https://arxiv.org/abs/1909.12513",
+    "access_depth": "primary摘要、NeurIPS元数据与作者仓库",
+    "verified_claim": "可学习树滤波以结构保持方式转换特征，应用于有监督语义分割。",
+    "limitation": "不证明本项目传播一定有效，但反驳有稠密标签就没有结构模块用途的普遍说法。",
+    "project_use": "可保留结构算子灵感；不为缺标签而增加伪标签训练流程。",
+    "source_refs": [
+      "turn70academia31",
+      "turn70search3",
+      "turn70search11"
+    ]
+  },
+  {
+    "id": "LC30",
+    "title": "Revisiting 3D Medical Scribble Supervision: Benchmarking Beyond Cardiac Segmentation",
+    "year": 2025,
+    "domain": "3D医学涂鸦监督基准",
+    "url": "https://papers.miccai.org/miccai-2025/0782-Paper4424.html",
+    "access_depth": "全文重点精读：实验设置、Table 3、比较限制",
+    "verified_claim": "七个数据集的所测3D配置中，partial-loss基线平均Dice0.813，full监督0.856；复杂方法不自动优于强基线。",
+    "limitation": "结论限于所测涂鸦监督管线；不等于所有全监督结构正则无效。",
+    "project_use": "优先使用完整GT直接监督；不先搭复杂伪标签系统。",
+    "source_refs": [
+      "turn83view7",
+      "turn110view4",
+      "turn75search8",
+      "turn155view1"
+    ]
+  },
+  {
+    "id": "LC31",
+    "title": "Gated CRF Loss for Weakly Supervised Semantic Image Segmentation",
+    "year": 2019,
+    "domain": "弱监督正则/撤稿状态",
+    "url": "https://arxiv.org/abs/1906.04651",
+    "access_depth": "arXiv摘要、版本历史与撤回说明",
+    "verified_claim": "作者已撤回，说明部分报告数字与陈述有误。",
+    "limitation": "不把其效果数字作为支持方法的证据；仅可作历史机制线索。",
+    "project_use": "保留附件已写的撤回提醒，不计为有效性支持论文。",
+    "source_refs": [
+      "turn108view4",
+      "turn110view3"
+    ]
+  }
+]

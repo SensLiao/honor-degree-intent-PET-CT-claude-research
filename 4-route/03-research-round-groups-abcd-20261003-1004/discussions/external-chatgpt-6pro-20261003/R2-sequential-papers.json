@@ -1,0 +1,408 @@
+[
+  {
+    "id": "R2-01",
+    "title": "Efficient Reductions for Imitation Learning",
+    "year": 2010,
+    "domain": "模仿学习／序贯分布偏移",
+    "url": "https://proceedings.mlr.press/v9/ross10a/ross10a.pdf",
+    "access_depth": "原始PDF；读取引言、§2.1定理、§3前向训练",
+    "verified_claim": "独立同分布式行为克隆忽略策略改变后续状态，最坏累计代价可随时长平方增长；文中通过交互训练与逐步改变策略减轻偏移。",
+    "limitation": "界要求有界任务代价和动作错误定义；不能把任意体素Dice loss直接代入，也不提供SIRB的实际提升幅度。",
+    "project_use": "把旧父模型回放与当前editor+selector访问的状态分开；需要随联合策略刷新训练轨迹。",
+    "source_refs": [
+      "turn31view0"
+    ]
+  },
+  {
+    "id": "R2-02",
+    "title": "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning",
+    "year": 2011,
+    "domain": "DAgger／数据聚合",
+    "url": "https://proceedings.mlr.press/v15/ross11a/ross11a.pdf",
+    "access_depth": "原始PDF；读取状态分布定义、Theorem 2.1/2.2/3.1/3.2、Algorithm 3.1",
+    "verified_claim": "DAgger在当前策略访问的状态查询专家标签，并把新旧数据聚合；性能界中的u是一次偏离后由专家续行的成本差上界。",
+    "limitation": "专家可重标只满足一个条件；无悔优化、surrogate与动作错误的关系、有限样本及u均须处理。深网短续训不自动获得该定理。",
+    "project_use": "恢复Codex round2已写出的理论边界，删掉G文“u约等于最后一笔1.5点”和“条件全部满足”的强断言。",
+    "source_refs": [
+      "turn8view0"
+    ]
+  },
+  {
+    "id": "R2-03",
+    "title": "Search-based Structured Prediction",
+    "year": 2009,
+    "domain": "结构化预测／SEARN",
+    "url": "https://arxiv.org/pdf/0907.0786",
+    "access_depth": "原始PDF；读取§3.2与算法、cost-sensitive构造",
+    "verified_claim": "SEARN用当前搜索策略生成状态，对可选动作构造后续结构损失的成本向量，再训练普通成本敏感分类器。",
+    "limitation": "后续rollout与专家质量影响成本；随机策略混合和理论迭代数不能原样搬到医疗编辑。",
+    "project_use": "有限候选编辑可以用监督式排序/回归学习，不必引入高维强化学习。",
+    "source_refs": [
+      "turn8view2",
+      "turn34view1"
+    ]
+  },
+  {
+    "id": "R2-04",
+    "title": "Reinforcement and Imitation Learning via Interactive No-Regret Learning",
+    "year": 2014,
+    "domain": "AggreVaTe／成本到终点",
+    "url": "https://arxiv.org/pdf/1406.5979",
+    "access_depth": "原始PDF；读取引言、Algorithm 1及其上下文",
+    "verified_claim": "AggreVaTe在学习者roll-in到达的状态尝试动作，再由专家续行估计cost-to-go；不同错误不能只按一律错误计费。",
+    "limitation": "其Q是指定续行策略的结果，不是单步收益；专家续行可能比部署策略更会恢复。",
+    "project_use": "对少量no-op或大误改状态，为proposal与no-op生成相同续行条件下的短期标签。",
+    "source_refs": [
+      "turn31view1",
+      "turn41view0"
+    ]
+  },
+  {
+    "id": "R2-05",
+    "title": "Learning to Search Better than Your Teacher",
+    "year": 2015,
+    "domain": "LOLS／learning to search",
+    "url": "https://proceedings.mlr.press/v37/changb15.pdf",
+    "access_depth": "原始PDF；读取§2、§3.1与Table 1",
+    "verified_claim": "LOLS区分roll-in和roll-out；用参考策略roll-in会让训练状态过于理想；成本由执行候选后续行到终态的损失构成。",
+    "limitation": "其局部最优/遗憾结论依赖所述策略混合和在线学习；不能把两步局部标签称为最优D5。",
+    "project_use": "明确候选的未来由同一个冻结部署策略续行，避免候选之间或no-op之间标签时长不一致。",
+    "source_refs": [
+      "turn8view1",
+      "turn34view0"
+    ]
+  },
+  {
+    "id": "R2-06",
+    "title": "Deeply AggreVaTeD: Differentiable Imitation Learning for Sequential Prediction",
+    "year": 2017,
+    "domain": "深度模仿学习／价值指导",
+    "url": "https://proceedings.mlr.press/v70/sun17d/sun17d.pdf",
+    "access_depth": "原始PDF；读取§1–2、oracle与cost-to-go定义、式(1)",
+    "verified_claim": "训练时可用只在训练阶段存在的oracle，其cost-to-go可通过执行候选再由oracle续行估计；该信息可降低相对从零RL的样本需求。",
+    "limitation": "oracle可能次优；复杂度优势有形式化条件，不能换算成节省几小时或医学Dice提升。",
+    "project_use": "保留已有完整GT的优势，以候选监督和短rollout标签解决决策，不做从零RL。",
+    "source_refs": [
+      "turn31view2",
+      "turn41view1",
+      "turn121view4"
+    ]
+  },
+  {
+    "id": "R2-07",
+    "title": "DART: Noise Injection for Robust Imitation Learning",
+    "year": 2017,
+    "domain": "机器人学习／扰动与恢复",
+    "url": "https://arxiv.org/pdf/1703.09327",
+    "access_depth": "原始PDF；读取§1、§3–4及噪声拟合条件",
+    "verified_claim": "DART给专家动作注入拟合学习者误差的噪声，使示范包含偏离后的恢复行为；任意噪声不自动减小分布偏移。",
+    "limitation": "研究是机器人控制；单纯匹配修回体积分布不保证复现医疗错误的空间形态、桥接与误删。",
+    "project_use": "CPU合成状态只作真实joint-policy回放的补充；扰动形态从TRAIN实际误差估计，不能替代刷新。",
+    "source_refs": [
+      "turn31view3",
+      "turn41view2"
+    ]
+  },
+  {
+    "id": "R2-08",
+    "title": "Scheduled Sampling for Sequence Prediction with Recurrent Neural Networks",
+    "year": 2015,
+    "domain": "序列模型／曝光偏差",
+    "url": "https://arxiv.org/pdf/1506.03099",
+    "access_depth": "原始PDF；读取§2.2–2.4与训练/推理定义",
+    "verified_claim": "训练中逐步从真实前缀切换为模型生成的前缀，目的是减少训练和部署输入差异。",
+    "limitation": "原方法仍用既定目标续写，下一篇指出其统计不一致；不是所有self-generated训练的普遍保证。",
+    "project_use": "每次替换M以后必须重画当前笔并重算T/O/P，不能沿用旧状态标签。",
+    "source_refs": [
+      "turn50view0"
+    ]
+  },
+  {
+    "id": "R2-09",
+    "title": "How (not) to Train Your Generative Model: Scheduled Sampling, Likelihood, Adversary?",
+    "year": 2015,
+    "domain": "统计学习／目标一致性",
+    "url": "https://arxiv.org/pdf/1511.05101",
+    "access_depth": "原始预印本；读取§4式(6)–(8)及结论",
+    "verified_claim": "在所分析设置中，scheduled sampling目标不是一致的；生成上下文改变但配对目标不相应改变时，极限目标可能偏向分解分布。",
+    "limitation": "这是特定序列生成目标的分析，不能概括成“LLM无法做自身状态重标”。",
+    "project_use": "旧G文应删绝对化LLM对比；SIRB有GT可重标有优势，但GKD等LLM也会在自产前缀上查询教师。",
+    "source_refs": [
+      "turn50view1",
+      "turn58view0"
+    ]
+  },
+  {
+    "id": "R2-10",
+    "title": "On-Policy Distillation of Language Models: Learning from Self-Generated Mistakes",
+    "year": 2024,
+    "domain": "LLM／GKD／在线蒸馏",
+    "url": "https://arxiv.org/pdf/2306.13649",
+    "access_depth": "ICLR 2024原始PDF；读取摘要、引言、训练数据分布说明",
+    "verified_claim": "GKD让学生在自身生成序列上获得教师反馈，明确把静态输出数据的偏移与学生自身访问分布联系起来。",
+    "limitation": "教师预测不等于真实GT；语言生成实验不能证明SIRB只刷新一次就足够。",
+    "project_use": "selector更改后也要把其引出的新状态给editor/selector训练，而不是只刷新主网络旧输出。",
+    "source_refs": [
+      "turn56view0"
+    ]
+  },
+  {
+    "id": "R2-11",
+    "title": "Training Language Models to Self-Correct via Reinforcement Learning",
+    "year": 2024,
+    "domain": "LLM／SCoRe／多轮纠错",
+    "url": "https://arxiv.org/pdf/2409.12917",
+    "access_depth": "原始预印本；读取§4–5、Figure 5/6和behavior collapse分析",
+    "verified_claim": "文中区分分布偏移与不再修改的行为坍缩；在自产数据上训练可针对前者，却不自动解决后者。",
+    "limitation": "其行为坍缩是语言回答实验；SIRB第2轮净增益小还可能是大量修回与新错抵消，不能直接归类为“不改”。",
+    "project_use": "同时记录实际编辑量、净收益、no-op和重复目标；不能用一个平均ΔDice诊断坍缩。",
+    "source_refs": [
+      "turn56view1",
+      "turn63view0",
+      "turn63view1"
+    ]
+  },
+  {
+    "id": "R2-12",
+    "title": "Reviving Iterative Training with Mask Guidance for Interactive Segmentation",
+    "year": 2021,
+    "domain": "交互分割／RITM",
+    "url": "https://arxiv.org/pdf/2102.06583",
+    "access_depth": "arXiv原始PDF；读取§3.2–3.3、§5.2与Figure 4",
+    "verified_claim": "迭代生成纠错点击与上一轮mask输入共同改善后续交互稳定性；该实验中迭代点击数5、6曾导致训练坍缩。",
+    "limitation": "其具体点击数现象不是“所有五轮训练不能做”的定律；完整五轮无梯度rollout与五次反向展开是不同计算。",
+    "project_use": "完整五轮生成真实状态，训练可对单状态或相邻两步监督并截断梯度，避免整卷五步BPTT。",
+    "source_refs": [
+      "turn56view2",
+      "turn63view2",
+      "turn63view3"
+    ]
+  },
+  {
+    "id": "R2-13",
+    "title": "Iteratively Trained Interactive Segmentation",
+    "year": 2018,
+    "domain": "交互分割／ITIS",
+    "url": "https://arxiv.org/abs/1805.04398",
+    "access_depth": "原始摘要页；PDF/arXiv和BMVC全文本次取回失败，未核数值",
+    "verified_claim": "原文摘要明确在训练中根据当前预测错误迭代添加点击。",
+    "limitation": "本次仅摘要，不能据此引用具体重置概率、增益或训练细节。",
+    "project_use": "证明“用自己的错生成下一次交互”已有直接交互分割先例，不把这件事单列首创。",
+    "source_refs": [
+      "turn78view2",
+      "turn128view2"
+    ]
+  },
+  {
+    "id": "R2-14",
+    "title": "FocalClick: Towards Practical Interactive Image Segmentation",
+    "year": 2022,
+    "domain": "交互mask修正／局部更新",
+    "url": "https://arxiv.org/abs/2204.02574",
+    "access_depth": "原始摘要页；CVF全文403、arXiv PDF超大小限制，未核细节",
+    "verified_claim": "论文提出Interactive Mask Correction任务和Progressive Merge来修正预先存在的mask。",
+    "limitation": "本次不以二手转述断言其精确合并规则或数值效果。",
+    "project_use": "保留正确既有mask的局部更新已有先例；SIRB要突出当前错误对象的指代范围与状态变化。",
+    "source_refs": [
+      "turn128view3",
+      "turn65search2"
+    ]
+  },
+  {
+    "id": "R2-15",
+    "title": "Iteratively-Refined Interactive 3D Medical Image Segmentation with Multi-Agent Reinforcement Learning",
+    "year": 2020,
+    "domain": "3D医学交互分割／IteR-MRL",
+    "url": "https://arxiv.org/pdf/1911.10334",
+    "access_depth": "2019预印本对应CVPR 2020；读取摘要、引言、§3方法概述",
+    "verified_claim": "把迭代医学分割写为MDP，体素共享策略；状态保留预测概率，奖励使用相邻步骤的交叉熵改善。",
+    "limitation": "它修改的是分割概率且用RL；不等同SIRB二值有符号残差，进步奖励也不是新的SIRB原创概念。",
+    "project_use": "支持多轮和前次置信图有意义；只借进步监督与状态反馈，不搬其高维RL训练。",
+    "source_refs": [
+      "turn78view1",
+      "turn65search0"
+    ]
+  },
+  {
+    "id": "R2-16",
+    "title": "Doubly Robust Policy Evaluation and Learning",
+    "year": 2011,
+    "domain": "离线评估／contextual bandit",
+    "url": "https://icml.cc/2011/papers/554_icmlpaper.pdf",
+    "access_depth": "原始PDF；读取§2.2式(1)、Theorem 1与偏差讨论",
+    "verified_claim": "DR组合奖励回归与行为策略概率校正；偏差取决于两个估计的误差，二者之一正确可提供稳健性。",
+    "limitation": "需要相应支持性和模型条件；不能从确定性0.5日志凭空估计未见动作/后续轨迹。",
+    "project_use": "本项目在已观察TRAIN状态有GT，可直接算所有候选的即时结果，优先完整监督，免去不必要的IPS/DR工程。",
+    "source_refs": [
+      "turn78view3",
+      "turn109view1"
+    ]
+  },
+  {
+    "id": "R2-17",
+    "title": "Doubly Robust Off-policy Value Evaluation for Reinforcement Learning",
+    "year": 2016,
+    "domain": "离线序贯价值评估",
+    "url": "https://proceedings.mlr.press/v48/jiang16.pdf",
+    "access_depth": "原始PDF；读取§2的逐步重要性比与DR说明",
+    "verified_claim": "新策略的序贯评估必须处理行为策略与目标策略差异；逐步重要性比沿轨迹相乘，方差和覆盖问题随之出现。",
+    "limitation": "已有旧轨迹单步oracle扫描不是新策略五轮效果的无偏估计；DR也不是缺失支持的自动补救。",
+    "project_use": "有可用GT模拟器时直接重跑五轮，更便宜也更可信；旧200状态仅保留为诊断。",
+    "source_refs": [
+      "turn78view4",
+      "turn109view2"
+    ]
+  },
+  {
+    "id": "R2-18",
+    "title": "Counterfactual Risk Minimization: Learning from Logged Bandit Feedback",
+    "year": 2015,
+    "domain": "反事实风险／选择偏差",
+    "url": "https://proceedings.mlr.press/v37/swaminathan15.pdf",
+    "access_depth": "原始PDF；读取§3风险估计、方差界与§4超参数说明",
+    "verified_claim": "只凭日志反馈优化策略须处理重要性估计方差；过小行为概率会使方差爆炸，裁剪又引入偏差。",
+    "limitation": "SIRB完整GT能提供observed-state候选全信息，不符合只有被选动作回报的基础bandit设置。",
+    "project_use": "分清“候选即时奖励全可知”与“未来状态没覆盖”两个问题，后者用回放刷新解决。",
+    "source_refs": [
+      "turn78view5",
+      "turn94view2"
+    ]
+  },
+  {
+    "id": "R2-19",
+    "title": "Safe Policy Improvement with Baseline Bootstrapping",
+    "year": 2019,
+    "domain": "保守策略改进／SPIBB",
+    "url": "https://proceedings.mlr.press/v97/laroche19a/laroche19a.pdf",
+    "access_depth": "原始PDF；读取§1–2与高概率改进问题定义",
+    "verified_claim": "在数据不足的状态动作对上回到已有行为策略，保证有特定有限MDP与计数条件。",
+    "limitation": "原文的baseline是收集数据的策略，不是自动等于no-op；不能把“保持mask”叫作有SPIBB安全保证。",
+    "project_use": "把fixed-0.5父执行、stroke-only和no-op都当可对比候选，拒绝武断认定不改总是安全最优。",
+    "source_refs": [
+      "turn93view0"
+    ]
+  },
+  {
+    "id": "R2-20",
+    "title": "Conservative Q-Learning for Offline Reinforcement Learning",
+    "year": 2020,
+    "domain": "离线RL／过高价值估计",
+    "url": "https://arxiv.org/pdf/2006.04779",
+    "access_depth": "原始PDF；读取§2–3的离线动作偏移与保守价值目标",
+    "verified_claim": "策略最大化Q时会选择数据分布外的错误高值动作；CQL以保守Q目标抑制这一问题。",
+    "limitation": "下界是该RL算法条件下的命题，不适用于任意树回归ΔDice；本项目没有理由完整实现CQL。",
+    "project_use": "只借“在被选候选上检查过估”这一风险；增加候选不能默认提高真实收益。",
+    "source_refs": [
+      "turn93view1",
+      "turn128view0"
+    ]
+  },
+  {
+    "id": "R2-21",
+    "title": "Offline Reinforcement Learning with Implicit Q-Learning",
+    "year": 2022,
+    "domain": "离线RL／IQL",
+    "url": "https://arxiv.org/pdf/2110.06169",
+    "access_depth": "原始PDF；读取§4.2 expectile价值学习",
+    "verified_claim": "IQL通过数据内动作的expectile估计改进值函数，避免显式对未观察动作执行最大化。",
+    "limitation": "expectile参数仍是设计选择；其算法解决离线动作支持问题，不能自动修复SIRB状态覆盖或指代错误。",
+    "project_use": "说明有限已验证候选优于盲目扩大动作空间；先做直接GT候选监督而非增加RL。",
+    "source_refs": [
+      "turn93view2",
+      "turn109view4"
+    ]
+  },
+  {
+    "id": "R2-22",
+    "title": "Prioritized Experience Replay",
+    "year": 2016,
+    "domain": "数据回放／优先采样",
+    "url": "https://arxiv.org/pdf/1511.05952",
+    "access_depth": "原始PDF；读取§3.3 stochastic prioritization与§3.4偏差校正",
+    "verified_claim": "贪心只采高误差会降低多样性并追噪声；概率采样保留低优先级样本，非均匀采样还会改变优化分布。",
+    "limitation": "TD-error不等于可实现Dice缺口；将权重学出来或按缺口算也不会自动消除偏置。",
+    "project_use": "先保证每患者/轮次的自然覆盖，再从真实失误补样本；保留抽样概率并明确是否校正到目标分布。",
+    "source_refs": [
+      "turn93view3",
+      "turn109view5",
+      "turn121view2"
+    ]
+  },
+  {
+    "id": "R2-23",
+    "title": "Double Q-learning",
+    "year": 2010,
+    "domain": "最大化偏差／价值选择",
+    "url": "https://papers.neurips.cc/paper_files/paper/2010/file/091d584fced301b442654dd8c23b3fc9-Paper.pdf",
+    "access_depth": "原始PDF；读取§2.1–2.2的最大值偏差与双估计",
+    "verified_claim": "对各自无偏的噪声估计取最大值，会对最大期望值形成乐观偏差；分开选择与估值可减少这一偏差但也可能偏低。",
+    "limitation": "本项目不是Q-learning，不能照搬算法保证；两个树模型或患者交叉拟合也不保证独立误差。",
+    "project_use": "在留出TRAIN患者上评估真正被selector选中的候选，不把所有候选平均MSE当主要成功指标。",
+    "source_refs": [
+      "turn106view0"
+    ]
+  },
+  {
+    "id": "R2-24",
+    "title": "Scaling Laws for Reward Model Overoptimization",
+    "year": 2023,
+    "domain": "LLM／验证器过优化",
+    "url": "https://proceedings.mlr.press/v202/gao23h/gao23h.pdf",
+    "access_depth": "原始PDF；读取摘要、§1、best-of-n结果说明",
+    "verified_claim": "在以另一个奖励模型作gold标准的合成设置里，过度优化proxy reward可降低gold reward；best-of-n也存在这种现象。",
+    "limitation": "gold是合成奖励模型，不是医学标注；其拟合曲线与候选数拐点不能搬到SIRB。",
+    "project_use": "候选去重、保留固定父候选，并记录selected-only过估、后续轨迹伤害，不无限堆候选。",
+    "source_refs": [
+      "turn106view1",
+      "turn119view3",
+      "turn128view1"
+    ]
+  },
+  {
+    "id": "R2-25",
+    "title": "Deep Recurrent Q-Learning for Partially Observable MDPs",
+    "year": 2015,
+    "domain": "部分可观测／历史表示",
+    "url": "https://arxiv.org/pdf/1507.06527",
+    "access_depth": "原始PDF；读取摘要、partial observability与replay update段",
+    "verified_claim": "循环历史表示可缓解观察不完整；原文也说明相同历史长度下循环并无系统性全面优势，随机重置状态可能限制可学时长。",
+    "limitation": "不能据此断言上一轮ΔM已是充分状态，也不能直接套卡尔曼滤波或Markov保证。",
+    "project_use": "保留已有全部真实笔历史，再补上一轮真实执行Δ和上一pT；不把过去模型修改区域当永久正确约束。",
+    "source_refs": [
+      "turn106view2",
+      "turn119view4",
+      "turn121view3"
+    ]
+  },
+  {
+    "id": "R2-26",
+    "title": "Training Verifiers to Solve Math Word Problems",
+    "year": 2021,
+    "domain": "LLM／候选验证",
+    "url": "https://arxiv.org/pdf/2110.14168",
+    "access_depth": "原始PDF；读取§4.2–4.3、§5.1和Figure 6/7说明",
+    "verified_claim": "从生成候选中学习验证器选择有用；该设置候选增至一定数量后性能反降，作者解释为可能找到欺骗验证器的解。",
+    "limitation": "数学正确性标签与医疗范围收益不同；不能搬用100或400候选数，也不能认为小验证器总够用。",
+    "project_use": "把验证器的价值定义为已选动作真实收益和五轮D5，并与候选覆盖上限区分。",
+    "source_refs": [
+      "turn106view3",
+      "turn119view5"
+    ]
+  },
+  {
+    "id": "R2-27",
+    "title": "Policy Invariance Under Reward Transformations: Theory and Application to Reward Shaping",
+    "year": 1999,
+    "domain": "序贯奖励／势函数",
+    "url": "https://ai.stanford.edu/~ang/papers/shaping-icml99.pdf",
+    "access_depth": "作者原始PDF可访问但文本抽取损坏；核作者页与摘要，尝试PDF截图；本次不声称核完证明",
+    "verified_claim": "论文研究势函数差形式的奖励变换及其策略不变性条件。",
+    "limitation": "本项目只能使用自行可直接验证的有限时长望远镜和式；不把训练的soft局部损失说成满足原论文全部条件。",
+    "project_use": "在同一真实轨迹、同一计分规则下ΣΔDice=D5−D0；旧状态的一步监督和带符号条件均值不自动等价优化这个和。",
+    "source_refs": [
+      "turn107search24",
+      "turn107search1",
+      "turn119view0"
+    ]
+  }
+]

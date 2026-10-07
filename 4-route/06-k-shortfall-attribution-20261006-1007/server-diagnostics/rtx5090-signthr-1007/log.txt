@@ -1,0 +1,550 @@
+[sirb-r1-hist] 1/407 psma_0179419e313f7d8c_2019-06-10 -
+[sirb-r1-hist] 2/407 psma_0198cdca94fbb95f_2019-12-28 +
+[sirb-r1-hist] 3/407 psma_0198cdca94fbb95f_2020-05-09 +
+[sirb-r1-hist] 4/407 psma_01a52e26ce5b5e26_2016-11-21 -
+[sirb-r1-hist] 5/407 psma_01a52e26ce5b5e26_2017-04-21 -
+[sirb-r1-hist] 6/407 psma_024e1c55ab49d220_2014-10-04 +
+[sirb-r1-hist] 7/407 psma_02826eb561d6e0c7_2016-11-04 +
+[sirb-r1-hist] 8/407 psma_0429b5db53a944ea_2015-10-19 negative scan, no stroke
+[sirb-r1-hist] 9/407 psma_0429b5db53a944ea_2016-10-29 negative scan, no stroke
+[sirb-r1-hist] 10/407 psma_0429b5db53a944ea_2019-03-11 +
+[sirb-r1-hist] 11/407 psma_05d59d060a8bb7d0_2020-09-07 +
+[sirb-r1-hist] 12/407 psma_079f4e7df73c0f0a_2020-01-18 +
+[sirb-r1-hist] 13/407 psma_0878fdec425f09c3_2019-05-24 +
+[sirb-r1-hist] 14/407 psma_088e6252f80e4ec3_2019-11-09 +
+[sirb-r1-hist] 15/407 psma_08a881912350c103_2014-09-27 +
+[sirb-r1-hist] 16/407 psma_08e4ed1f00357374_2015-01-03 negative scan, no stroke
+[sirb-r1-hist] 17/407 psma_0908b747558fc03e_2019-11-02 +
+[sirb-r1-hist] 18/407 psma_098d83617429637f_2018-06-08 +
+[sirb-r1-hist] 19/407 psma_0a3fdc59c5e700d8_2017-12-31 +
+[sirb-r1-hist] 20/407 psma_0a52cb5b45b821f7_2015-09-18 -
+[sirb-r1-hist] 21/407 psma_0a52cb5b45b821f7_2016-02-19 -
+[sirb-r1-hist] 22/407 psma_0bf6ac34fa0c97c0_2016-12-23 +
+[sirb-r1-hist] 23/407 psma_0bf6ac34fa0c97c0_2017-07-07 +
+[sirb-r1-hist] 24/407 psma_0bf6ac34fa0c97c0_2019-02-09 +
+[sirb-r1-hist] 25/407 psma_0d0f9fdf1578eaed_2021-08-28 +
+[sirb-r1-hist] 26/407 psma_0d0f9fdf1578eaed_2022-02-05 -
+[sirb-r1-hist] 27/407 psma_0d2d8c9b29ea6861_2020-04-25 +
+[sirb-r1-hist] 28/407 psma_0ec0e718244b2a79_2015-06-19 -
+[sirb-r1-hist] 29/407 psma_0ec0e718244b2a79_2016-07-01 +
+[sirb-r1-hist] 30/407 psma_0ec0e718244b2a79_2018-09-28 +
+[sirb-r1-hist] 31/407 psma_0ef9e2afd72f7483_2019-10-04 +
+[sirb-r1-hist] 32/407 psma_0f434739488a6988_2017-11-03 -
+[sirb-r1-hist] 33/407 psma_0fcbcd7dc52d5b82_2020-02-24 -
+[sirb-r1-hist] 34/407 psma_0fcbcd7dc52d5b82_2020-06-19 +
+[sirb-r1-hist] 35/407 psma_1160f053324a19bd_2020-01-17 -
+[sirb-r1-hist] 36/407 psma_12191f0bacb7e563_2016-02-14 -
+[sirb-r1-hist] 37/407 psma_12191f0bacb7e563_2017-03-10 -
+[sirb-r1-hist] 38/407 psma_16660da87b2fe805_2020-10-10 +
+[sirb-r1-hist] 39/407 psma_1983760ba540893d_2014-09-21 +
+[sirb-r1-hist] 40/407 psma_1983760ba540893d_2015-02-20 +
+[sirb-r1-hist] 41/407 psma_1cd68411f227b3c4_2021-01-15 +
+[sirb-r1-hist] 42/407 psma_1d7ce562612262cb_2019-08-09 -
+[sirb-r1-hist] 43/407 psma_1d7ce562612262cb_2019-11-01 -
+[sirb-r1-hist] 44/407 psma_206e0f3bf8cb8ed3_2015-12-25 negative scan, no stroke
+[sirb-r1-hist] 45/407 psma_206e0f3bf8cb8ed3_2018-03-09 -
+[sirb-r1-hist] 46/407 psma_206e0f3bf8cb8ed3_2019-04-19 -
+[sirb-r1-hist] 47/407 psma_209536ec8c0b1d5e_2019-11-04 +
+[sirb-r1-hist] 48/407 psma_2109bda82957a5b7_2016-05-16 +
+[sirb-r1-hist] 49/407 psma_2109bda82957a5b7_2020-09-11 +
+[sirb-r1-hist] 50/407 psma_24f62f21c04402ec_2014-11-23 +
+[sirb-r1-hist] 51/407 psma_24f62f21c04402ec_2015-04-26 -
+[sirb-r1-hist] 52/407 psma_25c60014bb1469d3_2022-05-14 +
+[sirb-r1-hist] 53/407 psma_25c60014bb1469d3_2022-09-16 +
+[sirb-r1-hist] 54/407 psma_26154a761c528fdd_2016-10-22 -
+[sirb-r1-hist] 55/407 psma_26154a761c528fdd_2017-04-08 -
+[sirb-r1-hist] 56/407 psma_26d1990d3a90ce16_2016-12-25 -
+[sirb-r1-hist] 57/407 psma_2740fa8c813cd29c_2014-04-24 +
+[sirb-r1-hist] 58/407 psma_2740fa8c813cd29c_2015-01-02 +
+[sirb-r1-hist] 59/407 psma_2740fa8c813cd29c_2017-09-01 negative scan, no stroke
+[sirb-r1-hist] 60/407 psma_27ef75904d7f2fc6_2019-04-13 -
+[sirb-r1-hist] 61/407 psma_28f9ecc106933531_2015-04-27 -
+[sirb-r1-hist] 62/407 psma_28f9ecc106933531_2017-06-12 +
+[sirb-r1-hist] 63/407 psma_28f9ecc106933531_2017-10-28 negative scan, no stroke
+[sirb-r1-hist] 64/407 psma_28f9ecc106933531_2019-06-15 negative scan, no stroke
+[sirb-r1-hist] 65/407 psma_2a630b4c5627e34d_2017-08-21 +
+[sirb-r1-hist] 66/407 psma_2a630b4c5627e34d_2019-10-19 negative scan, no stroke
+[sirb-r1-hist] 67/407 psma_2a630b4c5627e34d_2020-08-28 +
+[sirb-r1-hist] 68/407 psma_2c2358f5005d1a3c_2019-06-21 +
+[sirb-r1-hist] 69/407 psma_2d05f0b0476364c0_2021-09-11 +
+[sirb-r1-hist] 70/407 psma_2d05f0b0476364c0_2021-12-24 +
+[sirb-r1-hist] 71/407 psma_2d1c74d01f72de21_2019-11-04 +
+[sirb-r1-hist] 72/407 psma_2d635a895be772d5_2019-03-16 -
+[sirb-r1-hist] 73/407 psma_2d635a895be772d5_2019-08-10 +
+[sirb-r1-hist] 74/407 psma_2d635a895be772d5_2020-01-20 -
+[sirb-r1-hist] 75/407 psma_2e5119d4ac37d41d_2016-08-05 +
+[sirb-r1-hist] 76/407 psma_2e53e6536753bac6_2017-08-12 -
+[sirb-r1-hist] 77/407 psma_304ecd79e68f0116_2016-09-16 +
+[sirb-r1-hist] 78/407 psma_30fbb9471537bfb0_2014-06-23 -
+[sirb-r1-hist] 79/407 psma_310d8ea58fb29cb1_2020-07-13 +
+[sirb-r1-hist] 80/407 psma_313bce3639064450_2018-09-28 +
+[sirb-r1-hist] 81/407 psma_313ff961c59ee5dc_2015-11-13 -
+[sirb-r1-hist] 82/407 psma_313ff961c59ee5dc_2016-04-22 +
+[sirb-r1-hist] 83/407 psma_32e70fdbf4468564_2020-06-06 +
+[sirb-r1-hist] 84/407 psma_348a4dbda705c573_2017-09-02 +
+[sirb-r1-hist] 85/407 psma_348a4dbda705c573_2018-04-13 +
+[sirb-r1-hist] 86/407 psma_3561d942a56d7096_2017-02-04 +
+[sirb-r1-hist] 87/407 psma_35650dda11e850e6_2017-07-22 +
+[sirb-r1-hist] 88/407 psma_35650dda11e850e6_2018-01-19 +
+[sirb-r1-hist] 89/407 psma_35fd083826d0b23d_2018-01-01 +
+[sirb-r1-hist] 90/407 psma_35fd083826d0b23d_2018-03-23 +
+[sirb-r1-hist] 91/407 psma_362c6e38b303c924_2020-10-26 -
+[sirb-r1-hist] 92/407 psma_367adbcbbe2108d5_2019-09-27 +
+[sirb-r1-hist] 93/407 psma_36c6b5674abe9d32_2018-08-31 +
+[sirb-r1-hist] 94/407 psma_36fc7d8bd1286adb_2022-02-26 +
+[sirb-r1-hist] 95/407 psma_36fc7d8bd1286adb_2022-07-02 -
+[sirb-r1-hist] 96/407 psma_37328a98c70706f3_2020-11-06 -
+[sirb-r1-hist] 97/407 psma_3952dd30abc947de_2014-10-20 +
+[sirb-r1-hist] 98/407 psma_3a15b9fe3b4346f9_2018-01-14 +
+[sirb-r1-hist] 99/407 psma_3f09802c9c2821e1_2016-07-16 -
+[sirb-r1-hist] 100/407 psma_416d9ff3295dafcb_2020-02-08 +
+[sirb-r1-hist] 101/407 psma_43324b58ec80a0a5_2018-07-23 +
+[sirb-r1-hist] 102/407 psma_438bb68482a3e054_2018-04-23 -
+[sirb-r1-hist] 103/407 psma_438bb68482a3e054_2018-10-13 +
+[sirb-r1-hist] 104/407 psma_44b93bfe059935a1_2014-06-07 +
+[sirb-r1-hist] 105/407 psma_46bee58f9758552a_2014-02-21 +
+[sirb-r1-hist] 106/407 psma_46bee58f9758552a_2020-02-01 negative scan, no stroke
+[sirb-r1-hist] 107/407 psma_46cf1282a7648712_2017-08-06 +
+[sirb-r1-hist] 108/407 psma_46cf1282a7648712_2019-04-19 -
+[sirb-r1-hist] 109/407 psma_46fcda50b67c2523_2020-11-21 -
+[sirb-r1-hist] 110/407 psma_46fcda50b67c2523_2021-03-06 -
+[sirb-r1-hist] 111/407 psma_4aa52e14d0947256_2015-07-26 +
+[sirb-r1-hist] 112/407 psma_4aa52e14d0947256_2017-09-16 -
+[sirb-r1-hist] 113/407 psma_4b0580560f13db7a_2016-01-17 +
+[sirb-r1-hist] 114/407 psma_4dc8b85ba2c1e037_2019-06-22 +
+[sirb-r1-hist] 115/407 psma_4dee75d0657f3c47_2015-11-05 +
+[sirb-r1-hist] 116/407 psma_4f8549d7a1cb31b0_2016-06-03 -
+[sirb-r1-hist] 117/407 psma_4fc4664327ba8d0b_2014-06-06 +
+[sirb-r1-hist] 118/407 psma_4fc4664327ba8d0b_2014-12-19 +
+[sirb-r1-hist] 119/407 psma_5095b111f4d06a37_2017-02-03 -
+[sirb-r1-hist] 120/407 psma_527f1b3f98ecf49c_2015-11-23 +
+[sirb-r1-hist] 121/407 psma_52ccf5db1b96158d_2020-10-30 negative scan, no stroke
+[sirb-r1-hist] 122/407 psma_53d59c767e28c8b9_2017-06-11 +
+[sirb-r1-hist] 123/407 psma_53d9705e1ddc8d81_2020-12-26 -
+[sirb-r1-hist] 124/407 psma_54d1613921a2d2ae_2021-02-01 -
+[sirb-r1-hist] 125/407 psma_54d1613921a2d2ae_2021-06-12 -
+[sirb-r1-hist] 126/407 psma_560e93923a626c54_2015-06-13 -
+[sirb-r1-hist] 127/407 psma_5652dbb3d9cf179d_2017-04-07 +
+[sirb-r1-hist] 128/407 psma_56a3a3e55545e167_2018-06-29 -
+[sirb-r1-hist] 129/407 psma_56a3a3e55545e167_2018-11-03 +
+[sirb-r1-hist] 130/407 psma_56e3d8d37a3d3958_2017-03-25 +
+[sirb-r1-hist] 131/407 psma_56e540714db4775a_2020-03-27 +
+[sirb-r1-hist] 132/407 psma_572ba4a3592c01f2_2016-02-13 +
+[sirb-r1-hist] 133/407 psma_575634d308f78dba_2015-12-20 +
+[sirb-r1-hist] 134/407 psma_576326cfba8460b8_2016-02-12 -
+[sirb-r1-hist] 135/407 psma_579d2afa0c4eec3e_2018-07-16 +
+[sirb-r1-hist] 136/407 psma_57a5841a095d55d1_2018-06-30 +
+[sirb-r1-hist] 137/407 psma_57cf81e8bb97b452_2020-03-06 -
+[sirb-r1-hist] 138/407 psma_57cf81e8bb97b452_2020-08-28 negative scan, no stroke
+[sirb-r1-hist] 139/407 psma_58d3055bba19d76b_2021-01-15 negative scan, no stroke
+[sirb-r1-hist] 140/407 psma_5907433e52a030d1_2016-05-29 -
+[sirb-r1-hist] 141/407 psma_5b644577e75785bc_2018-08-10 +
+[sirb-r1-hist] 142/407 psma_5b644577e75785bc_2019-02-11 -
+[sirb-r1-hist] 143/407 psma_5c0552e946050837_2019-11-22 +
+[sirb-r1-hist] 144/407 psma_5eb9920ce854b7a2_2019-03-29 +
+[sirb-r1-hist] 145/407 psma_614aab262dcced0a_2015-10-16 +
+[sirb-r1-hist] 146/407 psma_614aab262dcced0a_2016-02-13 +
+[sirb-r1-hist] 147/407 psma_620ec005ccb1430d_2015-02-05 -
+[sirb-r1-hist] 148/407 psma_64a9ae45dc1a48f1_2018-11-12 +
+[sirb-r1-hist] 149/407 psma_64a9ae45dc1a48f1_2019-04-27 -
+[sirb-r1-hist] 150/407 psma_652cdc5859bf667d_2016-03-26 +
+[sirb-r1-hist] 151/407 psma_652cdc5859bf667d_2017-04-28 +
+[sirb-r1-hist] 152/407 psma_6786badc43e8c5cc_2019-07-08 -
+[sirb-r1-hist] 153/407 psma_698f9e802d84253c_2014-08-03 +
+[sirb-r1-hist] 154/407 psma_6a3cdd0e7ed83b6c_2014-10-18 +
+[sirb-r1-hist] 155/407 psma_6b41c21073fb3fc9_2018-03-19 -
+[sirb-r1-hist] 156/407 psma_6d5c002d629eb131_2022-01-22 +
+[sirb-r1-hist] 157/407 psma_6d5c002d629eb131_2022-06-04 -
+[sirb-r1-hist] 158/407 psma_6eeaaf6c168d8656_2015-04-12 -
+[sirb-r1-hist] 159/407 psma_6ef5e5c442e4ce63_2018-01-27 -
+[sirb-r1-hist] 160/407 psma_6ef5e5c442e4ce63_2018-09-01 +
+[sirb-r1-hist] 161/407 psma_6f538887f996bfaf_2022-01-15 +
+[sirb-r1-hist] 162/407 psma_6f538887f996bfaf_2022-05-14 +
+[sirb-r1-hist] 163/407 psma_709da54824f16bc1_2016-07-02 negative scan, no stroke
+[sirb-r1-hist] 164/407 psma_709da54824f16bc1_2018-02-19 -
+[sirb-r1-hist] 165/407 psma_72fd83ed9edea418_2020-05-01 +
+[sirb-r1-hist] 166/407 psma_751d8b9d08e7859c_2021-11-20 +
+[sirb-r1-hist] 167/407 psma_751d8b9d08e7859c_2022-03-12 +
+[sirb-r1-hist] 168/407 psma_75b021ca6b8b39a0_2015-01-04 +
+[sirb-r1-hist] 169/407 psma_75c11a592f49e915_2018-12-17 -
+[sirb-r1-hist] 170/407 psma_7731a871ce8b4642_2014-11-27 -
+[sirb-r1-hist] 171/407 psma_7731a871ce8b4642_2015-05-17 -
+[sirb-r1-hist] 172/407 psma_78e0f5526687a2a7_2020-02-15 +
+[sirb-r1-hist] 173/407 psma_798b3279d6980a3b_2018-11-19 +
+[sirb-r1-hist] 174/407 psma_798b3279d6980a3b_2019-03-04 +
+[sirb-r1-hist] 175/407 psma_798b3279d6980a3b_2019-05-31 negative scan, no stroke
+[sirb-r1-hist] 176/407 psma_798b3279d6980a3b_2019-08-02 negative scan, no stroke
+[sirb-r1-hist] 177/407 psma_798b3279d6980a3b_2019-11-01 negative scan, no stroke
+[sirb-r1-hist] 178/407 psma_799e088191559ae6_2017-08-05 -
+[sirb-r1-hist] 179/407 psma_799e088191559ae6_2017-12-30 -
+[sirb-r1-hist] 180/407 psma_7a522636008cf840_2020-07-31 +
+[sirb-r1-hist] 181/407 psma_7a522636008cf840_2020-12-18 -
+[sirb-r1-hist] 182/407 psma_7acbfeb3410596a9_2018-12-08 -
+[sirb-r1-hist] 183/407 psma_7b8b5ff85fd13b54_2021-01-15 +
+[sirb-r1-hist] 184/407 psma_7b925af5d11d56e0_2017-08-19 +
+[sirb-r1-hist] 185/407 psma_7ba5d19cccb26c0e_2018-09-10 +
+[sirb-r1-hist] 186/407 psma_7ba5d19cccb26c0e_2020-02-10 +
+[sirb-r1-hist] 187/407 psma_7bf1123c2e71a6f9_2018-02-09 +
+[sirb-r1-hist] 188/407 psma_7e25beff54698eb8_2021-02-06 +
+[sirb-r1-hist] 189/407 psma_7e25beff54698eb8_2021-06-21 -
+[sirb-r1-hist] 190/407 psma_7f274800860fcbfa_2015-06-29 -
+[sirb-r1-hist] 191/407 psma_7f274800860fcbfa_2015-11-21 -
+[sirb-r1-hist] 192/407 psma_7fa68d5b0861c0b4_2014-10-30 +
+[sirb-r1-hist] 193/407 psma_80a782c4b998fefd_2020-07-31 -
+[sirb-r1-hist] 194/407 psma_80b075b681bffb02_2017-01-30 +
+[sirb-r1-hist] 195/407 psma_80b075b681bffb02_2017-07-14 +
+[sirb-r1-hist] 196/407 psma_81b53d3911e09543_2020-10-16 +
+[sirb-r1-hist] 197/407 psma_81b53d3911e09543_2021-03-13 -
+[sirb-r1-hist] 198/407 psma_834460a6d4330410_2020-02-22 -
+[sirb-r1-hist] 199/407 psma_838c9340e85ca431_2015-05-31 +
+[sirb-r1-hist] 200/407 psma_838c9340e85ca431_2015-09-11 -
+[sirb-r1-hist] 201/407 psma_838c9340e85ca431_2016-03-26 negative scan, no stroke
+[sirb-r1-hist] 202/407 psma_838c9340e85ca431_2019-08-31 negative scan, no stroke
+[sirb-r1-hist] 203/407 psma_838c9340e85ca431_2020-02-22 negative scan, no stroke
+[sirb-r1-hist] 204/407 psma_838c9340e85ca431_2020-05-23 negative scan, no stroke
+[sirb-r1-hist] 205/407 psma_83df8050261c44fd_2021-03-19 -
+[sirb-r1-hist] 206/407 psma_83df8050261c44fd_2021-07-10 -
+[sirb-r1-hist] 207/407 psma_88c7a13c98fc9ede_2020-04-27 +
+[sirb-r1-hist] 208/407 psma_8a33927f6bd135d0_2015-04-12 +
+[sirb-r1-hist] 209/407 psma_8a5734c2659a5e0a_2020-06-29 +
+[sirb-r1-hist] 210/407 psma_8b3f81670b02a757_2020-11-02 +
+[sirb-r1-hist] 211/407 psma_8e7619b9167225fb_2016-06-17 +
+[sirb-r1-hist] 212/407 psma_8e7619b9167225fb_2019-03-30 +
+[sirb-r1-hist] 213/407 psma_8e7619b9167225fb_2020-09-28 +
+[sirb-r1-hist] 214/407 psma_8f09d57384f77ce6_2017-07-31 +
+[sirb-r1-hist] 215/407 psma_8f948062b06f8555_2018-01-07 -
+[sirb-r1-hist] 216/407 psma_8fa31ac9e70376a4_2020-12-18 +
+[sirb-r1-hist] 217/407 psma_907f1345abedf4fa_2014-06-28 +
+[sirb-r1-hist] 218/407 psma_907f1345abedf4fa_2020-11-21 +
+[sirb-r1-hist] 219/407 psma_90b7bff35b17cdd3_2019-03-22 +
+[sirb-r1-hist] 220/407 psma_940a0f71bdde52c5_2019-02-09 +
+[sirb-r1-hist] 221/407 psma_9421cee77b2c2953_2019-10-04 -
+[sirb-r1-hist] 222/407 psma_95a4d87af2bc56f7_2019-03-11 +
+[sirb-r1-hist] 223/407 psma_95b833d46f153cd2_2017-11-18 +
+[sirb-r1-hist] 224/407 psma_95b833d46f153cd2_2018-04-16 +
+[sirb-r1-hist] 225/407 psma_963334ffb5b4855b_2019-04-19 +
+[sirb-r1-hist] 226/407 psma_9724be80190a0274_2016-05-27 +
+[sirb-r1-hist] 227/407 psma_9724be80190a0274_2018-03-10 negative scan, no stroke
+[sirb-r1-hist] 228/407 psma_99278c16213e2429_2015-12-19 +
+[sirb-r1-hist] 229/407 psma_99278c16213e2429_2018-06-23 +
+[sirb-r1-hist] 230/407 psma_995fbaec49f131ce_2016-05-07 -
+[sirb-r1-hist] 231/407 psma_995fbaec49f131ce_2016-11-12 -
+[sirb-r1-hist] 232/407 psma_9b733a4106c0fe37_2016-10-14 +
+[sirb-r1-hist] 233/407 psma_9b733a4106c0fe37_2019-11-22 negative scan, no stroke
+[sirb-r1-hist] 234/407 psma_9b7dfd431faf4067_2019-07-27 -
+[sirb-r1-hist] 235/407 psma_9baf4ca6321e66ad_2016-12-16 +
+[sirb-r1-hist] 236/407 psma_9c07b999c0e09e36_2020-08-08 +
+[sirb-r1-hist] 237/407 psma_9ca760d210e20f46_2015-08-07 -
+[sirb-r1-hist] 238/407 psma_9e37770ded7defaa_2014-12-13 +
+[sirb-r1-hist] 239/407 psma_9e37770ded7defaa_2015-06-20 +
+[sirb-r1-hist] 240/407 psma_9e37770ded7defaa_2015-11-06 negative scan, no stroke
+[sirb-r1-hist] 241/407 psma_9ef8f0685c79f857_2016-04-24 +
+[sirb-r1-hist] 242/407 psma_9ef8f0685c79f857_2016-08-12 +
+[sirb-r1-hist] 243/407 psma_9ef8f0685c79f857_2016-11-21 +
+[sirb-r1-hist] 244/407 psma_9ef8f0685c79f857_2018-07-28 negative scan, no stroke
+[sirb-r1-hist] 245/407 psma_9ef8f0685c79f857_2018-11-17 -
+[sirb-r1-hist] 246/407 psma_9ef8f0685c79f857_2019-06-21 +
+[sirb-r1-hist] 247/407 psma_9ef8f0685c79f857_2020-02-17 +
+[sirb-r1-hist] 248/407 psma_a13cf6d4d92a3d80_2020-03-27 +
+[sirb-r1-hist] 249/407 psma_a17bb16aa6d2f6fa_2020-10-31 +
+[sirb-r1-hist] 250/407 psma_a2e474cdd4d3c64a_2019-12-27 +
+[sirb-r1-hist] 251/407 psma_a2ff166a8aad6c9f_2018-03-01 +
+[sirb-r1-hist] 252/407 psma_a3c5675abaec3e1d_2017-08-14 +
+[sirb-r1-hist] 253/407 psma_a3d54951d96f5563_2016-04-30 -
+[sirb-r1-hist] 254/407 psma_a3d54951d96f5563_2016-10-24 negative scan, no stroke
+[sirb-r1-hist] 255/407 psma_a4320e00716c20b4_2017-01-13 -
+[sirb-r1-hist] 256/407 psma_a5454c6c5eda4112_2020-10-16 -
+[sirb-r1-hist] 257/407 psma_a5454c6c5eda4112_2021-03-06 +
+[sirb-r1-hist] 258/407 psma_a63d490ca591ed15_2019-02-09 +
+[sirb-r1-hist] 259/407 psma_a6509098ad09ada5_2016-05-28 -
+[sirb-r1-hist] 260/407 psma_a672c1e6a35c21b8_2019-07-20 -
+[sirb-r1-hist] 261/407 psma_a96814a79aa26c8f_2022-09-23 +
+[sirb-r1-hist] 262/407 psma_ab12d866a44fe389_2020-09-04 +
+[sirb-r1-hist] 263/407 psma_ad7bc1aa5b586751_2018-02-04 -
+[sirb-r1-hist] 264/407 psma_ad7bc1aa5b586751_2018-09-14 -
+[sirb-r1-hist] 265/407 psma_ada3f9f15facc495_2019-01-18 negative scan, no stroke
+[sirb-r1-hist] 266/407 psma_af881eca29658895_2020-01-18 -
+[sirb-r1-hist] 267/407 psma_af881eca29658895_2020-05-09 -
+[sirb-r1-hist] 268/407 psma_b165b9d5698b0532_2020-11-28 +
+[sirb-r1-hist] 269/407 psma_b165b9d5698b0532_2021-04-02 +
+[sirb-r1-hist] 270/407 psma_b1afbd871047f751_2019-03-22 +
+[sirb-r1-hist] 271/407 psma_b25df290eb7a867b_2019-09-23 -
+[sirb-r1-hist] 272/407 psma_b3f377bd2b873391_2021-08-07 +
+[sirb-r1-hist] 273/407 psma_b3f377bd2b873391_2021-12-25 +
+[sirb-r1-hist] 274/407 psma_b5a4134e681683c0_2018-10-05 -
+[sirb-r1-hist] 275/407 psma_b5a4134e681683c0_2018-12-28 +
+[sirb-r1-hist] 276/407 psma_b5e009b02fb0a848_2020-11-16 -
+[sirb-r1-hist] 277/407 psma_b5e009b02fb0a848_2021-03-01 -
+[sirb-r1-hist] 278/407 psma_b8b992413f5d80c3_2020-05-15 +
+[sirb-r1-hist] 279/407 psma_b8e8c96ded38dc79_2015-05-15 -
+[sirb-r1-hist] 280/407 psma_b8e8c96ded38dc79_2015-10-04 +
+[sirb-r1-hist] 281/407 psma_ba5034e13e4c31f5_2019-07-05 +
+[sirb-r1-hist] 282/407 psma_ba5034e13e4c31f5_2019-10-14 +
+[sirb-r1-hist] 283/407 psma_bc63defabeea583e_2016-11-27 -
+[sirb-r1-hist] 284/407 psma_bc63defabeea583e_2017-04-22 +
+[sirb-r1-hist] 285/407 psma_bc6df739c0290965_2020-11-28 negative scan, no stroke
+[sirb-r1-hist] 286/407 psma_bcd20c8fcb92d9cf_2019-05-11 +
+[sirb-r1-hist] 287/407 psma_be783bd2bf313946_2017-05-05 -
+[sirb-r1-hist] 288/407 psma_be783bd2bf313946_2017-10-28 +
+[sirb-r1-hist] 289/407 psma_c0b18f90b401d6d6_2019-11-23 +
+[sirb-r1-hist] 290/407 psma_c0b18f90b401d6d6_2020-05-09 +
+[sirb-r1-hist] 291/407 psma_c0b18f90b401d6d6_2020-08-14 +
+[sirb-r1-hist] 292/407 psma_c0b18f90b401d6d6_2020-12-14 +
+[sirb-r1-hist] 293/407 psma_c1373c3c46c36014_2020-05-29 +
+[sirb-r1-hist] 294/407 psma_c1aac5281cd6dedd_2018-03-23 negative scan, no stroke
+[sirb-r1-hist] 295/407 psma_c265ec063df5602b_2019-12-27 -
+[sirb-r1-hist] 296/407 psma_c2c49ffc29ebf6fc_2019-09-20 +
+[sirb-r1-hist] 297/407 psma_c408e60627628585_2021-11-19 +
+[sirb-r1-hist] 298/407 psma_c408e60627628585_2022-04-09 -
+[sirb-r1-hist] 299/407 psma_c67186371fb31240_2019-08-30 +
+[sirb-r1-hist] 300/407 psma_c6c8bf45106bd40a_2019-07-08 +
+[sirb-r1-hist] 301/407 psma_c76a99febb4bf130_2018-03-19 +
+[sirb-r1-hist] 302/407 psma_c76a99febb4bf130_2019-10-25 +
+[sirb-r1-hist] 303/407 psma_c81bde6455d07a32_2020-06-22 +
+[sirb-r1-hist] 304/407 psma_c81bde6455d07a32_2020-12-19 -
+[sirb-r1-hist] 305/407 psma_c878220db97c05e1_2020-02-08 -
+[sirb-r1-hist] 306/407 psma_ca36bd95b63289d0_2020-05-15 -
+[sirb-r1-hist] 307/407 psma_cacf91c8fffe43de_2017-02-13 +
+[sirb-r1-hist] 308/407 psma_ce956153f9464e26_2016-05-21 -
+[sirb-r1-hist] 309/407 psma_ce956153f9464e26_2019-11-02 -
+[sirb-r1-hist] 310/407 psma_cebb76f71890f8e9_2016-01-02 -
+[sirb-r1-hist] 311/407 psma_d0d4b360c767b075_2019-07-29 +
+[sirb-r1-hist] 312/407 psma_d0f877ac02b84ee6_2014-10-30 -
+[sirb-r1-hist] 313/407 psma_d0f877ac02b84ee6_2015-10-17 +
+[sirb-r1-hist] 314/407 psma_d221fa198555e92e_2017-10-22 +
+[sirb-r1-hist] 315/407 psma_d221fa198555e92e_2018-02-10 +
+[sirb-r1-hist] 316/407 psma_d44c406a6988dbd6_2018-07-13 -
+[sirb-r1-hist] 317/407 psma_d466e2f1c0351c67_2019-02-22 -
+[sirb-r1-hist] 318/407 psma_d4a0f545789b1bbb_2016-03-18 +
+[sirb-r1-hist] 319/407 psma_d4a0f545789b1bbb_2016-11-26 +
+[sirb-r1-hist] 320/407 psma_d5b636ea4da7638b_2019-03-15 +
+[sirb-r1-hist] 321/407 psma_d5b636ea4da7638b_2019-09-27 negative scan, no stroke
+[sirb-r1-hist] 322/407 psma_d5b636ea4da7638b_2020-05-18 negative scan, no stroke
+[sirb-r1-hist] 323/407 psma_d7032f7f9ec70157_2018-10-15 -
+[sirb-r1-hist] 324/407 psma_d854b5837ca97440_2018-02-04 -
+[sirb-r1-hist] 325/407 psma_d854b5837ca97440_2018-06-23 +
+[sirb-r1-hist] 326/407 psma_d98ce837bcc6fb20_2016-06-20 +
+[sirb-r1-hist] 327/407 psma_d98ce837bcc6fb20_2019-12-13 +
+[sirb-r1-hist] 328/407 psma_da0ed9952645bbac_2016-08-06 +
+[sirb-r1-hist] 329/407 psma_daf98725797ce51a_2016-07-29 +
+[sirb-r1-hist] 330/407 psma_daf98725797ce51a_2016-12-17 +
+[sirb-r1-hist] 331/407 psma_db3c36bf584eab12_2020-07-11 +
+[sirb-r1-hist] 332/407 psma_dc21e961e5341e6b_2017-06-30 -
+[sirb-r1-hist] 333/407 psma_dc798b834a9962b6_2018-10-29 -
+[sirb-r1-hist] 334/407 psma_dc798b834a9962b6_2019-03-09 +
+[sirb-r1-hist] 335/407 psma_dc8bb6a76a0a72cd_2016-10-31 +
+[sirb-r1-hist] 336/407 psma_dca89b53a183f8e5_2018-02-26 -
+[sirb-r1-hist] 337/407 psma_ddb74fb0f8a8478e_2015-08-07 +
+[sirb-r1-hist] 338/407 psma_ddd1dd20149915fb_2019-05-27 +
+[sirb-r1-hist] 339/407 psma_ddd1dd20149915fb_2019-10-28 -
+[sirb-r1-hist] 340/407 psma_ddf308f3025bd9c8_2018-06-11 -
+[sirb-r1-hist] 341/407 psma_ddf308f3025bd9c8_2018-11-16 -
+[sirb-r1-hist] 342/407 psma_de1f4300eda3bef3_2016-01-31 +
+[sirb-r1-hist] 343/407 psma_de1f4300eda3bef3_2017-04-23 -
+[sirb-r1-hist] 344/407 psma_ded97a4f2275ba94_2018-04-14 -
+[sirb-r1-hist] 345/407 psma_ded97a4f2275ba94_2018-11-09 -
+[sirb-r1-hist] 346/407 psma_dee1112c5d1380f1_2018-10-06 +
+[sirb-r1-hist] 347/407 psma_dee1112c5d1380f1_2019-02-25 +
+[sirb-r1-hist] 348/407 psma_e0cfd612e10c3ff7_2017-09-28 +
+[sirb-r1-hist] 349/407 psma_e1eef1b5e130ded8_2016-07-09 +
+[sirb-r1-hist] 350/407 psma_e21d5b67b48f750d_2014-10-13 +
+[sirb-r1-hist] 351/407 psma_e2b34467658ec579_2017-06-09 +
+[sirb-r1-hist] 352/407 psma_e3c355d21f90cfe7_2019-12-16 +
+[sirb-r1-hist] 353/407 psma_e3c355d21f90cfe7_2020-03-23 -
+[sirb-r1-hist] 354/407 psma_e3c4639102fe5c51_2020-09-25 +
+[sirb-r1-hist] 355/407 psma_e3c5b97cc53ac899_2016-12-30 +
+[sirb-r1-hist] 356/407 psma_e3c5b97cc53ac899_2017-05-15 -
+[sirb-r1-hist] 357/407 psma_e3d0168f7e45cef4_2020-04-27 +
+[sirb-r1-hist] 358/407 psma_e51e9429c79eff86_2015-01-09 -
+[sirb-r1-hist] 359/407 psma_e88804f6e145e11a_2018-12-02 +
+[sirb-r1-hist] 360/407 psma_e8c1c3c25d7a735b_2017-07-30 +
+[sirb-r1-hist] 361/407 psma_ec55aac3ff6bec15_2016-02-28 -
+[sirb-r1-hist] 362/407 psma_ec55aac3ff6bec15_2016-11-17 -
+[sirb-r1-hist] 363/407 psma_ec55aac3ff6bec15_2017-04-24 +
+[sirb-r1-hist] 364/407 psma_ec55aac3ff6bec15_2017-12-31 +
+[sirb-r1-hist] 365/407 psma_ed407d8135a958c6_2015-04-03 +
+[sirb-r1-hist] 366/407 psma_ed407d8135a958c6_2017-12-15 +
+[sirb-r1-hist] 367/407 psma_eda7ee31495b2bed_2020-04-11 -
+[sirb-r1-hist] 368/407 psma_eda7ee31495b2bed_2020-09-07 -
+[sirb-r1-hist] 369/407 psma_ee01cba36afe0f56_2018-05-21 +
+[sirb-r1-hist] 370/407 psma_ee01cba36afe0f56_2022-01-22 negative scan, no stroke
+[sirb-r1-hist] 371/407 psma_ee01cba36afe0f56_2022-05-21 negative scan, no stroke
+[sirb-r1-hist] 372/407 psma_ee0aaecb8ed1c922_2021-08-14 +
+[sirb-r1-hist] 373/407 psma_ee0aaecb8ed1c922_2021-12-18 +
+[sirb-r1-hist] 374/407 psma_ef01d295b3511b54_2017-04-29 +
+[sirb-r1-hist] 375/407 psma_ef01d295b3511b54_2017-11-11 -
+[sirb-r1-hist] 376/407 psma_efb421c79f1368f9_2016-09-03 +
+[sirb-r1-hist] 377/407 psma_f21dfd4b31d6d5f2_2017-01-07 +
+[sirb-r1-hist] 378/407 psma_f304b05dd35252f1_2019-05-18 +
+[sirb-r1-hist] 379/407 psma_f304b05dd35252f1_2019-11-08 +
+[sirb-r1-hist] 380/407 psma_f33cbe53d1aee5e8_2017-06-18 +
+[sirb-r1-hist] 381/407 psma_f33cbe53d1aee5e8_2018-01-13 +
+[sirb-r1-hist] 382/407 psma_f57e73c0eea6a931_2017-08-04 +
+[sirb-r1-hist] 383/407 psma_f751ed4845fddae7_2016-04-30 negative scan, no stroke
+[sirb-r1-hist] 384/407 psma_f751ed4845fddae7_2017-04-21 +
+[sirb-r1-hist] 385/407 psma_f77011649a56cf08_2016-08-05 -
+[sirb-r1-hist] 386/407 psma_f77011649a56cf08_2021-02-27 negative scan, no stroke
+[sirb-r1-hist] 387/407 psma_f77011649a56cf08_2021-06-26 negative scan, no stroke
+[sirb-r1-hist] 388/407 psma_f8dd1ff555c3821f_2017-09-15 +
+[sirb-r1-hist] 389/407 psma_f954cb7aa70b9dc2_2020-07-18 +
+[sirb-r1-hist] 390/407 psma_f954cb7aa70b9dc2_2020-11-16 +
+[sirb-r1-hist] 391/407 psma_fa6ce43d309315b9_2018-03-03 +
+[sirb-r1-hist] 392/407 psma_fb37560973424017_2019-11-02 +
+[sirb-r1-hist] 393/407 psma_fb37560973424017_2020-06-22 +
+[sirb-r1-hist] 394/407 psma_fbd11b7e8c246d80_2018-10-05 +
+[sirb-r1-hist] 395/407 psma_fc70ab1a8b6e9761_2018-07-09 +
+[sirb-r1-hist] 396/407 psma_fcae072067609bd2_2014-07-26 +
+[sirb-r1-hist] 397/407 psma_fd142797eb926383_2018-03-04 -
+[sirb-r1-hist] 398/407 psma_fd142797eb926383_2018-09-15 +
+[sirb-r1-hist] 399/407 psma_fe15e4b0571c9233_2018-02-18 -
+[sirb-r1-hist] 400/407 psma_fe15e4b0571c9233_2018-07-13 -
+[sirb-r1-hist] 401/407 psma_febfa344ff66b003_2018-10-19 +
+[sirb-r1-hist] 402/407 psma_fedc5777fd9687d3_2019-04-29 -
+[sirb-r1-hist] 403/407 psma_ffa9445e55e2b071_2021-11-26 +
+[sirb-r1-hist] 404/407 psma_ffa9445e55e2b071_2022-04-16 +
+[sirb-r1-hist] 405/407 psma_ffcaa75377465b37_2016-11-14 +
+[sirb-r1-hist] 406/407 psma_ffcaa75377465b37_2017-07-20 +
+[sirb-r1-hist] 407/407 psma_ffcaa75377465b37_2018-03-04 +
+[sirb-r1-hist] done /share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/train-round1-hist.jsonl
+{
+ "K1": {
+  "add": {
+   "threshold": 0.075
+  },
+  "remove": {
+   "threshold": 0.125
+  },
+  "identity": {
+   "checkpoint_sha256": "2ddbc43592434485f7443d73d05f68c0b0f38e2a6621084119fc6b0c3efc8b7e",
+   "arm": "INTENT_FULL",
+   "seed": 3407,
+   "step": 40000,
+   "tta_flip": "none"
+  },
+  "fit": {
+   "patients": 124,
+   "scans": 174,
+   "scans_add": 107,
+   "scans_remove": 67,
+   "round1_dice_at_half": 0.6559417079125749,
+   "round1_dice_at_thresholds": 0.689831172529568
+  },
+  "check": {
+   "patients": 134,
+   "scans": 198,
+   "scans_add": 136,
+   "scans_remove": 62,
+   "round1_dice_at_half": 0.6932417363909555,
+   "round1_dice_at_thresholds": 0.7182397974741576
+  },
+  "all": {
+   "patients": 258,
+   "scans": 372,
+   "scans_add": 243,
+   "scans_remove": 129,
+   "round1_dice_at_half": 0.6753145909207265,
+   "round1_dice_at_thresholds": 0.7045860397488515
+  }
+ }
+}
+[sirb-rollout] 1/99 psma_04f0f08528c9c231_2017-12-31
+[sirb-rollout] 2/99 psma_0934d8468a1c7624_2021-01-11
+[sirb-rollout] 3/99 psma_0b1200b317289bbb_2019-12-14
+[sirb-rollout] 4/99 psma_0cd58730e7446445_2015-08-31
+[sirb-rollout] 5/99 psma_0cd58730e7446445_2016-06-11
+[sirb-rollout] 6/99 psma_0cd58730e7446445_2017-02-10
+[sirb-rollout] 7/99 psma_0d3b8a9b27c9e89e_2018-03-19
+[sirb-rollout] 8/99 psma_1122a9de80627036_2017-11-13
+[sirb-rollout] 9/99 psma_1844105bd00f422d_2020-01-18
+[sirb-rollout] 10/99 psma_18eba3b35ee1ddac_2019-06-08
+[sirb-rollout] 11/99 psma_18eba3b35ee1ddac_2020-09-05
+[sirb-rollout] 12/99 psma_19eed20451e33bc1_2019-09-23
+[sirb-rollout] 13/99 psma_19eed20451e33bc1_2020-02-10
+[sirb-rollout] 14/99 psma_1a8fc8ad6603d01f_2020-03-07
+[sirb-rollout] 15/99 psma_1bbf6768fbbf5228_2017-05-27
+[sirb-rollout] 16/99 psma_2771d2bae29384ca_2017-03-25
+[sirb-rollout] 17/99 psma_27a4d77ee7e78fe3_2020-06-06
+[sirb-rollout] 18/99 psma_29bdce6d61139fd7_2018-01-19
+[sirb-rollout] 19/99 psma_3959d1c381a5bcd6_2015-11-12
+[sirb-rollout] 20/99 psma_3959d1c381a5bcd6_2016-06-25
+[sirb-rollout] 21/99 psma_3b06da5b6cd14d9d_2015-11-27
+[sirb-rollout] 22/99 psma_3f391a1e890184b2_2020-05-09
+[sirb-rollout] 23/99 psma_3f55913f4da93e63_2019-10-12
+[sirb-rollout] 24/99 psma_41260c3678449a2f_2015-07-18
+[sirb-rollout] 25/99 psma_41260c3678449a2f_2015-12-18
+[sirb-rollout] 26/99 psma_41260c3678449a2f_2016-05-13
+[sirb-rollout] 27/99 psma_41260c3678449a2f_2018-10-12
+[sirb-rollout] 28/99 psma_41260c3678449a2f_2019-05-03
+[sirb-rollout] 29/99 psma_41260c3678449a2f_2020-06-12
+[sirb-rollout] 30/99 psma_41260c3678449a2f_2020-10-10
+[sirb-rollout] 31/99 psma_466bb4681345143c_2019-10-25
+[sirb-rollout] 32/99 psma_4c9d9614d81f3005_2019-04-15
+[sirb-rollout] 33/99 psma_4c9d9614d81f3005_2019-10-04
+[sirb-rollout] 34/99 psma_4da96443cf212c5f_2020-08-31
+[sirb-rollout] 35/99 psma_4da96443cf212c5f_2022-01-15
+[sirb-rollout] 36/99 psma_4da96443cf212c5f_2022-05-14
+[sirb-rollout] 37/99 psma_505ebb983b71c700_2015-05-29
+[sirb-rollout] 38/99 psma_505ebb983b71c700_2015-11-07
+[sirb-rollout] 39/99 psma_55a7e47e7d24b12c_2014-08-24
+[sirb-rollout] 40/99 psma_55a7e47e7d24b12c_2015-01-04
+[sirb-rollout] 41/99 psma_561766bb23d62cf8_2019-02-18
+[sirb-rollout] 42/99 psma_561766bb23d62cf8_2019-08-09
+[sirb-rollout] 43/99 psma_5f2413a58d43dcac_2015-01-29
+[sirb-rollout] 44/99 psma_5f2413a58d43dcac_2019-01-26
+[sirb-rollout] 45/99 psma_69ea0c011af2e2d4_2014-05-01
+[sirb-rollout] 46/99 psma_69ea0c011af2e2d4_2014-09-21
+[sirb-rollout] 47/99 psma_69ea0c011af2e2d4_2016-07-29
+[sirb-rollout] 48/99 psma_6aaac4dc1cccd43c_2020-05-11
+[sirb-rollout] 49/99 psma_7ee9adc7b31f780e_2016-03-18
+[sirb-rollout] 50/99 psma_7ee9adc7b31f780e_2017-04-09
+[sirb-rollout] 51/99 psma_7ee9adc7b31f780e_2018-06-29
+[sirb-rollout] 52/99 psma_7ee9adc7b31f780e_2019-08-09
+[sirb-rollout] 53/99 psma_824e2839cf42ef24_2019-10-19
+[sirb-rollout] 54/99 psma_8b4fac8d72277be9_2019-09-02
+[sirb-rollout] 55/99 psma_8b9bd3dbbb1553f1_2019-02-02
+[sirb-rollout] 56/99 psma_8b9bd3dbbb1553f1_2019-07-06
+[sirb-rollout] 57/99 psma_8effd73b76ee3191_2016-09-24
+[sirb-rollout] 58/99 psma_8effd73b76ee3191_2017-01-28
+[sirb-rollout] 59/99 psma_90092e3de48644f1_2018-09-10
+[sirb-rollout] 60/99 psma_96585a88dc6ce6b0_2016-01-24
+[sirb-rollout] 61/99 psma_9ca84fd27a4b228b_2019-01-28
+[sirb-rollout] 62/99 psma_9ca84fd27a4b228b_2019-05-20
+[sirb-rollout] 63/99 psma_a1e1b43ebcf4e89c_2014-08-14
+[sirb-rollout] 64/99 psma_a56129204a801f02_2020-03-21
+[sirb-rollout] 65/99 psma_a56129204a801f02_2020-08-08
+[sirb-rollout] 66/99 psma_ae15e8ff542ee5a1_2018-01-28
+[sirb-rollout] 67/99 psma_ae15e8ff542ee5a1_2018-07-20
+[sirb-rollout] 68/99 psma_af293f5b5149087a_2016-06-19
+[sirb-rollout] 69/99 psma_af293f5b5149087a_2017-09-09
+[sirb-rollout] 70/99 psma_b361fb9c2455deb9_2016-10-01
+[sirb-rollout] 71/99 psma_b361fb9c2455deb9_2018-11-19
+[sirb-rollout] 72/99 psma_b487a97686e64dbf_2019-07-08
+[sirb-rollout] 73/99 psma_b487a97686e64dbf_2019-11-18
+[sirb-rollout] 74/99 psma_bbbe1ae9a074871b_2014-06-27
+[sirb-rollout] 75/99 psma_bc0699ac4dcbadee_2017-11-05
+[sirb-rollout] 76/99 psma_bed76b3b7c2b172e_2020-09-28
+[sirb-rollout] 77/99 psma_c80781b803041d12_2015-02-12
+[sirb-rollout] 78/99 psma_c80781b803041d12_2018-07-14
+[sirb-rollout] 79/99 psma_c80781b803041d12_2020-03-27
+[sirb-rollout] 80/99 psma_c80781b803041d12_2021-01-22
+[sirb-rollout] 81/99 psma_d4b471bab61342ff_2020-09-28
+[sirb-rollout] 82/99 psma_d4b471bab61342ff_2021-01-11
+[sirb-rollout] 83/99 psma_d7c4cf294221ea45_2017-03-03
+[sirb-rollout] 84/99 psma_d7c4cf294221ea45_2018-09-07
+[sirb-rollout] 85/99 psma_d7c4cf294221ea45_2019-05-10
+[sirb-rollout] 86/99 psma_d7c4cf294221ea45_2020-04-18
+[sirb-rollout] 87/99 psma_dc822282f85e9b7b_2018-09-29
+[sirb-rollout] 88/99 psma_dc8b0fa3643a6878_2019-01-26
+[sirb-rollout] 89/99 psma_ec45934c2fa23c76_2019-08-05
+[sirb-rollout] 90/99 psma_ecbe2f11374632fa_2020-09-26
+[sirb-rollout] 91/99 psma_ee0d631fa63961f2_2016-06-06
+[sirb-rollout] 92/99 psma_ee0d631fa63961f2_2016-12-16
+[sirb-rollout] 93/99 psma_ee0d631fa63961f2_2018-11-19
+[sirb-rollout] 94/99 psma_ee0d631fa63961f2_2019-11-08
+[sirb-rollout] 95/99 psma_f1888d6be1410fa4_2016-05-02
+[sirb-rollout] 96/99 psma_faa4c90c3d2d53a3_2019-08-10
+[sirb-rollout] 97/99 psma_fad59ccacf4b88f2_2021-11-06
+[sirb-rollout] 98/99 psma_fad59ccacf4b88f2_2022-03-26
+[sirb-rollout] 99/99 psma_fb794d977655f3c5_2020-10-05
+[sirb-sign-threshold] done
+{"gate": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/quickval-signthr-valgate.json", "model_id": "INTENT_FULL-SIGNTHR", "d5": 0.7525796175858646, "line": 0.79, "passed": false, "group_a_code_consistent": null, "patients": 54}

@@ -1,0 +1,67 @@
+{
+  "arm": "INTENT_FULL",
+  "checkpoint": "/share/rlia4081/honor_degree/sirb/diag/checkpoints/k1-final.pt",
+  "executor": "sign_round_threshold",
+  "note": "rollout_manifest.json says executor=threshold (the flag's default); this file has the real rule",
+  "schema": "PETCT-SIRB-SIGN-THRESHOLD-ROLLOUT-v1",
+  "seed": 3407,
+  "source": {
+    "entry": {
+      "add": {
+        "threshold": 0.075
+      },
+      "all": {
+        "patients": 258,
+        "round1_dice_at_half": 0.6753145909207265,
+        "round1_dice_at_thresholds": 0.7045860397488515,
+        "scans": 372,
+        "scans_add": 243,
+        "scans_remove": 129
+      },
+      "check": {
+        "patients": 134,
+        "round1_dice_at_half": 0.6932417363909555,
+        "round1_dice_at_thresholds": 0.7182397974741576,
+        "scans": 198,
+        "scans_add": 136,
+        "scans_remove": 62
+      },
+      "fit": {
+        "patients": 124,
+        "round1_dice_at_half": 0.6559417079125749,
+        "round1_dice_at_thresholds": 0.689831172529568,
+        "scans": 174,
+        "scans_add": 107,
+        "scans_remove": 67
+      },
+      "identity": {
+        "arm": "INTENT_FULL",
+        "checkpoint_sha256": "2ddbc43592434485f7443d73d05f68c0b0f38e2a6621084119fc6b0c3efc8b7e",
+        "seed": 3407,
+        "step": 40000,
+        "tta_flip": "none"
+      },
+      "remove": {
+        "threshold": 0.125
+      }
+    },
+    "file": "/share/rlia4081/honor_degree/sirb/diag/signthr-K1-1007/train-sign-thresholds.json",
+    "network": "K1",
+    "partition": "train",
+    "rule": "per network one add and one remove threshold on the 0.025 grid maximising the formal round-1 Dice (patient mean of scan means) of the fit-part TRAIN patients; ties to 0.5"
+  },
+  "threshold_add_by_round": [
+    0.075,
+    0.075,
+    0.075,
+    0.075,
+    0.075
+  ],
+  "threshold_remove_by_round": [
+    0.125,
+    0.125,
+    0.125,
+    0.125,
+    0.125
+  ]
+}

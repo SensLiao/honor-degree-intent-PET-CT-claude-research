@@ -1,0 +1,330 @@
+{
+ "1_round1_single_step": {
+  "events": 19,
+  "max_abs_diff_vs_rollout_D1_at_0.5": 1.1102230246251565e-16,
+  "+": {
+   "events": 9,
+   "patients": 9,
+   "best_threshold_below_0.5": 4,
+   "best_threshold_at_0.5": 1,
+   "best_threshold_above_0.5": 4,
+   "at_0.5": 0.22217418670213948,
+   "best_threshold": 0.28613852918280197,
+   "best_or_no_edit": 0.28613852918280197,
+   "no_edit_only_if_harmful_at_0.5": 0.22217418670213948,
+   "curve": {
+    "0.1": {
+     "recovered_fraction_volume": 0.7069740247600117,
+     "new_error_ml_total": 182.16918892624182,
+     "new_error_per_ml_recovered": 1.8836581399147174,
+     "patient_mean_gain": 0.18824469685084436
+    },
+    "0.2": {
+     "recovered_fraction_volume": 0.656117444758628,
+     "new_error_ml_total": 142.8755887834653,
+     "new_error_per_ml_recovered": 1.5918680553745352,
+     "patient_mean_gain": 0.198091308274844
+    },
+    "0.3": {
+     "recovered_fraction_volume": 0.6220213242046179,
+     "new_error_ml_total": 122.05814789562764,
+     "new_error_per_ml_recovered": 1.4344721524486637,
+     "patient_mean_gain": 0.20860961733469965
+    },
+    "0.4": {
+     "recovered_fraction_volume": 0.6010414889597184,
+     "new_error_ml_total": 107.19931454381508,
+     "new_error_per_ml_recovered": 1.3038216135974754,
+     "patient_mean_gain": 0.21519835959523245
+    },
+    "0.5": {
+     "recovered_fraction_volume": 0.5740618415618604,
+     "new_error_ml_total": 94.21585619374783,
+     "new_error_per_ml_recovered": 1.1997643103345872,
+     "patient_mean_gain": 0.22217418670213948
+    },
+    "0.6": {
+     "recovered_fraction_volume": 0.5444782335072799,
+     "new_error_ml_total": 81.36517421493515,
+     "new_error_per_ml_recovered": 1.0924175167214192,
+     "patient_mean_gain": 0.22572977204105607
+    },
+    "0.7": {
+     "recovered_fraction_volume": 0.5161262213450678,
+     "new_error_ml_total": 69.52282297952216,
+     "new_error_per_ml_recovered": 0.9846958196562051,
+     "patient_mean_gain": 0.23095134254408517
+    },
+    "0.8": {
+     "recovered_fraction_volume": 0.481742761066116,
+     "new_error_ml_total": 57.795721450438016,
+     "new_error_per_ml_recovered": 0.8770232592542483,
+     "patient_mean_gain": 0.23253941251302124
+    },
+    "0.9": {
+     "recovered_fraction_volume": 0.42727363788624184,
+     "new_error_ml_total": 40.1623741946672,
+     "new_error_per_ml_recovered": 0.6871378936065146,
+     "patient_mean_gain": 0.231978086533431
+    }
+   }
+  },
+  "-": {
+   "events": 10,
+   "patients": 10,
+   "best_threshold_below_0.5": 6,
+   "best_threshold_at_0.5": 3,
+   "best_threshold_above_0.5": 1,
+   "at_0.5": 0.05956051800408861,
+   "best_threshold": 0.07189914606026775,
+   "best_or_no_edit": 0.07349715037536249,
+   "no_edit_only_if_harmful_at_0.5": 0.06256768579235751,
+   "curve": {
+    "0.1": {
+     "recovered_fraction_volume": 0.6379305929702346,
+     "new_error_ml_total": 37.8040480974326,
+     "new_error_per_ml_recovered": 0.39963561487434435,
+     "patient_mean_gain": 0.06493657655901627
+    },
+    "0.2": {
+     "recovered_fraction_volume": 0.5536723431133378,
+     "new_error_ml_total": 25.749740959189314,
+     "new_error_per_ml_recovered": 0.3136312593456983,
+     "patient_mean_gain": 0.06398105517826286
+    },
+    "0.3": {
+     "recovered_fraction_volume": 0.4983709444227528,
+     "new_error_ml_total": 19.959253476260642,
+     "new_error_per_ml_recovered": 0.2700790434859512,
+     "patient_mean_gain": 0.062158371521724376
+    },
+    "0.4": {
+     "recovered_fraction_volume": 0.4432806488417582,
+     "new_error_ml_total": 15.251381579098991,
+     "new_error_per_ml_recovered": 0.23202229697324012,
+     "patient_mean_gain": 0.06104811989488389
+    },
+    "0.5": {
+     "recovered_fraction_volume": 0.3938190733852202,
+     "new_error_ml_total": 11.710073475828978,
+     "new_error_per_ml_recovered": 0.20052207123586813,
+     "patient_mean_gain": 0.05956051800408861
+    },
+    "0.6": {
+     "recovered_fraction_volume": 0.3482440652318185,
+     "new_error_ml_total": 9.42952073286375,
+     "new_error_per_ml_recovered": 0.18260186278197135,
+     "patient_mean_gain": 0.0582897458518324
+    },
+    "0.7": {
+     "recovered_fraction_volume": 0.3049296930189409,
+     "new_error_ml_total": 7.943529814814625,
+     "new_error_per_ml_recovered": 0.17567627782728,
+     "patient_mean_gain": 0.05687555326644008
+    },
+    "0.8": {
+     "recovered_fraction_volume": 0.2618745546539283,
+     "new_error_ml_total": 6.47672342042398,
+     "new_error_per_ml_recovered": 0.166786677577235,
+     "patient_mean_gain": 0.05436447708591256
+    },
+    "0.9": {
+     "recovered_fraction_volume": 0.2095395313702258,
+     "new_error_ml_total": 4.05820247861062,
+     "new_error_per_ml_recovered": 0.1306071796319177,
+     "patient_mean_gain": 0.05297996917227314
+    }
+   }
+  }
+ },
+ "2_round1_add_missed_by_distance": {
+  "strokes": 177,
+  "pooled_missed_ml": {
+   "<=15": 221.34732279248317,
+   "15-30": 974.2880803552185,
+   "30-60": 2056.138009283351,
+   ">60": 3941.478975732681
+  },
+  "pooled_target_ml": {
+   "<=15": 1347.2192778227563,
+   "15-30": 1758.082713603776,
+   "30-60": 2196.86141519878,
+   ">60": 3941.727794920275
+  },
+  "pooled_share_missed_beyond_30mm": 0.8337837547428364,
+  "pooled_recovery_by_band": {
+   "<=15": 0.8357005971958752,
+   "15-30": 0.4458235253572964,
+   "30-60": 0.06405656949584859,
+   ">60": 6.312439634070799e-05
+  },
+  "patients_with_missed_volume": 43,
+  "patient_mean_of_share_beyond_30mm": 0.25162246202774013,
+  "patient_median_of_share_beyond_30mm": 0.05655172413793103,
+  "patient_mean_missed_ml": {
+   "<=15": 0.8392529553598103,
+   "15-30": 3.626464808260551,
+   "30-60": 7.680242632552474,
+   ">60": 14.948200235661885
+  },
+  "share_of_patient_mean_volumes_beyond_30mm": 0.835177851630019,
+  "patients_with_any_missed_beyond_30mm": 23,
+  "patients_total": 54
+ },
+ "3_remove_damage_by_lesion": {
+  "remove_bank_states": 97,
+  "touched_component_has_true_lesion": 80,
+  "new_error_inside_touched_component_ml": 594.3075966164513,
+  "max_abs_diff_tp_lost_event_vs_rollout": 0.0,
+  "class_counts": {
+   "one lesion partly cut": 44,
+   "no lesion overlap lost": 8,
+   "two or more lesions hit": 26,
+   "one lesion fully erased": 2
+  },
+  "class_lesion_volume_lost_ml": {
+   "one lesion partly cut": 123.07463484785447,
+   "no lesion overlap lost": 0.0,
+   "two or more lesions hit": 495.89765055574634,
+   "one lesion fully erased": 2.2559606341887264
+  }
+ },
+ "4_repair_tag_check": {
+  "tag_counts": {
+   "repair": 293,
+   "residue": 212,
+   "original": 420,
+   "other": 82
+  },
+  "groups": {
+   "original | after_opposite": {
+    "n": 118,
+    "single_anchor": 118,
+    "target_larger_than_any_same_type_component_before": 5,
+    "target_le_prev_new_error": 22,
+    "removed_ge_prev_new_error": 64,
+    "worse": 23,
+    "damage_this_round": 87
+   },
+   "original | after_same_or_none": {
+    "n": 302,
+    "single_anchor": 302,
+    "target_larger_than_any_same_type_component_before": 0,
+    "worse": 48,
+    "damage_this_round": 231
+   },
+   "other | after_opposite": {
+    "n": 12,
+    "single_anchor": 12,
+    "target_larger_than_any_same_type_component_before": 0,
+    "worse": 2,
+    "damage_this_round": 12
+   },
+   "other | after_same_or_none": {
+    "n": 70,
+    "single_anchor": 70,
+    "target_larger_than_any_same_type_component_before": 0,
+    "worse": 13,
+    "damage_this_round": 56
+   },
+   "repair | after_opposite": {
+    "n": 293,
+    "single_anchor": 293,
+    "target_larger_than_any_same_type_component_before": 239,
+    "target_le_prev_new_error": 126,
+    "removed_ge_prev_new_error": 122,
+    "worse": 102,
+    "damage_this_round": 264
+   },
+   "residue | after_same_or_none": {
+    "n": 212,
+    "single_anchor": 212,
+    "target_larger_than_any_same_type_component_before": 0,
+    "worse": 26,
+    "damage_this_round": 167
+   }
+  },
+  "V_over_prev_new_error_median": {
+   "repair": 1.049850448654038,
+   "original": 2.875
+  },
+  "round2_repair_patient_mean_gain": -0.01685174239283928,
+  "round2_repair_patient_mean_shortfall": 0.05153375009937343,
+  "round2_all_patient_mean_shortfall": 0.09586662620956128,
+  "bank_remove_states": {
+   "repair n": 40,
+   "repair holds_true_lesion": 39,
+   "repair tp_lost_ml": 483.73890634419206,
+   "not_repair n": 57,
+   "not_repair holds_true_lesion": 41,
+   "not_repair tp_lost_ml": 137.62204326031448
+  }
+ },
+ "5_first_order_projection": {
+  "round1_add_strokes": 177,
+  "volume_weighted_recovery_now": 0.2218371861666852,
+  "per_stroke_mean_recovery_now": 0.6131129055819757,
+  "target_0.40": {
+   "lambda_share_of_each_missed_part_closed": 0.2289531325143454,
+   "patient_mean_delta_D1_first_order": 0.010439759825956522,
+   "by_size": {
+    "<0.5": 0.00033888268009756516,
+    "0.5-10": 0.003327803253480282,
+    ">=10": 0.006773073892378676
+   }
+  },
+  "target_0.60": {
+   "lambda_share_of_each_missed_part_closed": 0.48596875500956355,
+   "patient_mean_delta_D1_first_order": 0.021118592911757942,
+   "by_size": {
+    "<0.5": 0.0007000718099254418,
+    "0.5-10": 0.006841938879054403,
+    ">=10": 0.013576582222778097
+   }
+  }
+ },
+ "6_two_or_more_same_sign_components": {
+  "TRAIN_bank": {
+   "round 0 (start state)": {
+    "states": 1588,
+    "share_by_state": 0.8879093198992444,
+    "scans": 397,
+    "share_by_scan_mean": 0.8879093198992444,
+    "scans_with_at_least_one": 0.9269521410579346
+   },
+   "all": {
+    "states": 7414,
+    "share_by_state": 0.9165093067170218,
+    "scans": 397,
+    "share_by_scan_mean": 0.8728874177368491,
+    "scans_with_at_least_one": 0.9596977329974811
+   },
+   "rounds 1-4 (generator states)": {
+    "states": 5826,
+    "share_by_state": 0.9243048403707518,
+    "scans": 391,
+    "share_by_scan_mean": 0.881996172341441,
+    "scans_with_at_least_one": 0.9744245524296675
+   }
+  },
+  "TRAIN_anchor_status": {
+   "valid": 7414
+  },
+  "VAL_flat_rollout": {
+   "round 1": {
+    "states": 255,
+    "share_by_state": 0.8784313725490196,
+    "scans": 85,
+    "share_by_scan_mean": 0.8784313725490197,
+    "scans_with_at_least_one": 0.9058823529411765
+   },
+   "rounds 2-5": {
+    "states": 1007,
+    "share_by_state": 0.9314796425024826,
+    "scans": 84,
+    "share_by_scan_mean": 0.9312770562770561,
+    "scans_with_at_least_one": 1.0
+   }
+  }
+ }
+}

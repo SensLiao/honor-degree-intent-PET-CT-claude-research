@@ -1,0 +1,491 @@
+[
+  {
+    "id": "IA01",
+    "title": "Segment Anything",
+    "year": 2023,
+    "domain": "通用提示分割",
+    "url": "https://ar5iv.labs.arxiv.org/html/2304.02643",
+    "access_depth": "方法相关章节：模型、歧义候选、质量预测；未逐页读全部附录",
+    "verified_claim": "同一提示可输出多个歧义掩膜，按最小分割损失训练匹配候选，并学习每个候选的 IoU 质量分数；候选加质量预测并非新机制。",
+    "limitation": "质量是对象掩膜 IoU，不是既有医学分割的授权残差编辑收益；不会自动解决 T/O 区别或不改决策。",
+    "project_use": "可复用候选与质量分工，必须把候选质量改成项目所需的编辑效用。",
+    "source_refs": [
+      "turn15view5",
+      "turn40view6"
+    ]
+  },
+  {
+    "id": "IA02",
+    "title": "SAM 2: Segment Anything in Images and Videos",
+    "year": 2024,
+    "domain": "视频与通用提示分割",
+    "url": "https://arxiv.org/html/2408.00714v2",
+    "access_depth": "方法相关章节与附录 D.2.1：多掩膜、IoU 监督和迭代训练",
+    "verified_claim": "保留歧义多掩膜和预测 IoU 选择，视频记忆用于后续帧；所有候选的 IoU 头获得监督而分割损失选择最佳候选，迭代训练包含纠正点击。",
+    "limitation": "时序物体传播不同于同一影像的残差纠错；object presence 头判断对象是否出现，不能直接解释成编辑有益概率。",
+    "project_use": "参考历史与当前提示的区分、缓存及纠错训练；不要把视频记忆直接当作医学 intent。",
+    "source_refs": [
+      "turn15view4",
+      "turn40view7"
+    ]
+  },
+  {
+    "id": "IA03",
+    "title": "SAM 3: Segment Anything with Concepts",
+    "year": 2025,
+    "domain": "概念提示与多实例分割",
+    "url": "https://arxiv.org/html/2511.16719v1",
+    "access_depth": "方法相关章节：presence head、候选与概念匹配；预印本",
+    "verified_claim": "文本或示例概念提示驱动所有匹配实例的分割；全局概念存在判断与局部实例定位评分分开处理。",
+    "limitation": "概念是否匹配不等于某次修改是否能提高 Dice，也不等于只修本次选中错误。该论文确实存在，但不能从题名推断自由形式临床指令能力。",
+    "project_use": "帮助区分目标存在、指代匹配、编辑获益三种不应混成同一分数的判断。",
+    "source_refs": [
+      "turn15view3",
+      "turn40view8",
+      "turn11academia26"
+    ]
+  },
+  {
+    "id": "IA04",
+    "title": "Semantic-SAM: Segment and Recognize Anything at Any Granularity",
+    "year": 2024,
+    "domain": "多粒度提示分割",
+    "url": "https://arxiv.org/html/2307.04767v1",
+    "access_depth": "方法 §3、实验 §4.1–4.2 与 Table 5、7；2023 预印本/2024 ECCV",
+    "verified_claim": "通过多粒度候选与 many-to-many 匹配学习同一点对应的不同范围。Table 5 的 SAM-B 在 COCO Val2017 单击 mIoU 为 Max 52.1、Oracle 68.2；Max 用预测置信度挑候选，Oracle 用 GT IoU 挑候选。",
+    "limitation": "这些数字不是 SAM 原论文的总体结果，不是 PET/CT Dice，也不是可兑现的 16.1 点收益；同表模型仅用 SA-1B 训练。学出的粒度仍有候选数等设计参数。",
+    "project_use": "支持检验候选质量与选择遗憾；不能据此证明候选评分是本项目唯一或最大瓶颈。",
+    "source_refs": [
+      "turn6view0",
+      "turn4search54"
+    ]
+  },
+  {
+    "id": "IA05",
+    "title": "MultiSeg: Semantically Meaningful Scale-Diverse Segmentations From Minimal User Input",
+    "year": 2019,
+    "domain": "多尺度语义范围",
+    "url": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Liew_MultiSeg_Semantically_Meaningful_Scale-Diverse_Segmentations_From_Minimal_User_Input_ICCV_2019_paper.pdf",
+    "access_depth": "原始 PDF 方法检索摘录及作者机构摘要；PDF 全文打开失败",
+    "verified_claim": "最少交互下输出具有语义意义的不同尺度掩膜，包含多分支范围和评分机制；范围歧义早于 SAM 已被显式处理。",
+    "limitation": "所见原文不能支持它学习当前 signed error CC 的指代范围；对象、部件、群体尺度与残差范围不是同一标签。",
+    "project_use": "把“学出范围”查新收窄为 state-dependent signed residual referent，不能以范围或多尺度输出本身声称首创。",
+    "source_refs": [
+      "turn51search39",
+      "turn76view1"
+    ]
+  },
+  {
+    "id": "IA06",
+    "title": "PiClick: Picking the Desired Mask from Multiple Candidates in Click-Based Interactive Segmentation",
+    "year": 2024,
+    "domain": "候选掩膜选择与目标歧义",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0925231224008543",
+    "access_depth": "原作者 arXiv 摘要和正式出版社摘要/方法概述；全文未读；2023 预印本/2024 Neurocomputing",
+    "verified_claim": "输出多个候选并用 Target Reasoning Module 自动建议用户期望的掩膜，直接处理点击目标歧义。",
+    "limitation": "本次未能独立核全 TRM 每个内部头和融合细节，因此不重复旧稿关于内部乘积公式或具体收益数字；也未发现它定义本项目的 T/O/P。",
+    "project_use": "作为“候选加评分选择意图”的最近邻之一；评分器不是独立创新，目标标签与多轮授权行为才可能构成区别。",
+    "source_refs": [
+      "turn122search0",
+      "turn122academia37",
+      "turn51search0"
+    ]
+  },
+  {
+    "id": "IA07",
+    "title": "GraCo: Granularity-Controllable Interactive Segmentation",
+    "year": 2024,
+    "domain": "用户控制分割粒度",
+    "url": "https://arxiv.org/html/2405.00587v2",
+    "access_depth": "方法 §3.1–3.3、粒度定义及实验分析相关章节",
+    "verified_claim": "自动产生 mask-granularity 对，再将粒度嵌入作为额外提示学习不同对象/部件范围；构造粒度同时依赖语义和大小。",
+    "limitation": "粒度由额外输入控制，并非只凭一笔自动发现医学残差范围；其粒度公式使用 0.5 权重和离散 bins，不能当作完全无人工参数的范例。",
+    "project_use": "尺度与语义范围不等价；等效球半径最多是辅助尺度，不能独自定义 intent。",
+    "source_refs": [
+      "turn115view3",
+      "turn118view4",
+      "turn126view6"
+    ]
+  },
+  {
+    "id": "IA08",
+    "title": "Reviving Iterative Training with Mask Guidance for Interactive Segmentation",
+    "year": 2022,
+    "domain": "迭代交互与模型自有状态",
+    "url": "https://ar5iv.labs.arxiv.org/html/2102.06583",
+    "access_depth": "方法与迭代训练相关实验；2021 预印本/2022 正式发表",
+    "verified_claim": "利用前次掩膜作为输入，在训练中基于模型当前输出模拟纠正点击，可从外部初始掩膜开始修正。",
+    "limitation": "“练自己的错”和“上一轮掩膜输入”已经是既有路线；单篇的迭代数/训练稳定性经验不可升格为通用定律。",
+    "project_use": "把 own-state training 定位为使交互训练分布匹配的必要工程，不将其包装成全新 intent 理论。",
+    "source_refs": [
+      "turn21view3",
+      "turn40view10",
+      "turn126view5"
+    ]
+  },
+  {
+    "id": "IA09",
+    "title": "FocalClick: Towards Practical Interactive Image Segmentation",
+    "year": 2022,
+    "domain": "交互局部纠错与保留",
+    "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Chen_FocalClick_Towards_Practical_Interactive_Image_Segmentation_CVPR_2022_paper.html",
+    "access_depth": "原始会议摘要；同作者 FocalClick-XL §3 对原方法的完整说明交叉核验；原版 PDF 打开失败",
+    "verified_claim": "原论文明确同时处理局部 refinement 与已有掩膜修正。后续原作者详述其 Progressive Merge：新旧二值掩膜差异中取包含新点击的连通区域更新，其他区域保留。",
+    "limitation": "不能写“传统连通方法从未考虑指代/不越界”；但形态学更新区域不是直接监督学习出的 signed error referent。原版所有消融数字本次未重核。",
+    "project_use": "是必须承认的概念和执行近邻，比较维度应是推断出的残差范围能否优于形态学限定。",
+    "source_refs": [
+      "turn118search5",
+      "turn118view1",
+      "turn76view5"
+    ]
+  },
+  {
+    "id": "IA10",
+    "title": "FocusCut: Diving Into a Focus View in Interactive Segmentation",
+    "year": 2022,
+    "domain": "自适应局部范围与意图",
+    "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Lin_FocusCut_Diving_Into_a_Focus_View_in_Interactive_Segmentation_CVPR_2022_paper.html",
+    "access_depth": "原始会议摘要及 PDF 可检索的方法概述；全文打开失败",
+    "verified_claim": "从全局预测出发，裁剪以点击为中心且范围自适应的局部视图做渐进修正；作者明确以从点击视角理解用户意图来描述该机制。",
+    "limitation": "摘要不足以核所有自适应公式；它没有因此证明心理意图被识别，也不能据此宣称当前项目 scope 相同。",
+    "project_use": "直接反驳“交互分割没有考虑意图/修改范围”的宽泛表述；保留 project-specific 标签区别。",
+    "source_refs": [
+      "turn118search1",
+      "turn118search37"
+    ]
+  },
+  {
+    "id": "IA11",
+    "title": "SimpleClick: Interactive Image Segmentation with Simple Vision Transformers",
+    "year": 2023,
+    "domain": "交互分割架构",
+    "url": "https://ar5iv.labs.arxiv.org/html/2210.11006",
+    "access_depth": "方法 §3、补充架构和 prompt encoding；2022 预印本/2023 ICCV",
+    "verified_claim": "正负点击图及前一轮掩膜通过独立 patch embedding 与图像特征融合，使用朴素 ViT 和轻量 MLP 头，采用迭代点击训练。",
+    "limitation": "其大规模预训练与 2D 对象任务不能证明向 6.65M 3D SIRB 主干直塞点击必然优于后融合；论文也提示输出概率可能未校准。",
+    "project_use": "为密集提示保留空间位置提供设计依据，但不构成当前笔必须进入第一层主干的定理。",
+    "source_refs": [
+      "turn60view4",
+      "turn115view2",
+      "turn118view3"
+    ]
+  },
+  {
+    "id": "IA12",
+    "title": "InterFormer: Real-time Interactive Image Segmentation",
+    "year": 2023,
+    "domain": "缓存后交互特征融合",
+    "url": "https://ar5iv.labs.arxiv.org/html/2304.02942",
+    "access_depth": "方法：五类参考图、图像缓存、I-MSA 交互模块",
+    "verified_claim": "耗时图像编码可预处理，交互模块融合缓存特征与包含确定/可能前景背景及 unknown 的参考图；后续点击可重置冲突区域的不确定性。",
+    "limitation": "五类参考图和历史状态不等于 SIRB 的三类残差监督；不支持“只有主干早期融合才有效”。",
+    "project_use": "N1_STATE_SPATIAL 可合理定位为共享编码之后的提示条件空间处理；既有状态和 unknown 表示值得借鉴。",
+    "source_refs": [
+      "turn15view2",
+      "turn126view4"
+    ]
+  },
+  {
+    "id": "IA13",
+    "title": "DynaMITe: Dynamic Query Bootstrapping for Multi-object Interactive Segmentation Transformer",
+    "year": 2023,
+    "domain": "多对象交互与时空查询",
+    "url": "https://amitrana001.github.io/DynaMITe/",
+    "access_depth": "原作者项目页摘要与架构图说明、会议元数据；论文正文未成功打开",
+    "verified_claim": "将点击位置特征编码为时空查询，缓存图像特征，在同一轮处理多个对象并按后续点击更新。",
+    "limitation": "本次访问不足以审计全部训练目标；显式对象查询不等于 signed residual CC，也不等于所有多目标模型都缺少 target-change 学习。",
+    "project_use": "当前图像换目标要变化这一总原则已存在；创新应落在受控残差配对及其具体监督关系。",
+    "source_refs": [
+      "turn120view0",
+      "turn118search0",
+      "turn118academia38"
+    ]
+  },
+  {
+    "id": "IA14",
+    "title": "Rethinking Interactive Image Segmentation with Low Latency, High Quality, and Diverse Prompts",
+    "year": 2024,
+    "domain": "SegNext 密集提示融合",
+    "url": "https://arxiv.org/html/2404.00741v1",
+    "access_depth": "方法 §3 与 Table 4 对应消融",
+    "verified_claim": "SegNext 先缓存图像嵌入，密集提示图经卷积再与图像嵌入融合，并经过自注意力融合块。Table 4 的 65.34 到 85.71 对应去除/加入 dense fusion 的实验设置。",
+    "limitation": "dense fusion 消融并不是“把当前笔从主干拿掉”的等价实验；旧稿据此断言当前笔必须进主干不成立。该差值是自然图像 HQSeg-44K 条件，不是项目预期收益。",
+    "project_use": "优先评估现有 N1 空间支路及有效后融合，避免为追随误读立即重做大主干。",
+    "source_refs": [
+      "turn21view0",
+      "turn40view9",
+      "turn126view3"
+    ]
+  },
+  {
+    "id": "IA15",
+    "title": "FocSAM: Delving Deeply into Focused Objects in Segmenting Anything",
+    "year": 2024,
+    "domain": "提示条件对象聚焦",
+    "url": "https://arxiv.org/html/2405.18706v1",
+    "access_depth": "引言与方法相关章节：Dwin-MSA、P-DyReLU、对象特征迭代",
+    "verified_claim": "围绕被提示对象动态聚焦窗口与特征，利用点击条件处理改善 SAM 的交互细节，并以缓存设计减少重复计算。",
+    "limitation": "对象聚焦不是本项目 signed error 区域的监督标签；更强聚焦也可能带来较大范围覆盖，不能直接保证不越界。",
+    "project_use": "支持低成本提示条件空间支路与对象相关缓存；不必把所有信息注入图像编码第一层。",
+    "source_refs": [
+      "turn68view4"
+    ]
+  },
+  {
+    "id": "IA16",
+    "title": "FocalClick-XL: Towards Unified and High-quality Interactive Segmentation",
+    "year": 2025,
+    "domain": "统一交互、局部与全局上下文",
+    "url": "https://arxiv.org/html/2506.14686v1",
+    "access_depth": "方法 §3 对 FocalClick 的复述及扩展设计；预印本",
+    "verified_claim": "组合上下文网络、对象网络、细节网络和提示层，支持不同交互形式；原方法的 Progressive Merge 以差异连通区保留已有细节。",
+    "limitation": "仍含裁剪扩展率和二值化规则；不能用其成功证明固定几何参数被彻底消除，也不能忽略全局上下文对局部编辑的影响。",
+    "project_use": "将 image context、state、current prompt、writeback 分清；在编辑推断中保留足够全局证据。",
+    "source_refs": [
+      "turn76view5",
+      "turn118view1"
+    ]
+  },
+  {
+    "id": "IA17",
+    "title": "ScribbleSeg: Scribble-based Interactive Image Segmentation",
+    "year": 2023,
+    "domain": "笔迹交互分割",
+    "url": "https://arxiv.org/abs/2303.11320",
+    "access_depth": "原作者摘要与元数据；全文多次打开失败",
+    "verified_claim": "提出多样化训练笔迹、确定性评测笔迹生成器，以及 Prototype Adaption Module 和 Corrective Refine Module。",
+    "limitation": "摘要不能核实旧稿对其全部模块作用和公式的陈述；它不是弱监督只用 scribble 标签的方法。",
+    "project_use": "明确区分训练 prompt 模拟、评测 robot 规则与预测目标；这些因素不能在一篇引用中混为一谈。",
+    "source_refs": [
+      "turn120academia18"
+    ]
+  },
+  {
+    "id": "IA18",
+    "title": "Interactive Segmentation for Diverse Gesture Types Without Context",
+    "year": 2024,
+    "domain": "DIG 局部意图与手势多样性",
+    "url": "https://openaccess.thecvf.com/content/WACV2024/papers/Myers-Dean_Interactive_Segmentation_for_Diverse_Gesture_Types_Without_Context_WACV_2024_paper.pdf",
+    "access_depth": "原始 PDF 的方法与 Local RICE 可检索摘录，原作者项目页；PDF 全文打开失败",
+    "verified_claim": "不仅提出只计手势目标错误区域的 Local RICE，也通过训练增强学习手势与区域的关系，并让其他区域保持已有分割；考察 diverse gestures 的局部修正。",
+    "limitation": "本次读取为原文方法摘录，未核全数据与所有公式。它不完全等同 native 18 邻接残差标签，但旧稿将它说成仅换评价指标过窄。",
+    "project_use": "列为真正的 task-level 近邻；新方法需强调显式 T/O/P 残差标签和状态变化后的指代重定，而不是笼统的局部编辑。",
+    "source_refs": [
+      "turn51search38",
+      "turn76view0"
+    ]
+  },
+  {
+    "id": "IA19",
+    "title": "ClickAttention: Click Region Similarity Guided Interactive Segmentation",
+    "year": 2024,
+    "domain": "点击影响范围与亲和监督",
+    "url": "https://arxiv.org/html/2408.06021v1",
+    "access_depth": "方法 §III：点击相似度、监督式范围、正负点击 affinity loss；预印本",
+    "verified_claim": "显式扩展点击影响范围，按点击区域和全图特征相似性学习 attention，并用分割标签监督相似度、用判别亲和损失减少正负点击耦合。",
+    "limitation": "已经不是纯无监督相似度；但监督对象仍为语义前景/背景，不是本项目有符号残差中的 T/O/P。",
+    "project_use": "“已有范围只靠手定相似度、无人监督学习范围”必须删除；可保留残差指代与普通前景监督的区别。",
+    "source_refs": [
+      "turn40view4",
+      "turn116view5"
+    ]
+  },
+  {
+    "id": "IA20",
+    "title": "Structured Click Control in Transformer-based Interactive Segmentation",
+    "year": 2024,
+    "domain": "图结构意图与点击控制",
+    "url": "https://arxiv.org/html/2405.04009v1",
+    "access_depth": "方法 §III-A/B 及前言；预印本",
+    "verified_claim": "作者明确提出 structured click intent，学习点击相似性分数、选择图节点、用 GNN 聚合和双 cross-attention 融合；节点重要性有监督损失。",
+    "limitation": "使用相似度阈值、top-k 等人工计算选择；其图是动态 token 关系，并非 seed-to-voxel 精确 maximin 残差可达图。",
+    "project_use": "反驳“intent + 图传播”的宽泛首创；把新意限定为状态条件的 signed residual connectivity 和可操作的配对标签。",
+    "source_refs": [
+      "turn40view3",
+      "turn116view4"
+    ]
+  },
+  {
+    "id": "IA21",
+    "title": "Segment Everything Everywhere All at Once",
+    "year": 2023,
+    "domain": "SEEM 多模态 referring 与交互",
+    "url": "https://ar5iv.labs.arxiv.org/html/2304.06718",
+    "access_depth": "方法：提示采样、语言/视觉组合、记忆提示和掩膜匹配",
+    "verified_claim": "视觉提示、语言提示与记忆提示可组合，模型按提示生成对应分割，历史掩膜通过 memory prompting 参与后续互动。",
+    "limitation": "语义指代表达和视觉对象选择不同于误差 CC 定义；没有语言或临床目标标签时不能借 SEEM 证明本项目已经理解医生完整意图。",
+    "project_use": "将 referent 定义写清楚；同状态不同提示对应不同目标是广泛已有能力。",
+    "source_refs": [
+      "turn60view2"
+    ]
+  },
+  {
+    "id": "IA22",
+    "title": "GRES: Generalized Referring Expression Segmentation",
+    "year": 2023,
+    "domain": "多目标与无目标指代",
+    "url": "https://ar5iv.labs.arxiv.org/html/2306.00968",
+    "access_depth": "任务定义 §3.1 与 no-target 评价/分类器分析",
+    "verified_claim": "扩展语言指代分割到多个目标和无目标输入，提供独立 no-target 标签及相关评价；只看掩膜空不空不能充分完成无目标识别。",
+    "limitation": "no target 是请求未匹配对象，no-op 是候选编辑预期无益；真实错误仍存在时 no-op 不能被宣称为已经完成意图。",
+    "project_use": "给评分器分清匹配、修正范围与停止原因；无益拒绝不可与无目标识别混同。",
+    "source_refs": [
+      "turn60view3",
+      "turn115view1"
+    ]
+  },
+  {
+    "id": "IA23",
+    "title": "Cross Prompting Consistency with Segment Anything Model for Semi-supervised Medical Image Segmentation",
+    "year": 2024,
+    "domain": "CPC-SAM 半监督跨分支提示",
+    "url": "https://ar5iv.labs.arxiv.org/html/2407.05416",
+    "access_depth": "方法 §2.1–2.2 的 cross prompting 与监督关系",
+    "verified_claim": "两个分支从各自无提示输出产生对方的点提示，用提示后的更可靠输出交叉监督对方无提示输出，训练时利用未标注数据；推理可无显式提示。",
+    "limitation": "不是简单的同一目标换两个点要求输出一致；不能直接称为已有同状态目标切换的反事实监督。全标注 SIRB 未必需要其半监督损失。",
+    "project_use": "纠正旧稿对 CPC-SAM 的简化描述；仅借对称关系监督的思想并清楚标注改造。",
+    "source_refs": [
+      "turn116view0",
+      "turn118view0"
+    ]
+  },
+  {
+    "id": "IA24",
+    "title": "PRISM: A Promptable and Robust Interactive Segmentation Model with Visual Prompts",
+    "year": 2024,
+    "domain": "医学交互候选评分与修正",
+    "url": "https://arxiv.org/html/2404.15028v1",
+    "access_depth": "方法：迭代、confidence learning、corrective learning，相关实验",
+    "verified_claim": "多个候选掩膜的置信度通过 Dice 目标回归监督，选择最高分候选后进入浅层纠错网络，训练包含迭代错误提示。",
+    "limitation": "监督是候选整掩膜的 Dice，不是某个已有多病灶掩膜的授权编辑增益；存在指标相同而任务不同的区别。",
+    "project_use": "医学里“多候选+学质量+选择”已有直接先例；工程价值仍高，贡献应落在 T/O/P 一致的效用与五轮闭环行为。",
+    "source_refs": [
+      "turn40view0",
+      "turn115view4"
+    ]
+  },
+  {
+    "id": "IA25",
+    "title": "VISTA3D: Versatile Imaging Segmentation and Annotation Model for 3D Computed Tomography",
+    "year": 2024,
+    "domain": "三维医学局部纠错与合并",
+    "url": "https://arxiv.org/html/2406.05285v1",
+    "access_depth": "方法、Algorithm 1 的 connected component merge",
+    "verified_claim": "新预测与已有掩膜形成正负差异区，各自按连通分量，只合并包含相应点击的分量；还处理正点击落在已有掩膜内的情形。",
+    "limitation": "不是学习本项目的 T/O/P，且连通更新仍是形态学规则；但已在 3D 医学任务明确限制点击引发的修改。",
+    "project_use": "作为 SIRB 最直接的三维医学执行近邻；学习指代范围应证明超出规则式 CC merge 的具体能力。",
+    "source_refs": [
+      "turn40view1",
+      "turn45view1"
+    ]
+  },
+  {
+    "id": "IA26",
+    "title": "nnInteractive: Redefining 3D Promptable Segmentation",
+    "year": 2025,
+    "domain": "通用三维医学交互",
+    "url": "https://arxiv.org/html/2503.08373v1",
+    "access_depth": "方法 §2 的 prompting、用户策略、AutoZoom、ambiguity 与训练数据章节",
+    "verified_claim": "混合交互用户策略、按对象尺度调整笔迹形变、随机标签组合适应语义歧义；AutoZoom 根据边界预测扩展 ROI。训练覆盖 120 多个 3D 数据集和多模态。",
+    "limitation": "AutoZoom 仍有 1.5 倍步长和最多 4 倍等计算/范围设置，不能拿它证明无超参数。通用性来自任务数据与评测，不来自模型名称。",
+    "project_use": "强烈支持对象相对尺度与混合用户策略；当前 PET/CT 模型只能先称 generalizable design，需跨数据证据才称 general medical model。",
+    "source_refs": [
+      "turn40view2",
+      "turn116view3",
+      "turn118view2"
+    ]
+  },
+  {
+    "id": "IA27",
+    "title": "ScribblePrompt: Fast and Flexible Interactive Segmentation for Any Biomedical Image",
+    "year": 2024,
+    "domain": "通用生物医学笔迹交互",
+    "url": "https://arxiv.org/html/2312.07381v2",
+    "access_depth": "方法 §3.1–3.4、引言与作者项目页；未逐页读全部补充",
+    "verified_claim": "在多任务影像上以模型当前错误模拟后续提示，结合真实与合成标签提升未见任务适应；正负笔迹、点击和框均被表示，支持轻量 UNet。",
+    "limitation": "多任务 2D 全对象分割不同于 native 3D 残差授权；专家研究的时间和 Dice 改善不能外推为本项目收益。",
+    "project_use": "支持先做轻量有效的状态与提示训练，借多样化任务而非仅移除 mm 常数实现泛化。",
+    "source_refs": [
+      "turn124view2",
+      "turn124view1"
+    ]
+  },
+  {
+    "id": "IA28",
+    "title": "SCISSR: Scribble-Conditioned Interactive Surgical Segmentation and Refinement",
+    "year": 2026,
+    "domain": "外科笔迹交互与历史记忆",
+    "url": "https://arxiv.org/html/2603.18544v1",
+    "access_depth": "方法 §2.1–2.7；2026-03-19 预印本",
+    "verified_claim": "冻结 SAM 2 主体，加入密集笔迹编码、最新笔迹的空间门控融合、前轮预测记忆与 LoRA，展开多轮纠错训练。",
+    "limitation": "自然视角手术图像不同于 PET/CT；所见摘要提及 SAM 3 可转移并不等于已经报告跨 backbone 完整验证。不能凭其高 Dice 判断 SIRB 可以达到相同分数。",
+    "project_use": "最新笔迹和历史信号分流已经有近邻；SIRB 可借简洁接口，但创新需来自残差指代目标。",
+    "source_refs": [
+      "turn40view5",
+      "turn45view5",
+      "turn126view2"
+    ]
+  },
+  {
+    "id": "IA29",
+    "title": "iSegFormer: Interactive Segmentation via Transformers with Application to 3D Knee MR Images",
+    "year": 2022,
+    "domain": "医学 Transformer 交互",
+    "url": "https://arxiv.org/abs/2112.11325",
+    "access_depth": "原作者摘要、作者论文页与会议元数据；全文未读",
+    "verified_claim": "Transformer 交互框架应用于膝 MR 分割，结合 2D 交互和视频式传播服务三维影像。",
+    "limitation": "不能把“应用到 3D”写成原生全体积 3D 卷积/Transformer 残差模型；本次未核全部传播参数和数字。",
+    "project_use": "避免按标题归类；可比较交互计算与体积范围，但不是直接 scope 标签先例。",
+    "source_refs": [
+      "turn4academia53",
+      "turn4search38",
+      "turn4search32"
+    ]
+  },
+  {
+    "id": "IA30",
+    "title": "PseudoClick: Interactive Image Segmentation with Click Imitation",
+    "year": 2022,
+    "domain": "错误预测与自动纠正点击",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12685406/",
+    "access_depth": "原始作者稿在 PMC 的方法检索摘录；网页打开遇到验证页，ECCV PDF 未成功打开",
+    "verified_claim": "预测假阳性和假阴性错误区域，按这些预测产生伪点击，区分人类与伪点击的输入表示以模仿交互纠错。",
+    "limitation": "预测哪里可能有错并自动出下一笔，不等于推断当前真实一笔指向哪块错；本次未重新验证所有性能数字。",
+    "project_use": "把 error localization 与 referent assignment 分成不同能力；不能认为有错误图就自然得到 T/O。",
+    "source_refs": [
+      "turn68search0",
+      "turn68search26"
+    ]
+  },
+  {
+    "id": "IA31",
+    "title": "TETRIS: Towards Exploring the Robustness of Interactive Segmentation",
+    "year": 2024,
+    "domain": "真实用户与交互鲁棒性",
+    "url": "https://arxiv.org/html/2402.06132v1",
+    "access_depth": "真实用户研究、极端点击优化、评价协议方法章节",
+    "verified_claim": "真实用户点击分布偏离标准中心错误点击，模型对有效点击位置敏感；用受约束极端点击测试模型鲁棒性。",
+    "limitation": "真实研究是 600 个第一轮和 1200 个第二轮答复，不能称 1800 名医生或完整多轮临床轨迹；自然图像结论不能量化 PET/CT 掉分。",
+    "project_use": "支持训练端覆盖多样交互；评测协议保持冻结，不能为消除难例临时改 robot。",
+    "source_refs": [
+      "turn27view4",
+      "turn126view0"
+    ]
+  },
+  {
+    "id": "IA32",
+    "title": "RClicks: Realistic Click Simulation for Benchmarking Interactive Segmentation",
+    "year": 2024,
+    "domain": "学习用户点击分布",
+    "url": "https://arxiv.org/html/2410.11722v1",
+    "access_depth": "用户数据 §3 与 clickability 方法 §4 相关章节",
+    "verified_claim": "收集约 47.5 万有效真实点击并学习 clickability 模型，使用更真实点击分布评测交互质量和鲁棒性。",
+    "limitation": "是自然图像点击模型，不是医生 PET/CT 笔迹分布；学习出来的用户模型也有域依赖，不能直接替换冻结评测。",
+    "project_use": "在 TRAIN 混合不同选笔习惯时留出未训练的策略作压力检验；将策略变化和理想可修空间变化区分。",
+    "source_refs": [
+      "turn27view5",
+      "turn40view11",
+      "turn126view1"
+    ]
+  }
+]

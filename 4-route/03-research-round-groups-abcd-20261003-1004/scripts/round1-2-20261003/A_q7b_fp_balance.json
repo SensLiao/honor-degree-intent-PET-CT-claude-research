@@ -1,0 +1,44 @@
+{
+ "flat": {
+  "trajectories": 255,
+  "fp_more_at_d5": 148,
+  "fp_less_at_d5": 100,
+  "fn_more_at_d5": 43,
+  "fn_less_at_d5": 201,
+  "median_dfp_ml": 0.2985830251132138,
+  "median_dfn_ml": -1.1735611036419868,
+  "patient_mean_dfp_ml": -0.08210382019418774,
+  "patient_median_fp0_ml": 4.070809073746205,
+  "patient_median_fp5_ml": 4.629046575476727,
+  "patient_median_fn0_ml": 5.888720773066159,
+  "patient_median_fn5_ml": 3.1295924484088697
+ },
+ "N3": {
+  "trajectories": 255,
+  "fp_more_at_d5": 163,
+  "fp_less_at_d5": 83,
+  "fn_more_at_d5": 41,
+  "fn_less_at_d5": 200,
+  "median_dfp_ml": 0.5639901585471816,
+  "median_dfn_ml": -1.1943321004528684,
+  "patient_mean_dfp_ml": 2.0911011321217905,
+  "patient_median_fp0_ml": 4.070809073746205,
+  "patient_median_fp5_ml": 4.590353298699484,
+  "patient_median_fn0_ml": 5.888720773066159,
+  "patient_median_fn5_ml": 3.646583427077119
+ },
+ "oracle": {
+  "trajectories": 255,
+  "fp_more_at_d5": 0,
+  "fp_less_at_d5": 183,
+  "fn_more_at_d5": 0,
+  "fn_less_at_d5": 237,
+  "median_dfp_ml": -0.9952767503773792,
+  "median_dfn_ml": -4.611448943415189,
+  "patient_mean_dfp_ml": -18.38522752389618,
+  "patient_median_fp0_ml": 4.070809073746205,
+  "patient_median_fp5_ml": 0.9952767503773791,
+  "patient_median_fn0_ml": 5.888720773066159,
+  "patient_median_fn5_ml": 1.230609212846806
+ }
+}

@@ -1,0 +1,34 @@
+Sums over the 99 VAL scans (ml).  r1 = round 1 (identical start and stroke for every system), r2-5 = later rounds
+
+=== stroke sign +
+system   rounds    n   target_volume_ml target_recovery_ml same_sign_other_re        fp_added_ml         tp_lost_ml opposite_sign_repa       new_error_ml
+v1flat   r1       54             3107.8              700.8                7.6              339.1                0.0                0.0              339.1
+v1flat   r2-5    189             7150.1             1295.8               61.3              949.1                0.0                0.0              949.1
+K1       r1       54             3107.8              369.4                5.6               62.7                0.0                0.0               62.7
+K1       r2-5    232             9045.2              974.9               52.2              720.4                0.0                0.0              720.4
+K2       r1       54             3107.8              483.0                3.0              129.7                0.0                0.0              129.7
+K2       r2-5    212             8195.9              479.3               31.1              318.2                0.0                0.0              318.2
+K2flip   r1       54             3107.8              470.6                3.3              114.9                0.0                0.0              114.9
+K2flip   r2-5    221             8360.4              512.7               22.7              285.9                0.0                0.0              285.9
+oracle   r1       54             3107.8             3107.8                0.0                0.0                0.0                0.0                0.0
+oracle   r2-5    192             1995.0             1995.0                0.0                0.0                0.0                0.0                0.0
+
+=== stroke sign -
+system   rounds    n   target_volume_ml target_recovery_ml same_sign_other_re        fp_added_ml         tp_lost_ml opposite_sign_repa       new_error_ml
+v1flat   r1       31              722.6              182.4               11.2                0.0               64.2                0.0               64.2
+v1flat   r2-5    147             2226.1             1015.5              121.1                0.0              654.6                0.0              654.6
+K1       r1       31              722.6               66.9                2.8                0.0                5.4                0.0                5.4
+K1       r2-5    106             3508.3              576.7               22.7                0.0              355.9                0.0              355.9
+K2       r1       31              722.6               72.1                1.9                0.0                5.7                0.0                5.7
+K2       r2-5    126             3327.6              396.7               11.0                0.0               98.7                0.0               98.7
+K2flip   r1       31              722.6               67.2                1.9                0.0                4.8                0.0                4.8
+K2flip   r2-5    117             3328.2              298.2               11.7                0.0               95.7                0.0               95.7
+oracle   r1       31              722.6              722.6                0.0                0.0                0.0                0.0                0.0
+oracle   r2-5    108             1038.2             1038.2                0.0                0.0                0.0                0.0                0.0
+
+=== round-1 ADD strokes: per-stroke medians (ml) and share of T recovered / O recovered
+v1flat   n=54 T-share median=0.537 mean=0.571  O fixed median=0.01 sum=7.6  FP added median=1.39 sum=339.1
+K1       n=54 T-share median=0.175 mean=0.279  O fixed median=0.00 sum=5.6  FP added median=0.03 sum=62.7
+K2       n=54 T-share median=0.184 mean=0.296  O fixed median=0.00 sum=3.0  FP added median=0.09 sum=129.7
+K2flip   n=54 T-share median=0.179 mean=0.284  O fixed median=0.00 sum=3.3  FP added median=0.07 sum=114.9
+oracle   n=54 T-share median=1.000 mean=1.000  O fixed median=0.00 sum=0.0  FP added median=0.00 sum=0.0
