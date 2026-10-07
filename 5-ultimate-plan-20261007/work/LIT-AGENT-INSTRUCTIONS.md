@@ -68,3 +68,15 @@
 - 文件路径用绝对路径 `/home/user/honor-degree-intent-pet-ct-claude-research/5-ultimate-plan-20261007/04-cross-domain/registers/<domain>/<subtopic>.json`。
 - 每核实 5 篇就用 Write 整体重写一次 JSON（有效的 JSON 数组）。不要运行 git。
 - 一个子主题只写自己的两个文件，别碰别人的。
+
+## 补充（07:30 UTC 实测，WebFetch 和 curl 行为不同，以下按 WebFetch 的实际表现写）
+
+1. PubMed 文章页 `https://pubmed.ncbi.nlm.nih.gov/<PMID>/` 经 WebFetch 只返回 cookie 提示页，拿不到内容。改用两步：
+   - 找 PMID：`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=<标题关键词，用+连接>[Title]&retmode=json`
+   - 读记录：`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=<PMID>&retmode=xml`（返回官方 PubMed 记录，含标题、作者、年份、期刊、DOI、完整摘要）。这算打开了来源记录，`verification` 写“读了摘要（eutils XML）”，`url` 写 `https://pubmed.ncbi.nlm.nih.gov/<PMID>/`，`doi` 填 XML 里的 DOI。
+2. Europe PMC REST 能用且覆盖心理学、神经科学、教育学、医学：`https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:%22<标题>%22&format=json&resultType=core&pageSize=3`（返回标题、作者、年份、期刊、DOI、摘要）。`verification` 写“读了摘要（Europe PMC）”，`url` 写它返回的 DOI 链接或 PubMed 链接。Europe PMC 的网页版 europepmc.org 被拦，只能用 REST。
+3. OpenAlex 按 DOI 查能用（`https://api.openalex.org/works/doi:<doi>`），按关键词搜索被限流。它只给元数据（标题、作者、年份、出处），没有摘要正文时不算核实，只能用来确认 DOI 和年份。
+4. Nature、Springer（link.springer.com，含 PDF 直链）的文章页经 WebFetch 全部跳到 idp.nature.com / idp.springer.com 的 cookie 授权页，拿不到内容。这两家的论文改走：PubMed eutils（生物医学类几乎都有 PMID）、Europe PMC、PMC 全文页（`https://pmc.ncbi.nlm.nih.gov/articles/PMC<id>/` 能开）、arXiv 版本。都没有就记 unverified。
+5. doi.org 经 WebFetch 返回“REDIRECT DETECTED”，把它给出的跳转 URL 再 WebFetch 一次即可（跳到 Nature/Springer 时按第 4 条处理）。
+6. 另外确认能开：proceedings.mlr.press（ICML/AISTATS 等）、ojs.aaai.org、ijcai.org、www.cambridge.org/core（文章页含摘要，不需要登录）、psyarxiv.com 与 osf.io、jmlr.org、hal.science、core.ac.uk、openaccess.thecvf.com、journals.plos.org、elifesciences.org、frontiersin.org 文章页。确认被拦：jneurosci.org（Cloudflare 验证页）、psycnet.apa.org、academic.oup.com、direct.mit.edu、journals.sagepub.com、cell.com、annualreviews.org、royalsocietypublishing.org、sciencedirect.com、ieeexplore、dl.acm.org。
+7. 统计脚本认 `verification` 以“读了摘要”或“读了全文”开头的记录，所以括号里的注释可以保留。

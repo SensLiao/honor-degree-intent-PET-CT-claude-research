@@ -1,0 +1,19 @@
+[
+ {
+  "id": "neuroscience-lead-verified-01",
+  "domain": "neuroscience",
+  "subtopic": "lead-verified",
+  "title": "Whatever next? Predictive brains, situated agents, and the future of cognitive science",
+  "authors": "Andy Clark",
+  "year": 2013,
+  "venue": "Behavioral and Brain Sciences",
+  "url": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/whatever-next-predictive-brains-situated-agents-and-the-future-of-cognitive-science/33542C736E17E3D1D44E8D03BE5F4CD9",
+  "doi": "10.1017/S0140525X12000477",
+  "verification": "读了摘要",
+  "source_page_opened": true,
+  "what_it_says": "综述预测加工观点：大脑是预测机器，通过不断用自上而下的预期匹配感觉输入、只向上传递预测误差来支持知觉与行动。",
+  "target_module": "残差修正框架 / 误差场",
+  "use_for_project": "修改器只对“预测与证据不符”的地方产生信号的设计与预测加工同构：误差场 e 应由影像证据和当前分割的差决定，编辑只沿误差传播；精度加权对应按置信度调门槛。",
+  "transfer_risk": "这是理论综述不是网络设计证据；预测加工描述的是层级生成模型的推断，我们的网络没有显式生成模型，类比只到“只传播误差、按精度加权”这一步。"
+ }
+]

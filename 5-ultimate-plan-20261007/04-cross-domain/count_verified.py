@@ -3,7 +3,7 @@
 
 Usage: python3 -I count_verified.py [--write]
 Dedup key: DOI (lowercased) if present, else arXiv id in url, else normalized title.
-Only records with source_page_opened == true and verification in {读了摘要, 读了全文} count as verified.
+Only records with source_page_opened == true and verification starting with 读了摘要 or 读了全文 count as verified.
 """
 import csv, json, os, re, sys, glob
 from collections import OrderedDict
@@ -13,7 +13,7 @@ REG = os.path.join(HERE, "registers")
 DOMAINS = ["psychology", "neuroscience", "llm", "medical-cv", "physics", "mathematics", "education"]
 FIELDS = ["id", "domain", "subtopic", "title", "authors", "year", "venue", "url", "doi",
           "verification", "source_page_opened", "what_it_says", "target_module", "use_for_project", "transfer_risk"]
-OK_VERIF = {"读了摘要", "读了全文"}
+OK_PREFIX = ("读了摘要", "读了全文")
 
 def norm_title(t):
     t = (t or "").lower()
@@ -55,7 +55,7 @@ def main(write):
             for r in recs:
                 v = (r.get("verification") or "").strip()
                 opened = r.get("source_page_opened") in (True, "true", "True", 1)
-                if is_unv or v not in OK_VERIF or not opened or not r.get("url") or not r.get("title"):
+                if is_unv or not v.startswith(OK_PREFIX) or not opened or not r.get("url") or not r.get("title"):
                     unverified.append(r)
                     continue
                 k = key_of(r)

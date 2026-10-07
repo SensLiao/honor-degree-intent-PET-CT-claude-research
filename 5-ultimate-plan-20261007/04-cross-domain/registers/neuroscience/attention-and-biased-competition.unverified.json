@@ -1,0 +1,19 @@
+[
+  {
+    "id": "neuroscience-attention-and-biased-competition-U01",
+    "domain": "neuroscience",
+    "subtopic": "attention-and-biased-competition",
+    "title": "Neural mechanisms of selective visual attention",
+    "authors": "Desimone R, Duncan J",
+    "year": 1995,
+    "venue": "Annual Review of Neuroscience 18:193-222",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/7605061/",
+    "doi": "10.1146/annurev.ne.18.030195.001205",
+    "verification": "只读到检索摘录",
+    "source_page_opened": false,
+    "what_it_says": "偏置竞争模型的奠基综述。本次只在 PubMed（eutils XML）和 Europe PMC REST 读到标题、作者、年份、期刊和 DOI，两处记录都没有摘要；annualreviews.org 被拦，core.ac.uk 检索返回 403，两个猜测的课程网页 PDF 地址返回 404，所以摘要和正文都没读到，内容按记忆不写。偏置竞争的可读陈述改用同一作者 1998 年 Philosophical Transactions 的论文（主文件第 05 条）。",
+    "target_module": "意图绑定（被指的块赢、别处同向的错输）",
+    "use_for_project": "若日后拿到全文，可作为“多刺激竞争表示、自上而下与自下而上信号偏置竞争、未被选中者被压制”这一总框架的首引；项目里对应 T 与 O 在同一块内按 q 竞争、O 必须输的设计。",
+    "transfer_risk": "本次没读到原文，不能据此写任何具体结论；即使读到，综述里的机制陈述也只是对网络设计的类比启发。"
+  }
+]
