@@ -38,7 +38,7 @@
     "domain": "neuroscience",
     "subtopic": "binding-and-working-memory",
     "title": "Neural synchrony in cortical networks: history, concept and current status",
-    "authors": "Peter J. Uhlhaas, Gordon Pipa, Bruss Lima, Lucia Melloni, Sergio Neuenschwander, Danko Nikolić, Wolf Singer",
+    "authors": "Peter J. Uhlhaas, Gordon Pipa, Bruss Lima 等（末位作者 Wolf Singer）",
     "year": 2009,
     "venue": "Frontiers in Integrative Neuroscience",
     "url": "https://www.frontiersin.org/articles/10.3389/neuro.07.017.2009/full",
@@ -242,7 +242,7 @@
     "domain": "neuroscience",
     "subtopic": "binding-and-working-memory",
     "title": "The importance of mixed selectivity in complex cognitive tasks",
-    "authors": "Mattia Rigotti, Omri Barak, Melissa R. Warden, Xiao-Jing Wang, Nathaniel D. Daw, Earl K. Miller, Stefano Fusi",
+    "authors": "Mattia Rigotti, Omri Barak, Melissa R. Warden 等（末位作者 Stefano Fusi）",
     "year": 2013,
     "venue": "Nature",
     "url": "https://pubmed.ncbi.nlm.nih.gov/23685452/",
@@ -320,7 +320,7 @@
     "what_it_says": "破坏再固化对处理情绪记忆有前景，但记忆何时变得不稳定仍不清楚。研究显示检索后期望值的变化可作为预测误差的读出，反映记忆再激活引发的底层过程：环境的微小差异决定检索是引发再固化还是开启新的记忆痕迹。单个预测误差时发生再固化并可被药理破坏；多个预测误差累积到足以降低威胁期望时转为新学习（消退），再固化不再发生。",
     "target_module": "多轮纠错 / 历史作为证据（上一轮改动面对新笔：续修、局部撤回、还是另起新目标）",
     "use_for_project": "把“当前笔与上一轮改动的冲突量”做成连续的预测误差量（如笔落在上一轮反向改动区域内的体积比例、方向是否相反），并学一个三分支决策：冲突小则续修（保留历史改动），中等则给出局部撤回候选（主张 a 的几个范围），大则当作新目标重新绑定；分支边界由网络学出而不是手定。",
-    "transfer_risk": "这是人类恐惧条件反射与 propranolol 的药理实验，“单个 vs 多个预测误差”的分界是实验操作定义的；迁移到网络只剩“更新模式随冲突量分级”这一假设，分级是否带来 Dice 收益没有证据，属于需验证的假设。"
+    "transfer_risk": "这是人类恐惧条件反射的药理实验，“单个 vs 多个预测误差”的分界是实验操作定义的；迁移到网络只剩“更新模式随冲突量分级”这一假设，分级是否带来 Dice 收益没有证据，属于需验证的假设。"
   },
   {
     "id": "neuroscience-binding-and-working-memory-20",
@@ -497,7 +497,7 @@
     "domain": "neuroscience",
     "subtopic": "binding-and-working-memory",
     "title": "Object-Centric Learning with Slot Attention",
-    "authors": "Francesco Locatello, Dirk Weissenborn, Thomas Unterthiner, Aravindh Mahendran, Georg Heigold, Jakob Uszkoreit, Alexey Dosovitskiy, Thomas Kipf",
+    "authors": "Francesco Locatello, Dirk Weissenborn, Thomas Unterthiner 等（末位作者 Thomas Kipf）",
     "year": 2020,
     "venue": "NeurIPS 2020（arXiv:2006.15055）",
     "url": "https://arxiv.org/abs/2006.15055",

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "neuroscience-plasticity-gating-and-asymmetric-learning-u01",
+    "domain": "neuroscience",
+    "subtopic": "plasticity-gating-and-asymmetric-learning",
+    "title": "Behavioural and neural characterization of optimistic reinforcement learning",
+    "authors": "Germain Lefebvre, Maël Lebreton, Florent Meyniel, Sacha Bourgeois-Gironde, Stefano Palminteri",
+    "year": 2017,
+    "venue": "Nature Human Behaviour",
+    "url": "https://www.nature.com/articles/s41562-017-0067",
+    "doi": "10.1038/s41562-017-0067",
+    "verification": "只读到检索摘录",
+    "source_page_opened": false,
+    "what_it_says": "据检索摘录与同作者 Palminteri 等 2017 PLOS Comput Biol 文中的转述，该文报告人类被试对正预测误差的学习率高于负预测误差（乐观更新）并给出神经关联。本次 Nature 文章页经 WebFetch 跳到 idp.nature.com cookie 页，PubMed eutils 与 Europe PMC 按标题和作者都查不到记录，内容未核实。",
+    "target_module": "加删分治",
+    "use_for_project": "若核实，可作为“正负误差学习率不对称是人类默认设置”的直接行为证据，支持加笔侧给正样本更高权重的设计。",
+    "transfer_risk": "未核实；且人类乐观偏差常被视为非理性偏差，直接套到损失权重上没有规范性依据，须靠 Cazé 等 2013 一类的规范分析补足。"
+  },
+  {
+    "id": "neuroscience-plasticity-gating-and-asymmetric-learning-u02",
+    "domain": "neuroscience",
+    "subtopic": "plasticity-gating-and-asymmetric-learning",
+    "title": "Failure to escape traumatic shock",
+    "authors": "Martin E. P. Seligman, Steven F. Maier",
+    "year": 1967,
+    "venue": "Journal of Experimental Psychology",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/6032570/",
+    "doi": "10.1037/h0024514",
+    "verification": "只读到检索摘录（PubMed 记录只有题录，无摘要）",
+    "source_page_opened": true,
+    "what_it_says": "习得性无助的原始实验报告。本次通过 eutils 打开了 PubMed 记录，标题、作者、年份、期刊、DOI 对得上，但记录没有摘要，正文无法读到，所以内容只能转述自 Maier 与 Seligman 2016 年的回顾（已核实，见主文件 18 条）：经历不可控电击的狗随后不再逃避可逃避的电击。",
+    "target_module": "难负样本",
+    "use_for_project": "作为“惩罚不可控时的被动”这一现象的历史出处引用；具体机制与修正结论以 2016 年回顾为准。",
+    "transfer_risk": "只有题录核实；而且 2016 年回顾已指出原理论对机制的解释是反的，引用时必须一并引回顾。"
+  }
+]
