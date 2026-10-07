@@ -27,7 +27,7 @@
 - 身份：N4_STATIC、seed3407、v1 N3 40k final续训8k；三份manifest均绑定同一final checkpoint（18aa9116…），partition=val。每扫描一种冻结画法、五轮交互，不是三画法最终VAL或TEST，不与不同画法结果直接比较。
 - 99扫描/57患者，85阳性扫描/54患者进入Dice分母，99轨迹/594个六状态记录、0失败。先在患者内平均扫描，再对患者等权平均：D0–D5为0.609465、0.671966、0.694585、0.704837、0.721913、0.736012；D5−D0=0.126547，nAUC=0.693208。
 - 101机制片段全部有目标区域Dice定义值，56患者，患者平均0.548943；397轨迹状态全部有定义值，53患者，患者平均0.455288。这两项是目标区域Dice，不是全卷D5。
-- 原件：代码树 `records/server_status/heartbeat-3-20261002-0924/val-results/`，三运行目录的manifest和19份结果表，全部表SHA256与manifest一致。汇总 `metrics-summary.json`，核对 `transfer-checks.json`；远端原件在运行根 `eval/v2-quickval-N4_STATIC-R1`、`v2-list-N4_STATIC-R1`、`v2-traj-N4_STATIC-R1`。
+- 原件：代码树 `records/server_status/heartbeat-3-20261002-0924/val-results/`（10-07 已清理），三运行目录的manifest和19份结果表，全部表SHA256与manifest一致。汇总 `metrics-summary.json`，核对 `transfer-checks.json`；远端原件在运行根 `eval/v2-quickval-N4_STATIC-R1`、`v2-list-N4_STATIC-R1`、`v2-traj-N4_STATIC-R1`。
 - 可用于本轮VAL筛选描述；尚未对匹配同头参考执行完整判定，不能据此声称领先或通过候选条件。批次登记已更新，TEST结果表不登记此VAL。
 
 ### flat续训对照快速VAL结果（10-03核验）
@@ -38,7 +38,7 @@
 - 原件：本机 `records/development_results_transfer/eval-sirb-v2-quickval-N1_STATE_STATIC-R1-20261003/`（`rollout_manifest.json`、`six_state.csv`，两个文件的sha256本机与服务器一致）；N3续训对照的同类副本在 `eval-sirb-v2-quickval-N4_STATIC-R1-20261003/`（与10-02那份逐字节相同）。收回工具 `scripts/reporting/collect_baseline_fold_val.py`。远端原件在运行根 `eval/v2-quickval-N1_STATE_STATIC-R1`。
 - 网页：Results → Training & Validation → VAL里，两个续训对照是第二版模型两行（Continuation control · based on Main model / Flat 3-class control，v2-1、v2-2），状态由in progress改completed（训练和快速VAL完成），标“quick VAL · 一种冻结画法 · screening only”；10-03 01:00已随网页上线（见 [[petct-sirb-illustrated-course]]）。
 
-flat续训对照新增机制结果（10-03 02:49核验）：101片段/56患者目标区域Dice0.610919，397轨迹状态/53患者0.552134，全部事件有定义值。两manifest同绑定b2c19b77…final checkpoint、partition=val；events SHA256与manifest一致。原件和汇总在代码树 `records/server_status/heartbeat-3-20261003-0247/val-results/`。属于VAL机制诊断，不是全卷Dice或TEST。
+flat续训对照新增机制结果（10-03 02:49核验）：101片段/56患者目标区域Dice0.610919，397轨迹状态/53患者0.552134，全部事件有定义值。两manifest同绑定b2c19b77…final checkpoint、partition=val；events SHA256与manifest一致。原件和汇总在代码树 `records/server_status/heartbeat-3-20261003-0247/val-results/`（10-07 已清理）。属于VAL机制诊断，不是全卷Dice或TEST。
 
 ### flat诱导状态候选首批VAL（10-03 23:56核验）
 
@@ -57,7 +57,7 @@ flat续训对照新增机制结果（10-03 02:49核验）：101片段/56患者�
 
 - 快速VAL08:49:39完成99例/57患者、0失败，Dice85阳性例/54患者，一种冻结画法。患者D0..D5：0.609465、0.684402、0.708991、0.719875、0.743620、0.754361；nAUC0.707760。
 - 对同头N3续训对照：D5差+0.0183488595、nAUC差+0.0145523019。101机制09:33:37完成，101定义值/56患者，目标区域Dice0.5807686401（对照0.5489426568，差+0.0318259833）；原10-01整体及目标Dice机制条件均满足。但D5比flat诱导状态0.760569低0.0062085320，不能声称胜过flat，新计划待定。
-- 快速VAL按既有工具回传 `records/development_results_transfer/eval-sirb-v2-quickval-N3_ES-R1-20261004/`，双端SHA一致；机制manifest/events和核验在 `records/server_status/heartbeat-3-20261004-0956/val-results/v2-list-N3_ES-R1/`。本机Results已接sirb-v2-5，builder成功无新推理/体素读取；线上本轮尚未发布，待审UI不整站发布。
+- 快速VAL按既有工具回传 `records/development_results_transfer/eval-sirb-v2-quickval-N3_ES-R1-20261004/`，双端SHA一致；机制manifest/events和核验在 `records/server_status/heartbeat-3-20261004-0956/val-results/v2-list-N3_ES-R1/`（10-07 已清理）。本机Results已接sirb-v2-5，builder成功无新推理/体素读取；线上本轮尚未发布，待审UI不整站发布。
 - 队列09:33:37自动接flat空间支路N1_STATE_SPATIAL，当前720/8000、1.52秒/步，训练/队列活；20步现17完成/1运行/2排队。3090 78°C、数据盘34GB、系统盘0；证据records/server_status/heartbeat-3-20261004-0956/。
 
 ### flat空间支路快速VAL与起点模型（10-04 15:28 AEDT核验）
@@ -86,7 +86,7 @@ flat续训对照新增机制结果（10-03 02:49核验）：101片段/56患者�
 
 ### 证据
 
-- 部署回执：代码树 `records/verification/editor-sirb-v2-code-deploy-20261001-R1.json`、`-R2.json`。
-- 新组别测试：本机Python 3.10，退役旧计划脚本后重跑新组别、配置登记、推理回放、启动队列四个测试文件，296项通过、5项跳过（4项要Linux的真flock、真符号链接、GNU stat，1项是登记表自身不查）；2项失败是此前就有的（完整VAL脚本直接写数值精度名、一个10-01新加的2S-ICR辅助模块不在分流表），与本次改动无关。完整输出在代码树 `records/verification/editor-sirb-v2-tests-after-retirement-20261001.txt`。服务器Python核对：新组别参数量N3_ES 6,650,938（多20,672）、空间支路多36,642，训练配方哈希仍为20d6da7d…，v1 checkpoint可作父模型。
+- 部署回执：代码树 `records/verification/editor-sirb-v2-code-deploy-20261001-R1.json`（10-07 已清理）、`-R2.json`。
+- 新组别测试：本机Python 3.10，退役旧计划脚本后重跑新组别、配置登记、推理回放、启动队列四个测试文件，296项通过、5项跳过（4项要Linux的真flock、真符号链接、GNU stat，1项是登记表自身不查）；2项失败是此前就有的（完整VAL脚本直接写数值精度名、一个10-01新加的2S-ICR辅助模块不在分流表），与本次改动无关。完整输出在代码树 `records/verification/editor-sirb-v2-tests-after-retirement-20261001.txt`（10-07 已清理）。服务器Python核对：新组别参数量N3_ES 6,650,938（多20,672）、空间支路多36,642，训练配方哈希仍为20d6da7d…，v1 checkpoint可作父模型。
 - 完整VAL队列停止记录 `runs/eval-sirb-full-val-20260930-R1/queue.stopped-by-director-20261001.json`；12k原型checkpoint删除前清单 `records/verification/editor-sirb-pilot-12k-checkpoints-before-delete-20261001.txt`。
-- 快速评估判定程序：代码树 `scripts/evaluation/gen_petct_eval_sirb_v2_quickval_verdict.py`，按PLAN.md第3.3节判候选对同头续训对照（主条件、各模块机制条件、组合、排序；远端几何未实现会拒绝），打印登记表要填的四格，登记表人工填。本机107项测试通过（含故意改坏程序的检查），输出 `records/verification/editor-sirb-v2-quickval-verdict-tests-20261001.txt`；用第一批VAL已存结果试跑，101清单目标区域Dice 0.5319 / 0.6051、397状态0.4537 / 0.5511与登记值逐位相同。10-01 23:3x作为新文件放进R2代码目录（sha256 5fa4cb2b…），服务器上 `--help` 正常。
+- 快速评估判定程序：代码树 `scripts/evaluation/gen_petct_eval_sirb_v2_quickval_verdict.py`，按PLAN.md第3.3节判候选对同头续训对照（主条件、各模块机制条件、组合、排序；远端几何未实现会拒绝），打印登记表要填的四格，登记表人工填。本机107项测试通过（含故意改坏程序的检查），输出 `records/verification/editor-sirb-v2-quickval-verdict-tests-20261001.txt`（10-07 已清理）；用第一批VAL已存结果试跑，101清单目标区域Dice 0.5319 / 0.6051、397状态0.4537 / 0.5511与登记值逐位相同。10-01 23:3x作为新文件放进R2代码目录（sha256 5fa4cb2b…），服务器上 `--help` 正常。
